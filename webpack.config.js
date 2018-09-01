@@ -11,7 +11,10 @@ const config = {
 module.exports = {
   mode: config.mode,
   context: path.join(__dirname, 'wp-content/themes'),
-  entry: {'origin': './origin/assets/app.js'},
+  entry: {
+    'origin': './origin/assets/app.js',
+    'ludens': './ludens/assets/app.js'
+  },
   output: {
     path: path.join(__dirname, 'wp-content/themes'),
     filename: '[name]/public/js/index.js'

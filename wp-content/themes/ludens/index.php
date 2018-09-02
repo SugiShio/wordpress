@@ -15,20 +15,11 @@
           <ul class="pickup__list">
             <li class="pickupItem">
               <div class="pickupItem__image">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fair.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.jpg" alt="">
               </div>
               <div class="pickupItem__body">
-                <h2 class="pickupItem__title">【サンプルフェア】テキストテキストテキスト♪</h2>
-                <p class="pickupItem__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </li>
-            <li class="pickupItem">
-              <div class="pickupItem__image">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fair.jpg" alt="">
-              </div>
-              <div class="pickupItem__body">
-                <h2 class="pickupItem__title">【サンプルフェア】テキストテキストテキスト♪</h2>
-                <p class="pickupItem__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <h2 class="pickupItem__title">9月グランドオープン</h2>
+                <p class="pickupItem__text">グランドオープンいたしました。最新情報をアップしてまいります。</p>
               </div>
             </li>
           </ul>

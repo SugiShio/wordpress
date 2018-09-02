@@ -47,6 +47,10 @@
   background-image: url('../images/pickup.jpg');
   background-repeat: no-repeat;
 
+  &__list {
+    overflow: scroll;
+    height: 110px;
+  }
 
   &__link {
     display: flex;
@@ -54,10 +58,10 @@
     justify-content: center;
     width: 200px;
     margin: 5px auto;
-    background-color: #697584;
-    box-shadow: 0 2px 4px rgba(#000, .2);
     padding: 10px;
     transition: .3s;
+    background-color: #697584;
+    box-shadow: 0 2px 4px rgba(#000, .2);
 
     &:hover {
       opacity: .8;
@@ -69,10 +73,10 @@
   display: flex;
 
   &__image {
-    width: 60px;
-    height: 60px;
     display: inline-flex;
     align-items: center;
+    width: 60px;
+    height: 60px;
   }
 
   &__body {

@@ -234,9 +234,6 @@ table {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 10px;
     transition: .3s; }
-    .pickup__link img {
-      width: auto;
-      height: 14px; }
     .pickup__link:hover {
       opacity: .8; }
 

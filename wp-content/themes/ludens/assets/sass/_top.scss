@@ -183,9 +183,6 @@
   background-image: url('../images/pickup.jpg');
   background-repeat: no-repeat;
 
-  &__list {
-
-  }
 
   &__link {
     display: flex;
@@ -197,11 +194,6 @@
     box-shadow: 0 2px 4px rgba(#000, .2);
     padding: 10px;
     transition: .3s;
-
-    img {
-      width: auto;
-      height: 14px;
-    }
 
     &:hover {
       opacity: .8;

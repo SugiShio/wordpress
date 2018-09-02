@@ -33,7 +33,7 @@
             </li>
           </ul>
           <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="pickup__link">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/show-all-fair.svg" alt="全てのフェアを見る">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/show-all-fair.png" alt="全てのフェアを見る">
           </a>
         </section>
         <div class="top-content__top-links">

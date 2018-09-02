@@ -1,0 +1,13 @@
+.access {
+  padding: 30px;
+  background-image: url('../images/bg.jpg');
+}
+
+.map {
+  width: 800px;
+  margin: 0 auto;
+
+  &__info {
+    margin-top: 30px;
+  }
+}

@@ -262,3 +262,12 @@ table {
     text-align: right; }
     .footer__copyright img {
       height: 14px; }
+
+.coming-soon {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea; }
+  .coming-soon img {
+    width: 920px;
+    height: 240px; }

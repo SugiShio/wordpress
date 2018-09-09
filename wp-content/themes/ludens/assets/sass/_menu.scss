@@ -1,0 +1,50 @@
+.menu {
+  padding: 0 10px;
+  background-image: url('../images/bg-blue.jpg');
+}
+
+.menu-list {
+  display: flex;
+
+  &__item {
+    position: relative;
+    flex-grow: 1;
+
+    &:first-child::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      height: 30px;
+      margin: auto;
+      content: '';
+      background-color: #999;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &:first-child::before {
+      left: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: .3s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__image {
+    width: auto;
+    height: 36px;
+  }
+}

@@ -27,7 +27,7 @@
         </a>
       </li>
       <li class="menu-list__item">
-        <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="menu-list__link">
+        <a href="<?php echo get_permalink(get_page_by_path('cuisine')->ID); ?>" class="menu-list__link">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/cuisine.png" alt="料理" class="menu-list__image">
         </a>
       </li>

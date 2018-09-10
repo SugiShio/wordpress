@@ -55,12 +55,12 @@
   &__link {
     display: block;
     padding: 0 10px;
+    transition: .3s;
     color: #fff;
     background-color: $color-text-blue;
     font-family: $font-serif;
     font-size: $font-lg;
     font-weight: bold;
-    transition: .3s;
 
     &:hover {
       opacity: .8;
@@ -102,6 +102,20 @@
       border-bottom: 2px solid $color-text-blue;
       font-family: $font-sansserif-kaku;
     }
+
+    &--cuisine {
+      color: $color-gold;
+      font-family: $font-serif;
+    }
+  }
+
+  &__subhead {
+    width: $width-content;
+    margin: auto;
+    color: $color-gold;
+    font-family: $font-sansserif-kaku;
+    font-size: $font-lg;
+    font-weight: bold;
   }
 
   &__text {

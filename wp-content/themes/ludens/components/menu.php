@@ -12,7 +12,7 @@
         </a>
       </li>
       <li class="menu-list__item">
-        <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="menu-list__link">
+        <a href="<?php echo get_permalink(get_page_by_path('facility')->ID); ?>" class="menu-list__link">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/facility.png" alt="施設" class="menu-list__image">
         </a>
       </li>

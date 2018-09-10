@@ -12,7 +12,7 @@
   </div>
 
   <article class="content-main">
-    <h2 class="content-main__head">
+    <h2 class="content-main__head content-main__head--concept">
       <span>LUXURY & RESORT</span>
     </h2>
     <p class="content-main__text">

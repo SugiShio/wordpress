@@ -2,6 +2,7 @@
   margin: auto;
   padding: 30px 0;
   background-image: url('../images/common/bg.jpg');
+  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
 }
@@ -20,7 +21,7 @@
   }
 
   &__title {
-    color: #7b7b7b;
+    color: $color-text;
     font-family: $font-serif;
     font-size: $font-xlg;
     font-weight: bold;
@@ -28,7 +29,7 @@
 
   &__sub {
     margin-left: 10px;
-    color: #7b7b7b;
+    color: $color-text;
     font-family: $font-serif;
     font-size: $font-lg;
     font-weight: bold;
@@ -36,8 +37,39 @@
 
   &__description {
     padding: 5px 0;
-    color: #7b7b7b;
+    color: $color-text;
     font-family: $font-serif;
+  }
+
+  &__link-list {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &__link-item {
+    width: 180px;
+    margin-left: 10px;
+  }
+
+  &__link {
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    background-color: $color-text-blue;
+    font-family: $font-serif;
+    font-size: $font-lg;
+    font-weight: bold;
+    transition: .3s;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &::before {
+      margin-right: 5px;
+      content: '▶︎';
+    }
   }
 }
 
@@ -51,21 +83,31 @@
   &__head {
     width: $width-content;
     margin: auto;
+    font-size: $font-xlg;
+    font-weight: bold;
 
-    span {
-      padding-right: 60px;
-      color: #7b7b7b;
-      border-bottom: 2px solid #a9a9a9;
-      font-family: $font-serif;
-      font-size: $font-xlg;
-      font-weight: bold;
+    &--concept {
+      span {
+        padding-right: 60px;
+        color: $color-text;
+        border-bottom: 2px solid #a9a9a9;
+        font-family: $font-serif;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+
+    &--facility {
+      color: $color-text-blue;
+      border-bottom: 2px solid $color-text-blue;
+      font-family: $font-sansserif-kaku;
     }
   }
 
   &__text {
     width: $width-content;
     margin: 20px auto;
-    color: #697584;
+    color: $color-text-blue;
   }
 
   &__image-box {

@@ -102,9 +102,20 @@ eval("__webpack_require__(/*! ./sass/app.scss */ \"./ludens/assets/sass/app.scss
   !*** ./ludens/assets/js/app.js ***!
   \*********************************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/app.js?");
+
+/***/ }),
+
+/***/ "./ludens/assets/js/smoothScroll.js":
+/*!******************************************!*\
+  !*** ./ludens/assets/js/smoothScroll.js ***!
+  \******************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./ludens/assets/js/app.js?");
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nmodule.exports = function SmoothScroll() {\n   _classCallCheck(this, SmoothScroll);\n\n   $(function () {\n      $('a[href^=#]').click(function () {\n         var speed = 400;\n         var href = $(this).attr(\"href\");\n         var target = $(href == \"#\" || href == \"\" ? 'html' : href);\n         var position = target.offset().top;\n         $('body,html').animate({ scrollTop: position }, speed, 'swing');\n         return false;\n      });\n   });\n};\n\n//# sourceURL=webpack:///./ludens/assets/js/smoothScroll.js?");
 
 /***/ }),
 

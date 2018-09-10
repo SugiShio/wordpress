@@ -49,7 +49,7 @@
       </a>
     </li>
     <li class="top-content__item">
-      <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="top-content__link">
+      <a href="<?php echo get_permalink(get_page_by_path('facility')->ID); ?>" class="top-content__link">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facility.jpg" alt="施設">
       </a>
     </li>

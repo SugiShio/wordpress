@@ -12,3 +12,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <?php get_template_part('components/header'); ?>
+  <?php get_template_part('components/menu'); ?>
+  <?php if(is_home()) : ?>
+    <main>
+  <?php else : ?>
+    <main class="content">
+  <?php endif; ?>

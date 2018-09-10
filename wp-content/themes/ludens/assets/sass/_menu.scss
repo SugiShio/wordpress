@@ -1,6 +1,11 @@
 .menu {
-  padding: 0 10px;
   background-image: url('../images/bg-blue.jpg');
+
+  &__inner {
+    width: $width-wrapper;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
 }
 
 .menu-list {

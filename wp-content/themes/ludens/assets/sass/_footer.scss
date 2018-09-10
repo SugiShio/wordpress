@@ -3,6 +3,8 @@
   background-image: url('../images/bg-blue.jpg');
 
   &__copyright {
+    width: $width-wrapper;
+    margin: 0 auto;
     text-align: right;
 
     small {

@@ -19,6 +19,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: 1100px;
   vertical-align: baseline;
   text-decoration: none;
   letter-spacing: .07em;
@@ -29,7 +30,8 @@ html {
           font-feature-settings: "palt";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%; }
 
 body, div,
 h1, h2, h3, h4, h5, h6, p,
@@ -247,7 +249,7 @@ table {
     padding: 5px 0;
     color: #7b7b7b;
     font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif; }
-  .content-head__link-list {
+  .content-head__box {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end; }
@@ -380,6 +382,89 @@ table {
     font-weight: bold; }
   .pickupItem__text {
     font-size: 10px; }
+
+.plan__item {
+  width: 1000px;
+  margin: 30px auto;
+  padding: 30px 50px;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.plan__box {
+  display: flex; }
+
+.plan__text {
+  flex-grow: 1;
+  margin-right: 20px; }
+
+.plan__title {
+  position: relative;
+  display: inline-block;
+  margin-left: 60px;
+  color: #697584;
+  border-bottom: 4px solid #697584;
+  font-size: 30px;
+  font-weight: bold; }
+  .plan__title::before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    height: 60px;
+    margin: auto 10px auto 0;
+    content: '\25C6';
+    font-size: 1.4em; }
+
+.plan__detail {
+  margin: 30px 0;
+  color: #f74678;
+  font-size: 36px;
+  font-weight: bold; }
+  .plan__detail::before {
+    margin-right: 10px;
+    content: '\25B6\FE0E'; }
+
+.plan__description {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold; }
+
+.plan__condition {
+  display: flex;
+  padding: 5px 10px;
+  border: 4px solid #f74678;
+  background-color: #e8e8e8; }
+
+.plan__condition-term, .plan__condition-desc {
+  color: #f74678;
+  font-size: 20px;
+  font-weight: bold; }
+
+.plan__condition-term {
+  padding: 0 20px; }
+
+.plan__cta {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #e8e8e8; }
+
+.plan__cta-text {
+  flex-grow: 1;
+  color: #697584;
+  font-size: 24px;
+  font-weight: bold; }
+
+.plan__cta-link {
+  transition: .3s; }
+  .plan__cta-link:hover {
+    opacity: .8; }
+
+.plan__note {
+  text-align: center;
+  color: #697584;
+  font-size: 20px;
+  font-weight: bold; }
 
 .coming-soon {
   display: flex;

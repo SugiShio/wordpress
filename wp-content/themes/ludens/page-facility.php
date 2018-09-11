@@ -7,7 +7,7 @@
         FACILITY
       </h2>
       <span class="content-head__sub">施設</span>
-      <ul class="content-head__link-list">
+      <ul class="content-head__box">
         <li class="content-head__link-item">
           <a href="#chapel" class="content-head__link">チャペル</a>
         </li>

@@ -1,4 +1,9 @@
 <?php
+    function ludens_setup() {
+        add_theme_support('title-tag');
+    }
+    add_action('after_setup_theme', 'ludens_setup');
+
     function ludens_scripts() {
         wp_enqueue_style('ludens-style', get_template_directory_uri() . '/public/css/style.css');
         wp_enqueue_script('jQuery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');

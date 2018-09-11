@@ -31,7 +31,7 @@
     </div>
     <div class="plan__cta">
       <p class="plan__cta-text">費用についてすぐに相談したい方はこちらから</p>
-      <a href="#" class="plan__cta-link">
+      <a href="<?php echo get_permalink(get_page_by_path('contact-input')->ID); ?>" class="plan__cta-link">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan/button.png" alt="見積もり依頼をする">
       </a>
     </div>
@@ -55,7 +55,7 @@
     </div>
     <div class="plan__cta">
       <p class="plan__cta-text">費用についてすぐに相談したい方はこちらから</p>
-      <a href="#" class="plan__cta-link">
+      <a href="<?php echo get_permalink(get_page_by_path('contact-input')->ID); ?>" class="plan__cta-link">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan/button.png" alt="見積もり依頼をする">
       </a>
     </div>

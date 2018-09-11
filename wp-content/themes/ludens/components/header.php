@@ -17,7 +17,7 @@
           </a>
         </li>
         <li class="contact-box__item">
-          <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="contact-box__link">
+          <a href="<?php echo get_permalink(get_page_by_path('contact-input')->ID); ?>" class="contact-box__link">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact.png" alt="">
           </a>
         </li>

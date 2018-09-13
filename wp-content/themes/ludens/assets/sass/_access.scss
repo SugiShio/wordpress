@@ -1,6 +1,7 @@
 .access {
+  max-width: $width-wrapper;
+  margin: 0 auto;
   padding: 30px;
-  background-image: url('../images/bg.jpg');
 }
 
 .map {

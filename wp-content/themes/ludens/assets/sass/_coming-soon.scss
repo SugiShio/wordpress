@@ -1,7 +1,9 @@
 .coming-soon {
-  height: 100vh;
   display: flex;
   justify-content: center;
+  width: $width-content;
+  height: 100vh;
+  margin: 0 auto;
   background-color: #eaeaea;
 
   img {

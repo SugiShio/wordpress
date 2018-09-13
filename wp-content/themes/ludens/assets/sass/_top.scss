@@ -1,6 +1,13 @@
+.main-view {
+  max-width: $width-wrapper;
+  margin: 0 auto;
+}
+
 .top-content {
+  max-width: $width-wrapper;
+  margin: 0 auto;
   padding: 50px;
-  background-image: url('../images/bg.jpg');
+  background-image: url('../images/top/bg.jpg');
   background-position: center center;
 
   background-repeat-x: no-repeat;

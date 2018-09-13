@@ -3,11 +3,16 @@
   background-image: url('../images/bg-blue.jpg');
 
   &__copyright {
+    width: $width-wrapper;
+    margin: 0 auto;
     text-align: right;
 
-    img {
-      height: 14px;
+    small {
+      color: #fff;
+      font-family: $font-serif;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 14px;
     }
   }
-
 }

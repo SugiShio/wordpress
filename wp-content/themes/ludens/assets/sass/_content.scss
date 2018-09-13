@@ -1,0 +1,137 @@
+.content {
+  margin: auto;
+  padding: 30px 0;
+  background-image: url('../images/common/bg.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.content-head {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: rgba(#fff, .8);
+
+  &__main {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 10px;
+    border-bottom: 2px solid #a9a9a9;
+  }
+
+  &__title {
+    color: $color-text;
+    font-family: $font-serif;
+    font-size: $font-xlg;
+    font-weight: bold;
+  }
+
+  &__sub {
+    margin-left: 10px;
+    color: $color-text;
+    font-family: $font-serif;
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+
+  &__description {
+    padding: 5px 0;
+    color: $color-text;
+    font-family: $font-serif;
+  }
+
+  &__box {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &__link-item {
+    width: 180px;
+    margin-left: 10px;
+  }
+
+  &__link {
+    display: block;
+    padding: 0 10px;
+    transition: .3s;
+    color: #fff;
+    background-color: $color-text-blue;
+    font-family: $font-serif;
+    font-size: $font-lg;
+    font-weight: bold;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &::before {
+      margin-right: 5px;
+      content: '▶︎';
+    }
+  }
+}
+
+.content-main {
+  width: 1000px;
+  margin: 30px auto;
+  padding: 30px 0;
+  border: 2px solid #a9a9a9;
+  background-color: #fff;
+
+  &__head {
+    width: $width-content;
+    margin: auto;
+    font-size: $font-xlg;
+    font-weight: bold;
+
+    &--concept {
+      span {
+        padding-right: 60px;
+        color: $color-text;
+        border-bottom: 2px solid #a9a9a9;
+        font-family: $font-serif;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+
+    &--facility {
+      color: $color-text-blue;
+      border-bottom: 2px solid $color-text-blue;
+      font-family: $font-sansserif-kaku;
+    }
+
+    &--cuisine {
+      color: $color-gold;
+      font-family: $font-serif;
+    }
+  }
+
+  &__subhead {
+    width: $width-content;
+    margin: auto;
+    color: $color-gold;
+    font-family: $font-sansserif-kaku;
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+
+  &__text {
+    width: $width-content;
+    margin: 20px auto;
+    color: $color-text-blue;
+  }
+
+  &__image-box {
+    display: flex;
+    justify-content: space-between;
+    width: $width-content;
+    margin: 40px auto;
+  }
+
+  &__image {
+    box-shadow: 0 0 8px rgba(#56361c, .6);
+  }
+}

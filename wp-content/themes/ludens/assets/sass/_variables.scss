@@ -2,34 +2,29 @@
 
 /* colors
 ----------------- */
-$color-black: #141415;
-$color-text: #141415;
-$color-text-weak: #93989e;
-$color-text-link: #2f6ab2;
-$color-background: #f7f8fa;
-$color-accent: #c91138;
-$color-theme: #2f6ab2;
-$color-technic: #2f6ab2;
-$color-performance: #98c746;
-$color-cm: #f4bf20;
-$color-photo: #cf5e9e;
-
-$color-input-border: #93989e;
+$color-text: #7b7b7b;
+$color-text-blue: #697584;
+$color-gold: #ae8a67;
+$color-pink: #f74678;
+$color-gray: #e8e8e8;
 
 /* font families
 ----------------- */
-$font-sansserif: 'Source Sans Pro', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$font-serif: 'YuMincho', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+$font-sansserif: 'ヒラギノ丸ゴ ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$font-sansserif-kaku: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
 
 /* font sizes
 ----------------- */
 $font-sm: 10px;
-$font-md: 14px;
-$font-lg: 18px;
-$font-xlg: 24px;
+$font-md: 16px;
+$font-lg: 20px;
+$font-xlg: 36px;
 
-/* break points
+/* sizes
 ----------------- */
-$width-sidebar: 220px;
+$width-wrapper: 1100px;
+$width-content: 940px;
 
 /* break points
 ----------------- */

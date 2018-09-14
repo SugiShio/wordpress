@@ -1,4 +1,13 @@
 .contact {
+  &__title {
+    margin: 20px 0 15px;
+    color: $color-gold;
+    border-bottom: 1px solid $color-gold;
+    font-family: $font-serif;
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+
   &__form {
     width: 600px;
     margin: 30px auto;
@@ -20,18 +29,42 @@
     padding: 10px 0;
   }
 
+
+  &__input-wrapper {
+    display: flex;
+    align-items: flex-start;
+    align-self: center;
+    width: 100%;
+
+    > .contact__input {
+      align-self: flex-start;
+    }
+
+    > * + * {
+      margin-left: 10px;
+    }
+  }
+
   &__input {
-    display: block;
     align-self: center;
     flex-grow: 1;
 
     input,
+    select,
     textarea {
       width: 100%;
       padding: 10px;
       border: 1px solid $color-gray;
-      border-radius: 3px;
+      border-radius: 3px;  background-color: #fff;
     }
+
+    select {
+      height: 40px;
+    }
+  }
+
+  &__time {
+    width: 50% !important;
   }
 
   &__buttons {
@@ -42,7 +75,7 @@
   &__submit,
   &__back {
     display: inline-block;
-    min-width: 290px;
+    min-width: 280px;
     padding: 10px;
     cursor: pointer;
     transition: .3s;
@@ -52,6 +85,8 @@
     font-family: $font-serif;
     font-size: $font-md;
     font-weight: bold;
+
+    appearance: none;
   }
 
   &__submit {

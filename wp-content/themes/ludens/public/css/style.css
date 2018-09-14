@@ -466,6 +466,14 @@ table {
   font-size: 20px;
   font-weight: bold; }
 
+.contact__title {
+  margin: 20px 0 15px;
+  color: #ae8a67;
+  border-bottom: 1px solid #ae8a67;
+  font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
+  font-size: 20px;
+  font-weight: bold; }
+
 .contact__form {
   width: 600px;
   margin: 30px auto; }
@@ -482,17 +490,33 @@ table {
   width: 150px;
   padding: 10px 0; }
 
+.contact__input-wrapper {
+  display: flex;
+  align-items: flex-start;
+  align-self: center;
+  width: 100%; }
+  .contact__input-wrapper > .contact__input {
+    align-self: flex-start; }
+  .contact__input-wrapper > * + * {
+    margin-left: 10px; }
+
 .contact__input {
-  display: block;
   -ms-grid-row-align: center;
       align-self: center;
   flex-grow: 1; }
   .contact__input input,
+  .contact__input select,
   .contact__input textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #e8e8e8;
-    border-radius: 3px; }
+    border-radius: 3px;
+    background-color: #fff; }
+  .contact__input select {
+    height: 40px; }
+
+.contact__time {
+  width: 50% !important; }
 
 .contact__buttons {
   margin: 20px 0;
@@ -500,7 +524,7 @@ table {
 
 .contact__submit, .contact__back {
   display: inline-block;
-  min-width: 290px;
+  min-width: 280px;
   padding: 10px;
   cursor: pointer;
   transition: .3s;
@@ -509,7 +533,10 @@ table {
   box-shadow: none;
   font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
   font-size: 16px;
-  font-weight: bold; }
+  font-weight: bold;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
 
 .contact__submit {
   color: #fff;

@@ -1,0 +1,113 @@
+.contact {
+  &__title {
+    margin: 20px 0 15px;
+    color: $color-gold;
+    border-bottom: 1px solid $color-gold;
+    font-family: $font-serif;
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+
+  &__form {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  &__formitem {
+    display: flex;
+    padding: 5px 0;
+
+    > input,
+    > span {
+      padding: 10px;
+    }
+  }
+
+  &__label {
+    flex-shrink: 0;
+    width: 150px;
+    padding: 10px 0;
+  }
+
+
+  &__input-wrapper {
+    display: flex;
+    align-items: flex-start;
+    align-self: center;
+    width: 100%;
+
+    > .contact__input {
+      align-self: flex-start;
+    }
+
+    > * + * {
+      margin-left: 10px;
+    }
+  }
+
+  &__input {
+    align-self: center;
+    flex-grow: 1;
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $color-gray;
+      border-radius: 3px;  background-color: #fff;
+    }
+
+    select {
+      height: 40px;
+    }
+  }
+
+  &__time {
+    width: 50% !important;
+  }
+
+  &__buttons {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  &__submit,
+  &__back {
+    display: inline-block;
+    min-width: 280px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid $color-gold;
+    border-radius: 3px;
+    box-shadow: none;
+    font-family: $font-serif;
+    font-size: $font-md;
+    font-weight: bold;
+
+    appearance: none;
+  }
+
+  &__submit {
+    color: #fff;
+    background-color: $color-gold;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__back {
+    margin-right: 20px;
+    color: $color-gold;
+
+    &:hover {
+      background-color: lighten($color-gold, 30%);
+    }
+  }
+
+  &__complete {
+    padding: 0 30px;
+  }
+}

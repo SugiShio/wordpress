@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
-<div class="main-view">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mainview.jpg" alt="Espoir LumineuxからLUDENS WEDDING VILLAへ...大人のラグジュアリー空間へ生まれ変わります。">
+<div class="main-view js-slick">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/mainview_1.jpg" alt="エスポワールからルーデンスウェディングヴィラへ...大人のラグジュアリー空間へ生まれ変わります。">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/mainview_2.jpg" alt="">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/mainview_3.jpg" alt="">
 </div>
 
 <div class="top-content">

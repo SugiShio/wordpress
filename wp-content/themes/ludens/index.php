@@ -20,7 +20,7 @@
           </div>
         </li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="pickup__link">
+      <a href="https://zexy.net/wedding/c_7770020837/" class="pickup__link" target="_blank">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/show-all-fair.png" alt="全てのフェアを見る">
       </a>
     </section>
@@ -46,7 +46,7 @@
       </a>
     </li>
     <li class="top-content__item">
-      <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="top-content__link">
+      <a href="https://zexy.net/wedding/c_7770020837/" class="top-content__link" target="_blank">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fair.jpg" alt="フェア">
       </a>
     </li>

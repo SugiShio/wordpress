@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+$slick-dot-color: #c2f9f6;
+$slick-dot-color-active: #365c7e;
+$slick-dot-size: 16px;
+$slick-opacity-default: 1;
+$slick-opacity-on-hover: .8;
+$slick-opacity-not-active: 1;
+
+.slick-dots {
+  li {
+    button {
+      &:hover, &:focus {
+        &:before {
+          opacity: $slick-opacity-on-hover;
+        }
+      }
+      &:before {
+        opacity: $slick-opacity-not-active;
+        color: $slick-dot-color;
+        font-size: $slick-dot-size;
+        line-height: 30px;
+      }
+    }
+    &.slick-active button:before {
+      opacity: $slick-opacity-default;
+      color: $slick-dot-color-active;
+    }
+  }
+}

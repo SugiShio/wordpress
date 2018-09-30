@@ -104,7 +104,18 @@ eval("__webpack_require__(/*! ./sass/app.scss */ \"./ludens/assets/sass/app.scss
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/app.js?");
+eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/app.js?");
+
+/***/ }),
+
+/***/ "./ludens/assets/js/slickSettings.js":
+/*!*******************************************!*\
+  !*** ./ludens/assets/js/slickSettings.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nmodule.exports = function slickSettings() {\n  _classCallCheck(this, slickSettings);\n\n  $(function () {\n    $('.js-slick').slick({\n      autoplay: true,\n      autoplaySpeed: 5000,\n      arrows: false,\n      dots: true,\n      infinite: true,\n      speed: 500,\n      fade: true,\n      cssEase: 'linear'\n    });\n  });\n};\n\n//# sourceURL=webpack:///./ludens/assets/js/slickSettings.js?");
 
 /***/ }),
 

@@ -10,7 +10,6 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  min-width: $width-wrapper;
   vertical-align: baseline;
   text-decoration: none;
   letter-spacing: .07em;
@@ -23,6 +22,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
+  @include screen-lg {
+    min-width: $width-wrapper;
+  }
 }
 
 body, div,

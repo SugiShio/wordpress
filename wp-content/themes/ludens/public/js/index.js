@@ -104,7 +104,18 @@ eval("__webpack_require__(/*! ./sass/app.scss */ \"./ludens/assets/sass/app.scss
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/app.js?");
+eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar Hamburger = __webpack_require__(/*! ./hamburger */ \"./ludens/assets/js/hamburger.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new Hamburger();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/app.js?");
+
+/***/ }),
+
+/***/ "./ludens/assets/js/hamburger.js":
+/*!***************************************!*\
+  !*** ./ludens/assets/js/hamburger.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nmodule.exports = function Hamburger() {\n  var _this = this;\n\n  _classCallCheck(this, Hamburger);\n\n  this.$triggerOpen = $('.js-hamburger_trigger-open');\n  this.$triggerClose = $('.js-hamburger_trigger-close');\n  this.$content = $('.js-hamburger_content');\n  this.isOpen = false;\n\n  this.$triggerOpen.on('click', function () {\n    if (_this.isOpen) return;\n    _this.isOpen = true;\n    _this.$content.slideDown();\n  });\n  this.$triggerClose.on('click', function () {\n    if (!_this.isOpen) return;\n    _this.isOpen = false;\n    _this.$content.slideUp();\n  });\n};\n\n//# sourceURL=webpack:///./ludens/assets/js/hamburger.js?");
 
 /***/ }),
 

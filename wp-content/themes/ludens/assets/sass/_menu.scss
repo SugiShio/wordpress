@@ -1,5 +1,13 @@
 .menu {
+  @extend %show-on-pc;
   background-image: url('../images/bg-blue.jpg');
+  z-index: $z-index-header + 1;
+  @include screen-sm {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
 
   &__inner {
     width: $width-wrapper;

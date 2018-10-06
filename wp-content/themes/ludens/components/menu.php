@@ -1,4 +1,4 @@
-<nav class="menu">
+<nav class="menu js-hamburger_content">
   <div class="menu__inner">
     <ul class="menu-list">
       <li class="menu-list__item">
@@ -32,5 +32,12 @@
         </a>
       </li>
     </ul>
+    <div class="contact-box-sp">
+      <?php get_template_part('components/contact-box'); ?>
+    </div>
+    <div class="sns-links-sp">
+      <?php get_template_part('components/sns-links'); ?>
+    </div>
+    <div class="menu-button-close js-hamburger_trigger-close">CLOSE</div>
   </div>
 </nav>

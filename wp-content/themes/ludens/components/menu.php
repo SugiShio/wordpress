@@ -3,32 +3,38 @@
     <ul class="menu-list">
       <li class="menu-list__item">
         <a href="<?php echo home_url(); ?>" class="menu-list__link">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/top.png" alt="トップ" class="menu-list__image">
+          <span class="menu-list__text-main">TOP</span>
+          <span class="menu-list__text-sub">トップ</span>
         </a>
       </li>
       <li class="menu-list__item">
         <a href="<?php echo get_permalink(get_page_by_path('concept')->ID); ?>" class="menu-list__link">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/concept.png" alt="コンセプト" class="menu-list__image">
+          <span class="menu-list__text-main">CONCEPT</span>
+          <span class="menu-list__text-sub">コンセプト</span>
         </a>
       </li>
       <li class="menu-list__item">
         <a href="<?php echo get_permalink(get_page_by_path('facility')->ID); ?>" class="menu-list__link">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/facility.png" alt="施設" class="menu-list__image">
+          <span class="menu-list__text-main">FACILITY</span>
+          <span class="menu-list__text-sub">施設</span>
         </a>
       </li>
       <li class="menu-list__item">
         <a href="https://zexy.net/wedding/c_7770020837/" class="menu-list__link" target="_blank">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/fair.png" alt="フェア" class="menu-list__image">
+          <span class="menu-list__text-main">FAIR</span>
+          <span class="menu-list__text-sub">フェア</span>
         </a>
       </li>
       <li class="menu-list__item">
         <a href="<?php echo get_permalink(get_page_by_path('plan')->ID); ?>" class="menu-list__link">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/plan.png" alt="プラン" class="menu-list__image">
+          <span class="menu-list__text-main">PLAN</span>
+          <span class="menu-list__text-sub">プラン</span>
         </a>
       </li>
       <li class="menu-list__item">
         <a href="<?php echo get_permalink(get_page_by_path('cuisine')->ID); ?>" class="menu-list__link">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu/cuisine.png" alt="料理" class="menu-list__image">
+          <span class="menu-list__text-main">CUISINE</span>
+          <span class="menu-list__text-sub">料理</span>
         </a>
       </li>
     </ul>

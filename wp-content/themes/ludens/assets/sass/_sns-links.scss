@@ -1,0 +1,30 @@
+.sns-links {
+  display: flex;
+  justify-content: center;
+  @include screen-sm {
+    margin: 10px 0;
+  }
+
+  &__item {
+    margin: 0 5px;
+  }
+
+  &__link {
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.sns-links-pc {
+  @extend %show-on-pc;
+  @include screen-lg {
+    align-self: flex-end;
+  }
+}
+
+.sns-links-sp {
+  @extend %show-on-sp;
+}

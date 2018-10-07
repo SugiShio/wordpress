@@ -3,17 +3,17 @@
   <ul class="contact-box__links">
     <li class="contact-box__item">
       <a href="<?php echo get_permalink(get_page_by_path('reserve-input')->ID); ?>" class="contact-box__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/reserve.png" alt="">
+        来店予約
       </a>
     </li>
     <li class="contact-box__item">
       <a href="<?php echo get_permalink(get_page_by_path('request-input')->ID); ?>" class="contact-box__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/document.png" alt="">
+        資料請求
       </a>
     </li>
     <li class="contact-box__item">
       <a href="<?php echo get_permalink(get_page_by_path('contact-input')->ID); ?>" class="contact-box__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact.png" alt="">
+         お問合せ
       </a>
     </li>
   </ul>

@@ -6,12 +6,10 @@ module.exports = class Hamburger {
     this.isOpen = false
 
     this.$triggerOpen.on('click', () => {
-      if(this.isOpen) return;
       this.isOpen = true
       this.$content.slideDown()
     })
     this.$triggerClose.on('click', () => {
-      if(!this.isOpen) return;
       this.isOpen = false
       this.$content.slideUp()
     })

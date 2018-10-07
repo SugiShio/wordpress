@@ -9,6 +9,7 @@
 <div class="top-content">
   <div class="top-content__top-box">
     <section class="pickup">
+      <h2 class="pickup__title">PICK UP</h2>
       <ul class="pickup__list">
         <li class="pickupItem">
           <div class="pickupItem__image">
@@ -21,7 +22,7 @@
         </li>
       </ul>
       <a href="https://zexy.net/wedding/c_7770020837/" class="pickup__link" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/show-all-fair.png" alt="全てのフェアを見る">
+        全てのフェアを見る
       </a>
     </section>
     <div class="top-content__top-links">
@@ -37,32 +38,50 @@
   <ul class="top-content__links">
     <li class="top-content__item">
       <a href="<?php echo get_permalink(get_page_by_path('concept')->ID); ?>" class="top-content__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/concept.jpg" alt="コンセプト">
+        <span class="top-content__link-text">
+          <span class="top-content__link-text-main">CONCEPT</span>
+          <span class="top-content__link-text-sub">コンセプト</span>
+        </span>
       </a>
     </li>
     <li class="top-content__item">
       <a href="<?php echo get_permalink(get_page_by_path('plan')->ID); ?>" class="top-content__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan.jpg" alt="プラン">
+        <span class="top-content__link-text">
+          <span class="top-content__link-text-main">PLAN</span>
+          <span class="top-content__link-text-sub">プラン</span>
+        </span>
       </a>
     </li>
     <li class="top-content__item">
       <a href="https://zexy.net/wedding/c_7770020837/" class="top-content__link" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fair.jpg" alt="フェア">
+        <span class="top-content__link-text">
+          <span class="top-content__link-text-main">FAIR</span>
+          <span class="top-content__link-text-sub">フェア</span>
+        </span>
       </a>
     </li>
     <li class="top-content__item">
       <a href="<?php echo get_permalink(get_page_by_path('facility')->ID); ?>" class="top-content__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facility.jpg" alt="施設">
+        <span class="top-content__link-text">
+          <span class="top-content__link-text-main">FACILITY</span>
+          <span class="top-content__link-text-sub">施設</span>
+        </span>
       </a>
     </li>
     <li class="top-content__item">
       <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="top-content__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery.jpg" alt="ギャラリー">
+        <span class="top-content__link-text">
+          <span class="top-content__link-text-main">GALLERY</span>
+          <span class="top-content__link-text-sub">ギャラリー</span>
+        </span>
       </a>
     </li>
     <li class="top-content__item">
       <a href="<?php echo get_permalink(get_page_by_path('access')->ID); ?>" class="top-content__link">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/access.jpg" alt="アクセス">
+        <span class="top-content__link-text">
+          <span class="top-content__link-text-main">ACCESS</span>
+          <span class="top-content__link-text-sub">アクセス</span>
+        </span>
       </a>
     </li>
   </ul>

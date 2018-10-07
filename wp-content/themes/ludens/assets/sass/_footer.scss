@@ -3,16 +3,22 @@
   background-image: url('../images/bg-blue.jpg');
 
   &__copyright {
-    width: $width-wrapper;
     margin: 0 auto;
-    text-align: right;
+    text-align: center;
+    @include screen-lg {
+      width: $width-wrapper;
+      text-align: right;
+    }
 
     small {
       color: #fff;
       font-family: $font-serif;
-      font-size: 12px;
+      font-size: $font-sm;
       font-weight: bold;
       line-height: 14px;
+      @include screen-lg {
+        font-size: 12px;
+      }
     }
   }
 }

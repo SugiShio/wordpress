@@ -6,33 +6,60 @@
 .top-content {
   max-width: $width-wrapper;
   margin: 0 auto;
-  padding: 50px;
+  padding: 20px;
   background-image: url('../images/top/bg.jpg');
   background-position: center center;
+  @include screen-lg {
+    padding: 50px;
+  }
 
   background-repeat-x: no-repeat;
 
   &__top-box {
-    display: flex;
-    justify-content: space-between;
+    @include screen-lg {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__top-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 360px;
+    margin: 20px 0;
+    text-align: center;
+    @include screen-lg {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 360px;
+      margin: 0;
+    }
   }
 
   &__links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 60px;
+    @include screen-lg {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__item {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    @include screen-lg {
+      width: 300px;
+      margin-bottom: 40px;
+    }
+    &:nth-child(even) .top-content__link {
+      justify-content: flex-end;
+    }
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) .top-content__link {
+        background-image: url('../images/top/link/#{$i}_sp.jpg');
+        @include screen-lg {
+          background-image: url('../images/top/link/#{$i}_pc.jpg');
+        }
+      }
+    }
   }
 
   &__top-banner,
@@ -44,31 +71,107 @@
     }
   }
 
-
-}
-
-.pickup {
-  width: 600px;
-  height: 237px;
-  padding: 70px 15px 15px;
-  background-image: url('../images/pickup.jpg');
-  background-repeat: no-repeat;
-
-  &__list {
-    overflow: scroll;
-    height: 110px;
+  &__top-banner {
+    display: inline-block;
+    & + & {
+      @include screen-sm {
+        margin-top: 20px;
+      }
+    }
   }
 
   &__link {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    margin: 5px auto;
+    align-items: flex-end;
+    height: 100px;
     padding: 10px;
+    border: 2px solid #28abe1;
+    background-position: center center;
+    @include screen-lg {
+      justify-content: flex-end;
+      height: 220px;
+    }
+  }
+
+  &__link-text {
+    min-width: 100px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 2px #838787,
+    -2px 2px 2px #838787,
+    2px -2px 2px #838787,
+    -2px -2px 2px #838787;
+  }
+
+  &__link-text-main,
+  &__link-text-sub {
+    display: block;
+    font-family: $font-serif;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  &__link-text-main {
+    font-size: 24px;
+  }
+}
+
+.pickup {
+  border: 2px solid #28abe1;
+  background-image: url('../images/bg-lightblue.jpg');
+  @include screen-lg {
+    width: 600px;
+    height: 237px;
+    padding: 0 15px;
+    border: none;
+    background-image: url('../images/pickup.jpg');
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    text-align: center;
+    background-image: url('../images/bg-blue.jpg');
+    text-shadow: 2px 2px 2px #fff,
+    -2px 2px 2px #fff,
+    2px -2px 2px #fff,
+    -2px -2px 2px #fff;
+    font-family: $font-serif;
+    font-size: 26px;
+    font-weight: bold;
+    @include screen-lg {
+      background-image: none;
+      font-size: $font-xlg;
+      line-height: 65px;
+    }
+  }
+
+  &__list {
+    padding: 10px;
+    @include screen-lg {
+      overflow: scroll;
+      height: 110px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 5px 10px;
     transition: .3s;
+    text-align: center;
+    color: #fff;
     background-color: #697584;
     box-shadow: 0 2px 4px rgba(#000, .2);
+    font-family: $font-serif;
+    font-weight: bold;
+    @include screen-lg {
+      margin: 5px auto;
+    }
+
+    &::before {
+      content: '▶︎';
+      font-size: $font-sm;
+    }
 
     &:hover {
       opacity: .8;
@@ -80,8 +183,6 @@
   display: flex;
 
   &__image {
-    display: inline-flex;
-    align-items: center;
     width: 60px;
     height: 60px;
   }
@@ -91,11 +192,10 @@
   }
 
   &__title {
-    font-size: 12px;
     font-weight: bold;
   }
 
   &__text {
-    font-size: 10px;
+    font-size: 12px;
   }
 }

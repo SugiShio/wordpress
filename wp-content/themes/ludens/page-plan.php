@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="plan">
+<section class="plan content-wrapper">
   <div class="content-head">
     <div class="content-head__main">
       <h2 class="content-head__title">

@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header js-header">
   <div class="header__inner">
     <a href="<?php echo home_url(); ?>">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="LUDENS ISESAKI WEDDING VILLA" class="header__logo">

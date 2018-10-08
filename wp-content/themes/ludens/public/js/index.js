@@ -137,7 +137,7 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nmodule.exports = function SmoothScroll() {\n   _classCallCheck(this, SmoothScroll);\n\n   $(function () {\n      $('a[href^=#]').click(function () {\n         var speed = 400;\n         var href = $(this).attr(\"href\");\n         var target = $(href == \"#\" || href == \"\" ? 'html' : href);\n         var position = target.offset().top;\n         $('body,html').animate({ scrollTop: position }, speed, 'swing');\n         return false;\n      });\n   });\n};\n\n//# sourceURL=webpack:///./ludens/assets/js/smoothScroll.js?");
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nmodule.exports = function SmoothScroll() {\n  _classCallCheck(this, SmoothScroll);\n\n  $(function () {\n    $('a[href^=#]').click(function () {\n      var speed = 400;\n      var href = $(this).attr(\"href\");\n      var target = $(href == \"#\" || href == \"\" ? 'html' : href);\n      var position = target.offset().top;\n      if ($(window).width() < 768) position -= $('.js-header').outerHeight();\n\n      $('body, html').animate({ scrollTop: position }, speed, 'swing');\n      return false;\n    });\n  });\n};\n\n//# sourceURL=webpack:///./ludens/assets/js/smoothScroll.js?");
 
 /***/ }),
 

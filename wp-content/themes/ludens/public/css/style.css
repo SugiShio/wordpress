@@ -751,92 +751,93 @@ table {
       .plan__note {
         font-size: 20px; } }
 
-.contact__title {
-  margin: 20px 0 15px;
-  color: #ae8a67;
-  border-bottom: 1px solid #ae8a67;
-  font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
-  font-size: 20px;
-  font-weight: bold; }
-
-.contact__form {
-  width: 600px;
-  margin: 30px auto; }
-
-.contact__formitem {
-  display: flex;
-  padding: 5px 0; }
-  .contact__formitem > input,
-  .contact__formitem > span {
-    padding: 10px; }
-
-.contact__label {
-  flex-shrink: 0;
-  width: 150px;
-  padding: 10px 0; }
-
-.contact__input-wrapper {
-  display: flex;
-  align-items: flex-start;
-  align-self: center;
-  width: 100%; }
-  .contact__input-wrapper > .contact__input {
-    align-self: flex-start; }
-  .contact__input-wrapper > * + * {
-    margin-left: 10px; }
-
-.contact__input {
-  -ms-grid-row-align: center;
-      align-self: center;
-  flex-grow: 1; }
-  .contact__input input,
-  .contact__input select,
-  .contact__input textarea {
-    width: 100%;
+.contact {
+  padding: 20px; }
+  .contact__title {
+    margin: 20px 0 15px;
+    color: #ae8a67;
+    border-bottom: 1px solid #ae8a67;
+    font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
+    font-size: 20px;
+    font-weight: bold; }
+  .contact__form {
+    margin: 20px; }
+    @media screen and (min-width: 768px) {
+      .contact__form {
+        width: 600px;
+        margin: 30px auto; } }
+  .contact__formitem {
+    margin-top: 10px;
+    padding: 5px 0; }
+    @media screen and (min-width: 768px) {
+      .contact__formitem {
+        display: flex;
+        margin: 0; } }
+    .contact__formitem > input,
+    .contact__formitem > span {
+      padding: 10px; }
+  .contact__label {
+    flex-shrink: 0;
+    width: 150px;
+    padding: 10px 0; }
+  .contact__input-wrapper {
+    display: flex;
+    align-items: flex-start;
+    align-self: center;
+    width: 100%; }
+    .contact__input-wrapper > .contact__input {
+      align-self: flex-start; }
+    .contact__input-wrapper > * + * {
+      margin-left: 10px; }
+  .contact__input {
+    -ms-grid-row-align: center;
+        align-self: center;
+    flex-grow: 1;
+    min-width: 100px; }
+    .contact__input input,
+    .contact__input select,
+    .contact__input textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #fff; }
+    .contact__input select {
+      height: 40px; }
+  .contact__time {
+    width: 50% !important; }
+  .contact__buttons {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center; }
+  .contact__submit, .contact__back {
+    width: 280px;
+    max-width: 100%;
     padding: 10px;
-    border: 1px solid #e8e8e8;
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid #ae8a67;
     border-radius: 3px;
+    box-shadow: none;
+    font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
+    font-size: 16px;
+    font-weight: bold;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+  .contact__submit {
+    color: #fff;
+    background-color: #ae8a67; }
+    .contact__submit:hover {
+      opacity: .8; }
+  .contact__back {
+    margin-right: 20px;
+    color: #ae8a67;
     background-color: #fff; }
-  .contact__input select {
-    height: 40px; }
-
-.contact__time {
-  width: 50% !important; }
-
-.contact__buttons {
-  margin: 20px 0;
-  text-align: center; }
-
-.contact__submit, .contact__back {
-  display: inline-block;
-  min-width: 280px;
-  padding: 10px;
-  cursor: pointer;
-  transition: .3s;
-  border: 1px solid #ae8a67;
-  border-radius: 3px;
-  box-shadow: none;
-  font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
-  font-size: 16px;
-  font-weight: bold;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
-
-.contact__submit {
-  color: #fff;
-  background-color: #ae8a67; }
-  .contact__submit:hover {
-    opacity: .8; }
-
-.contact__back {
-  margin-right: 20px;
-  color: #ae8a67; }
-  .contact__back:hover {
-    background-color: #e3d7cb; }
-
-.contact__complete {
-  padding: 0 30px; }
+    .contact__back:hover {
+      background-color: #e3d7cb; }
+  .contact__complete {
+    padding: 0 30px; }
 
 .coming-soon {
   display: flex;

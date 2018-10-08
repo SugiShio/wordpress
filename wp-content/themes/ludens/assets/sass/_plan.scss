@@ -40,7 +40,7 @@
   &__detail {
     margin: 30px 0;
     color: $color-pink;
-    font-size: $font-xlg;
+    font-size: $font-pc-xlg;
     font-weight: bold;
 
     &::before {
@@ -65,7 +65,7 @@
   &__condition-term,
   &__condition-desc {
     color: $color-pink;
-    font-size: $font-lg;
+    font-size: $font-pc-lg;
     font-weight: bold;
   }
 
@@ -99,7 +99,7 @@
   &__note {
     text-align: center;
     color: $color-text-blue;
-    font-size: $font-lg;
+    font-size: $font-pc-lg;
     font-weight: bold;
   }
 }

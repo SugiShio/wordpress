@@ -78,7 +78,7 @@
   }
 
   &__text-main {
-    font-size: $font-lg;
+    font-size: $font-pc-lg;
   }
 
   &__text-sub {
@@ -126,6 +126,6 @@
   &::before {
     margin-right: 5px;
     content: '×';
-    font-size: $font-lg;
+    font-size: $font-pc-lg;
   }
 }

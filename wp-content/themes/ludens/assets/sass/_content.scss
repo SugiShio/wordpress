@@ -18,35 +18,43 @@
 
 
 .content-head {
-  width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
   background-color: rgba(#fff, .8);
+  @include screen-lg {
+    width: 1000px;
+  }
 
   &__main {
     display: flex;
     align-items: center;
     padding: 20px 0 10px;
-    border-bottom: 2px solid #a9a9a9;
   }
 
   &__title {
     color: $color-text;
     font-family: $font-serif;
-    font-size: $font-xlg;
+    font-size: $font-sp-xlg;
     font-weight: bold;
+    @include screen-lg {
+      font-size: $font-pc-xlg;
+    }
   }
 
   &__sub {
     margin-left: 10px;
     color: $color-text;
     font-family: $font-serif;
-    font-size: $font-lg;
+    font-size: $font-sp-lg;
     font-weight: bold;
+    @include screen-lg {
+      font-size: $font-pc-lg;
+    }
   }
 
   &__description {
     padding: 5px 0;
+    border-top: 2px solid #a9a9a9;
     color: $color-text;
     font-family: $font-serif;
   }
@@ -69,7 +77,7 @@
     color: #fff;
     background-color: $color-text-blue;
     font-family: $font-serif;
-    font-size: $font-lg;
+    font-size: $font-pc-lg;
     font-weight: bold;
 
     &:hover {
@@ -84,16 +92,18 @@
 }
 
 .content-main {
-  width: 1000px;
   margin: 30px auto;
   padding: 30px 0;
   border: 2px solid #a9a9a9;
   background-color: #fff;
+  @include screen-lg {
+    width: 1000px;
+  }
 
   &__head {
     width: $width-content;
     margin: auto;
-    font-size: $font-xlg;
+    font-size: $font-pc-xlg;
     font-weight: bold;
 
     &--concept {
@@ -124,7 +134,7 @@
     margin: auto;
     color: $color-gold;
     font-family: $font-sansserif-kaku;
-    font-size: $font-lg;
+    font-size: $font-pc-lg;
     font-weight: bold;
   }
 

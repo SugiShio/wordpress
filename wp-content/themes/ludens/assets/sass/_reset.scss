@@ -37,7 +37,7 @@ footer, header, main,
 menu, nav, section, summary,
 blockquote {
   font-family: $font-sansserif;
-  font-size: $font-md;
+  font-size: $font-sp-md;
   font-weight: normal;
   font-style:normal;
   line-height: 1.6;
@@ -53,6 +53,10 @@ blockquote {
 
   font-feature-settings: "palt";
   -webkit-tap-highlight-color: transparent;
+
+  @include screen-lg {
+    font-size: $font-pc-md;
+  }
 }
 
 a, span, em, time, small {

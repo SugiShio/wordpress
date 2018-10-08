@@ -139,7 +139,7 @@
     font-weight: bold;
     @include screen-lg {
       background-image: none;
-      font-size: $font-xlg;
+      font-size: $font-pc-xlg;
       line-height: 65px;
     }
   }
@@ -170,7 +170,7 @@
 
     &::before {
       content: '▶︎';
-      font-size: $font-sm;
+      font-size: $font-pc-sm;
     }
 
     &:hover {

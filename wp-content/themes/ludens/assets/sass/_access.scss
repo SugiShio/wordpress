@@ -5,10 +5,34 @@
 }
 
 .map {
-  width: 800px;
+  width: 80%;
   margin: 0 auto;
 
-  &__info {
-    margin-top: 30px;
+  &__iframe {
+    display: block;
+    margin: auto auto 30px;
+    @include screen-sm {
+      display: block;
+      width: 60vw;
+      height: 45vw;
+    }
+  }
+
+  &__title {
+    margin: 5px 0;
+    font-size: $font-sp-lg;
+    font-weight: bold;
+    @include screen-lg {
+      font-size: $font-pc-lg;
+    }
+  }
+
+  &__info-title {
+    margin-top: 5px;
+    font-weight: bold;
+    &::before {
+      margin-right: 5px;
+      content: '◆';
+    }
   }
 }

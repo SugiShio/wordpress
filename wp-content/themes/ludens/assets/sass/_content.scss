@@ -102,7 +102,7 @@
 .content-head-box-sp {
   display: flex;
   flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 20px 0;
   @include screen-lg {
     display: none;
@@ -174,7 +174,11 @@
   }
 
   &__image-box {
-    margin: 20px;
+    margin: 20px auto;
+    padding: 0 20px;
+    @include screen-sm {
+      max-width: 490px;
+    }
     @include screen-lg {
       display: flex;
       justify-content: space-between;

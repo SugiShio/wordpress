@@ -35,7 +35,10 @@
   }
 
   &__links {
-    margin-top: 60px;
+    margin: 60px auto;
+    @include screen-sm {
+      max-width: 400px;
+    }
     @include screen-lg {
       display: flex;
       flex-wrap: wrap;
@@ -87,6 +90,7 @@
     padding: 10px;
     border: 2px solid #28abe1;
     background-position: center center;
+    background-size: cover;
     @include screen-lg {
       justify-content: flex-end;
       height: 220px;

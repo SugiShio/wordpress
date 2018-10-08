@@ -386,16 +386,13 @@ table {
         font-size: 20px; } }
   .content-head__description {
     padding: 5px 0;
-    border-top: 2px solid #a9a9a9;
     color: #7b7b7b;
+    border-top: 2px solid #a9a9a9;
     font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif; }
-  .content-head__box {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end; }
   .content-head__link-item {
-    width: 180px;
-    margin-left: 10px; }
+    width: 180px; }
+    .content-head__link-item:not(:first-child) {
+      margin-left: 10px; }
   .content-head__link {
     display: block;
     padding: 0 10px;
@@ -403,13 +400,32 @@ table {
     color: #fff;
     background-color: #697584;
     font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
-    font-size: 20px;
     font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .content-head__link {
+        font-size: 20px; }
+        .content-head__link::before {
+          margin-right: 5px;
+          content: '\25B6\FE0E'; } }
     .content-head__link:hover {
       opacity: .8; }
-    .content-head__link::before {
-      margin-right: 5px;
-      content: '\25B6\FE0E'; }
+
+.content-head-box-pc {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .content-head-box-pc {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end; } }
+
+.content-head-box-sp {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin: 20px 0; }
+  @media screen and (min-width: 768px) {
+    .content-head-box-sp {
+      display: none; } }
 
 .content-main {
   margin: 30px auto;
@@ -625,88 +641,115 @@ table {
   .pickupItem__text {
     font-size: 12px; }
 
-.plan__item {
-  width: 1000px;
-  margin: 30px auto;
-  padding: 30px 50px;
-  background-color: rgba(255, 255, 255, 0.8); }
-
-.plan__box {
-  display: flex; }
-
-.plan__text {
-  flex-grow: 1;
-  margin-right: 20px; }
-
-.plan__title {
-  position: relative;
-  display: inline-block;
-  margin-left: 60px;
-  color: #697584;
-  border-bottom: 4px solid #697584;
-  font-size: 30px;
-  font-weight: bold; }
-  .plan__title::before {
-    position: absolute;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    height: 60px;
-    margin: auto 10px auto 0;
-    content: '\25C6';
-    font-size: 1.4em; }
-
-.plan__detail {
-  margin: 30px 0;
-  color: #f74678;
-  font-size: 36px;
-  font-weight: bold; }
-  .plan__detail::before {
-    margin-right: 10px;
-    content: '\25B6\FE0E'; }
-
-.plan__description {
-  margin: 20px 0;
-  font-size: 18px;
-  font-weight: bold; }
-
-.plan__condition {
-  display: flex;
-  padding: 5px 10px;
-  border: 4px solid #f74678;
-  background-color: #e8e8e8; }
-
-.plan__condition-term, .plan__condition-desc {
-  color: #f74678;
-  font-size: 20px;
-  font-weight: bold; }
-
-.plan__condition-term {
-  padding: 0 20px; }
-
-.plan__cta {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  padding: 20px;
-  background-color: #e8e8e8; }
-
-.plan__cta-text {
-  flex-grow: 1;
-  color: #697584;
-  font-size: 24px;
-  font-weight: bold; }
-
-.plan__cta-link {
-  transition: .3s; }
-  .plan__cta-link:hover {
-    opacity: .8; }
-
-.plan__note {
-  text-align: center;
-  color: #697584;
-  font-size: 20px;
-  font-weight: bold; }
+.plan {
+  padding: 30px; }
+  .plan__item {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); }
+    @media screen and (min-width: 768px) {
+      .plan__item {
+        width: 1000px;
+        padding: 30px 50px; } }
+  @media screen and (min-width: 768px) {
+    .plan__box {
+      display: flex; } }
+  @media screen and (min-width: 768px) {
+    .plan__text {
+      flex-grow: 1;
+      margin-right: 20px; } }
+  .plan__title {
+    position: relative;
+    display: inline-block;
+    color: #697584;
+    border-bottom: 3px solid #697584;
+    font-size: 24px;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .plan__title {
+        margin-left: 60px;
+        border-bottom-width: 2px;
+        font-size: 30px; }
+        .plan__title::before {
+          position: absolute;
+          top: 0;
+          right: 100%;
+          bottom: 0;
+          height: 60px;
+          margin: auto 10px auto 0;
+          content: '\25C6';
+          font-size: 1.4em; } }
+  .plan__detail {
+    margin: 10px 0;
+    color: #f74678;
+    font-size: 28px;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .plan__detail {
+        margin: 30px 0;
+        font-size: 36px; } }
+    .plan__detail::before {
+      margin-right: 10px;
+      content: '\25B6\FE0E'; }
+  .plan__description {
+    margin: 10px 0;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .plan__description {
+        margin: 20px 0;
+        font-size: 18px; } }
+  .plan__condition {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 4px solid #f74678;
+    background-color: #e8e8e8; }
+    @media screen and (min-width: 768px) {
+      .plan__condition {
+        display: flex; } }
+  .plan__condition-term, .plan__condition-desc {
+    color: #f74678;
+    font-size: 18px;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .plan__condition-term, .plan__condition-desc {
+        font-size: 20px; } }
+  @media screen and (min-width: 768px) {
+    .plan__condition-term {
+      padding: 0 20px; } }
+  .plan__cta {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e8e8e8;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .plan__cta {
+        padding: 20px;
+        display: flex;
+        align-items: center; } }
+  .plan__cta-text {
+    flex-grow: 1;
+    color: #697584;
+    font-size: 18px;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .plan__cta-text {
+        font-size: 24px; } }
+  .plan__cta-link {
+    display: block;
+    transition: .3s; }
+    @media screen and (max-width: 767px) {
+      .plan__cta-link {
+        margin-top: 10px; } }
+    .plan__cta-link:hover {
+      opacity: .8; }
+  .plan__note {
+    text-align: center;
+    color: #697584;
+    font-size: 18px;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .plan__note {
+        font-size: 20px; } }
 
 .contact__title {
   margin: 20px 0 15px;
@@ -848,3 +891,6 @@ table {
 .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #365c7e; }
+
+.facility {
+  padding: 20px; }

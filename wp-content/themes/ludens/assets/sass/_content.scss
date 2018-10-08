@@ -54,20 +54,16 @@
 
   &__description {
     padding: 5px 0;
-    border-top: 2px solid #a9a9a9;
     color: $color-text;
+    border-top: 2px solid #a9a9a9;
     font-family: $font-serif;
-  }
-
-  &__box {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
   }
 
   &__link-item {
     width: 180px;
-    margin-left: 10px;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
   }
 
   &__link {
@@ -77,17 +73,37 @@
     color: #fff;
     background-color: $color-text-blue;
     font-family: $font-serif;
-    font-size: $font-pc-lg;
     font-weight: bold;
+    @include screen-lg {
+      font-size: $font-pc-lg;
+      &::before {
+        margin-right: 5px;
+        content: '▶︎';
+      }
+    }
 
     &:hover {
       opacity: .8;
     }
+  }
+}
 
-    &::before {
-      margin-right: 5px;
-      content: '▶︎';
-    }
+.content-head-box-pc {
+  display: none;
+  @include screen-lg {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+}
+
+.content-head-box-sp {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin: 20px 0;
+  @include screen-lg {
+    display: none;
   }
 }
 

@@ -1,17 +1,20 @@
 <?php get_header(); ?>
 
-<section class="plan">
+<section class="plan content-wrapper">
   <div class="content-head">
     <div class="content-head__main">
       <h2 class="content-head__title">
         PLAN
       </h2>
       <span class="content-head__sub">プラン</span>
-      <div class="content-head__box">
+      <div class="content-head-box-pc">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan/banner.jpg" alt="ベストプライス保証">
       </div>
     </div>
     <p class="content-head__description">最高のウエディングを演出するプランをご用意しております</p>
+  </div>
+  <div class="content-head-box-sp">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan/banner.jpg" alt="ベストプライス保証">
   </div>
 
   <article class="plan__item">

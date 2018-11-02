@@ -1,4 +1,11 @@
 <?php
+$ua = $_SERVER['HTTP_USER_AGENT'];
+function is_mobile() {
+    if(preg_match('/(iPhone)|(iPad)|(iPod)|(Android)/', $ua)) return true;
+    return false;
+}
+
+header('Location: http://detectmobilebrowser.com/mobile');
     function ludens_setup() {
         add_theme_support('title-tag');
     }

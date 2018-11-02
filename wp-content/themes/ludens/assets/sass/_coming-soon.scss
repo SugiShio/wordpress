@@ -1,13 +1,9 @@
 .coming-soon {
-  display: flex;
-  justify-content: center;
-  width: $width-content;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #eaeaea;
-
-  img {
-    width: 920px;
-    height: 240px;
+  min-height: 70vh;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 48px;
+  @include screen-lg {
+    width: $width-content;
   }
 }

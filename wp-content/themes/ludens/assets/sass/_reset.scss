@@ -10,10 +10,9 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  min-width: $width-wrapper;
   vertical-align: baseline;
   text-decoration: none;
-  letter-spacing: .07em;
+  letter-spacing: .04em;
   color: $color-text;
   border: 0;
   outline: none;
@@ -23,6 +22,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
+  @include screen-lg {
+    min-width: $width-wrapper;
+  }
 }
 
 body, div,
@@ -35,7 +37,7 @@ footer, header, main,
 menu, nav, section, summary,
 blockquote {
   font-family: $font-sansserif;
-  font-size: $font-md;
+  font-size: $font-sp-md;
   font-weight: normal;
   font-style:normal;
   line-height: 1.6;
@@ -44,13 +46,17 @@ blockquote {
   padding: 0;
   vertical-align: baseline;
   text-decoration: none;
-  letter-spacing: .07em;
+  letter-spacing: .04em;
   color: inherit;
   border: 0;
   outline: none;
 
   font-feature-settings: "palt";
   -webkit-tap-highlight-color: transparent;
+
+  @include screen-lg {
+    font-size: $font-pc-md;
+  }
 }
 
 a, span, em, time, small {

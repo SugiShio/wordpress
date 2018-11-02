@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
-<section class="facility">
+<section class="facility content-wrapper">
   <div class="content-head">
     <div class="content-head__main">
       <h2 class="content-head__title">
         FACILITY
       </h2>
       <span class="content-head__sub">施設</span>
-      <ul class="content-head__box">
+      <ul class="content-head-box-pc">
         <li class="content-head__link-item">
           <a href="#chapel" class="content-head__link">チャペル</a>
         </li>
@@ -21,6 +21,18 @@
     </div>
     <p class="content-head__description">お二人のための最高の場を演出いたします</p>
   </div>
+
+  <ul class="content-head-box-sp">
+    <li class="content-head__link-item">
+      <a href="#chapel" class="content-head__link">チャペル</a>
+    </li>
+    <li class="content-head__link-item">
+      <a href="#banquet" class="content-head__link">バンケット</a>
+    </li>
+    <li class="content-head__link-item">
+      <a href="#entrance" class="content-head__link">ガーデン</a>
+    </li>
+  </ul>
 
   <article class="content-main" id="chapel">
     <h2 class="content-main__head content-main__head--facility">

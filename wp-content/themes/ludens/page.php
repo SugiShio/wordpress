@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="contact">
+<section class="content-wrapper">
 <?php if(have_posts()): while(have_posts()): the_post();?>
   <div class="content-head">
     <div class="content-head__main">

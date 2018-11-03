@@ -658,14 +658,17 @@ table {
 
 .pickupItem {
   display: flex; }
+  .pickupItem + .pickupItem {
+    margin-top: 10px; }
   .pickupItem__image {
     width: 60px;
-    height: 60px; }
+    height: 60px;
+    flex-shrink: 0; }
   .pickupItem__body {
     margin-left: 15px; }
   .pickupItem__title {
     font-weight: bold; }
-  .pickupItem__text {
+  .pickupItem__text p {
     font-size: 12px; }
 
 .plan__item {

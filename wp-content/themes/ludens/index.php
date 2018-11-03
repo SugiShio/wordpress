@@ -11,15 +11,30 @@
     <section class="pickup">
       <h2 class="pickup__title">PICK UP</h2>
       <ul class="pickup__list">
-        <li class="pickupItem">
-          <div class="pickupItem__image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.jpg" alt="">
-          </div>
-          <div class="pickupItem__body">
-            <h2 class="pickupItem__title">9月グランドオープン</h2>
-            <p class="pickupItem__text">グランドオープンいたしました。最新情報をアップしてまいります。</p>
-          </div>
-        </li>
+        <?php
+          $posts = get_posts(array(
+            'category_name' => 'pickup',
+            'order_by' => 'post_date',
+            'posts_per_page' => 3
+          ));
+         ?>
+        <?php foreach( $posts as $post ) : ?>
+          <?php setup_postdata( $post ); ?>
+          <li class="pickupItem">
+            <div class="pickupItem__image">
+              <?php if ( has_post_thumbnail() ) : ?>
+                <?php the_post_thumbnail('full'); ?>
+              <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.jpg" alt="">
+              <?php endif; ?>
+            </div>
+            <div class="pickupItem__body">
+              <h2 class="pickupItem__title"><?php the_title(); ?></h2>
+              <div class="pickupItem__text"><?php the_content(); ?></div>
+            </div>
+          </li>
+          <?php wp_reset_postdata(); ?>
+        <?php endforeach; ?>
       </ul>
       <a href="https://zexy.net/wedding/c_7770020837/" class="pickup__link" target="_blank">
         全てのフェアを見る

@@ -93,18 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./sass/app.scss */ \"./ludens/assets/sass/app.scss\");\n__webpack_require__(/*! ./js/app.js */ \"./ludens/assets/js/app.js\");\n\n//# sourceURL=webpack:///./ludens/assets/app.js?");
-
-/***/ }),
-
-/***/ "./ludens/assets/js/app.js":
-/*!*********************************!*\
-  !*** ./ludens/assets/js/app.js ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar Hamburger = __webpack_require__(/*! ./hamburger */ \"./ludens/assets/js/hamburger.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new Hamburger();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/app.js?");
+eval("__webpack_require__(/*! ./sass/style.scss */ \"./ludens/assets/sass/style.scss\");\n__webpack_require__(/*! ./js/script.js */ \"./ludens/assets/js/script.js\");\n\n//# sourceURL=webpack:///./ludens/assets/app.js?");
 
 /***/ }),
 
@@ -116,6 +105,17 @@ eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/as
 /***/ (function(module, exports) {
 
 eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nmodule.exports = function Hamburger() {\n  var _this = this;\n\n  _classCallCheck(this, Hamburger);\n\n  this.$triggerOpen = $('.js-hamburger_trigger-open');\n  this.$triggerClose = $('.js-hamburger_trigger-close');\n  this.$content = $('.js-hamburger_content');\n  this.isOpen = false;\n\n  this.$triggerOpen.on('click', function () {\n    _this.isOpen = true;\n    _this.$content.slideDown();\n  });\n  this.$triggerClose.on('click', function () {\n    _this.isOpen = false;\n    _this.$content.slideUp();\n  });\n};\n\n//# sourceURL=webpack:///./ludens/assets/js/hamburger.js?");
+
+/***/ }),
+
+/***/ "./ludens/assets/js/script.js":
+/*!************************************!*\
+  !*** ./ludens/assets/js/script.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar Hamburger = __webpack_require__(/*! ./hamburger */ \"./ludens/assets/js/hamburger.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new Hamburger();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/script.js?");
 
 /***/ }),
 
@@ -141,14 +141,14 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
 
 /***/ }),
 
-/***/ "./ludens/assets/sass/app.scss":
-/*!*************************************!*\
-  !*** ./ludens/assets/sass/app.scss ***!
-  \*************************************/
+/***/ "./ludens/assets/sass/style.scss":
+/*!***************************************!*\
+  !*** ./ludens/assets/sass/style.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./ludens/assets/sass/app.scss?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./ludens/assets/sass/style.scss?");
 
 /***/ })
 

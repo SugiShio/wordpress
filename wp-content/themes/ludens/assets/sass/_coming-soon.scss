@@ -1,0 +1,9 @@
+.coming-soon {
+  min-height: 70vh;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 48px;
+  @include screen-lg {
+    width: $width-content;
+  }
+}

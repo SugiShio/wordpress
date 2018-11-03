@@ -58,7 +58,7 @@ module.exports = {
       }),
     },
     {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(png|jpg|gif|svg|ttc|ttf)$/,
       use: [
       {
         loader: 'url-loader',
@@ -66,7 +66,7 @@ module.exports = {
           name: '[path][name].[ext]',
           outputPath: '',
           publicPath: '../',
-          limit: 1048576,
+          // limit: 1048576,
         }
       }
       ]

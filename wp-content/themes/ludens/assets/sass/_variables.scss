@@ -1,0 +1,42 @@
+@charset 'utf-8';
+
+/* colors
+----------------- */
+$color-text: #7b7b7b;
+$color-text-blue: #697584;
+$color-gold: #ae8a67;
+$color-pink: #f74678;
+$color-gray: #e8e8e8;
+
+/* font families
+----------------- */
+$font-serif: 'YuMincho', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+$font-sansserif: 'ヒラギノ丸ゴ ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$font-sansserif-kaku: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+
+/* font sizes
+----------------- */
+$font-sp-sm: 10px;
+$font-sp-md: 14px;
+$font-sp-lg: 18px;
+$font-sp-xlg: 30px;
+
+$font-pc-sm: 10px;
+$font-pc-md: 16px;
+$font-pc-lg: 20px;
+$font-pc-xlg: 36px;
+
+/* sizes
+----------------- */
+$width-wrapper: 1100px;
+$width-content: 940px;
+
+$height-header-sp: 60px;
+
+/* break points
+----------------- */
+$breakpoint: 768px;
+
+/* z-index
+----------------- */
+$z-index-header: 100;

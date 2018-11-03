@@ -1,0 +1,143 @@
+.plan {
+  &__item {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(#fff, .8);
+    @include screen-lg {
+      width: 1000px;
+      padding: 30px 50px;
+    }
+  }
+
+  &__box {
+    @include screen-lg {
+      display: flex;
+    }
+  }
+
+  &__text {
+    @include screen-lg {
+      flex-grow: 1;
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    color: $color-text-blue;
+    border-bottom: 3px solid $color-text-blue;
+    font-size: 24px;
+    font-weight: bold;
+    @include screen-lg {
+      margin-left: 60px;
+      border-bottom-width: 2px;
+      font-size: 30px;
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        height: 60px;
+        margin: auto 10px auto 0;
+        content: '◆';
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  &__detail {
+    margin: 10px 0;
+    color: $color-pink;
+    font-size: 28px;
+    font-weight: bold;
+    @include screen-lg {
+      margin: 30px 0;
+      font-size: $font-pc-xlg;
+    }
+
+    &::before {
+      margin-right: 10px;
+      content: '▶︎';
+    }
+  }
+
+  &__description {
+    margin: 10px 0;
+    font-weight: bold;
+    @include screen-lg {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+  }
+
+  &__condition {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 4px solid $color-pink;
+    background-color: $color-gray;
+    @include screen-lg {
+      display: flex;
+    }
+  }
+
+  &__condition-term,
+  &__condition-desc {
+    color: $color-pink;
+    font-size: $font-sp-lg;
+    font-weight: bold;
+    @include screen-lg {
+      font-size: $font-pc-lg;
+    }
+  }
+
+  &__condition-term {
+    @include screen-lg {
+      padding: 0 20px;
+    }
+  }
+
+  &__cta {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: $color-gray;
+    text-align: center;
+    @include screen-lg {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__cta-text {
+    flex-grow: 1;
+    color: $color-text-blue;
+    font-size: $font-sp-lg;
+    font-weight: bold;
+    @include screen-lg {
+      font-size: 24px;
+    }
+  }
+
+  &__cta-link {
+    display: block;
+    transition: .3s;
+    @include screen-sm {
+      margin-top: 10px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__note {
+    text-align: center;
+    color: $color-text-blue;
+    font-size: $font-sp-lg;
+    font-weight: bold;
+    @include screen-lg {
+      font-size: $font-pc-lg;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.contact-box {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  @include screen-lg {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    margin: auto;
+    content: '';
+    border: 2px solid #999;
+  }
+
+  &__tell-number {
+    margin: 0 10px;
+  }
+
+  &__links {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    @include screen-lg {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    margin: 5px;
+    padding: 5px 10px;
+    transition: .3s;
+    text-align: center;
+    color: #fff;
+    background-color: #92e0f5;
+    font-family: $font-serif;
+    font-size: 14px;
+    font-weight: bold;
+    @include screen-lg {
+      padding: 10px;
+}
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.contact-box-pc {
+  @extend %show-on-pc;
+}
+
+.contact-box-sp {
+  @extend %show-on-sp;
+}

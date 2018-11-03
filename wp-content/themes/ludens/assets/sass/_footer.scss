@@ -1,0 +1,24 @@
+.footer {
+  padding: 10px;
+  background-image: url('../images/bg-blue.jpg');
+
+  &__copyright {
+    margin: 0 auto;
+    text-align: center;
+    @include screen-lg {
+      width: $width-wrapper;
+      text-align: right;
+    }
+
+    small {
+      color: #fff;
+      font-family: $font-serif;
+      font-size: $font-pc-sm;
+      font-weight: bold;
+      line-height: 14px;
+      @include screen-lg {
+        font-size: 12px;
+      }
+    }
+  }
+}

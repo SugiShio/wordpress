@@ -1,0 +1,32 @@
+.header {
+  z-index: $z-index-header;
+  background-image: url('../images/bg-lightblue.jpg');
+  @include screen-sm {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $height-header-sp;
+    margin: 0 auto;
+    padding: 5px 10px;
+    @include screen-lg {
+      width: $width-wrapper;
+      height: 75px;
+    }
+  }
+
+  &__logo {
+    max-width: 80%;
+    margin: 0 10px;
+    @include screen-lg {
+      width: 480px;
+      max-width: 100%;
+    }
+  }
+}

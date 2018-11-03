@@ -1,0 +1,131 @@
+.menu {
+  @extend %show-on-pc;
+  z-index: $z-index-header + 1;
+  background-image: url('../images/bg-blue.jpg');
+  @include screen-sm {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding: 0 10px;
+    @include screen-lg {
+      width: $width-wrapper;
+    }
+  }
+}
+
+.menu-list {
+  @include screen-lg {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0%;
+    border-bottom: 1px solid #999;
+    @include screen-lg {
+      border: none;
+
+      &:first-child::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        height: 30px;
+        margin: auto;
+        content: '';
+        background-color: #999;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      &:first-child::before {
+        left: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 5px;
+    transition: .3s;
+    text-align: center;
+    @include screen-lg {
+      padding: 15px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__text-main,
+  &__text-sub {
+    font-family: $font-serif;
+    font-weight: bold;
+    @include screen-lg {
+      display: block;
+      line-height: 1.1;
+    }
+  }
+
+  &__text-main {
+    font-size: $font-pc-lg;
+  }
+
+  &__text-sub {
+    margin-left: 5px;
+    font-size: 12px;
+    @include screen-lg {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    width: auto;
+    height: 36px;
+  }
+}
+
+.menu-button-open {
+  @extend %show-on-sp;
+  cursor: pointer;
+  text-align: center;
+  font-family: $font-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+
+  &::after {
+    content: 'MENU';
+  }
+
+  span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 6px auto;
+    background-color: $color-text;
+  }
+}
+
+.menu-button-close {
+  @extend %show-on-sp;
+  padding: 5px;
+  text-align: center;
+  font-family: $font-serif;
+  font-weight: bold;
+  &::before {
+    margin-right: 5px;
+    content: '×';
+    font-size: $font-pc-lg;
+  }
+}

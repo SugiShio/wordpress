@@ -1,5 +1,5 @@
 {
-  "name": "mimhhs",
+  "name": "mimhhs_wordpress",
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
@@ -24,8 +24,8 @@
     "webpack-notifier": "^1.6.0"
   },
   "scripts": {
-    "dev": "webpack --mode=development",
-    "watch": "webpack --mode=development --watch --progress",
+    "dev": "webpack",
+    "watch": "webpack --watch --progress",
     "build": "webpack --config ./webpack.prod.config.js"
   }
 }

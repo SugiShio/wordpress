@@ -186,9 +186,14 @@
 .pickupItem {
   display: flex;
 
+  & + & {
+    margin-top: 10px;
+  }
+
   &__image {
     width: 60px;
     height: 60px;
+    flex-shrink: 0;
   }
 
   &__body {
@@ -199,7 +204,7 @@
     font-weight: bold;
   }
 
-  &__text {
+  &__text p {
     font-size: 12px;
   }
 }

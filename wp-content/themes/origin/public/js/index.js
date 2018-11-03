@@ -93,29 +93,29 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./sass/app.scss */ \"./origin/assets/sass/app.scss\");\n__webpack_require__(/*! ./js/app.js */ \"./origin/assets/js/app.js\");\n\n//# sourceURL=webpack:///./origin/assets/app.js?");
+eval("__webpack_require__(/*! ./sass/style.scss */ \"./origin/assets/sass/style.scss\");\n__webpack_require__(/*! ./js/script.js */ \"./origin/assets/js/script.js\");\n\n//# sourceURL=webpack:///./origin/assets/app.js?");
 
 /***/ }),
 
-/***/ "./origin/assets/js/app.js":
-/*!*********************************!*\
-  !*** ./origin/assets/js/app.js ***!
-  \*********************************/
+/***/ "./origin/assets/js/script.js":
+/*!************************************!*\
+  !*** ./origin/assets/js/script.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./origin/assets/js/app.js?");
+eval("\n\n//# sourceURL=webpack:///./origin/assets/js/script.js?");
 
 /***/ }),
 
-/***/ "./origin/assets/sass/app.scss":
-/*!*************************************!*\
-  !*** ./origin/assets/sass/app.scss ***!
-  \*************************************/
+/***/ "./origin/assets/sass/style.scss":
+/*!***************************************!*\
+  !*** ./origin/assets/sass/style.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./origin/assets/sass/app.scss?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./origin/assets/sass/style.scss?");
 
 /***/ })
 

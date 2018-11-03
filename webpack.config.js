@@ -2,16 +2,26 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const path = require('path');
+const glob = require('glob');
 
 const config = {
   mode: 'development',
   useSourceMap: true,
 }
 
+// entryを自動生成
+let entries = {};
+const TARGETS = './**/app.js';
+glob.sync(TARGETS).map(function(file) {
+  const FILE_PATH = file.replace(/wp-content\/themes\//, '');
+  const PROJECT_NAME = FILE_PATH.split('/')[1];
+  entries[PROJECT_NAME] = FILE_PATH;
+});
+
 module.exports = {
   mode: config.mode,
   context: path.join(__dirname, 'wp-content/themes'),
-  entry: {'origin': './origin/assets/app.js'},
+  entry: entries,
   output: {
     path: path.join(__dirname, 'wp-content/themes'),
     filename: '[name]/public/js/index.js'

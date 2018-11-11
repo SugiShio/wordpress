@@ -1,4 +1,4 @@
-<header class="w-header">
+<header class="w-header js-header">
   <nav class="w-header__nav">
     <ul class="menu">
       <li class="menu-item">

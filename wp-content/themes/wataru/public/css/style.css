@@ -9,6 +9,8 @@
 ----------------- */
 /* break points
 ----------------- */
+/* z-index
+----------------- */
 html {
   font-family: "Source Sans Pro", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", sans-serif;
   font-size: 62.5%;
@@ -119,6 +121,10 @@ table {
   left: 0;
   height: 50px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0)); }
+  .w-header.is-fixed {
+    position: fixed;
+    z-index: 100;
+    background: linear-gradient(-3deg, #334c66, #1a2633); }
   .w-header__nav {
     display: flex;
     align-items: center;
@@ -134,8 +140,8 @@ table {
     .w-header__snsitem img {
       width: 36px; }
   .w-header .menu {
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1;
     justify-content: space-around;
     align-items: center; }
   .w-header .menu-item a,

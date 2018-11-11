@@ -17,7 +17,7 @@
   </div>
 </div>
 
-<main class="w-main">
+<main class="w-main js-main">
   <div class="w-columnswrapper">
     <div class="w-maincolumn">
       <section class="w-topblock w-topblock--schedule">

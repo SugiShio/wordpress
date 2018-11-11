@@ -97,14 +97,25 @@ eval("__webpack_require__(/*! ./sass/style.scss */ \"./wataru/assets/sass/style.
 
 /***/ }),
 
+/***/ "./wataru/assets/js/header.js":
+/*!************************************!*\
+  !*** ./wataru/assets/js/header.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar HEADER_CLASS = 'js-header';\nvar MAIN_CLASS = 'js-main';\nvar FIXED_CLASS = 'is-fixed';\n\nvar Header = function Header() {\n  var _this = this;\n\n  _classCallCheck(this, Header);\n\n  this.$header = $('.' + HEADER_CLASS);\n  this.headerHeight = this.$header.innerHeight();\n  this.breakpoint = $('.' + MAIN_CLASS).offset().top;\n\n  $(window).on('scroll', function () {\n    if ($(window).scrollTop() > _this.breakpoint) {\n      // todo アニメーション\n      _this.$header.addClass(FIXED_CLASS);\n    } else {\n      _this.$header.removeClass(FIXED_CLASS);\n    }\n  });\n};\n\n$(function () {\n  new Header();\n});\n\n//# sourceURL=webpack:///./wataru/assets/js/header.js?");
+
+/***/ }),
+
 /***/ "./wataru/assets/js/script.js":
 /*!************************************!*\
   !*** ./wataru/assets/js/script.js ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./wataru/assets/js/script.js?");
+eval("__webpack_require__(/*! ./header.js */ \"./wataru/assets/js/header.js\");\n\n//# sourceURL=webpack:///./wataru/assets/js/script.js?");
 
 /***/ }),
 

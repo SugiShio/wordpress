@@ -1,0 +1,116 @@
+.w-mainview {
+  height: 100vh;
+  background-image: url('../images/index/mainview.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: $width-default;
+    height: 100%;
+    margin: auto;
+  }
+
+  &__title {
+    width: 640px;
+    margin-top: 80px;
+
+    filter: drop-shadow(0 0 20px rgba(#000, 1));
+  }
+
+  &__subtitle {
+    width: 640px;
+
+    filter: drop-shadow(0 0 20px rgba(#000, 1));
+  }
+}
+
+.w-topnews {
+  margin-top: 90px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: lighten($color-text-weak, 30%);
+    transition: .3s;
+    filter: drop-shadow(0 0 5px rgba(#000, 1));
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__head {
+    width: 60px;
+    font-family: $fontfamily-alegreya;
+    letter-spacing: .1em;
+    &::after {
+      margin-left: 5px;
+      content: '/';
+    }
+  }
+
+  &__date {
+    width: 60px;
+    font-size: $fontsize-sm;
+  }
+
+  &__title {
+    flex-grow: 1;
+    font-size: 14px;
+  }
+}
+
+.w-topblock {
+  margin-bottom: 70px;
+
+  &--schedule {
+    padding: 0 20px 20px;
+    background-color: $color-back;
+    box-shadow: 0 2px 8px rgba(#000, .1);
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-right: 80px;
+    border-bottom: 3px solid $color-main;
+    color: $color-main;
+    font-family: $fontfamily-alegreya;
+    font-size: 46px;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: .05em;
+
+    &--schedule {
+      margin-top: -30px;
+    }
+  }
+}
+
+.w-schedule {
+  margin: 10px 0;
+
+  &__item {
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    transition: .3s;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &__date {
+    width: 90px;
+    color: $color-text-weak;
+    font-size: $fontsize-sm;
+  }
+}

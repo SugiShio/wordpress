@@ -1,0 +1,18 @@
+.w-main {
+  padding: 70px 20px;
+}
+
+.w-columnswrapper {
+  width: $width-default;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-maincolumn {
+  width: $width-maincolumn;
+}
+
+.w-sidecolumn {
+  width: $width-sidecolumn;
+}

@@ -1,0 +1,27 @@
+.w-footer {
+  padding: 20px 0;
+
+  &__sns {
+    display: flex;
+    justify-content: center;
+    width: $width-default;
+    margin: auto;
+  }
+
+  &__snsitem {
+    margin: 0 5px;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  &__copyright {
+    display: block;
+    width: $width-default;
+    margin: 10px auto 0;
+    color: $color-main;
+    font-size: 10px;
+    text-align: center;
+  }
+}

@@ -2,34 +2,34 @@
 
 /* colors
 ----------------- */
-$color-black: #141415;
-$color-text: #141415;
-$color-text-weak: #93989e;
-$color-text-link: #2f6ab2;
-$color-background: #f7f8fa;
-$color-accent: #c91138;
-$color-theme: #2f6ab2;
-$color-technic: #2f6ab2;
-$color-performance: #98c746;
-$color-cm: #f4bf20;
-$color-photo: #cf5e9e;
+$color-white: #fff;
+$color-black: #333639;
+$color-gray: #697584;
 
-$color-input-border: #93989e;
+$color-text: $color-black;
+$color-text-weak: #8391a0;
+$color-main: #334c66;
+$color-back: #f7fafc;
+$color-border: #e0e5ea;
 
 /* font families
 ----------------- */
-$font-sansserif: 'Source Sans Pro', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$fontfamily-default: 'Source Sans Pro', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$fontfamily-alegreya: 'Alegreya Sans SC', sans-serif;
 
 /* font sizes
 ----------------- */
-$font-sm: 10px;
-$font-md: 14px;
-$font-lg: 18px;
-$font-xlg: 24px;
+$fontsize-sm: 12px;
+$fontsize-md: 16px;
+$fontsize-lg: 20px;
 
-/* break points
+$fontsize-title: 46px;
+
+/* font sizes
 ----------------- */
-$width-sidebar: 220px;
+$width-default: 1000px;
+$width-maincolumn: 640px;
+$width-sidecolumn: 320px;
 
 /* break points
 ----------------- */

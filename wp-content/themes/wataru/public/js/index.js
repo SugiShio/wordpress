@@ -81,41 +81,41 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./origin/assets/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./wataru/assets/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./origin/assets/app.js":
+/***/ "./wataru/assets/app.js":
 /*!******************************!*\
-  !*** ./origin/assets/app.js ***!
+  !*** ./wataru/assets/app.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./sass/style.scss */ \"./origin/assets/sass/style.scss\");\n__webpack_require__(/*! ./js/script.js */ \"./origin/assets/js/script.js\");\n\n//# sourceURL=webpack:///./origin/assets/app.js?");
+eval("__webpack_require__(/*! ./sass/style.scss */ \"./wataru/assets/sass/style.scss\");\n__webpack_require__(/*! ./js/script.js */ \"./wataru/assets/js/script.js\");\n\n//# sourceURL=webpack:///./wataru/assets/app.js?");
 
 /***/ }),
 
-/***/ "./origin/assets/js/script.js":
+/***/ "./wataru/assets/js/script.js":
 /*!************************************!*\
-  !*** ./origin/assets/js/script.js ***!
+  !*** ./wataru/assets/js/script.js ***!
   \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./origin/assets/js/script.js?");
+eval("\n\n//# sourceURL=webpack:///./wataru/assets/js/script.js?");
 
 /***/ }),
 
-/***/ "./origin/assets/sass/style.scss":
+/***/ "./wataru/assets/sass/style.scss":
 /*!***************************************!*\
-  !*** ./origin/assets/sass/style.scss ***!
+  !*** ./wataru/assets/sass/style.scss ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./origin/assets/sass/style.scss?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./wataru/assets/sass/style.scss?");
 
 /***/ })
 

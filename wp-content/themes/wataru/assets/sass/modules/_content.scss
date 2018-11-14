@@ -1,0 +1,14 @@
+.w-content {
+  &__title {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-right: 80px;
+    border-bottom: 3px solid $color-main;
+    color: $color-main;
+    font-family: $fontfamily-alegreya;
+    font-size: 46px;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: .05em;
+  }
+}

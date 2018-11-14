@@ -1,0 +1,22 @@
+.w-schedule {
+  padding: 20px;
+  background-color: #f7fafc;
+  box-shadow: 0 2px 8px rgba(#000, .1);
+
+  &__title {
+    color: $color-main;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  &__date {
+    color: $color-text-weak;
+  }
+}
+
+.w-schedulelist {
+  &__item {
+    margin-bottom: 30px;
+  }
+}

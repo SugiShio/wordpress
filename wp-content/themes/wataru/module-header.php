@@ -2,7 +2,7 @@
   <nav class="w-header__nav">
     <ul class="menu">
       <li class="menu-item">
-        <a href="#">Schedule</a>
+        <a href="<?php echo esc_url(get_category_link(get_category_by_slug('schedule')->cat_ID)); ?>"><?php echo $GLOBALS["wordset"]["title"]["schedule"]; ?></a>
       </li>
       <li class="menu-item">
         <a href="#">Profile</a>

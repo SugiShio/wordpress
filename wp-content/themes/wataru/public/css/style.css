@@ -9,6 +9,8 @@
 ----------------- */
 /* break points
 ----------------- */
+/* z-index
+----------------- */
 html {
   font-family: "Source Sans Pro", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", sans-serif;
   font-size: 62.5%;
@@ -121,7 +123,8 @@ table {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0)); }
   .w-header.is-fixed {
     position: fixed;
-    background: linear-gradient(-3deg, #334c66, #111922); }
+    z-index: 100;
+    background: linear-gradient(-3deg, #334c66, #1a2633); }
   .w-header__nav {
     display: flex;
     align-items: center;
@@ -197,6 +200,18 @@ table {
     display: block;
     color: #fff;
     font-size: 12px; }
+
+.w-content__title {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-right: 80px;
+  border-bottom: 3px solid #334c66;
+  color: #334c66;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 46px;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: .05em; }
 
 .w-button {
   display: block;
@@ -280,18 +295,33 @@ table {
     .w-topblock__title--schedule {
       margin-top: -30px; }
 
-.w-schedule {
+.w-topschedule {
   margin: 10px 0; }
-  .w-schedule__item {
+  .w-topschedule__item {
     border-bottom: 1px solid #e0e5ea; }
-  .w-schedule__link {
+  .w-topschedule__link {
     display: flex;
     align-items: center;
     padding: 15px 10px;
     transition: .3s; }
-    .w-schedule__link:hover {
+    .w-topschedule__link:hover {
       opacity: .5; }
-  .w-schedule__date {
+  .w-topschedule__date {
     width: 90px;
     color: #8391a0;
     font-size: 12px; }
+
+.w-schedule {
+  padding: 20px;
+  background-color: #f7fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+  .w-schedule__title {
+    color: #334c66;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic; }
+  .w-schedule__date {
+    color: #8391a0; }
+
+.w-schedulelist__item {
+  margin-bottom: 30px; }

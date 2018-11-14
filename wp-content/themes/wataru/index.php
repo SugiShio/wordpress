@@ -22,23 +22,23 @@
     <div class="w-maincolumn">
       <section class="w-topblock w-topblock--schedule">
         <h2 class="w-topblock__title w-topblock__title--schedule">Schedule</h2>
-        <ul class="w-schedule">
-          <li class="w-schedule__item">
-            <a href="" class="w-schedule__link">
-              <time class="w-schedule__date">2018.9.1 Sat</time>
-              <p class="w-schedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
+        <ul class="w-topschedule">
+          <li class="w-topschedule__item">
+            <a href="" class="w-topschedule__link">
+              <time class="w-topschedule__date">2018.9.1 Sat</time>
+              <p class="w-topschedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
             </a>
           </li>
-          <li class="w-schedule__item">
-            <a href="" class="w-schedule__link">
-              <time class="w-schedule__date">2018.9.1 Sat</time>
-              <p class="w-schedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
+          <li class="w-topschedule__item">
+            <a href="" class="w-topschedule__link">
+              <time class="w-topschedule__date">2018.9.1 Sat</time>
+              <p class="w-topschedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
             </a>
           </li>
-          <li class="w-schedule__item">
-            <a href="" class="w-schedule__link">
-              <time class="w-schedule__date">2018.9.1 Sat</time>
-              <p class="w-schedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
+          <li class="w-topschedule__item">
+            <a href="" class="w-topschedule__link">
+              <time class="w-topschedule__date">2018.9.1 Sat</time>
+              <p class="w-topschedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
             </a>
           </li>
         </ul>

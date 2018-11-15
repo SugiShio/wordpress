@@ -89,6 +89,14 @@ module.exports = {
       use: [
       {
         loader: 'vue-loader',
+        options: {
+          extractCSS: true,
+          loaders: {
+            js: 'babel-loader',
+            scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
+            sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
+          },
+        },
       }
       ]
     }

@@ -9,10 +9,23 @@
   justify-content: space-between;
 }
 
+.w-singlecolumn {
+  width: $width-default;
+  margin: auto;
+}
+
 .w-maincolumn {
   width: $width-maincolumn;
 }
 
 .w-sidecolumn {
   width: $width-sidecolumn;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-size: 1.3em;
+  &::before {
+    vertical-align: middle;
+  }
 }

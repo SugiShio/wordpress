@@ -23,26 +23,26 @@
       <section class="w-topblock w-topblock--schedule">
         <h2 class="w-topblock__title w-topblock__title--schedule">Schedule</h2>
         <ul class="w-topschedule">
-          <li class="w-topschedule__item">
-            <a href="" class="w-topschedule__link">
-              <time class="w-topschedule__date">2018.9.1 Sat</time>
-              <p class="w-topschedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
-            </a>
-          </li>
-          <li class="w-topschedule__item">
-            <a href="" class="w-topschedule__link">
-              <time class="w-topschedule__date">2018.9.1 Sat</time>
-              <p class="w-topschedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
-            </a>
-          </li>
-          <li class="w-topschedule__item">
-            <a href="" class="w-topschedule__link">
-              <time class="w-topschedule__date">2018.9.1 Sat</time>
-              <p class="w-topschedule__text">T-SQUARE ChilpoJazz 韓国・浦項(Pohang)</p>
-            </a>
-          </li>
+          <?php
+            $posts = get_posts(array(
+              'category_name' => 'schedule',
+              'order_by' => 'post_date',
+              'order' => 'asc',
+              'posts_per_page' => 5
+            ));
+           ?>
+          <?php foreach( $posts as $post ) : ?>
+            <?php setup_postdata( $post ); ?>
+            <li class="w-topschedule__item">
+              <a href="" class="w-topschedule__link">
+                <time class="w-topschedule__date" datetime="<?php echo get_the_date(DATE_W3C); ?>"><?php echo date('Y.n.j D', strtotime($post->post_date)); ?></time>
+                <p class="w-topschedule__text"><?php the_title() ?></p>
+              </a>
+            </li>
+            <?php wp_reset_postdata(); ?>
+          <?php endforeach; ?>
         </ul>
-        <a href="" class="w-button">More</a>
+        <a href="<?php echo esc_url(get_category_link(get_category_by_slug('schedule')->cat_ID)); ?>" class="w-button">More</a>
       </section>
 
       <section class="w-topblock">

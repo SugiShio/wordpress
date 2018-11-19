@@ -3,7 +3,7 @@
   <div class="w-columnswrapper">
     <div class="w-maincolumn">
       <section class="w-content">
-        <h2 class="w-content__title"><?php echo $GLOBALS["wordset"]["title"]["schedule"]; ?></h2>
+        <h2 class="w-content__title"><?php echo single_cat_title(); ?></h2>
         <?php if (have_posts()) : ?>
         <ul class="w-schedulelist">
           <?php while (have_posts()) : the_post(); ?>
@@ -13,7 +13,6 @@
               <h3 class="w-schedule__title"><?php the_title(); ?></h3>
               <div class="w-schedule__body"><?php the_content(); ?></div>
             </article>
-
           </li>
           <?php endwhile; ?>
         </ul>

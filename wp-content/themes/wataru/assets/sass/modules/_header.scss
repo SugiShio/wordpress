@@ -27,8 +27,15 @@
 
   &__snsitem {
     margin: 0 10px;
-    img {
-      width: 36px;
+    font-size: 20px;
+    color: $color-white;
+  }
+
+  &__snslink {
+    transition: .3s;
+
+    &:hover {
+      opacity: .5;
     }
   }
 

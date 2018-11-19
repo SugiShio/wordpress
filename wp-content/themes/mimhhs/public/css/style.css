@@ -319,6 +319,101 @@ body {
     font-size: 14px;
     margin-left: 10px; }
 
+.single .content *, .page .content * {
+  line-height: 2; }
+
+.single .content h2, .page .content h2 {
+  font-family: "Open Sans", "\6E38\30B4\30B7\30C3\30AF\4F53", "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", sans-serif;
+  font-size: 18px;
+  line-height: 2;
+  margin: 50px 0 10px;
+  border-bottom: 1px solid #bbbcde; }
+  .single .content h2 + h3, .page .content h2 + h3 {
+    margin-top: 0; }
+
+.single .content h3, .page .content h3 {
+  font-family: "Open Sans", "\6E38\30B4\30B7\30C3\30AF\4F53", "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 30px 0 10px; }
+
+.single .content p, .page .content p {
+  margin: 10px 0; }
+  .single .content p code, .page .content p code {
+    font-size: 1.4rem;
+    line-height: .9;
+    display: inline-block;
+    padding: 5px;
+    color: #43458a;
+    background-color: #f5f6fa; }
+
+.single .content img, .page .content img {
+  box-shadow: 0 1px 4px rgba(43, 43, 43, 0.1); }
+
+.single .content ul, .page .content ul {
+  margin: 10px 0; }
+  .single .content ul li, .page .content ul li {
+    position: relative;
+    padding-left: 8px; }
+    .single .content ul li::before, .page .content ul li::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      margin: auto;
+      content: '';
+      border-radius: 50%;
+      background-color: #585857; }
+
+.single .content table, .page .content table {
+  margin: 10px 0;
+  border-top: 1px solid #a3a3a2;
+  border-bottom: 1px solid #a3a3a2; }
+  .single .content table th, .page .content table th, .single .content table td, .page .content table td {
+    padding: 5px 30px 5px 0; }
+  .single .content table > thead, .page .content table > thead {
+    border-bottom: 1px solid #a3a3a2; }
+    .single .content table > thead > tr > th, .page .content table > thead > tr > th {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #7678bd; }
+  .single .content table > tbody > tr + tr, .page .content table > tbody > tr + tr {
+    border-top: 1px solid #efefef; }
+
+.single .content code, .page .content code {
+  font-family: 'Inconsolata', monospace, '\6E38\30B4\30B7\30C3\30AF\4F53', 'Yu Gothic', YuGothic, '\30D2\30E9\30AE\30CE\89D2\30B4   Pro', 'Hiragino Kaku Gothic Pro', '\30E1\30A4\30EA\30AA', 'Meiryo', sans-serif; }
+
+.single .content pre, .page .content pre {
+  padding: 10px 15px;
+  background-color: #f9f9fc;
+  overflow: scroll; }
+  .single .content pre code, .page .content pre code {
+    line-height: 1.2;
+    display: block; }
+
+.single .content hr, .page .content hr {
+  height: 1px;
+  margin: 40px 0 20px;
+  background-color: #bbbcde; }
+
+.single .content a, .page .content a {
+  position: relative;
+  cursor: pointer;
+  color: #585857; }
+  .single .content a::before, .page .content a::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    content: '';
+    transition: .25s;
+    background: #585857; }
+  .single .content a:hover::before, .page .content a:hover::before {
+    width: 100%; }
+
 @media screen and (max-width: 600px) {
   .home::before {
     position: fixed;
@@ -437,90 +532,6 @@ body {
 
 .single .content {
   margin-top: 80px; }
-  .single .content * {
-    line-height: 2; }
-  .single .content h2 {
-    font-family: "Open Sans", "\6E38\30B4\30B7\30C3\30AF\4F53", "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", sans-serif;
-    font-size: 18px;
-    line-height: 2;
-    margin: 50px 0 10px;
-    border-bottom: 1px solid #bbbcde; }
-    .single .content h2 + h3 {
-      margin-top: 0; }
-  .single .content h3 {
-    font-family: "Open Sans", "\6E38\30B4\30B7\30C3\30AF\4F53", "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 30px 0 10px; }
-  .single .content p {
-    margin: 10px 0; }
-    .single .content p code {
-      font-size: 1.4rem;
-      line-height: .9;
-      display: inline-block;
-      padding: 5px;
-      color: #43458a;
-      background-color: #f5f6fa; }
-  .single .content img {
-    box-shadow: 0 1px 4px rgba(43, 43, 43, 0.1); }
-  .single .content ul {
-    margin: 10px 0; }
-    .single .content ul li {
-      position: relative;
-      padding-left: 8px; }
-      .single .content ul li::before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 3px;
-        height: 3px;
-        margin: auto;
-        content: '';
-        border-radius: 50%;
-        background-color: #585857; }
-  .single .content table {
-    margin: 10px 0;
-    border-top: 1px solid #a3a3a2;
-    border-bottom: 1px solid #a3a3a2; }
-    .single .content table th, .single .content table td {
-      padding: 5px 30px 5px 0; }
-    .single .content table > thead {
-      border-bottom: 1px solid #a3a3a2; }
-      .single .content table > thead > tr > th {
-        font-size: 1.3rem;
-        font-weight: bold;
-        color: #7678bd; }
-    .single .content table > tbody > tr + tr {
-      border-top: 1px solid #efefef; }
-  .single .content code {
-    font-family: 'Inconsolata', monospace, '\6E38\30B4\30B7\30C3\30AF\4F53', 'Yu Gothic', YuGothic, '\30D2\30E9\30AE\30CE\89D2\30B4   Pro', 'Hiragino Kaku Gothic Pro', '\30E1\30A4\30EA\30AA', 'Meiryo', sans-serif; }
-  .single .content pre {
-    padding: 10px 15px;
-    background-color: #f9f9fc;
-    overflow: scroll; }
-    .single .content pre code {
-      line-height: 1.2;
-      display: block; }
-  .single .content hr {
-    height: 1px;
-    margin: 40px 0 20px;
-    background-color: #bbbcde; }
-  .single .content a {
-    position: relative;
-    cursor: pointer;
-    color: #585857; }
-    .single .content a::before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      content: '';
-      transition: .25s;
-      background: #585857; }
-    .single .content a:hover::before {
-      width: 100%; }
 
 .page .title {
   font-size: 18px;

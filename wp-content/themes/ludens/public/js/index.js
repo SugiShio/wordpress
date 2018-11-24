@@ -97,6 +97,17 @@ eval("__webpack_require__(/*! ./sass/style.scss */ \"./ludens/assets/sass/style.
 
 /***/ }),
 
+/***/ "./ludens/assets/js/guideBar.js":
+/*!**************************************!*\
+  !*** ./ludens/assets/js/guideBar.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar GuideBar = function GuideBar($el) {\n  var _this = this;\n\n  var offsetTop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;\n  var offsetBottom = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 50;\n\n  _classCallCheck(this, GuideBar);\n\n  this.$el = $el;\n  window.onscroll = function () {\n    var offset = window.pageYOffset;\n    var _offsetBottom = $('body').outerHeight() - $(window).height() - offsetBottom;\n    if (offset > offsetTop && offset < _offsetBottom) {\n      _this.$el.addClass('is-show');\n    } else {\n      _this.$el.removeClass('is-show');\n    }\n  };\n};\n\n$(function () {\n  new GuideBar($('#js-guidebar'));\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/guideBar.js?");
+
+/***/ }),
+
 /***/ "./ludens/assets/js/hamburger.js":
 /*!***************************************!*\
   !*** ./ludens/assets/js/hamburger.js ***!
@@ -115,7 +126,7 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar Hamburger = __webpack_require__(/*! ./hamburger */ \"./ludens/assets/js/hamburger.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new Hamburger();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/script.js?");
+eval("__webpack_require__(/*! ./guideBar */ \"./ludens/assets/js/guideBar.js\");\nvar SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar Hamburger = __webpack_require__(/*! ./hamburger */ \"./ludens/assets/js/hamburger.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new Hamburger();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/script.js?");
 
 /***/ }),
 

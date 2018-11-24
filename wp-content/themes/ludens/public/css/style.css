@@ -504,6 +504,106 @@ table {
       .content-main__image:not(:first-child) {
         margin-top: 20px; } }
 
+.guide {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  color: #fff;
+  transition: .3s; }
+  .guide.is-show {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .guide__inner {
+    max-width: 1100px;
+    margin: auto;
+    border-right: 1px solid #888;
+    border-left: 1px solid #888; }
+  .guide__columns {
+    display: flex; }
+  .guide__links {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-right: 1px solid #888; }
+  .guide__linkitem {
+    margin: 5px; }
+    @media screen and (max-width: 767px) {
+      .guide__linkitem {
+        flex-grow: 1; } }
+  .guide__linktext {
+    min-height: 1.6em;
+    margin-bottom: 5px;
+    font-size: 10px;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .guide__linktext {
+        display: none; } }
+  .guide__link {
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #7b7b7b;
+    font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
+    font-weight: bold;
+    text-align: center;
+    transition: .3s; }
+    @media screen and (min-width: 768px) {
+      .guide__link {
+        width: 200px; } }
+    .guide__link--accent {
+      background-color: #ae8a67;
+      color: #fff; }
+    .guide__link:hover {
+      opacity: .8; }
+    @media screen and (min-width: 768px) {
+      .guide__link::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 0;
+        margin: auto;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 8px solid;
+        content: ''; } }
+  .guide__column {
+    width: 30%; }
+    @media screen and (max-width: 767px) {
+      .guide__column {
+        display: none; } }
+  .guide__container {
+    padding: 10px; }
+    .guide__container + .guide__container {
+      border-top: 1px solid #888; }
+  .guide__title {
+    font-size: 14px;
+    font-weight: bold; }
+  .guide__text {
+    font-size: 14px; }
+  .guide__small-links {
+    font-size: 10px;
+    text-align: right; }
+    .guide__small-links a::before {
+      margin-right: 5px;
+      content: '\25B6'; }
+  .guide__contact {
+    padding: 5px;
+    border-top: 1px solid #888;
+    font-size: 14px;
+    text-align: center; }
+    .guide__contact a {
+      font-size: 16px;
+      font-weight: bold; }
+
 .top-content {
   max-width: 1100px;
   margin: 0 auto;

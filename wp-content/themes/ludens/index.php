@@ -40,13 +40,10 @@
         全てのフェアを見る
       </a>
     </section>
-    <div class="top-content__top-links">
-      <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="top-content__top-banner">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/staff-blog.jpg" alt="スタッフブログ">
-      </a>
-      <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="top-content__top-banner">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-calender.jpg" alt="イベントカレンダー">
-      </a>
+    <div class="instagram">
+      <!-- InstaWidget -->
+      <a href="https://instawidget.net/v/user/ludens_isesaki_weddingvilla" id="link-2572492325313cb11064a0af7c5742d4a4247b3e0a41cdf4b1f2fdfbfcc2c49f">@ludens_isesaki_weddingvilla</a>
+      <script src="https://instawidget.net/js/instawidget.js?u=2572492325313cb11064a0af7c5742d4a4247b3e0a41cdf4b1f2fdfbfcc2c49f&width=330px"></script>
     </div>
   </div>
 

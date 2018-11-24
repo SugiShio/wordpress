@@ -7,5 +7,8 @@ $(function() {
     new SmoothScroll();
     new Hamburger();
     new SlickSettings();
+    $('.loading').fadeOut(300).queue(function() {
+      this.remove();
+    });
   });
 });

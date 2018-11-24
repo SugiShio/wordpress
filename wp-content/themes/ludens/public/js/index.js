@@ -126,7 +126,7 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./guideBar */ \"./ludens/assets/js/guideBar.js\");\nvar SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar Hamburger = __webpack_require__(/*! ./hamburger */ \"./ludens/assets/js/hamburger.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new Hamburger();\n    new SlickSettings();\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/script.js?");
+eval("__webpack_require__(/*! ./guideBar */ \"./ludens/assets/js/guideBar.js\");\nvar SmoothScroll = __webpack_require__(/*! ./smoothScroll */ \"./ludens/assets/js/smoothScroll.js\");\nvar Hamburger = __webpack_require__(/*! ./hamburger */ \"./ludens/assets/js/hamburger.js\");\nvar SlickSettings = __webpack_require__(/*! ./slickSettings */ \"./ludens/assets/js/slickSettings.js\");\n$(function () {\n  $(window).on('load', function () {\n    new SmoothScroll();\n    new Hamburger();\n    new SlickSettings();\n    $('.loading').fadeOut(300).queue(function () {\n      this.remove();\n    });\n  });\n});\n\n//# sourceURL=webpack:///./ludens/assets/js/script.js?");
 
 /***/ }),
 

@@ -10,14 +10,24 @@
 
   &__inner {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     height: $height-header-sp;
     margin: 0 auto;
     padding: 5px 10px;
     @include screen-lg {
       width: $width-wrapper;
       height: 75px;
+    }
+  }
+
+  &__text {
+    margin: auto;
+    padding: 10px;
+    border-top: 1px solid #999;
+    font-family: $font-serif;
+    @include screen-lg {
+      width: $width-wrapper;
     }
   }
 

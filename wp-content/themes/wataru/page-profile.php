@@ -7,8 +7,16 @@
           <h2 class="w-content__title"><?php the_title(); ?></h2>
         </div>
         <div class="w-profile__container">
+          <?php if ( has_post_thumbnail() ) : ?>
+            <div class="w-profile__image">
+              <?php the_post_thumbnail('full'); ?>
+            </div>
+          <?php endif; ?>
           <div class="w-profile__text">
-            <h3 class="w-profile__name">田中 航 / Wataru Tanaka</h3>
+            <h3 class="w-profile__name">
+              田中 航 /
+              <span class="w-profile__name-en">Wataru Tanaka</span>
+            </h3>
             <?php the_content(); ?>
             <ul class="w-profile__sns">
               <?php foreach($GLOBALS['sns'] as $key => $value) : ?>
@@ -21,11 +29,6 @@
               <?php endforeach; ?>
             </ul>
           </div>
-          <?php if ( has_post_thumbnail() ) : ?>
-            <div class="w-profile__image">
-              <?php the_post_thumbnail('full'); ?>
-            </div>
-          <?php endif; ?>
         </div>
       </section>
     <?php endwhile; endif; ?>

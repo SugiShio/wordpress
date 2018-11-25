@@ -482,7 +482,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     .w-topschedule__link:hover {
       opacity: .5; }
   .w-topschedule__date {
-    width: 90px;
+    width: 100px;
     color: #8391a0;
     font-size: 12px; }
 
@@ -508,6 +508,9 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
       transition: .3s; }
       .w-category__body a:hover {
         opacity: .8; }
+  .w-category__no-posts {
+    margin: 20px 0;
+    color: #8391a0; }
 
 .w-category-list__item {
   margin-bottom: 30px; }

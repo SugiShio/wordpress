@@ -39,18 +39,32 @@
         <h2 class="w-topblock__title w-topblock__title--schedule">Schedule</h2>
         <ul class="w-topschedule">
           <?php
+            $dt = new DateTime('', new DateTimeZone('Asia/Tokyo'));
+            $today = $dt->format('Y').$dt->format('m').$dt->format('d');
             $posts = get_posts(array(
               'category_name' => 'schedule',
-              'order_by' => 'post_date',
+              'order_by' => 'meta_value',
               'order' => 'asc',
-              'posts_per_page' => 5
+              'posts_per_page' => 5,
+              'meta_key' => 'date',
+              'meta_value' => $today,
+              'meta_compare' => '>=',
+              'meta_type' => 'NUMERIC'
             ));
            ?>
           <?php foreach( $posts as $post ) : ?>
-            <?php setup_postdata( $post ); ?>
+            <?php
+              setup_postdata( $post );
+              $date_int = (int)post_custom('date');
+              $year = floor($date_int / 10000);
+              $month = floor($date_int % 10000 / 100);
+              $day = $date_int % 100;
+
+              $date_dt = new DateTime( $year.'-'.$month.'-'.$day );
+             ?>
             <li class="w-topschedule__item">
               <a href="" class="w-topschedule__link">
-                <time class="w-topschedule__date" datetime="<?php echo get_the_date(DATE_W3C); ?>"><?php echo date('Y.n.j D', strtotime($post->post_date)); ?></time>
+                <time class="w-topschedule__date" datetime="<?php echo $date_dt->format(DateTime::W3C); ?>"><?php echo $date_dt->format('Y.n.j D'); ?></time>
                 <p class="w-topschedule__text"><?php the_title() ?></p>
               </a>
             </li>

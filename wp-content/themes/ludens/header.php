@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
   <div class="loading">
     <div class="loading__image">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.jpg" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.png" alt="">
     </div>
     <p class="loading__text">Loading...</p>
   </div>

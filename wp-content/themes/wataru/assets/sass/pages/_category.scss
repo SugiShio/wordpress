@@ -1,4 +1,4 @@
-.w-schedule {
+.w-category {
   padding: 20px;
   background-color: #f7fafc;
   box-shadow: 0 2px 8px rgba(#000, .1);
@@ -13,9 +13,27 @@
   &__date {
     color: $color-text-weak;
   }
+
+  &__body {
+    padding: 10px 0;
+    word-break: break-all;
+    p {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $color-text-weak;
+      transition: .3s;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
 }
 
-.w-schedulelist {
+.w-category-list {
   &__item {
     margin-bottom: 30px;
   }

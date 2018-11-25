@@ -5,13 +5,13 @@
       <section class="w-content">
         <h2 class="w-content__title"><?php echo single_cat_title(); ?></h2>
         <?php if (have_posts()) : ?>
-        <ul class="w-schedulelist">
+        <ul class="w-category-list">
           <?php while (have_posts()) : the_post(); ?>
-          <li class="w-schedulelist__item">
-            <article class="w-schedule">
-              <time class="w-schedule__date"><?php echo get_post_time('Y.n.j D'); ?></time>
-              <h3 class="w-schedule__title"><?php the_title(); ?></h3>
-              <div class="w-schedule__body"><?php the_content(); ?></div>
+          <li class="w-category-list__item">
+            <article class="w-category">
+              <time class="w-category__date"><?php echo get_post_time('Y.n.j D'); ?></time>
+              <h3 class="w-category__title"><?php the_title(); ?></h3>
+              <div class="w-category__body"><?php the_content(); ?></div>
             </article>
           </li>
           <?php endwhile; ?>

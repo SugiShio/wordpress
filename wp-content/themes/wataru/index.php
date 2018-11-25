@@ -8,11 +8,26 @@
     </h1>
     <p class="w-mainview__subtitle"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/official-website.svg" alt="Official Website"></p>
     <section class="w-topnews">
-      <a href="#" class="w-topnews__link">
+      <?php
+        $posts = get_posts(array(
+          'category_name' => 'news',
+          'order_by' => 'post_date',
+          'order' => 'desc',
+          'posts_per_page' => 1
+        ));
+        if(!empty($posts)) :
+      ?>
+      <?php
+        $post = array_shift($posts);
+        setup_postdata( $post );
+       ?>
+      <a href="<?php echo esc_url(get_category_link(get_category_by_slug( 'news' )->cat_ID)); ?>" class="w-topnews__link">
         <h2 class="w-topnews__head">News</h2>
-        <time class="w-topnews__date">2018.9.1</time>
-        <p class="w-topnews__title">スケジュールを更新しました</p>
+        <time class="w-topnews__date" datetime="<?php echo get_the_date(DATE_W3C); ?>"><?php echo date('Y.n.j', strtotime($post->post_date)); ?></time>
+        <p class="w-topnews__title"><?php the_title(); ?></p>
       </a>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
     </section>
   </div>
 </div>

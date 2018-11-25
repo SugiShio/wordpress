@@ -1,4 +1,10 @@
 <?php
+function is_mobile() {
+  $ua = $_SERVER['HTTP_USER_AGENT'];
+  if(preg_match('/(iPhone)|(iPad)|(iPod)|(Android)/', $ua)) return true;
+  return false;
+}
+
 $sns = array(
   'instagram' => array(
     'account' => 'watarutanaka_drums',

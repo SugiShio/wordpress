@@ -3,23 +3,31 @@
 }
 
 .w-columnswrapper {
-  width: $width-default;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
+  @include screen-lg {
+    display: flex;
+    margin: auto;
+    width: $width-default;
+    justify-content: space-between;
+  }
 }
 
 .w-singlecolumn {
-  width: $width-default;
-  margin: auto;
+  @include screen-lg {
+    width: $width-default;
+    margin: auto;
+  }
 }
 
 .w-maincolumn {
-  width: $width-maincolumn;
+  @include screen-lg {
+    width: $width-maincolumn;
+  }
 }
 
 .w-sidecolumn {
-  width: $width-sidecolumn;
+  @include screen-lg {
+    width: $width-sidecolumn;
+  }
 }
 
 [class^="icon-"],

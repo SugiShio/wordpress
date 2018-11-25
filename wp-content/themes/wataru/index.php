@@ -47,10 +47,15 @@
 
       <section class="w-topblock">
         <h2 class="w-topblock__title">Instagram</h2>
-        <div class="w-topblock__container">
-          <!-- InstaWidget -->
+        <div class="w-topblock__container w-topblock__container--instagram">
+        <!-- InstaWidget -->
+        <?php if(is_mobile()) : ?>
+          <script src="https://instawidget.net/js/instawidget.js?u=ca514452e3f42ce72e1e0ddb2ce179edda543e136fe88d4b1835be6b0a977dc8&width=300px"></script>
+        <?php else : ?>
           <script src="https://instawidget.net/js/instawidget.js?u=9a7956f6751678ff7749c5d4f4067a61064055f2e0d40aa87826d1b335e4e179&width=640px"></script>
+        <?php endif; ?>
         </div>
+
         <a href="https://www.instagram.com/watarutanaka_drums/" class="w-button" target="_blank">More</a>
       </section>
 

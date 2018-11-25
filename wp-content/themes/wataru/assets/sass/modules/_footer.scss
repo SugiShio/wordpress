@@ -4,8 +4,10 @@
   &__sns {
     display: flex;
     justify-content: center;
-    width: $width-default;
     margin: auto;
+    @include screen-lg {
+      width: $width-default;
+    }
   }
 
   &__snsitem {
@@ -24,10 +26,12 @@
 
   &__copyright {
     display: block;
-    width: $width-default;
     margin: 10px auto 0;
     color: $color-main;
     font-size: 10px;
     text-align: center;
+    @include screen-lg {
+      width: $width-default;
+    }
   }
 }

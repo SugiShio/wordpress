@@ -1,4 +1,4 @@
-<header class="w-header js-header">
+<header class="w-header js-header" id="js-hamburger_content">
   <nav class="w-header__nav">
     <ul class="menu">
       <?php if(!is_home()) : ?>
@@ -34,4 +34,10 @@
       <?php endforeach; ?>
     </ul>
   </nav>
+  <div class="w-hamburger-trigger" id="js-hamburger_trigger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
+<div class="w-hamburger-bg" id="js-hamburger_bg"></div>

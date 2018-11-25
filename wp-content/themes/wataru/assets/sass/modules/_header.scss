@@ -1,23 +1,42 @@
 .w-header {
-  position: absolute;
+  position: fixed;
+  top: 0;
   right: 0;
-  left: 0;
-  height: 50px;
-  background: linear-gradient(to bottom, rgba(#000, .4) 50%, rgba(#000, 0));
+  z-index: $z-header;
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(-30deg, $color-main, darken($color-main, 15%));
+  transform: translateX(100%);
+  transition: transform .3s;
+  @include screen-lg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(#000, .4) 50%, rgba(#000, 0));
+    transform: translateX(0);
+  }
+
+  &.is-shown {
+    transform: translateX(0);
+    box-shadow: -3px 0 15px rgba(#000, .8);
+  }
 
   &.is-fixed {
     position: fixed;
-    z-index: $z-header;
     background: linear-gradient(-3deg, $color-main, darken($color-main, 15%));
   }
 
   &__nav {
-    display: flex;
-    align-items: center;
-    width: $width-default;
     height: 100%;
     margin: auto;
-    padding: 0 20px;
+    padding: 50px 20px;
+    @include screen-lg {
+      display: flex;
+      align-items: center;
+      width: $width-default;
+      padding: 0 20px;
+    }
   }
 
   &__sns {
@@ -27,8 +46,8 @@
 
   &__snsitem {
     margin: 0 10px;
-    font-size: 20px;
     color: $color-white;
+    font-size: 20px;
   }
 
   &__snslink {
@@ -40,13 +59,19 @@
   }
 
   .menu {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-around;
-    align-items: center;
+    @include screen-lg {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
 
   .menu-item {
+    margin: 10px 0;
+    @include screen-lg {
+      margin: 0;
+    }
     a,
     a:visited {
       display: block;
@@ -60,4 +85,67 @@
       opacity: .5;
     }
   }
+}
+
+.w-hamburger-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba($color-white, .6);
+  transition: .3s;
+  transform: translateX(-100%);
+
+  @include screen-lg {
+    display: none;
+  }
+
+  span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: $color-main;
+    transition: .3s;
+  }
+
+  &.is-shown {
+    transform: translateX(0);
+    background-color: transparent;
+
+    span {
+      background-color: $color-white;
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+    }
+
+  }
+}
+
+.w-hamburger-bg {
+  position: fixed;
+  z-index: $z-header - 1;
+  background-color: rgba(#000, .8);
 }

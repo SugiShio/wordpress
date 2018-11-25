@@ -22,11 +22,13 @@
   }
 
   &__text {
+    display: none;
     margin: auto;
     padding: 10px;
     border-top: 1px solid #999;
     font-family: $font-serif;
     @include screen-lg {
+      display: block;
       width: $width-wrapper;
     }
   }

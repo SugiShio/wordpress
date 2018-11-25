@@ -42,8 +42,14 @@
     </section>
     <div class="instagram">
       <!-- InstaWidget -->
-      <a href="https://instawidget.net/v/user/ludens_isesaki_weddingvilla" id="link-2572492325313cb11064a0af7c5742d4a4247b3e0a41cdf4b1f2fdfbfcc2c49f">@ludens_isesaki_weddingvilla</a>
-      <script src="https://instawidget.net/js/instawidget.js?u=2572492325313cb11064a0af7c5742d4a4247b3e0a41cdf4b1f2fdfbfcc2c49f&width=330px"></script>
+      <!-- InstaWidget -->
+      <?php if(is_mobile()) : ?>
+        <a href="https://instawidget.net/v/user/ludens_isesaki_weddingvilla" id="link-60d61e34d5a3058fe9346881b0d3c1bf2f74aeb5f1bdebbd8bfd07a374f792fc">@ludens_isesaki_weddingvilla</a>
+        <script src="https://instawidget.net/js/instawidget.js?u=60d61e34d5a3058fe9346881b0d3c1bf2f74aeb5f1bdebbd8bfd07a374f792fc&width=270px"></script>
+      <?php else : ?>
+        <a href="https://instawidget.net/v/user/ludens_isesaki_weddingvilla" id="link-2572492325313cb11064a0af7c5742d4a4247b3e0a41cdf4b1f2fdfbfcc2c49f">@ludens_isesaki_weddingvilla</a>
+        <script src="https://instawidget.net/js/instawidget.js?u=2572492325313cb11064a0af7c5742d4a4247b3e0a41cdf4b1f2fdfbfcc2c49f&width=330px"></script>
+      <?php endif; ?>
     </div>
   </div>
 

@@ -179,12 +179,14 @@ table {
         width: 1100px;
         height: 75px; } }
   .header__text {
+    display: none;
     margin: auto;
     padding: 10px;
     border-top: 1px solid #999;
     font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif; }
     @media screen and (min-width: 768px) {
       .header__text {
+        display: block;
         width: 1100px; } }
   .header__logo {
     max-width: 80%;

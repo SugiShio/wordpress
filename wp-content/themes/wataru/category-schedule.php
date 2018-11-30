@@ -12,17 +12,20 @@
             'category_name' => 'schedule',
             'order_by' => 'meta_value',
             'order' => 'asc',
-            'posts_per_page' => $posts_per_page,
+            'posts_per_page' => -1,
             'meta_key' => 'date',
             'meta_value' => $today,
             'meta_compare' => '>=',
             'meta_type' => 'NUMERIC'
           );
-          if(array_key_exists('page', $_GET)) {
-            $args['offset'] = $_GET['page'] * $posts_per_page;
-          }
           $posts = get_posts($args);
+
+          $posts_total = count($posts);
+          $current_page = array_key_exists('page', $_GET) ? $_GET['page'] : 0;
+          $offset = $current_page * $posts_per_page;
+          $posts = array_slice( $posts, $offset, $posts_per_page);
         ?>
+
         <?php if(empty($posts)) : ?>
           <p class="w-category__no-posts">表示するスケジュールがありません</p>
         <?php else : ?>
@@ -47,6 +50,7 @@
             <?php wp_reset_postdata(); ?>
           <?php endforeach; ?>
           </ul>
+          <?php include 'module-pager.php'; ?>
         <?php endif; ?>
       </section>
     </div>

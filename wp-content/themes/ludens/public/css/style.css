@@ -531,7 +531,7 @@ table {
   background-color: #fff; }
   @media screen and (min-width: 768px) {
     .content-main {
-      width: 1000px; } }
+      max-width: 1000px; } }
   .content-main__head {
     margin: 0 20px;
     font-size: 30px;
@@ -690,6 +690,30 @@ table {
     .guide__contact a {
       font-size: 16px;
       font-weight: bold; }
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff; }
+  @media screen and (min-width: 768px) {
+    .nav-links {
+      width: 1000px; } }
+  .nav-links .page-numbers {
+    display: block;
+    width: 30px;
+    margin: 0 15px;
+    font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center; }
+    .nav-links .page-numbers:hover {
+      text-decoration: underline; }
+    .nav-links .page-numbers.current, .nav-links .page-numbers.dots {
+      color: #aeaeae; }
+      .nav-links .page-numbers.current:hover, .nav-links .page-numbers.dots:hover {
+        text-decoration: none; }
 
 .top-content {
   max-width: 1100px;
@@ -1105,6 +1129,60 @@ table {
     .map__info-title::before {
       margin-right: 5px;
       content: '\25C6'; }
+
+.gallery-list {
+  margin: 30px auto; }
+  @media screen and (min-width: 768px) {
+    .gallery-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1000px; } }
+  .gallery-list__item {
+    margin-bottom: 20px; }
+    @media screen and (min-width: 768px) {
+      .gallery-list__item {
+        width: calc(100% / 3);
+        padding-right: 20px; } }
+  .gallery-list__link {
+    display: block;
+    height: 100%;
+    padding: 10px;
+    background-color: #fff;
+    transition: .3s; }
+    .gallery-list__link:hover {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+  .gallery-list__title {
+    margin-top: 5px;
+    font-family: "YuMincho", "\30D2\30E9\30AE\30CE\660E\671D   ProN W3", "HiraMinProN-W3", "HG\660E\671D  E", "\FF2D\FF33   \FF30\660E\671D", "MS PMincho", "MS \660E\671D", serif;
+    font-weight: bold; }
+
+.gallery {
+  margin: 30px auto; }
+  @media screen and (min-width: 768px) {
+    .gallery {
+      width: 900px; } }
+  .gallery__main-img {
+    padding-bottom: 20px; }
+    @media screen and (min-width: 768px) {
+      .gallery__main-img {
+        padding: 10px; } }
+  .gallery__desc {
+    padding: 20px;
+    background-color: #fff; }
+  .gallery__text {
+    margin: 0 30px; }
+  .gallery__images {
+    margin: 30px 0; }
+    .gallery__images p {
+      width: 100%;
+      padding-bottom: 20px; }
+      @media screen and (min-width: 768px) {
+        .gallery__images p {
+          width: 300px;
+          padding: 10px; } }
+      .gallery__images p > img {
+        width: 100%;
+        height: auto; }
 
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
   opacity: 0.8; }

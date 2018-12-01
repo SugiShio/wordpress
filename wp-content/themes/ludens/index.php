@@ -87,7 +87,7 @@
       </a>
     </li>
     <li class="top-content__item">
-      <a href="<?php echo get_permalink(get_page_by_path('coming-soon')->ID); ?>" class="top-content__link">
+      <a href="<?php echo get_category_link(get_category_by_slug('gallery')->cat_ID); ?>" class="top-content__link">
         <span class="top-content__link-text">
           <span class="top-content__link-text-sub">ギャラリー</span>
           <span class="top-content__link-text-main">GALLERY</span>

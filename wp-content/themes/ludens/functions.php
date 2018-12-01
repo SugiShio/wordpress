@@ -1,6 +1,6 @@
 <?php
-$ua = $_SERVER['HTTP_USER_AGENT'];
 function is_mobile() {
+    $ua = $_SERVER['HTTP_USER_AGENT'];
     if(preg_match('/(iPhone)|(iPad)|(iPod)|(Android)/', $ua)) return true;
     return false;
 }

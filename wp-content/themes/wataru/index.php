@@ -63,7 +63,7 @@
               $date_dt = new DateTime( $year.'-'.$month.'-'.$day );
              ?>
             <li class="w-topschedule__item">
-              <a href="" class="w-topschedule__link">
+              <a href="<?php echo esc_url(get_permalink()); ?>" class="w-topschedule__link">
                 <time class="w-topschedule__date" datetime="<?php echo $date_dt->format(DateTime::W3C); ?>"><?php echo $date_dt->format('Y.n.j D'); ?></time>
                 <p class="w-topschedule__text"><?php the_title() ?></p>
               </a>

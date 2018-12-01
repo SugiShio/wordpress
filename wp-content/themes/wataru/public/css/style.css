@@ -524,10 +524,16 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
       color: #8391a0;
       transition: .3s; }
       .w-category__body a:hover {
-        opacity: .8; }
+        color: rgba(131, 145, 160, 0.7); }
   .w-category__no-posts {
     margin: 20px 0;
     color: #8391a0; }
+  .w-category__back {
+    color: #8391a0;
+    text-decoration: underline;
+    transition: .3s; }
+    .w-category__back:hover {
+      color: rgba(131, 145, 160, 0.7); }
 
 .w-category-list__item {
   margin-bottom: 30px; }

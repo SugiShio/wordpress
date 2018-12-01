@@ -27,7 +27,7 @@
       transition: .3s;
 
       &:hover {
-        opacity: .8;
+        color: rgba($color-text-weak, .7);
       }
     }
   }
@@ -35,6 +35,16 @@
   &__no-posts {
     margin: 20px 0;
     color: $color-text-weak;
+  }
+
+  &__back {
+    color: $color-text-weak;
+    text-decoration: underline;
+    transition: .3s;
+
+    &:hover {
+      color: rgba($color-text-weak, .7);
+    }
   }
 }
 

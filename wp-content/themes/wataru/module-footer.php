@@ -1,7 +1,7 @@
 <footer class="w-footer">
   <ul class="w-footer__sns">
     <li class="w-footer__snsitem">
-      <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact')->ID)); ?>">
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact-input')->ID)); ?>">
         <i class="w-footer__snsicon icon-mail"></i>
       </a>
     </li>

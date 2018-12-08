@@ -16,7 +16,7 @@
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('equipment')->ID)); ?>"><?php echo get_the_title(get_page_by_path('equipment')); ?></a>
       </li>
       <li class="menu-item">
-        <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact')->ID)); ?>"><?php echo get_the_title(get_page_by_path('contact')); ?></a>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact-input')->ID)); ?>"><?php echo get_the_title(get_page_by_path('contact-input')); ?></a>
       </li>
       <li class="menu-item">
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('recording-pack')->ID)); ?>"><?php echo get_the_title(get_page_by_path('recording-pack')); ?></a>

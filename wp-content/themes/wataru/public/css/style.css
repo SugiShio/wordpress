@@ -346,6 +346,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 
 .w-content__title {
   display: inline-block;
+  max-width: 100%;
   margin-bottom: 20px;
   padding-right: 80px;
   border-bottom: 3px solid #334c66;
@@ -356,7 +357,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   line-height: 1.2;
   letter-spacing: .05em; }
 
-.w-button {
+.w-button, .w-form__buttons input {
   display: block;
   width: 80%;
   margin: auto;
@@ -368,7 +369,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   text-align: center;
   letter-spacing: .1em;
   transition: .3s; }
-  .w-button:hover {
+  .w-button:hover, .w-form__buttons input:hover {
     background-color: #838f9d; }
 
 .w-pager {
@@ -537,6 +538,73 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 
 .w-category-list__item {
   margin-bottom: 30px; }
+
+.w-contact {
+  padding: 0 20px 20px;
+  background-color: #f7fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+  @media screen and (min-width: 1000px) {
+    .w-contact {
+      width: 640px;
+      margin: auto; } }
+  .w-contact__title .w-content__title {
+    margin-top: -30px; }
+  .w-contact__body .mw_wp_form_send_error {
+    margin: 30px 0;
+    text-align: center; }
+
+.w-form {
+  word-break: break-all; }
+  .w-form__row {
+    margin: 20px 0; }
+    @media screen and (min-width: 1000px) {
+      .w-form__row {
+        display: flex;
+        margin: 10px 0; } }
+  .w-form__term {
+    margin-bottom: 5px;
+    font-weight: bold; }
+    @media screen and (min-width: 1000px) {
+      .w-form__term {
+        flex-shrink: 0;
+        width: 160px; } }
+  @media screen and (min-width: 1000px) {
+    .w-form__content {
+      flex-grow: 1; } }
+  .w-form__content input,
+  .w-form__content select,
+  .w-form__content textarea {
+    padding: 10px;
+    border: 1px solid #697584;
+    border-radius: 3px; }
+  .w-form__content input,
+  .w-form__content select {
+    width: 100%; }
+    @media screen and (min-width: 1000px) {
+      .w-form__content input,
+      .w-form__content select {
+        width: 300px;
+        height: 40px; } }
+  .w-form__content textarea {
+    width: 100%;
+    height: 180px; }
+  .w-form__buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 30px;
+    cursor: pointer; }
+    @media screen and (min-width: 1000px) {
+      .w-form__buttons {
+        flex-direction: row; } }
+    .w-form__buttons input + input {
+      margin-bottom: 10px; }
+      @media screen and (min-width: 1000px) {
+        .w-form__buttons input + input {
+          margin: 0 0 0 20px; } }
+
+@media screen and (min-width: 1000px) {
+  .mw_wp_form_input .w-form__term {
+    padding: 10px 0; } }
 
 .w-profile {
   padding: 0 40px 40px;

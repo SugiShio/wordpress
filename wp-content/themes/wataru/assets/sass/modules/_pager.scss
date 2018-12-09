@@ -1,0 +1,27 @@
+.w-pager {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+
+  &__item {
+    margin: 0 10px;
+  }
+
+  &__link {
+    font-size: $fontsize-lg;
+    transition: .3s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--current {
+      color: $color-text-weak;
+      cursor: default;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

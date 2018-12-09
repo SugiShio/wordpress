@@ -97,6 +97,17 @@ eval("__webpack_require__(/*! ./sass/style.scss */ \"./wataru/assets/sass/style.
 
 /***/ }),
 
+/***/ "./wataru/assets/js/hamburger.js":
+/*!***************************************!*\
+  !*** ./wataru/assets/js/hamburger.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar CONTENT_ID = 'js-hamburger_content';\nvar TRIGGER_ID = 'js-hamburger_trigger';\nvar BG_ID = 'js-hamburger_bg';\nvar SHOW_CLASS = 'is-shown';\n\nvar Hamburger = function Hamburger() {\n  var _this = this;\n\n  _classCallCheck(this, Hamburger);\n\n  this.$content = $('#' + CONTENT_ID);\n  this.$trigger = $('#' + TRIGGER_ID);\n  this.$bg = $('#' + BG_ID);\n  this.isShown = false;\n\n  this.$trigger.on('click', function () {\n    if (_this.isShown) {\n      _this.isShown = false;\n      _this.$content.removeClass(SHOW_CLASS);\n      _this.$trigger.removeClass(SHOW_CLASS);\n      _this.$bg.removeClass(SHOW_CLASS);\n    } else {\n      _this.isShown = true;\n      _this.$content.addClass(SHOW_CLASS);\n      _this.$trigger.addClass(SHOW_CLASS);\n      _this.$bg.addClass(SHOW_CLASS);\n    }\n  });\n};\n\n$(function () {\n  if (!$('#' + CONTENT_ID)[0] || !$('#' + TRIGGER_ID)[0]) return;\n  new Hamburger();\n});\n\n//# sourceURL=webpack:///./wataru/assets/js/hamburger.js?");
+
+/***/ }),
+
 /***/ "./wataru/assets/js/header.js":
 /*!************************************!*\
   !*** ./wataru/assets/js/header.js ***!
@@ -104,7 +115,7 @@ eval("__webpack_require__(/*! ./sass/style.scss */ \"./wataru/assets/sass/style.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar HEADER_CLASS = 'js-header';\nvar MAIN_CLASS = 'js-main';\nvar FIXED_CLASS = 'is-fixed';\n\nvar Header = function Header() {\n  var _this = this;\n\n  _classCallCheck(this, Header);\n\n  this.$header = $('.' + HEADER_CLASS);\n  this.headerHeight = this.$header.innerHeight();\n  this.breakpoint = $('.' + MAIN_CLASS).offset().top;\n\n  $(window).on('scroll', function () {\n    if ($(window).scrollTop() > _this.breakpoint) {\n      // todo アニメーション\n      _this.$header.addClass(FIXED_CLASS);\n    } else {\n      _this.$header.removeClass(FIXED_CLASS);\n    }\n  });\n};\n\n$(function () {\n  new Header();\n});\n\n//# sourceURL=webpack:///./wataru/assets/js/header.js?");
+eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar HEADER_CLASS = 'js-header';\nvar MAIN_CLASS = 'js-main';\nvar FIXED_CLASS = 'is-fixed';\n\nvar Header = function Header() {\n  var _this = this;\n\n  _classCallCheck(this, Header);\n\n  this.$header = $('.' + HEADER_CLASS);\n  this.headerHeight = this.$header.innerHeight();\n  this.breakpoint = $('.' + MAIN_CLASS).offset().top;\n\n  $(window).on('scroll', function () {\n    if ($(window).scrollTop() > _this.breakpoint) {\n      // todo アニメーション\n      _this.$header.addClass(FIXED_CLASS);\n    } else {\n      _this.$header.removeClass(FIXED_CLASS);\n    }\n  });\n};\n\n$(function () {\n  if (!$('.' + HEADER_CLASS)[0] || !$('.' + MAIN_CLASS)[0]) return;\n  new Header();\n});\n\n//# sourceURL=webpack:///./wataru/assets/js/header.js?");
 
 /***/ }),
 
@@ -115,7 +126,7 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./header.js */ \"./wataru/assets/js/header.js\");\n\n//# sourceURL=webpack:///./wataru/assets/js/script.js?");
+eval("__webpack_require__(/*! ./header.js */ \"./wataru/assets/js/header.js\");\n__webpack_require__(/*! ./hamburger.js */ \"./wataru/assets/js/hamburger.js\");\n\n//# sourceURL=webpack:///./wataru/assets/js/script.js?");
 
 /***/ }),
 

@@ -1,13 +1,13 @@
 <div class="w-sidecolumn">
   <ul class="w-bannerlist">
     <li class="w-bannerlist__item">
-      <a href="#" class="w-banner">
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('recording-pack')->ID)); ?>" class="w-banner">
         <span class="w-banner__en">Recording Pack</span>
         <span class="w-banner__ja">レコーディングパック</span>
       </a>
     </li>
     <li class="w-bannerlist__item">
-      <a href="#" class="w-banner">
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact')->ID)); ?>" class="w-banner">
         <span class="w-banner__en">Contact</span>
         <span class="w-banner__ja">お問い合わせ</span>
       </a>

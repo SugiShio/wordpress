@@ -56,36 +56,44 @@
 
   &__description {
     padding: 5px 0;
-    color: $color-text;
     border-top: 2px solid #a9a9a9;
+    color: $color-text;
     font-family: $font-serif;
   }
 
   &__link-item {
     width: 180px;
+
     &:not(:first-child) {
       margin-left: 10px;
     }
   }
 
   &__link {
-    display: block;
-    padding: 0 10px;
-    transition: .3s;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     background-color: $color-text-blue;
-    font-family: $font-serif;
-    font-weight: bold;
-    @include screen-lg {
-      font-size: $font-pc-lg;
-      &::before {
-        margin-right: 5px;
-        content: '▶︎';
-      }
-    }
+    transition: .3s;
 
     &:hover {
       opacity: .8;
+    }
+
+    span {
+      width: 100%;
+      padding: 0 10px;
+      color: #fff;
+      font-family: $font-serif;
+      font-weight: bold;
+      @include screen-lg {
+        font-size: $font-pc-lg;
+        &::before {
+          margin-right: 5px;
+          content: '▶︎';
+        }
+      }
     }
   }
 }
@@ -131,8 +139,8 @@
     &--concept {
       span {
         padding-right: 60px;
-        color: $color-text;
         border-bottom: 2px solid #a9a9a9;
+        color: $color-text;
         font-family: $font-serif;
         font-size: inherit;
         font-weight: inherit;
@@ -140,8 +148,8 @@
     }
 
     &--facility {
-      color: $color-text-blue;
       border-bottom: 2px solid $color-text-blue;
+      color: $color-text-blue;
       font-family: $font-sansserif-kaku;
     }
 
@@ -158,8 +166,8 @@
     font-size: $font-sp-lg;
     font-weight: bold;
     @include screen-lg {
-      margin: auto;
       width: $width-content;
+      margin: auto;
       font-size: $font-pc-lg;
     }
   }
@@ -182,8 +190,8 @@
     @include screen-lg {
       display: flex;
       justify-content: space-between;
-      margin: 40px auto;
       width: $width-content;
+      margin: 40px auto;
     }
   }
 
@@ -193,6 +201,16 @@
       &:not(:first-child) {
         margin-top: 20px;
       }
+    }
+  }
+
+  &__content {
+    p {
+      @extend .content-main__text;
+    }
+
+    img {
+      @extend .content-main__image;
     }
   }
 }

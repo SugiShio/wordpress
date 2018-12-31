@@ -1,4 +1,5 @@
 require('./guideBar');
+require('./masonry');
 let SmoothScroll = require('./smoothScroll');
 let Hamburger = require('./hamburger');
 let SlickSettings = require('./slickSettings');

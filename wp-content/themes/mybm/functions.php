@@ -12,11 +12,9 @@
     add_action('after_setup_theme', 'mybm_setup');
 
     function mybm_scripts() {
-        wp_enqueue_style('mybm-reset', get_template_directory_uri() . '/assets/css/reset.css');
-        wp_enqueue_style('mybm-style', get_template_directory_uri() . '/assets/css/style.css');
+        wp_enqueue_style('mybm-style', get_template_directory_uri() . '/public/css/style.css');
         wp_enqueue_script('jQuery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');
-        wp_enqueue_script('velocity', get_template_directory_uri() . '/assets/js/velocity.min.js');
-        wp_enqueue_script('mybm-nav', get_template_directory_uri() . '/assets/js/nav.js');
+        wp_enqueue_script('mybm-nav', get_template_directory_uri() . '/public/js/index.js');
     }
     add_action('wp_enqueue_scripts', 'mybm_scripts');
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="11人組フェスティバル・ポップバンド。1stミニアルバム『かくも素晴らしき日々』全国のCDショップ、Amazonにて発売中！">
+    <meta name="description" content="<?php bloginfo( 'description' ); ?>">
     <meta property="og:title" content="メロウ・イエロー・バナナムーン" />
     <?php if(is_home()) : ?>
         <meta property="og:type" content="website" />
@@ -15,7 +15,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name"  content="メロウ・イエロー・バナナムーン" />
-    <meta property="og:description" content="11人組フェスティバル・ポップバンド。1stミニアルバム『かくも素晴らしき日々』全国のCDショップ、Amazonにて発売中！" />
+    <meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@mellowyellow877" />

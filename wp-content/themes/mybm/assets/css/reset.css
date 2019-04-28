@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300, 700");
 html {
   font-family: 'Roboto', Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: normal;
   font-style: normal;
   line-height: 1.7;
@@ -22,13 +22,13 @@ html {
 body, div,
 h1, h2, h3, h4, h5, h6, p,
 a, span, time, mark,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol, li,
 form, label, legend,
 article,
 footer, header, main,
 menu, nav, section, summary {
   font-family: 'Roboto', Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: normal;
   font-style: normal;
   line-height: 1.7;

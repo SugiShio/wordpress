@@ -11,9 +11,18 @@
     </header>
 
     <h1>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg"" alt=" メロウ・イエロー・バナナムーン" width="400" height="400">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="メロウ・イエロー・バナナムーン" width="1200" height="1200">
     </h1>
-
+        <nav id="menu">
+            <ul>
+                <li><a href="<?php echo get_category_link(get_cat_ID('news')); ?>">NEWS</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('biography')->ID) ?>">ABOUT</a></li>
+                <li><a href="<?php echo get_category_link(get_cat_ID('schedule')); ?>">SCHEDULE</a></li>
+                <li><a href="<?php echo get_category_link(get_cat_ID('discography')) ?>">DISCOGRAPHY</a></li>
+                <li><a href="<?php echo get_category_link(get_cat_ID('videos')) ?>">VIDEOS</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('contact')->ID) ?>">CONTACT</a></li>
+            </ul>
+        </nav>
     <div>
         <section class="news">
             <div class="sectionTtl">
@@ -22,7 +31,7 @@
             <?php if (have_posts()) : ?>
                 <ul class="posts">
                 <?php while (have_posts()) : the_post(); if($count++ < 3) :?>
-                    <li class="post-news">
+                    <li class="post-news" id="post-news-feed">
                         <time><?php echo get_the_date('Y.n.j'); ?></time>
                         <h3><a href="<?php echo get_category_link(get_cat_ID('news')); ?>"><?php the_title(); ?></a></h3>
                     </li>
@@ -42,16 +51,6 @@
 
             <p><?php echo $video->post_content ?></p>
         </section>
-
-        <nav id="menu">
-            <ul>
-                <li><a href="<?php echo get_category_link(get_cat_ID('schedule')); ?>">SCHEDULE</a></li>
-                <li><a href="<?php echo get_category_link(get_cat_ID('videos')) ?>">VIDEOS</a></li>
-                <li><a href="<?php echo get_permalink(get_page_by_path('biography')->ID) ?>">BIOGRAPHY</a></li>
-                <li><a href="<?php echo get_category_link(get_cat_ID('discography')) ?>">DISCOGRAPHY</a></li>
-                <li><a href="<?php echo get_permalink(get_page_by_path('contact')->ID) ?>">CONTACT</a></li>
-            </ul>
-        </nav>
     </div>
 </div>
 

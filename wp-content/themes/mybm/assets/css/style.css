@@ -231,7 +231,7 @@ iframe {
 }
 
 #top .news .posts .post-news {
-  display: flex;
+/*   display: flex; */
   justify-content: center;
   margin: 10px auto 0;
 }
@@ -247,7 +247,7 @@ iframe {
 
 #top .news__link {
   margin-top: 10px;
-  text-align: center;
+  text-align: right;
 }
 
 #top .news__link a {
@@ -273,7 +273,7 @@ iframe {
 }
 
 #top .video {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 #top .video h2 {

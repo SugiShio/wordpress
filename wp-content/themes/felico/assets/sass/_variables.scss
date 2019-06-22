@@ -2,12 +2,17 @@
 
 /* colors
 ----------------- */
-$color-text: #333;
+$color-pink: #e2999a;
+$color-brown: #342822;
+$color-gray: #c5beba;
+
+$color-text: $color-brown;
+$color-background: #f1e8d4;
 
 /* font families
 ----------------- */
-$font-default: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$font-default: serif;
 
 /* break points
 ----------------- */
-$breakpoint: 768px;
+$breakpoint: 600px;

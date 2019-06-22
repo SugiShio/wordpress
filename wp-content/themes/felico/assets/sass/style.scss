@@ -1,3 +1,166 @@
 @import 'variables';
 @import 'utils';
 @import 'reset';
+
+.f-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 100px 50px;
+  background-color: #fff;
+
+  @include screen-sm {
+    padding: 30px 20px;
+  }
+}
+
+.f-breadcrumb {
+  display: flex;
+  &__item {
+    font-size: 14px;
+
+    &:not(:first-child) {
+      position: relative;
+      margin-left: 30px;
+
+      &::before {
+        position: absolute;
+        left: -15px;
+        content: '>';
+      }
+    }
+  }
+}
+
+.f-mainview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/mainview.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  @include screen-sm {
+    height: 100vw;
+  }
+
+  &__title {
+    max-width: 30%;
+    margin: 180px 0 150px;
+
+    @include screen-sm {
+      max-width: 50%;
+      margin: 130px 0 100px;
+    }
+  }
+}
+
+.f-header {
+  padding-top: 20px;
+  &__title {
+    width: 70px;
+    margin: 10px auto;
+  }
+}
+
+.f-menu {
+  div {
+    padding: 0 20px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px -20px;
+    li {
+      padding: 0 20px;
+      a {
+        display: block;
+        padding: 5px 10px;
+        transition: 0.3s;
+        text-decoration: none;
+        &:hover {
+          color: $color-brown;
+        }
+      }
+    }
+  }
+  &--home {
+    a {
+      font-size: 18px;
+      color: #fff;
+      @include screen-sm {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.f-content {
+  h2 {
+    font-size: 30px;
+    position: relative;
+    margin: 30px auto;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 0.2em;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      margin: auto;
+      content: '';
+      background-color: $color-pink;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+    tr {
+      padding: 10px 0;
+      border-bottom: 1px dashed $color-gray;
+      td {
+        padding: 20px 10px;
+        vertical-align: top;
+
+        @include screen-sm {
+          display: block;
+        }
+        &:first-child {
+          font-weight: bold;
+          min-width: 120px;
+          color: $color-pink;
+
+          @include screen-sm {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.f-home {
+  p {
+    line-height: 2;
+    margin: 30px 0;
+    letter-spacing: 0.05em;
+  }
+
+  .f-container {
+    background-color: transparent;
+  }
+}
+
+.f-footer {
+  font-size: 12px;
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+}

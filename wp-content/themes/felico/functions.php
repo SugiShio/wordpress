@@ -10,3 +10,9 @@ function felico_scripts() {
     wp_enqueue_script('felico-scripts', get_template_directory_uri() . '/public/js/index.js');
 }
 add_action('wp_enqueue_scripts', 'felico_scripts');
+
+function register_my_menu() {
+  register_nav_menu('default', 'デフォルト' );
+  register_nav_menu('home', 'ホーム' );
+}
+add_action( 'init', 'register_my_menu' );

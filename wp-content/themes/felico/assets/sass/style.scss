@@ -227,6 +227,43 @@
   }
 }
 
+.f-single {
+  margin: 50px 0;
+
+  &__head {
+    position: relative;
+    margin: 30px auto;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 0.2em;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      margin: auto;
+      content: '';
+      background-color: $color-pink;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__content {
+    padding: 20px 0;
+    word-break: break-all;
+    border-bottom: 1px dashed $color-gray;
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
 .f-pagination {
   .nav-links {
     display: flex;
@@ -252,6 +289,48 @@
       &:hover {
         color: $color-pink;
       }
+    }
+  }
+}
+
+.f-navigation {
+  h2 {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .nav-previous,
+  .nav-next {
+    flex-grow: 1;
+    width: 100%;
+
+    &:before {
+      font-size: 13px;
+      display: block;
+    }
+  }
+  .nav-next {
+    &:before {
+      content: '次の記事';
+    }
+  }
+
+  .nav-previous {
+    margin-left: 20px;
+
+    &:before {
+      content: '前の記事';
+      text-align: right;
+    }
+
+    a {
+      display: block;
+      text-align: right;
     }
   }
 }

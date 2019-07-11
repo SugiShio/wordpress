@@ -174,6 +174,88 @@
   }
 }
 
+.f-archive {
+  margin: 30px 0;
+
+  @include screen-lg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed $color-gray;
+
+    @include screen-lg {
+      width: 30%;
+
+      &:nth-child(3n),
+      &:nth-child(3n + 2) {
+        margin-left: 5%;
+      }
+    }
+  }
+
+  &__a {
+    display: block;
+    height: 100%;
+    padding-bottom: 10px;
+    text-decoration: none;
+
+    &:hover * {
+      color: $color-pink;
+    }
+  }
+
+  &__image {
+    margin-bottom: 10px;
+    text-align: center;
+
+    img {
+      max-width: 180px;
+    }
+  }
+
+  &__date {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  &__title {
+    transition: 0.3s;
+    color: $color-brown;
+  }
+}
+
+.f-pagination {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-numbers {
+    font-weight: bold;
+    line-height: 36px;
+    display: block;
+    width: 40px;
+    margin: 0 10px;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid $color-pink;
+    background-color: $color-pink;
+
+    &[href] {
+      color: $color-brown;
+      background-color: #fff;
+      &:hover {
+        color: $color-pink;
+      }
+    }
+  }
+}
+
 .f-home {
   p {
     line-height: 2;

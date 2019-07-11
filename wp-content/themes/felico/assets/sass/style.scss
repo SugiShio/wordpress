@@ -146,6 +146,34 @@
   }
 }
 
+.f-voice {
+  margin: 20px auto;
+  padding: 20px 0;
+  border-bottom: 1px dashed $color-gray;
+
+  &__image {
+    width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  &__name {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__jobtype {
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    color: $color-pink;
+  }
+
+  &__voice {
+    max-width: 400px;
+    margin: 10px auto 0;
+  }
+}
+
 .f-home {
   p {
     line-height: 2;

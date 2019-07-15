@@ -38,10 +38,6 @@
   flex-direction: column;
   padding: 30px 0;
 
-  @include screen-sm {
-    height: 100vw;
-  }
-
   &__title {
     width: 500px;
     margin: 30px 0 0;
@@ -66,12 +62,19 @@
     padding: 0 20px;
   }
   ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     margin: 20px -20px;
+
+    @include screen-lg {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     li {
       padding: 0 20px;
+
+      @include screen-sm {
+        margin-bottom: 5px;
+      }
       a {
         display: block;
         padding: 10px 20px;
@@ -80,6 +83,10 @@
         color: $color-brown;
         background-color: #fff;
         box-shadow: 2px 2px 0 $color-pink;
+
+        @include screen-sm {
+          text-align: center;
+        }
         &:hover {
           color: $color-pink;
         }

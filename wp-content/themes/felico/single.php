@@ -1,4 +1,17 @@
 <?php get_header(); ?>
+
+<ul class="f-breadcrumb">
+  <li class="f-breadcrumb__item">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Top</a>
+  </li>
+  <li class="f-breadcrumb__item">
+    <a href="<?php echo esc_url( get_post_type_archive_link( get_post_type() ) ); ?>">
+      <?php echo get_post_type_object(get_post_type())->label; ?>一覧
+    </a>
+  </li>
+  <li class="f-breadcrumb__item"><?php the_title(); ?></li>
+</ul>
+
 <section class="f-single">
   <?php while ( have_posts() ) : the_post(); ?>
     <div class="f-single__head">

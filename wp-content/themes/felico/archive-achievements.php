@@ -1,9 +1,16 @@
 <?php get_header(); ?>
-
 <?php
 $post = get_page_by_path('profile'); //事業概要
 setup_postdata( $post );
  ?>
+
+<ul class="f-breadcrumb">
+  <li class="f-breadcrumb__item">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Top</a>
+  </li>
+  <li class="f-breadcrumb__item"><?php the_title(); ?></li>
+</ul>
+
 <section class="f-content"><?php the_content(); ?></section>
 <?php wp_reset_postdata(); ?>
 

@@ -205,9 +205,12 @@
 
   &__a {
     display: block;
-    height: 100%;
     padding-bottom: 10px;
     text-decoration: none;
+
+    @include screen-lg {
+      height: 100%;
+    }
 
     &:hover * {
       color: $color-pink;

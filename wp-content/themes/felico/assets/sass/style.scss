@@ -1,0 +1,361 @@
+@import 'variables';
+@import 'utils';
+@import 'reset';
+
+.f-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 100px 50px;
+  background-color: #fff;
+
+  @include screen-sm {
+    padding: 30px 20px;
+  }
+}
+
+.f-breadcrumb {
+  display: flex;
+  &__item {
+    font-size: 14px;
+
+    &:not(:first-child) {
+      position: relative;
+      margin-left: 30px;
+
+      &::before {
+        position: absolute;
+        left: -15px;
+        content: '>';
+      }
+    }
+  }
+}
+
+.f-mainview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0;
+
+  &__title {
+    width: 500px;
+    margin: 30px 0 0;
+
+    @include screen-sm {
+      max-width: 60%;
+      margin: 50px 0 20px;
+    }
+  }
+}
+
+.f-header {
+  padding-top: 20px;
+  &__title {
+    width: 140px;
+    margin: 30px auto;
+  }
+}
+
+.f-menu {
+  div {
+    padding: 0 20px;
+  }
+  ul {
+    margin: 20px -20px;
+
+    @include screen-lg {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    li {
+      padding: 0 20px;
+
+      @include screen-sm {
+        margin-bottom: 5px;
+      }
+      a {
+        display: block;
+        padding: 10px 20px;
+        transition: 0.3s;
+        text-decoration: none;
+        color: $color-brown;
+        background-color: #fff;
+        box-shadow: 2px 2px 0 $color-pink;
+
+        @include screen-sm {
+          text-align: center;
+        }
+        &:hover {
+          color: $color-pink;
+        }
+      }
+    }
+  }
+
+  &--home {
+    ul li a {
+      font-size: 18px;
+
+      @include screen-sm {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.f-content {
+  h2 {
+    font-size: 30px;
+    position: relative;
+    margin: 30px auto;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 0.2em;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      margin: auto;
+      content: '';
+      background-color: $color-pink;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+    tr {
+      padding: 10px 0;
+      border-bottom: 1px dashed $color-gray;
+      td {
+        padding: 20px 10px;
+        vertical-align: top;
+
+        @include screen-sm {
+          display: block;
+        }
+        &:first-child {
+          font-weight: bold;
+          min-width: 120px;
+          color: $color-pink;
+
+          @include screen-sm {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.f-voice {
+  margin: 20px auto;
+  padding: 20px 0;
+  border-bottom: 1px dashed $color-gray;
+
+  &__image {
+    width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  &__name {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__jobtype {
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    color: $color-pink;
+  }
+
+  &__voice {
+    max-width: 400px;
+    margin: 10px auto 0;
+  }
+}
+
+.f-archive {
+  margin: 30px 0;
+
+  @include screen-lg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed $color-gray;
+
+    @include screen-lg {
+      width: 30%;
+
+      &:nth-child(3n),
+      &:nth-child(3n + 2) {
+        margin-left: 5%;
+      }
+    }
+  }
+
+  &__a {
+    display: block;
+    padding-bottom: 10px;
+    text-decoration: none;
+
+    @include screen-lg {
+      height: 100%;
+    }
+
+    &:hover * {
+      color: $color-pink;
+    }
+  }
+
+  &__image {
+    margin-bottom: 10px;
+    text-align: center;
+
+    img {
+      max-width: 180px;
+    }
+  }
+
+  &__date {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  &__title {
+    transition: 0.3s;
+    color: $color-brown;
+  }
+}
+
+.f-single {
+  margin: 50px 0;
+
+  &__head {
+    position: relative;
+    margin: 30px auto;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 0.2em;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      margin: auto;
+      content: '';
+      background-color: $color-pink;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__content {
+    padding: 20px 0;
+    word-break: break-all;
+    border-bottom: 1px dashed $color-gray;
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+.f-pagination {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-numbers {
+    font-weight: bold;
+    line-height: 36px;
+    display: block;
+    width: 40px;
+    margin: 0 10px;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid $color-pink;
+    background-color: $color-pink;
+
+    &[href] {
+      color: $color-brown;
+      background-color: #fff;
+      &:hover {
+        color: $color-pink;
+      }
+    }
+  }
+}
+
+.f-navigation {
+  h2 {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .nav-previous,
+  .nav-next {
+    flex-grow: 1;
+    width: 100%;
+
+    &:before {
+      font-size: 13px;
+      display: block;
+    }
+  }
+  .nav-next {
+    &:before {
+      content: '次の記事';
+    }
+  }
+
+  .nav-previous {
+    margin-left: 20px;
+
+    &:before {
+      content: '前の記事';
+      text-align: right;
+    }
+
+    a {
+      display: block;
+      text-align: right;
+    }
+  }
+}
+
+.f-home {
+  p {
+    line-height: 2;
+    margin: 30px 0;
+    letter-spacing: 0.05em;
+  }
+}
+
+.f-footer {
+  font-size: 12px;
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+}

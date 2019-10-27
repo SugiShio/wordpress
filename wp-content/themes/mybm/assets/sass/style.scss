@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'reset';
 
 a {
     transition: 0.3s;
@@ -221,7 +222,6 @@ iframe {
         .posts {
             margin-top: 20px;
             .post-news {
-                display: flex;
                 justify-content: center;
                 margin: 10px auto 0;
                 > time {
@@ -235,7 +235,7 @@ iframe {
         }
         &__link {
             margin-top: 10px;
-            text-align: center;
+            text-align: right;
             a {
                 position: relative;
                 display: inline-block;
@@ -259,7 +259,7 @@ iframe {
         }
     }
     .video {
-        margin-top: 50px;
+        margin-top: 80px;
         h2 {
             font-size: 1.8rem;
         }

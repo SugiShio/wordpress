@@ -1,6 +1,8 @@
 .DS_Store
 *.log
-index.php
+/index.php
+/wp-content/index.php
+/wp-content/themes/index.php
 license.txt
 wp-activate.php
 wp-admin/

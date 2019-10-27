@@ -1,0 +1,23 @@
+@mixin screen-sm() {
+  @media screen and (max-width: $breakpoint - 1) {
+    @content;
+  }
+}
+
+@mixin screen-lg() {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+%show-on-pc {
+  @include screen-sm {
+    display: none;
+  }
+}
+
+%show-on-sp {
+  @include screen-lg {
+    display: none;
+  }
+}

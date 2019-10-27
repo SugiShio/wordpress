@@ -1,0 +1,31 @@
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  @include screen-lg {
+    width: 1000px;
+  }
+
+  .page-numbers {
+    display: block;
+    width: 30px;
+    margin: 0 15px;
+    font-family: $font-serif;
+    font-size: $font-sp-lg;
+    line-height: 30px;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.current,
+    &.dots {
+      color: lighten($color-text, 20%);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

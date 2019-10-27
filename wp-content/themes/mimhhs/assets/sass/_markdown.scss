@@ -1,0 +1,84 @@
+@charset 'utf-8';
+
+%markdown {
+    * {
+        line-height: 2;
+    }
+    h2 {
+        font-family: $font-sansserif;
+        font-size: 18px;
+        line-height: 2;
+        margin: 50px 0 10px;
+        border-bottom: 1px solid $color-fujiiro;
+        + h3 {
+            margin-top: 0;
+        }
+    }
+    h3 {
+        font-family: $font-sansserif;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 30px 0 10px;
+    }
+    p {
+        margin: 10px 0;
+        code {
+            font-size: 1.4rem;
+            line-height: .9;
+            display: inline-block;
+            padding: 5px;
+            color: darken($color-fujiiro, 40%);
+            background-color: lighten($color-fujiiro, 17%);
+        }
+    }
+    img {
+        box-shadow: 0 1px 4px rgba($color-kuro, .1);
+    }
+    ul {
+        margin: 10px 0;
+        li {
+            @include dot;
+        }
+    }
+    table {
+        margin: 10px 0;
+        border-top: 1px solid $color-usuzumi;
+        border-bottom: 1px solid $color-usuzumi;
+        th, td {
+            padding: 5px 30px 5px 0;
+        }
+        > thead {
+            border-bottom: 1px solid $color-usuzumi;
+            > tr > th {
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: darken($color-fujiiro, 20%);
+            }
+        }
+        > tbody {
+            > tr + tr {
+                border-top: 1px solid lighten($color-usuzumi, 30%);
+            }
+        }
+    }
+    code {
+        font-family: 'Inconsolata', monospace, '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+    }
+    pre {
+        padding: 10px 15px;
+        background-color: lighten($color-fujiiro, 18%);
+        overflow: scroll;
+        code {
+            line-height: 1.2;
+            display: block;
+        }
+    }
+    hr {
+        height: 1px;
+        margin: 40px 0 20px;
+        background-color: $color-fujiiro;
+    }
+    a {
+        @include link($color-sumi);
+    }
+}

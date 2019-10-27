@@ -10,6 +10,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <div class="loading">
+    <div class="loading__image">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.png" alt="">
+    </div>
+    <p class="loading__text">Loading...</p>
+  </div>
   <?php get_template_part('components/header'); ?>
   <?php get_template_part('components/menu'); ?>
   <?php if(is_home()) : ?>

@@ -1,0 +1,103 @@
+@charset 'utf-8';
+.home {
+    @media screen and (max-width: $bp-sp) {
+        &::before {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(-16.8deg, $color-fujiiro, $color-shioniro);
+            content: '';
+        }
+    }
+
+    .footer {
+        position: relative;
+        z-index: 10;
+        padding: 10px 50px;
+
+        @media screen and (max-width: $bp-sp) {
+            color: #fff;
+        }
+    }
+
+    h1 {
+        padding: 20px 0;
+    }
+
+    .menu {
+        padding: 10px 0;
+    }
+
+    .posts {
+        @media screen and (min-width: $bp-sp) {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(3 * 180px + 100px);
+        }
+
+         > li {
+            width: 100%;
+            height: calc(100vw - 100px);
+            overflow: hidden;
+            transition: .5s;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba($color-kuro, .2);
+
+            @media screen and (max-width: $bp-sp) {
+                & + li {
+                    margin-top: 50px;
+                }
+            }
+
+            @media screen and (min-width: $bp-sp) {
+                width: 180px;
+                height: 180px;
+                &:not(:nth-child(3n+1)) {
+                    margin-left: 50px;
+                }
+
+                &:nth-child(n+4) {
+                    margin-top: 50px;
+                }
+
+                &:hover {
+                    box-shadow: 0 4px 12px rgba($color-kuro, .2);
+                }
+            }
+
+             > a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                transition: .5s;
+                text-align: center;
+                color: $color-sumi;
+
+                > img {
+                    width: 100%;
+                    height: 100%;
+
+                    filter: grayscale(100%);
+                    object-fit: cover;
+                }
+
+                &:hover {
+                    transform: scale(1.1, 1.1);
+
+                    & > img {
+                        filter: grayscale(20%);
+                    }
+                }
+
+
+                > span {
+                    padding: 10px;
+                }
+            }
+        }
+
+    }
+}

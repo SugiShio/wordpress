@@ -1,5 +1,12 @@
 .DS_Store
 *.log
+index.php
+license.txt
+wp-activate.php
+wp-admin/
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
@@ -10,7 +17,21 @@ wp-content/upgrade/
 wp-content/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
-wp-content/plugins/hello.php
+wp-content/languages/
+wp-content/plugins/
+wp-content/themes/**/public/css
+wp-content/themes/**/public/js
+wp-content/themes/**/public/fonts
+wp-cron.php
+wp-includes/
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
 
 /.htaccess
 /.htpasswd
@@ -21,4 +42,3 @@ wp-content/plugins/hello.php
 
 node_modules/
 package-lock.json
-

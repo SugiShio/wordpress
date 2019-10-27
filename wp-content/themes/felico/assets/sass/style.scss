@@ -38,10 +38,6 @@
   flex-direction: column;
   padding: 30px 0;
 
-  @include screen-sm {
-    height: 100vw;
-  }
-
   &__title {
     width: 500px;
     margin: 30px 0 0;
@@ -66,12 +62,19 @@
     padding: 0 20px;
   }
   ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     margin: 20px -20px;
+
+    @include screen-lg {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     li {
       padding: 0 20px;
+
+      @include screen-sm {
+        margin-bottom: 5px;
+      }
       a {
         display: block;
         padding: 10px 20px;
@@ -80,6 +83,10 @@
         color: $color-brown;
         background-color: #fff;
         box-shadow: 2px 2px 0 $color-pink;
+
+        @include screen-sm {
+          text-align: center;
+        }
         &:hover {
           color: $color-pink;
         }
@@ -142,6 +149,198 @@
           }
         }
       }
+    }
+  }
+}
+
+.f-voice {
+  margin: 20px auto;
+  padding: 20px 0;
+  border-bottom: 1px dashed $color-gray;
+
+  &__image {
+    width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  &__name {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__jobtype {
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    color: $color-pink;
+  }
+
+  &__voice {
+    max-width: 400px;
+    margin: 10px auto 0;
+  }
+}
+
+.f-archive {
+  margin: 30px 0;
+
+  @include screen-lg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed $color-gray;
+
+    @include screen-lg {
+      width: 30%;
+
+      &:nth-child(3n),
+      &:nth-child(3n + 2) {
+        margin-left: 5%;
+      }
+    }
+  }
+
+  &__a {
+    display: block;
+    padding-bottom: 10px;
+    text-decoration: none;
+
+    @include screen-lg {
+      height: 100%;
+    }
+
+    &:hover * {
+      color: $color-pink;
+    }
+  }
+
+  &__image {
+    margin-bottom: 10px;
+    text-align: center;
+
+    img {
+      max-width: 180px;
+    }
+  }
+
+  &__date {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  &__title {
+    transition: 0.3s;
+    color: $color-brown;
+  }
+}
+
+.f-single {
+  margin: 50px 0;
+
+  &__head {
+    position: relative;
+    margin: 30px auto;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 0.2em;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      margin: auto;
+      content: '';
+      background-color: $color-pink;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__content {
+    padding: 20px 0;
+    word-break: break-all;
+    border-bottom: 1px dashed $color-gray;
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+.f-pagination {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-numbers {
+    font-weight: bold;
+    line-height: 36px;
+    display: block;
+    width: 40px;
+    margin: 0 10px;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid $color-pink;
+    background-color: $color-pink;
+
+    &[href] {
+      color: $color-brown;
+      background-color: #fff;
+      &:hover {
+        color: $color-pink;
+      }
+    }
+  }
+}
+
+.f-navigation {
+  h2 {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .nav-previous,
+  .nav-next {
+    flex-grow: 1;
+    width: 100%;
+
+    &:before {
+      font-size: 13px;
+      display: block;
+    }
+  }
+  .nav-next {
+    &:before {
+      content: '次の記事';
+    }
+  }
+
+  .nav-previous {
+    margin-left: 20px;
+
+    &:before {
+      content: '前の記事';
+      text-align: right;
+    }
+
+    a {
+      display: block;
+      text-align: right;
     }
   }
 }

@@ -32,11 +32,3 @@
   <?php endif; ?>
   <main class="f-<?php echo get_post_field( 'post_name', get_the_ID() ); ?>">
   <div class="f-container">
-    <?php if(!is_front_page()) : ?>
-    <ul class="f-breadcrumb">
-      <li class="f-breadcrumb__item">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Top</a>
-      </li>
-      <li class="f-breadcrumb__item"><?php the_title(); ?></li>
-    </ul>
-    <?php endif; ?>

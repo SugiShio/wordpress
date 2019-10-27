@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+.single {
+    .title {
+        font-size: 24px;
+    }
+
+    .time {
+        font-family: $font-number;
+        color: $color-usuzumi;
+    }
+
+    .content {
+        margin-top: 80px;
+        @extend %markdown;
+    }
+}

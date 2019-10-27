@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+.archive {
+    .title {
+        font-size: 18px;
+        color: $color-shioniro;
+    }
+
+    .posts {
+        margin-top: 20px;
+
+        li + li {
+            margin-top: 15px;
+        }
+
+        a {
+            @include link;
+            display: inline-flex;
+            color: $color-kuro;
+        }
+
+        time {
+            font-family: $font-number;
+            display: inline-block;
+            min-width: 70px;
+            letter-spacing: 0.05em;
+            color: $color-fujiiro;
+        }
+
+        p {
+            margin-left: 5px;
+            flex: 1;
+        }
+    }
+}

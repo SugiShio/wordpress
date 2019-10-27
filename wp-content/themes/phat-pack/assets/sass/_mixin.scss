@@ -1,0 +1,16 @@
+@mixin font-size($size: 10) {
+    font-size: #{$size}px;
+    font-size: #{$size/10}rem;
+}
+
+@mixin ttl($size: 10) {
+    @include font-size($size);
+    font-family: 'Cambay', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@mixin animationValue( $name, $duration, $function, $delay, $count, $state){
+    -webkit-animation: $name $duration+s $function $delay+s $count $state;
+    animation: $name $duration+s $function $delay+s $count $state;
+}

@@ -1,0 +1,72 @@
+.gallery-list {
+  margin: 30px auto;
+  @include screen-lg {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    @include screen-lg {
+      width: calc(100% / 3);
+      padding-right: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+    padding: 10px;
+    background-color: #fff;
+    transition: .3s;
+    &:hover {
+      box-shadow: 0 0 8px rgba(#000, .6);
+    }
+  }
+
+  &__title {
+    margin-top: 5px;
+    font-family: $font-serif;
+    font-weight: bold;
+  }
+}
+
+.gallery {
+  margin: 30px auto;
+  @include screen-lg {
+    width: 900px;
+  }
+
+  &__main-img {
+    padding-bottom: 20px;
+    @include screen-lg {
+      padding: 10px;
+    }
+  }
+
+  &__desc {
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  &__text {
+    margin: 0 30px;
+  }
+
+  &__images {
+    margin: 30px 0;
+    p {
+      width: 100%;
+      padding-bottom: 20px;
+      @include screen-lg {
+        width: 300px;
+        padding: 10px;
+      }
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

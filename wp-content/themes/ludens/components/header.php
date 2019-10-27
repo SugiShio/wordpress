@@ -15,4 +15,7 @@
       <span></span>
     </div>
   </div>
+  <div class="header__text">
+    『ルーデンス伊勢崎ウエディングヴィラ』　光×緑で叶う新感覚リゾートウエディング
+  </div>
 </header>

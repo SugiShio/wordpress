@@ -10,3 +10,4 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php include 'menu.php' ?>

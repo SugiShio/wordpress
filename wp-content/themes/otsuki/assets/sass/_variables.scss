@@ -2,9 +2,15 @@
 
 /* colors
 ----------------- */
-$color-text: #141415;
+$color-text: #4b473f;
+$color-main: #bca162;
+$color-weak: lighten($color-text, 10%);
 
 /* font families
 ----------------- */
-$font-sansserif: 'Source Sans Pro', 'ヒラギノ角ゴ Pro',
+$font-serif: 'EB Garamond', 'ヒラギノ角ゴ Pro',
   'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+
+/* z indexes
+----------------- */
+$z-index-header: 100000;

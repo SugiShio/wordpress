@@ -67,33 +67,4 @@
 
 .o-sns {
   padding: 80px 10px;
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__item {
-    margin: 0 10px;
-  }
-
-  &__link {
-    display: block;
-    text-align: center;
-    transition: 0.3s;
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-  &__icon {
-    img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  &__id {
-    font-size: 12px;
-  }
 }

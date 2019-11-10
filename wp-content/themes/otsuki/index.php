@@ -58,18 +58,7 @@ setup_postdata( $post );
 
   <?php /* SNS */ ?>
   <section class="o-sns">
-    <ul class="o-sns__list">
-      <?php foreach($GLOBALS['accounts'] as $account) : ?>
-      <li class="o-sns__item">
-        <a href="<?php echo $account['url']; ?>" target="_blank" class="o-sns__link">
-          <div class="o-sns__icon">
-            <img src="<?php echo get_template_directory_uri()."/assets/images/".$account['name'].".png"; ?>" alt="">
-          </div>
-          <div class="o-sns__id"><?php echo $account['id']; ?></div>
-        </a>
-      </li>
-      <?php endforeach; ?>
-    </ul>
+    <?php include 'snslist.php' ?>
   </section>
 
   <?php wp_reset_postdata(); ?>

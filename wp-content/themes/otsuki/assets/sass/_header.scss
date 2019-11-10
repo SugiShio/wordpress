@@ -1,0 +1,51 @@
+.o-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $z-index-header;
+
+  &.fix {
+    position: fixed;
+    background-color: $color-main;
+  }
+}
+
+.o-wrapper {
+  padding-top: 55px;
+}
+
+.o-nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    a,
+    span {
+      display: block;
+      padding: 15px;
+      margin: 0 10px;
+      color: $color-main;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    a:hover,
+    span {
+      opacity: 0.6;
+    }
+  }
+}
+
+.fix {
+  .o-nav {
+    &__item {
+      a,
+      span {
+        color: #fff;
+      }
+    }
+  }
+}

@@ -4,12 +4,13 @@
 ----------------- */
 $color-text: #4b473f;
 $color-main: #bca162;
-$color-weak: lighten($color-text, 10%);
+$color-main-weak: lighten($color-main, 20%);
+$color-weak: lighten($color-text, 30%);
 
 /* font families
 ----------------- */
-$font-serif: 'EB Garamond', 'ヒラギノ角ゴ Pro',
-  'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$font-serif: 'EB Garamond', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'HG明朝E',
+  'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
 
 /* z indexes
 ----------------- */

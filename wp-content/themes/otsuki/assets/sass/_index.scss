@@ -42,6 +42,14 @@
 }
 
 .o-featuredvideo {
+  &__video {
+    iframe {
+      width: 100vw;
+      height: 56.25vw;
+      display: block;
+    }
+  }
+
   &__link {
     display: block;
     text-align: center;

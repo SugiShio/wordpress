@@ -1,0 +1,23 @@
+.o-schedule {
+  &__item {
+    margin: 70px 0;
+    text-align: center;
+    a {
+      color: $color-main;
+      text-decoration: underline;
+    }
+  }
+  &__date {
+    color: $color-weak;
+  }
+  &__title {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  &__content {
+    margin: 15px auto 30px;
+    p {
+      margin: 10px 0;
+    }
+  }
+}

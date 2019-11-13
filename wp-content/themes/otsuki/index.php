@@ -13,7 +13,10 @@
   $posts = get_posts(array(
     'post_type' => 'schedule',
     'meta_key' => 'date',
-    'order' => 'ASC'
+    'order' => 'ASC',
+    'orderby' => 'meta_value',
+    'meta_value' => date('Ymd'),
+    'meta_compare' => '>=',
   ));
   $post = $posts[0];
   setup_postdata( $post );

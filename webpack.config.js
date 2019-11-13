@@ -8,7 +8,7 @@ const glob = require('glob')
 entries = (env = {}) => {
   const TARGETS = env.theme ? './**/' + env.theme + '/**/app.js' : './**/app.js'
   let entries = {}
-  glob.sync(TARGETS).map(function (file) {
+  glob.sync(TARGETS).map(function(file) {
     const FILE_PATH = file.replace(/wp-content\/themes\//, '')
     const PROJECT_NAME = FILE_PATH.split('/')[1]
     entries[PROJECT_NAME] = FILE_PATH
@@ -78,7 +78,17 @@ module.exports = (env = {}) => {
             {
               loader: 'babel-loader',
               options: {
-                presets: [['@babel/preset-env', { modules: false }]]
+                presets: [
+                  [
+                    '@babel/preset-env',
+                    {
+                      modules: false,
+                      targets: {
+                        node: 'current'
+                      }
+                    }
+                  ]
+                ]
               }
             }
           ]

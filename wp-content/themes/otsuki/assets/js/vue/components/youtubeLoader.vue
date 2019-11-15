@@ -27,6 +27,7 @@ div.o-content
 
 <script>
 import fetchComponent from './fetchComponent.vue'
+import { decNumRefToString } from '../../utils'
 export default {
   components: { fetchComponent },
   data() {
@@ -39,7 +40,7 @@ export default {
     setItems(items) {
       items.forEach(item => {
         this.items.push({
-          title: item.title.rendered,
+          title: decNumRefToString(item.title.rendered),
           youtubeId: item.youtube_id
         })
       })

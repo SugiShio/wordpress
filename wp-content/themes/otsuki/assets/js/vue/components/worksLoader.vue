@@ -31,6 +31,7 @@ div
 
 <script>
 import fetchComponent from './fetchComponent.vue'
+import { decNumRefToString } from '../../utils'
 export default {
   components: { fetchComponent },
   data() {
@@ -43,8 +44,8 @@ export default {
     setItems(items) {
       items.forEach(item => {
         this.items.push({
-          title: item.title.rendered,
-          content: item.content.rendered,
+          title: decNumRefToString(item.title.rendered),
+          content: decNumRefToString(item.content.rendered),
           imageSrc: item.image,
           year: item.year,
           updatedAt: item.date

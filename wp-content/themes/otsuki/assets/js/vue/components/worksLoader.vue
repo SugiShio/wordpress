@@ -1,12 +1,16 @@
 <template lang="pug">
-div.o-content
+div
   ul.list
     li.item(v-for='item in items')
-      .title
+      template(v-if='item.imageSrc')
+        .title
+          span {{ item.title }}
+        img(:src='item.imageSrc')
+      template(v-else)
         span {{ item.title }}
-      img(:src='`http://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`')
   fetch-component(
-    post-type='videos'
+    post-type='works'
+    :per-page='9'
     @fetch-succeed='setItems'
   )
 </template>
@@ -25,7 +29,8 @@ export default {
       items.forEach(item => {
         this.items.push({
           title: item.title.rendered,
-          youtubeId: item.youtube_id
+          content: item.content.rendered,
+          imageSrc: item.image
         })
       })
     }
@@ -34,13 +39,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../../sass/_variables.scss';
 .list {
-  margin: 30px 0;
+  max-width: 570px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .item {
-  margin: 30px 0;
+  margin: 20px;
+  width: 150px;
+  height: 150px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color-main, 0.1);
+  }
+
+  span {
+    display: block;
+    padding: 5px;
+    text-align: center;
+  }
 }
 
 .title {
@@ -50,8 +76,8 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 10px;
   transition: 0.3s;
-  cursor: pointer;
   justify-content: center;
   align-items: center;
   opacity: 0;

@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 <div id="app">
   <section class="o-mainview">
-    <p>Freelance Guitarist/Producer, based in Tokyo</p>
+    <h2>
+      <img src="<?php echo get_template_directory_uri()."/assets/images/title.svg"; ?>" alt="">
+    </h2>
+    <p class='o-mainview__sub'>Freelance Guitarist/Producer, based in Tokyo</p>
   </section>
 
   <parallax-box image="http://img.youtube.com/vi/<?php echo $GLOBALS['featured_video']; ?>/maxresdefault.jpg">

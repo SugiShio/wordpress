@@ -1,6 +1,11 @@
 .o-mainview {
   padding: 200px 10px;
   text-align: center;
+
+  &__sub {
+    margin-top: 50px;
+    color: $color-weak;
+  }
 }
 
 .o-show {

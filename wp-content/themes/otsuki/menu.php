@@ -3,7 +3,7 @@
     <ul class="o-nav__list">
       <?php if(!is_home()) : ?>
       <li class="o-nav__item">
-        <a href="<?php echo get_site_url() ?>">Top</a>
+        <a href="<?php echo get_site_url() ?>"><i class="icon-title"></i></a>
       </li>
       <?php endif; ?>
 

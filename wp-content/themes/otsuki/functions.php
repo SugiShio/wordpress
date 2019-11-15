@@ -75,6 +75,16 @@ function o_registar_rest_field() {
     )
   );
 
+  register_rest_field( 'works',
+  'year',
+  array(
+    'get_callback'    => function ( $object, $field_name, $request ) {
+      return get_post_meta( $object[ 'id' ], $field_name, true );
+    },
+    'update_callback' => null,
+    'schema'          => null,
+    )
+  );
 }
 add_action( 'rest_api_init', 'o_registar_rest_field' );
 ?>

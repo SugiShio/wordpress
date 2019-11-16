@@ -7,7 +7,7 @@
     <p class='o-mainview__sub'>Freelance Guitarist/Producer, based in Tokyo</p>
   </section>
 
-  <parallax-box image="http://img.youtube.com/vi/<?php echo $GLOBALS['featured_video']; ?>/maxresdefault.jpg">
+  <parallax-box image="<?php echo get_template_directory_uri()."/assets/images/image.jpg"; ?>" :rate="1.618">
   </parallax-box>
 
   <?php /* Schedule */ ?>

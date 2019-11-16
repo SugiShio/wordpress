@@ -38,6 +38,7 @@ export default {
     containerStyle() {
       return {
         overflow: 'hidden',
+        width: '100%',
         height: `${this.containerHeight}px`
       }
     },

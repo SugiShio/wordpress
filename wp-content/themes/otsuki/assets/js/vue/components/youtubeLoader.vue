@@ -71,9 +71,15 @@ export default {
 .item {
   margin-bottom: 150px;
   position: relative;
-  width: 600px;
-  height: 337.5px;
-  margin: 0 auto 150px;
+  margin: 0 auto 25vw;
+  width: 80vw;
+  height: 45vw;
+
+  @media screen and (min-width: 620px) {
+    margin: 0 auto 150px;
+    width: 600px;
+    height: 337.5px;
+  }
   &.loading {
     animation: 1s loading infinite alternate;
   }
@@ -101,6 +107,7 @@ export default {
   align-items: center;
   opacity: 0;
   background-color: #000;
+  text-align: center;
 
   &:hover {
     opacity: 0.8;

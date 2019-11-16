@@ -71,22 +71,35 @@ export default {
 <style lang="scss" scoped>
 @import '../../../sass/_variables.scss';
 .list {
-  max-width: 570px;
   margin: 30px auto;
-  display: flex;
-  flex-wrap: wrap;
+
+  @media screen and (min-width: 400px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+  }
+
+  @media screen and (min-width: 590px) {
+    width: 570px;
+  }
 }
 
 .item {
-  margin: 20px;
-  width: 150px;
-  height: 150px;
+  margin: 80px auto;
+  width: 70vw;
+  height: 70vw;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
   cursor: pointer;
+
+  @media screen and (min-width: 400px) {
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+  }
 
   &:hover {
     background-color: rgba($color-main, 0.1);

@@ -1,14 +1,17 @@
 <template lang="pug">
-div.o-content
+div
   ul.list
     li.item(
       v-for='item in items'
-      @click='setModalItem(item)')
-      .title
-        span {{ item.title }}
-      img(:src='`http://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`')
+      @click='setModalItem(item)'
+      :class='{ loading: !item.title }')
+      template(v-if='item.youtubeId')
+        .title
+          span {{ item.title }}
+        img(:src='`http://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`')
   fetch-component(
     post-type='videos'
+    @start-loading='setEmptyItem'
     @fetch-succeed='setItems'
   )
   .modal-bg(
@@ -37,7 +40,11 @@ export default {
     }
   },
   methods: {
+    setEmptyItem() {
+      this.items.push({})
+    },
     setItems(items) {
+      this.items.pop()
       items.forEach(item => {
         this.items.push({
           title: decNumRefToString(item.title.rendered),
@@ -64,6 +71,21 @@ export default {
 .item {
   margin-bottom: 150px;
   position: relative;
+  width: 600px;
+  height: 337.5px;
+  margin: 0 auto 150px;
+  &.loading {
+    animation: 1s loading infinite alternate;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-color: lighten($color-text, 70%);
+  }
+  100% {
+    background-color: lighten($color-text, 67%);
+  }
 }
 
 .title {
@@ -84,10 +106,6 @@ export default {
     opacity: 0.8;
     color: #fff;
   }
-}
-
-.loading {
-  text-align: center;
 }
 
 .modal-bg {

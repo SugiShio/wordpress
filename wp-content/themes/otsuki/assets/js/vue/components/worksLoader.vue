@@ -3,7 +3,8 @@ div
   ul.list
     li.item(
       v-for='item in items'
-      @click='setModalItem(item)')
+      @click='setModalItem(item)'
+      :class='{ loading: !item.title }')
       template(v-if='item.imageSrc')
         .title
           span {{ item.title }}
@@ -12,7 +13,8 @@ div
         span {{ item.title }}
   fetch-component(
     post-type='works'
-    :per-page='9'
+    :per-page='12'
+    @start-loading='setEmptyItem'
     @fetch-succeed='setItems'
   )
 
@@ -41,7 +43,11 @@ export default {
     }
   },
   methods: {
+    setEmptyItem() {
+      this.items.push({})
+    },
     setItems(items) {
+      this.items.pop()
       items.forEach(item => {
         this.items.push({
           title: decNumRefToString(item.title.rendered),
@@ -91,6 +97,19 @@ export default {
     padding: 5px;
     text-align: center;
   }
+
+  &.loading {
+    animation: 1s loading infinite alternate;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-color: lighten($color-text, 70%);
+  }
+  100% {
+    background-color: lighten($color-text, 68%);
+  }
 }
 
 .title {
@@ -111,10 +130,6 @@ export default {
     opacity: 0.8;
     color: #fff;
   }
-}
-
-.loading {
-  text-align: center;
 }
 
 .modal-bg {

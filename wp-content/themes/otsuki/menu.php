@@ -1,5 +1,10 @@
 <header id="js-header" class="o-header">
-  <nav class="o-nav">
+  <div class="o-nav-trigger" id="js-nav-trigger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="o-nav" id="js-nav">
     <ul class="o-nav__list">
       <?php if(!is_home()) : ?>
       <li class="o-nav__item">
@@ -32,6 +37,10 @@
         <?php /*
         <a href="https://mongoloid-union.jp">Mongoloid Union</a>
         */ ?>
+      </li>
+
+      <li class="o-nav__item o-nav__item--close-trigger" id="js-nav-close-trigger">
+        <a>close</a>
       </li>
     </ul>
   </nav>

@@ -1,3 +1,5 @@
+$breakpoint: 900px;
+
 .o-header {
   position: absolute;
   top: 0;
@@ -12,13 +14,61 @@
 }
 
 .o-wrapper {
-  padding-top: 55px;
+  @media screen and (min-width: $breakpoint) {
+    padding-top: 55px;
+  }
+}
+
+.o-nav-trigger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  span {
+    display: block;
+    height: 1px;
+    width: 60%;
+    background-color: $color-text;
+    margin: 3px 0;
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    display: none;
+  }
 }
 
 .o-nav {
+  @media screen and (max-width: $breakpoint) {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#fff, 0.95);
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (max-width: $breakpoint) {
+      flex-direction: column;
+      height: 100%;
+    }
   }
 
   &__item {
@@ -45,6 +95,14 @@
     span {
       opacity: 0.6;
     }
+
+    &--close-trigger {
+      margin-top: 30px;
+      text-decoration: underline;
+      @media screen and (min-width: $breakpoint) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -53,7 +111,9 @@
     &__item {
       a,
       span {
-        color: #fff;
+        @media screen and (min-width: $breakpoint) {
+          color: #fff;
+        }
       }
     }
   }

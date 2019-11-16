@@ -1,9 +1,8 @@
 <template lang="pug">
 div
-  .loading(v-if='isLoading') Loading...
   .link(
-    v-else-if='hasMore'
-    @click='fetchItems') 
+    v-if='showMore'
+    @click='fetchItems')
       a more
 </template>
 
@@ -29,8 +28,8 @@ export default {
     }
   },
   computed: {
-    hasMore() {
-      return this.fetchedCount < this.total
+    showMore() {
+      return !this.isLoading && this.fetchedCount < this.total
     }
   },
   created() {
@@ -44,6 +43,7 @@ export default {
         per_page: this.perPage
       }
       this.isLoading = true
+      this.$emit('start-loading')
       axios({
         method: 'get',
         url,

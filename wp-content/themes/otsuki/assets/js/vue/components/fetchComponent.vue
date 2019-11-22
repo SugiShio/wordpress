@@ -10,6 +10,7 @@ div
 import axios from 'axios'
 export default {
   props: {
+    baseUrl: String,
     postType: {
       type: String,
       required: true
@@ -33,6 +34,7 @@ export default {
     }
   },
   created() {
+    axios.defaults.baseURL = this.baseUrl
     this.fetchItems()
   },
   methods: {

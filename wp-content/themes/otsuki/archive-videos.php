@@ -6,8 +6,7 @@
     </h2>
     <span class="o-title__sub">動画</span>
   </div>
-
-  <youtube-loader></youtube-loader>
+  <youtube-loader base-url="<?php echo get_site_url() ?>">"></youtube-loader>
 </main>
 
 <?php get_footer(); ?>

@@ -11,6 +11,7 @@ div
         img(:src='`http://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`')
   fetch-component(
     post-type='videos'
+    :base-url='baseUrl'
     @start-loading='setEmptyItem'
     @fetch-succeed='setItems'
   )
@@ -33,6 +34,7 @@ import fetchComponent from './fetchComponent.vue'
 import { decNumRefToString } from '../../utils'
 export default {
   components: { fetchComponent },
+  props: { baseUrl: String },
   data() {
     return {
       items: [],

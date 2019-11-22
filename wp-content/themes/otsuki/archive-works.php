@@ -7,7 +7,7 @@
     <span class="o-title__sub">作品</span>
   </div>
 
-  <works-loader></works-loader>
+  <works-loader base-url="<?php echo get_site_url() ?>">"></works-loader>
 </main>
 
 <?php get_footer(); ?>

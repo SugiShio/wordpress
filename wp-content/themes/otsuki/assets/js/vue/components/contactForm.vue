@@ -10,7 +10,7 @@ div
           type='text'
           name='name'
           v-model='contact.name'
-          placeholder='大月文太'
+          placeholder='山田 太郎'
         )
     li.item
       label.input-wrapper
@@ -21,7 +21,7 @@ div
           type='email'
           name='email'
           v-model='contact.email'
-          placeholder='bunta.otsuki@gmail.com'
+          placeholder='taro@sample.com'
         )
     li.item
       label.input-wrapper
@@ -122,6 +122,7 @@ export default {
   font-family: $font-serif;
   outline: none;
   color: $color-text;
+  appearance: none;
 }
 
 .confirmItem {

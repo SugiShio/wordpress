@@ -14,6 +14,7 @@ div
     :base-url='baseUrl'
     @start-loading='setEmptyItem'
     @fetch-succeed='setItems'
+    :per-page='12'
   )
   .modal-bg(
     v-show='!!modalItem.title'
@@ -67,21 +68,31 @@ export default {
 <style lang="scss" scoped>
 @import '../../../sass/_variables.scss';
 .list {
-  margin: 80px 0;
+  margin: 80px auto;
+
+  @media screen and (min-width: 500px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+  }
+
+  @media screen and (min-width: 740px) {
+    width: 720px;
+  }
 }
 
 .item {
-  margin-bottom: 150px;
   position: relative;
   margin: 0 auto 25vw;
   width: 80vw;
   height: 45vw;
 
-  @media screen and (min-width: 620px) {
-    margin: 0 auto 150px;
-    width: 600px;
-    height: 337.5px;
+  @media screen and (min-width: 500px) {
+    margin: 30px 20px;
+    width: 200px;
+    height: 112.5px;
   }
+
   &.loading {
     animation: 1s loading infinite alternate;
   }
@@ -108,12 +119,13 @@ export default {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  background-color: #000;
+  background-color: rgba(#000, 0.5);
   text-align: center;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 1;
     color: #fff;
+    text-shadow: 0 0 5px #000;
   }
 }
 

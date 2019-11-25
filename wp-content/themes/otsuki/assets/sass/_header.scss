@@ -96,6 +96,15 @@ $breakpoint: 900px;
       opacity: 0.6;
     }
 
+    &--top {
+      @media screen and (min-width: $breakpoint) {
+        margin-right: 40px;
+      }
+      a {
+        color: $color-text;
+      }
+    }
+
     &--close-trigger {
       margin-top: 30px;
       text-decoration: underline;
@@ -106,13 +115,17 @@ $breakpoint: 900px;
   }
 }
 
-.fix {
-  .o-nav {
-    &__item {
-      a,
-      span {
-        @media screen and (min-width: $breakpoint) {
+@media screen and (min-width: $breakpoint) {
+  .fix {
+    .o-nav {
+      &__item {
+        a,
+        span {
           color: #fff;
+        }
+
+        &--top a {
+          color: $color-text;
         }
       }
     }

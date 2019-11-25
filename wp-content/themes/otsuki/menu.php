@@ -7,7 +7,7 @@
   <nav class="o-nav" id="js-nav">
     <ul class="o-nav__list">
       <?php if(!is_home()) : ?>
-      <li class="o-nav__item">
+      <li class="o-nav__item o-nav__item--top">
         <a href="<?php echo get_site_url() ?>"><i class="icon-title"></i></a>
       </li>
       <?php endif; ?>

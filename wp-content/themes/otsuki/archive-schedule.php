@@ -8,6 +8,11 @@
   </div>
 
   <?php
+  $year = (int)$_GET['y'];
+  $month = (int)$_GET['m'];
+  if(0 < $year && 0 < $month && $month <= 12) :
+    get_template_part('archive-schedule-scoped');
+  else :
   $posts = get_posts(array(
     'post_type' => 'schedule',
     'meta_key' => 'date',
@@ -60,6 +65,19 @@
     endif;
     ?>
   </ul>
+  <?php
+  $year = date('Y');
+  $month = date('m') - 1;
+  if($month < 1) {
+    $month += 12;
+    $year--;
+  }
+  ?>
+  <div class="o-schedule__link">
+    <a href="<?php echo esc_url(add_query_arg(array('y' => $year, 'm' => $month))); ?>">過去のスケジュール</a>
+  </div>
+  <?php endif; ?>
+
 </main>
 
 <?php get_footer(); ?>

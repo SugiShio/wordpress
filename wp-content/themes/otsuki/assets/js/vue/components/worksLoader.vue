@@ -139,11 +139,12 @@ export default {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  background-color: #000;
+  background-color: rgba(#000, 0.5);
 
   &:hover {
-    opacity: 0.8;
+    opacity: 1;
     color: #fff;
+    text-shadow: 0 0 5px #000;
   }
 }
 

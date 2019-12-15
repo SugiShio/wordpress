@@ -18,8 +18,14 @@
     'posts_per_page' => 20
   ));
   ?>
+
   <ul class="o-content">
+    <?php if(empty($posts)) : ?>
+    <li class="o-schedule__item">
+      予定されているスケジュールはありません
+    </li>
     <?php
+    else :
     foreach($posts as $post) :
     setup_postdata( $post );
     $date = get_field('date');
@@ -31,7 +37,7 @@
       <h3 class="o-schedule__title"><?php echo get_the_title(); ?></h3>
 
       <?php if(post_custom('place')) : ?>
-      <div>
+      <div class="o-schedule__place">
         @
         <?php if(post_custom('place_url')) : ?>
         <a href="<?php echo post_custom('place_url'); ?>">
@@ -51,6 +57,7 @@
     <?php
     wp_reset_postdata();
     endforeach;
+    endif;
     ?>
   </ul>
 </main>

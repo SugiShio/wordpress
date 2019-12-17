@@ -1,10 +1,10 @@
 <template lang="pug">
 div
   ul.list
-    li.item(
+    li.item.v-link-hover(
       v-for='item in items'
       @click='setModalItem(item)'
-      :class='{ loading: !item.title }')
+      :class='{ "v-loading": !item.title }')
       template(v-if='item.imageSrc')
         .title
           span {{ item.title }}
@@ -19,14 +19,14 @@ div
     @fetch-succeed='setItems'
   )
 
-  .modal-bg(
+  .modal-bg.v-zi-modal(
     v-show='!!modalItem.title'
     @click='onClose')
     .modal-wrapper(ref='modalContainer')
       .modal-container
         span.modal-close(@click='onClose') close
         h3.modal-title {{ modalItem.title }}
-        time.modal-year(:datetime='modalItem.updatedAt') {{ modalItem.year }}
+        time.modal-year.v-c-weak(:datetime='modalItem.updatedAt') {{ modalItem.year }}
         img.modal-image(:src='modalItem.imageSrc')
         .modal-content(v-html='modalItem.content')
 
@@ -71,7 +71,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/_variables.scss';
 .list {
   margin: 30px auto;
 
@@ -103,27 +102,10 @@ export default {
     height: 150px;
   }
 
-  &:hover {
-    background-color: rgba($color-main, 0.1);
-  }
-
   span {
     display: block;
     padding: 5px;
     text-align: center;
-  }
-
-  &.loading {
-    animation: 1s loading infinite alternate;
-  }
-}
-
-@keyframes loading {
-  0% {
-    background-color: lighten($color-text, 70%);
-  }
-  100% {
-    background-color: lighten($color-text, 68%);
   }
 }
 
@@ -148,7 +130,7 @@ export default {
   }
 }
 
-.modal-bg {
+.modal-bg.v-zi-modal {
   background-color: rgba(#000, 0.93);
   position: fixed;
   top: 0;
@@ -158,7 +140,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: $z-index-modal;
 }
 
 .modal-close {
@@ -197,7 +178,6 @@ export default {
 
 .modal-year {
   margin: 10px 0;
-  color: $color-weak;
 }
 
 .modal-image {

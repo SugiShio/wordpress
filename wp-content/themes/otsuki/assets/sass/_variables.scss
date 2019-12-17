@@ -19,3 +19,57 @@ $width-content: 600px;
 ----------------- */
 $z-index-header: 100000;
 $z-index-modal: 110000;
+
+.v {
+  &-c {
+    &-main {
+      color: $color-main !important;
+    }
+
+    &-text {
+      color: $color-text !important;
+    }
+
+    &-red {
+      color: $color-red !important;
+    }
+  }
+
+  &-bc {
+    &-weak {
+      border-color: $color-weak !important;
+    }
+  }
+
+  &-bgc {
+    &-main {
+      background-color: $color-main;
+    }
+  }
+
+  &-ff-serif {
+    font-family: $font-serif !important;
+  }
+  &-zi {
+    &-modal {
+      z-index: $z-index-modal;
+    }
+  }
+
+  &-loading {
+    animation: 1s loading infinite alternate;
+  }
+
+  &-link-hover:hover {
+    background-color: rgba($color-main, 0.1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-color: lighten($color-text, 70%);
+  }
+  100% {
+    background-color: lighten($color-text, 67%);
+  }
+}

@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  .link(
+  .link.v-c-main(
     v-if='showMore'
     @click='fetchItems')
       a more
@@ -69,10 +69,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/_variables.scss';
 .link {
   text-align: center;
-  color: $color-main;
   text-decoration: underline;
 
   a {

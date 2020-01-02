@@ -10,6 +10,7 @@ $url_base = array(
 $post = get_post(get_page_by_path('config'));
 setup_postdata( $post );
 $featured_video = get_field('video');
+$theme_name = get_field('theme');
 
 foreach($sns as $item) {
   if(get_field($item)) {
@@ -23,18 +24,25 @@ foreach($sns as $item) {
 wp_reset_postdata();
 
 function o_scripts() {
-  wp_enqueue_style('o-style', get_template_directory_uri() . '/public/css/style.css');
+  wp_enqueue_style('o-style', get_template_directory_uri() . '/public/css/style_'.$GLOBALS['theme_name'].'.css');
   wp_enqueue_script('o-scripts', get_template_directory_uri() . '/public/js/index.js');
 }
 add_action('wp_enqueue_scripts', 'o_scripts');
 
 function o_init() {
   $post_types = [
-    ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
-    ['label'=>'Works', 'term'=>'works', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
-    ['label'=>'Videos', 'term'=>'videos', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
+    'otsuki' => [
+      ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
+      ['label'=>'Works', 'term'=>'works', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
+      ['label'=>'Videos', 'term'=>'videos', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
+    ],
+    'mongoloid' => [
+      ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
+      ['label'=>'Discography', 'term'=>'discography', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
+      ['label'=>'Videos', 'term'=>'videos', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
+    ]
   ];
-  foreach($post_types as $post_type) {
+  foreach($post_types[$GLOBALS['theme_name']] as $post_type) {
     register_post_type($post_type['term'],
       array(
         'labels' => array(
@@ -85,6 +93,29 @@ function o_registar_rest_field() {
     'schema'          => null,
     )
   );
+
+register_rest_field( 'discography',
+'image',
+array(
+  'get_callback'    => function ( $object, $field_name, $request ) {
+    $image_id = get_post_meta( $object[ 'id' ], $field_name, true );
+    return wp_get_attachment_url($image_id);
+  },
+  'update_callback' => null,
+  'schema'          => null,
+  )
+);
+
+register_rest_field( 'discography',
+'year',
+array(
+  'get_callback'    => function ( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+  },
+  'update_callback' => null,
+  'schema'          => null,
+  )
+);
 }
 add_action( 'rest_api_init', 'o_registar_rest_field' );
 ?>

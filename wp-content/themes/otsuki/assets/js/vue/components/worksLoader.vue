@@ -12,7 +12,7 @@ div
       template(v-else)
         span {{ item.title }}
   fetch-component(
-    post-type='works'
+    :post-type='postType'
     :base-url='baseUrl'
     :per-page='12'
     @start-loading='setEmptyItem'
@@ -37,7 +37,7 @@ import fetchComponent from './fetchComponent.vue'
 import { decNumRefToString } from '../../utils'
 export default {
   components: { fetchComponent },
-  props: { baseUrl: String },
+  props: { baseUrl: String, postType: String },
   data() {
     return {
       items: [],
@@ -71,6 +71,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color-text: #4b473f;
+$color-weak: lighten($color-text, 30%);
 .list {
   margin: 30px auto;
 
@@ -148,6 +150,7 @@ export default {
   padding: 5px;
   cursor: pointer;
   transition: 0.3s;
+  color: $color-weak;
 
   &:hover {
     opacity: 0.6;
@@ -174,10 +177,12 @@ export default {
   margin: 10px 0;
   font-size: 22px;
   text-align: center;
+  color: $color-text;
 }
 
 .modal-year {
   margin: 10px 0;
+  color: $color-weak;
 }
 
 .modal-image {
@@ -187,5 +192,6 @@ export default {
 
 .modal-content {
   margin: 20px 0;
+  color: $color-text;
 }
 </style>

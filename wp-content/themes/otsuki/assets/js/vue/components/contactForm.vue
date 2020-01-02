@@ -37,7 +37,7 @@ div
         )
     li.item
       .error.v-c-red {{ errorMessage }}
-      .button.v-bgc-main.v-bc-main.v-ff-serif(
+      .button.v-bgc-main.v-bc-main.v-bc-main.v-ff-serif(
         v-show='!isConfirm'
         @click='goToConfirm'
       ) 送信内容の確認
@@ -47,7 +47,7 @@ div
           name='submit'
           value='送信'
         )
-        .button.button--weak.v-c-main(@click='backToInput') 修正する
+        .button.v-c-main(@click='backToInput') 修正する
 
 </template>
 
@@ -117,6 +117,7 @@ export default {
   padding: 10px 5px;
   border: none;
   border-bottom: 1px solid;
+  background-color: rgba(#fff, 0.2);
   outline: none;
   appearance: none;
 }
@@ -137,6 +138,7 @@ export default {
   margin: 10px auto;
   padding: 8px 10px;
   border: 1px solid;
+  background-color: transparent;
   color: #fff;
   text-align: center;
   cursor: pointer;
@@ -144,10 +146,6 @@ export default {
 
   &:hover {
     opacity: 0.6;
-  }
-
-  &--weak {
-    background-color: #fff;
   }
 }
 

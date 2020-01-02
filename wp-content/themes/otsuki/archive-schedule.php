@@ -1,11 +1,9 @@
 <?php get_header(); ?>
 <main class="o-main o-schedule">
-  <div class="o-title">
-    <h2>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/titles/schedule.svg" alt="schedule">
-    </h2>
-    <span class="o-title__sub">スケジュール</span>
-  </div>
+  <?php
+  $term = 'schedule';
+  include 'title.php';
+  ?>
 
   <?php
   $year = (int)$_GET['y'];

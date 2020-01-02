@@ -2,7 +2,9 @@
 <main class="o-main o-biography">
   <div class="o-title">
     <h2>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/titles/biography.svg" alt="biography">
+      <img
+        src="<?php echo get_template_directory_uri()."/assets/images/titles/".$GLOBALS['theme_name']."/biography.svg"; ?>"
+        alt="biography">
     </h2>
   </div>
 

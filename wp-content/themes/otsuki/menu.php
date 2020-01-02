@@ -8,36 +8,24 @@
     <ul class="o-nav__list">
       <?php if(!is_home()) : ?>
       <li class="o-nav__item o-nav__item--top">
-        <a href="<?php echo get_site_url() ?>"><i class="icon-title"></i></a>
+        <a href="<?php echo get_site_url() ?>"><i class="icon-title-<?php echo $GLOBALS['theme_name']; ?>"></i></a>
       </li>
       <?php endif; ?>
 
+      <?php
+      include 'menu-config.php';
+      $menu_items = $menu_config[$GLOBALS['theme_name']];
+      foreach($menu_items as $menu_item) : ?>
       <li class="o-nav__item">
-        <a href="<?php echo get_permalink(get_page_by_path('biography')) ?>">Biography</a>
+        <?php if($menu_item['url']) : ?>
+        <a href="<?php echo $menu_item['url']; ?>">
+          <?php echo $menu_item['label']; ?>
+        </a>
+        <?php else : ?>
+        <span><?php echo $menu_item['label']; ?></span>
+        <?php endif; ?>
       </li>
-
-      <li class="o-nav__item">
-        <a href="<?php echo get_post_type_archive_link('schedule') ?>">Schedule</a>
-      </li>
-
-      <li class="o-nav__item">
-        <a href="<?php echo get_post_type_archive_link('works') ?>">Works</a>
-      </li>
-
-      <li class="o-nav__item">
-        <a href="<?php echo get_post_type_archive_link('videos') ?>">Videos</a>
-      </li>
-
-      <li class="o-nav__item">
-        <a href="<?php echo get_permalink(get_page_by_path('contact')) ?>">Contact</a>
-      </li>
-
-      <li class="o-nav__item">
-        <span>Mongoloid Union</span>
-        <?php /*
-        <a href="https://mongoloid-union.jp">Mongoloid Union</a>
-        */ ?>
-      </li>
+      <?php endforeach; ?>
 
       <li class="o-nav__item o-nav__item--close-trigger" id="js-nav-close-trigger">
         <a>close</a>

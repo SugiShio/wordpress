@@ -5,7 +5,6 @@ $url_base = array(
   'twitter' => "https://twitter.com/ACCOUNT_ID",
   'instagram' => "https://www.instagram.com/ACCOUNT_ID",
   'facebook' => "https://www.facebook.com/ACCOUNT_ID",
-
 );
 $post = get_post(get_page_by_path('config'));
 setup_postdata( $post );

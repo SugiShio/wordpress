@@ -40,7 +40,7 @@ $page_config = [
     'profile' => [
       'label' => 'Profile',
       'ja' => 'プロフィール',
-
+      'url' => get_post_type_archive_link('profile'),
     ],
     'schedule' => [
       'label' => 'Schedule',

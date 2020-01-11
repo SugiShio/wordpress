@@ -38,6 +38,7 @@ function o_init() {
     ],
     'mongoloid' => [
       ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
+      ['label'=>'Profile', 'term'=>'profile', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-admin-users'],
       ['label'=>'Discography', 'term'=>'discography', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
       ['label'=>'Videos', 'term'=>'videos', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
     ]

@@ -2,7 +2,9 @@
 <main class="o-main o-schedule">
   <div class="o-title">
     <h2>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/titles/schedule.svg" alt="schedule">
+      <img
+        src="<?php echo get_template_directory_uri()."/assets/images/titles/".$GLOBALS['theme_name']."/schedule.svg"; ?>"
+        alt="schedule">
     </h2>
     <span class="o-title__sub">スケジュール</span>
   </div>
@@ -45,7 +47,7 @@
       <div class="o-schedule__place">
         @
         <?php if(post_custom('place_url')) : ?>
-        <a href="<?php echo post_custom('place_url'); ?>">
+        <a href="<?php echo post_custom('place_url'); ?>" target="_blank">
           <?php echo post_custom('place'); ?>
         </a>
         <?php else : ?>

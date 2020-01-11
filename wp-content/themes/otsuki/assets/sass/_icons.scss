@@ -26,6 +26,9 @@ i[class*=' icon-'] {
   }
 }
 
-.icon-title:before {
+.icon-title-mongoloid:before {
   content: '\f101';
+}
+.icon-title-otsuki:before {
+  content: '\f102';
 }

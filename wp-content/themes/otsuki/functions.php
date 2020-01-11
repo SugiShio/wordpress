@@ -10,6 +10,7 @@ $post = get_post(get_page_by_path('config'));
 setup_postdata( $post );
 $featured_video = get_field('video');
 $theme_name = get_field('theme');
+$twitter_account = get_field('twitter');
 
 foreach($sns as $item) {
   if(get_field($item)) {

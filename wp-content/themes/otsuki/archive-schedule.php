@@ -43,7 +43,7 @@
       <div class="o-schedule__place">
         @
         <?php if(post_custom('place_url')) : ?>
-        <a href="<?php echo post_custom('place_url'); ?>">
+        <a href="<?php echo post_custom('place_url'); ?>" target="_blank">
           <?php echo post_custom('place'); ?>
         </a>
         <?php else : ?>

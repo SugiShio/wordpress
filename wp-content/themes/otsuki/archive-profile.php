@@ -29,7 +29,6 @@
         );
       }
     };
-    // var_dump($accounts);
     ?>
     <li class="o-profile__item">
       <div class="o-profile__image">

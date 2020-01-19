@@ -10,7 +10,7 @@ div
           type='text'
           name='name'
           v-model='contact.name'
-          placeholder='山田 太郎'
+          :placeholder='placeholderName'
         )
     li.item
       label.input-wrapper
@@ -21,7 +21,7 @@ div
           type='email'
           name='email'
           v-model='contact.email'
-          placeholder='taro@sample.com'
+          :placeholder='placeholderEmail'
         )
     li.item
       label.input-wrapper
@@ -33,7 +33,7 @@ div
           v-model='contact.body'
           cols='10'
           rows='5'
-          placeholder='演奏、楽曲制作、レッスンのご依頼等 お気軽にご連絡ください。'
+          :placeholder='placeholderBody'
         )
     li.item
       .error.v-c-red {{ errorMessage }}
@@ -54,6 +54,11 @@ div
 <script>
 import axios from 'axios'
 export default {
+  props: {
+    placeholderName: String,
+    placeholderEmail: String,
+    placeholderBody: String
+  },
   data() {
     return {
       isConfirm: false,

@@ -71,6 +71,27 @@ function o_registar_rest_field() {
     'schema'          => null,
     )
   );
+  register_rest_field( 'videos',
+  'show_thumbnail',
+  array(
+    'get_callback'    => function ( $object, $field_name, $request ) {
+      return get_post_meta( $object[ 'id' ], $field_name, true ) == "1";
+    },
+    'update_callback' => null,
+    'schema'          => null,
+    )
+  );
+  register_rest_field( 'videos',
+  'thumbnail',
+  array(
+    'get_callback'    => function ( $object, $field_name, $request ) {
+      $image_id = get_post_meta( $object[ 'id' ], $field_name, true );
+      return wp_get_attachment_url($image_id);
+    },
+    'update_callback' => null,
+    'schema'          => null,
+    )
+  );
 
   register_rest_field( 'works',
   'image',

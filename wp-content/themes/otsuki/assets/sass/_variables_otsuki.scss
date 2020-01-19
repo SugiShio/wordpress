@@ -16,6 +16,7 @@ $font-default: 'EB Garamond', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3',
   'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
 
 $width-content: 600px;
+$breakpoint-lg: $width-content;
 
 /* z indexes
 ----------------- */
@@ -38,6 +39,10 @@ $z-index-modal: 110000;
   }
 
   &-bc {
+    &-main {
+      border-color: $color-main !important;
+    }
+
     &-weak {
       border-color: $color-weak !important;
     }
@@ -45,7 +50,7 @@ $z-index-modal: 110000;
 
   &-bgc {
     &-main {
-      background-color: $color-main;
+      background-color: $color-main !important;
     }
   }
 

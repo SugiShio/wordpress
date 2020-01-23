@@ -5,10 +5,10 @@ div
       v-for='item in items'
       @click='setModalItem(item)'
       :class='{ "v-loading": !item.title }')
-      template(v-if='item.youtubeId')
-        .title
-          span {{ item.title }}
-        img(:src='`http://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`')
+      youtube-item(
+        v-if='item.youtubeId'
+        :item='item'
+        )
   fetch-component(
     post-type='videos'
     :base-url='baseUrl'
@@ -32,9 +32,10 @@ div
 
 <script>
 import fetchComponent from './fetchComponent.vue'
+import youtubeItem from './youtubeItem.vue'
 import { decNumRefToString } from '../../utils'
 export default {
-  components: { fetchComponent },
+  components: { fetchComponent, youtubeItem },
   props: { baseUrl: String },
   data() {
     return {
@@ -51,7 +52,9 @@ export default {
       items.forEach(item => {
         this.items.push({
           title: decNumRefToString(item.title.rendered),
-          youtubeId: item.youtube_id
+          youtubeId: item.youtube_id,
+          showThumbnail: item.show_thumbnail,
+          thumbnail: item.thumbnail
         })
       })
     },
@@ -92,29 +95,6 @@ export default {
     height: 112.5px;
   }
 }
-
-.title {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transition: 0.3s;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  background-color: rgba(#000, 0.5);
-  text-align: center;
-
-  &:hover {
-    opacity: 1;
-    color: #fff;
-    text-shadow: 0 0 5px #000;
-  }
-}
-
 .modal-bg {
   background-color: rgba(#000, 0.93);
   position: fixed;

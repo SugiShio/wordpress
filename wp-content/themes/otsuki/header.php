@@ -4,6 +4,7 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><?php bloginfo( 'name' ); ?></title>
   <meta name="description" content="<?php bloginfo( 'description' ); ?>">
   <meta property="og:title" content="<?php bloginfo( 'name' ); ?>" />
   <?php if(is_home()) : ?>

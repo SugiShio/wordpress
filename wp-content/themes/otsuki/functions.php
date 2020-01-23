@@ -25,7 +25,7 @@ wp_reset_postdata();
 
 function o_scripts() {
   wp_enqueue_style('o-style', get_template_directory_uri() . '/public/css/style_'.$GLOBALS['theme_name'].'.css');
-  wp_enqueue_script('o-scripts', get_template_directory_uri() . '/public/js/index.js');
+  wp_enqueue_script('o-scripts', get_template_directory_uri() . '/public/js/index_'.$GLOBALS['theme_name'].'.js');
 }
 add_action('wp_enqueue_scripts', 'o_scripts');
 

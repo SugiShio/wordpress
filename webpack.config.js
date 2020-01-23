@@ -5,27 +5,22 @@ const path = require('path')
 const glob = require('glob')
 
 // entryを自動生成
-// entries = (env = {}) => {
-//   const TARGETS = env.theme ? './**/' + env.theme + '/**/app.js' : './**/app.js'
-//   let entries = {}
-//   glob.sync(TARGETS).map(function(file) {
-//     const FILE_PATH = file.replace(/wp-content\/themes\//, '')
-//     const PROJECT_NAME = FILE_PATH.split('/')[1]
-//     entries[PROJECT_NAME] = FILE_PATH
-//   })
-//   return entries
-// }
-
-const entries = glob.sync('./wp-content/**/app*.js').map(file => {
-  const entry = file.replace(/wp-content\/themes\//, '')
-  const path = entry.split('/')
-  const projectName = path[1]
-  const filename = path[path.length - 1]
-  const suffix = filename.replace(/^app/, '').replace(/\.js$/, '')
-  return { entry, projectName, suffix }
-})
+setEntries = theme => {
+  const targetPath = theme
+    ? './wp-content/**/' + theme + '/**/app*.js'
+    : './wp-content/**/app*.js'
+  return glob.sync(targetPath).map(file => {
+    const entry = file.replace(/wp-content\/themes\//, '')
+    const path = entry.split('/')
+    const projectName = path[1]
+    const filename = path[path.length - 1]
+    const suffix = filename.replace(/^app/, '').replace(/\.js$/, '')
+    return { entry, projectName, suffix }
+  })
+}
 
 module.exports = (env = {}) => {
+  const entries = setEntries(env.theme)
   return entries.map(({ entry, projectName, suffix }) => {
     const mode = env.NODE_ENV || 'development'
     const useSourceMap = false

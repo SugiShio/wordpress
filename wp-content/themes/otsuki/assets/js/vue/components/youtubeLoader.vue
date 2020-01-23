@@ -95,7 +95,7 @@ export default {
     height: 112.5px;
   }
 }
-å .modal-bg {
+.modal-bg {
   background-color: rgba(#000, 0.93);
   position: fixed;
   top: 0;

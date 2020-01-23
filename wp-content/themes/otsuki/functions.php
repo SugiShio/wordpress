@@ -5,7 +5,6 @@ $url_base = array(
   'twitter' => "https://twitter.com/ACCOUNT_ID",
   'instagram' => "https://www.instagram.com/ACCOUNT_ID",
   'facebook' => "https://www.facebook.com/ACCOUNT_ID",
-
 );
 $post = get_post(get_page_by_path('config'));
 setup_postdata( $post );
@@ -32,11 +31,19 @@ add_action('wp_enqueue_scripts', 'o_scripts');
 
 function o_init() {
   $post_types = [
-    ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
-    ['label'=>'Works', 'term'=>'works', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
-    ['label'=>'Videos', 'term'=>'videos', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
+    'otsuki' => [
+      ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
+      ['label'=>'Works', 'term'=>'works', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
+      ['label'=>'Videos', 'term'=>'videos', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
+    ],
+    'mongoloid' => [
+      ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
+      ['label'=>'Profile', 'term'=>'profile', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-admin-users'],
+      ['label'=>'Discography', 'term'=>'discography', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
+      ['label'=>'Videos', 'term'=>'videos', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
+    ]
   ];
-  foreach($post_types as $post_type) {
+  foreach($post_types[$GLOBALS['theme_name']] as $post_type) {
     register_post_type($post_type['term'],
       array(
         'labels' => array(

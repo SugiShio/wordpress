@@ -1,10 +1,10 @@
 <template lang="pug">
 div
   ul.list
-    li.item(
+    li.item.v-link-hover(
       v-for='item in items'
       @click='setModalItem(item)'
-      :class='{ loading: !item.title }')
+      :class='{ "v-loading": !item.title }')
       template(v-if='item.imageSrc')
         .title
           span {{ item.title }}
@@ -12,21 +12,21 @@ div
       template(v-else)
         span {{ item.title }}
   fetch-component(
-    post-type='works'
+    :post-type='postType'
     :base-url='baseUrl'
     :per-page='12'
     @start-loading='setEmptyItem'
     @fetch-succeed='setItems'
   )
 
-  .modal-bg(
+  .modal-bg.v-zi-modal(
     v-show='!!modalItem.title'
     @click='onClose')
     .modal-wrapper(ref='modalContainer')
       .modal-container
         span.modal-close(@click='onClose') close
         h3.modal-title {{ modalItem.title }}
-        time.modal-year(:datetime='modalItem.updatedAt') {{ modalItem.year }}
+        time.modal-year.v-c-weak(:datetime='modalItem.updatedAt') {{ modalItem.year }}
         img.modal-image(:src='modalItem.imageSrc')
         .modal-content(v-html='modalItem.content')
 
@@ -37,7 +37,7 @@ import fetchComponent from './fetchComponent.vue'
 import { decNumRefToString } from '../../utils'
 export default {
   components: { fetchComponent },
-  props: { baseUrl: String },
+  props: { baseUrl: String, postType: String },
   data() {
     return {
       items: [],
@@ -71,7 +71,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/_variables.scss';
+$color-text: #4b473f;
+$color-weak: lighten($color-text, 30%);
 .list {
   margin: 30px auto;
 
@@ -103,27 +104,10 @@ export default {
     height: 150px;
   }
 
-  &:hover {
-    background-color: rgba($color-main, 0.1);
-  }
-
   span {
     display: block;
     padding: 5px;
     text-align: center;
-  }
-
-  &.loading {
-    animation: 1s loading infinite alternate;
-  }
-}
-
-@keyframes loading {
-  0% {
-    background-color: lighten($color-text, 70%);
-  }
-  100% {
-    background-color: lighten($color-text, 68%);
   }
 }
 
@@ -148,7 +132,7 @@ export default {
   }
 }
 
-.modal-bg {
+.modal-bg.v-zi-modal {
   background-color: rgba(#000, 0.93);
   position: fixed;
   top: 0;
@@ -158,7 +142,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: $z-index-modal;
 }
 
 .modal-close {
@@ -167,6 +150,7 @@ export default {
   padding: 5px;
   cursor: pointer;
   transition: 0.3s;
+  color: $color-weak;
 
   &:hover {
     opacity: 0.6;
@@ -193,6 +177,7 @@ export default {
   margin: 10px 0;
   font-size: 22px;
   text-align: center;
+  color: $color-text;
 }
 
 .modal-year {
@@ -207,5 +192,6 @@ export default {
 
 .modal-content {
   margin: 20px 0;
+  color: $color-text;
 }
 </style>

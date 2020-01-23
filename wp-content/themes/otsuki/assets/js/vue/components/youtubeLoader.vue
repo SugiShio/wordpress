@@ -4,7 +4,7 @@ div
     li.item(
       v-for='item in items'
       @click='setModalItem(item)'
-      :class='{ loading: !item.title }')
+      :class='{ "v-loading": !item.title }')
       template(v-if='item.youtubeId')
         .title
           span {{ item.title }}
@@ -16,7 +16,7 @@ div
     @fetch-succeed='setItems'
     :per-page='12'
   )
-  .modal-bg(
+  .modal-bg.v-zi-modal(
     v-show='!!modalItem.title'
     @click='onClose')
     .modal-container(ref='modalContainer')
@@ -66,7 +66,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/_variables.scss';
 .list {
   margin: 80px auto;
 
@@ -91,19 +90,6 @@ export default {
     margin: 30px 20px;
     width: 200px;
     height: 112.5px;
-  }
-
-  &.loading {
-    animation: 1s loading infinite alternate;
-  }
-}
-
-@keyframes loading {
-  0% {
-    background-color: lighten($color-text, 70%);
-  }
-  100% {
-    background-color: lighten($color-text, 67%);
   }
 }
 
@@ -136,7 +122,6 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $z-index-modal;
 }
 
 .modal-close {

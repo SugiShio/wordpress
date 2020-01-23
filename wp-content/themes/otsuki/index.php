@@ -2,13 +2,15 @@
 <div id="app">
   <section class="o-mainview">
     <h2>
-      <img src="<?php echo get_template_directory_uri()."/assets/images/title-".$GLOBALS['theme_name'].".svg"; ?>"
+      <img src="<?php echo get_template_directory_uri()."/assets/images/".$GLOBALS['theme_name']."/title.svg"; ?>"
         alt="">
     </h2>
     <p class='o-mainview__sub'><?php bloginfo( 'description' ); ?></p>
   </section>
 
-  <parallax-box image="<?php echo get_template_directory_uri()."/assets/images/image.jpg"; ?>" :rate="1.618">
+  <parallax-box
+    image="<?php echo get_template_directory_uri()."/assets/images/".$GLOBALS['theme_name']."/image.jpg"; ?>"
+    :rate="1.618">
   </parallax-box>
 
   <?php /* Schedule */ ?>

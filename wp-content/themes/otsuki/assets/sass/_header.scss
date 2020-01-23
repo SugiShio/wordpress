@@ -52,7 +52,7 @@ $breakpoint: 900px;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(#fff, 0.95);
+    background-color: rgba($color-background, 0.95);
 
     &.is-open {
       display: flex;

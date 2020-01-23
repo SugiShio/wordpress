@@ -3,9 +3,9 @@ div
   ul
     li.item
       label.input-wrapper
-        span.label お名前
+        span.label.v-c-main お名前
         p.confirmItem(v-show='isConfirm') {{ contact.name }}
-        input.input(
+        input.input.v-bc-weak.v-c-text.v-ff-serif(
           v-show='!isConfirm'
           type='text'
           name='name'
@@ -14,9 +14,9 @@ div
         )
     li.item
       label.input-wrapper
-        span.label メールアドレス
+        span.label.v-c-main メールアドレス
         p.confirmItem(v-show='isConfirm') {{ contact.email }}
-        input.input(
+        input.input.v-bc-weak.v-c-text.v-ff-serif(
           v-show='!isConfirm'
           type='email'
           name='email'
@@ -25,9 +25,9 @@ div
         )
     li.item
       label.input-wrapper
-        span.label お問合せ内容
+        span.label.v-c-main お問合せ内容
         p.confirmItem(v-show='isConfirm') {{ contact.body }}
-        textarea.input(
+        textarea.input.v-bc-weak.v-c-text.v-ff-serif(
           v-show='!isConfirm'
           name='body'
           v-model='contact.body'
@@ -36,18 +36,18 @@ div
           placeholder='演奏、楽曲制作、レッスンのご依頼等 お気軽にご連絡ください。'
         )
     li.item
-      .error {{ errorMessage }}
-      .button(
+      .error.v-c-red {{ errorMessage }}
+      .button.v-bgc-main.v-bc-main.v-bc-main.v-ff-serif(
         v-show='!isConfirm'
         @click='goToConfirm'
       ) 送信内容の確認
       .buttons(v-show='isConfirm')
-        input.button(
+        input.button.v-bgc-main.v-bc-main.v-ff-serif(
           type='submit'
           name='submit'
           value='送信'
         )
-        .button.button--weak(@click='backToInput') 修正する
+        .button.v-c-main(@click='backToInput') 修正する
 
 </template>
 
@@ -90,7 +90,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/_variables.scss';
 .item {
   margin: 20px 0;
 }
@@ -98,7 +97,6 @@ export default {
 .label {
   display: block;
   padding: 0 5px;
-  color: $color-weak;
   @media screen and (min-width: 400px) {
     width: 120px;
     flex-shrink: 0;
@@ -118,10 +116,9 @@ export default {
   width: 100%;
   padding: 10px 5px;
   border: none;
-  border-bottom: 1px solid $color-weak;
-  font-family: $font-serif;
+  border-bottom: 1px solid;
+  background-color: rgba(#fff, 0.2);
   outline: none;
-  color: $color-text;
   appearance: none;
 }
 
@@ -140,26 +137,19 @@ export default {
   max-width: 200px;
   margin: 10px auto;
   padding: 8px 10px;
-  border: 1px solid $color-main;
-  background-color: $color-main;
+  border: 1px solid;
+  background-color: transparent;
   color: #fff;
   text-align: center;
   cursor: pointer;
-  font-family: $font-serif;
   transition: 0.3s;
 
   &:hover {
     opacity: 0.6;
   }
-
-  &--weak {
-    background-color: #fff;
-    color: $color-main;
-  }
 }
 
 .error {
   text-align: center;
-  color: $color-red;
 }
 </style>

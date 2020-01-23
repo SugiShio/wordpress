@@ -13,16 +13,16 @@
       <?php endif; ?>
 
       <?php
-      include 'menu-config.php';
-      $menu_items = $menu_config[$GLOBALS['theme_name']];
-      foreach($menu_items as $menu_item) : ?>
+      include 'page-config.php';
+      $page_items = $page_config[$GLOBALS['theme_name']];
+      foreach($page_items as $page_item) : ?>
       <li class="o-nav__item">
-        <?php if($menu_item['url']) : ?>
-        <a href="<?php echo $menu_item['url']; ?>">
-          <?php echo $menu_item['label']; ?>
+        <?php if($page_item['url']) : ?>
+        <a href="<?php echo $page_item['url']; ?>">
+          <?php echo $page_item['label']; ?>
         </a>
         <?php else : ?>
-        <span><?php echo $menu_item['label']; ?></span>
+        <span><?php echo $page_item['label']; ?></span>
         <?php endif; ?>
       </li>
       <?php endforeach; ?>

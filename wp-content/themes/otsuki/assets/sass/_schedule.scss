@@ -1,0 +1,53 @@
+.o-schedule {
+  &__dateTitle {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 50px;
+
+    span {
+      font-size: 24px;
+    }
+  }
+  &__monthSelector {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__selectorButton {
+    width: 30px;
+    text-align: center;
+  }
+  &__item {
+    margin: 70px 0 85px;
+    text-align: center;
+    a {
+      color: $color-main;
+      text-decoration: underline;
+    }
+  }
+  &__date {
+    color: $color-weak;
+    font-size: 12px;
+  }
+  &__title {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  &__place {
+    font-size: 12px;
+  }
+  &__content {
+    margin: 15px auto 40px;
+    p {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+  }
+  &__link {
+    text-align: center;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

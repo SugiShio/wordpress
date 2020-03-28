@@ -1,0 +1,76 @@
+.o-mainview {
+  max-height: 100vh;
+  padding: 200px 10px;
+  text-align: center;
+
+  &__sub {
+    margin-top: 50px;
+    color: $color-weak;
+  }
+}
+
+.o-show {
+  padding: 80px 10px;
+  text-align: center;
+
+  &__title {
+    color: $color-main;
+    font-weight: bold;
+
+    &::before,
+    &::after {
+      content: '-';
+      margin: 0 10px;
+    }
+  }
+
+  &__item {
+    margin: 20px 0;
+  }
+
+  &__date {
+    color: $color-weak;
+  }
+
+  &__itemtitle {
+    font-size: 16px;
+  }
+
+  &__morelink {
+    color: $color-main;
+    text-decoration: underline;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.o-featuredvideo {
+  &__video {
+    iframe {
+      width: 100vw;
+      height: 56.25vw;
+      display: block;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    color: #fff;
+    padding: 20px 10px;
+    background-color: $color-main-weak;
+    text-decoration: underline;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.o-sns {
+  padding: 80px 10px;
+}

@@ -1,0 +1,21 @@
+.o-title {
+  text-align: center;
+
+  &__sub {
+    margin-top: 15px;
+    letter-spacing: 0.2em;
+    color: $color-weak;
+    font-size: 10px;
+    display: block;
+  }
+}
+
+.o-main {
+  padding: 30px 10px 100px;
+}
+
+.o-content {
+  margin: auto;
+  max-width: $width-content;
+  padding: 20px 10px;
+}

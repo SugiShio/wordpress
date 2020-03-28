@@ -1,0 +1,38 @@
+.o-discography {
+  &__item {
+    margin: 100px 0;
+  }
+
+  &__image {
+    max-width: 360px;
+    margin: 30px auto;
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-size: 16px;
+    @include screen-lg {
+      text-align: center;
+    }
+  }
+
+  &__year {
+    color: $color-main;
+    font-size: 10px;
+    @include screen-lg {
+      text-align: center;
+    }
+  }
+
+  &__content {
+    margin: 15px auto;
+    @include screen-lg {
+      text-align: center;
+    }
+
+    p {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+  }
+}

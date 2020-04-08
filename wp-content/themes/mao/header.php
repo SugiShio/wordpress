@@ -18,7 +18,7 @@
   <meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
   <!-- twitter -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@twitter_account" />
+  <meta name="twitter:site" content="@<?php echo $GLOBALS['twitter_account']; ?>" />
 
   <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri()."/assets/images/favicon.ico"; ?>">
 

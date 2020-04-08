@@ -5,31 +5,33 @@ const path = require('path')
 const glob = require('glob')
 
 // entryを自動生成
-setEntries = theme => {
-  const targetPath = theme
-    ? './wp-content/**/' + theme + '/**/app*.js'
+setEntries = options => {
+  const namespace = options.theme || options.plugin
+  const targetPath = namespace
+    ? './wp-content/**/' + namespace + '/**/app*.js'
     : './wp-content/**/app*.js'
   return glob.sync(targetPath).map(file => {
-    const entry = file.replace(/wp-content\/themes\//, '')
+    const entry = file.replace(/wp-content\/.*?\//, '')
+    const type = file.match(/wp-content\/(.*?)\//, '')[1]
     const path = entry.split('/')
     const projectName = path[1]
     const filename = path[path.length - 1]
     const suffix = filename.replace(/^app/, '').replace(/\.js$/, '')
-    return { entry, projectName, suffix }
+    return { entry, type, projectName, suffix }
   })
 }
 
 module.exports = (env = {}) => {
-  const entries = setEntries(env.theme)
-  return entries.map(({ entry, projectName, suffix }) => {
+  const entries = setEntries(env)
+  return entries.map(({ entry, type, projectName, suffix }) => {
     const mode = env.NODE_ENV || 'development'
     const useSourceMap = false
     return {
       mode,
-      context: path.join(__dirname, 'wp-content/themes'),
+      context: path.join(__dirname, `wp-content/${type}`),
       entry,
       output: {
-        path: path.join(__dirname, 'wp-content/themes'),
+        path: path.join(__dirname, `wp-content/${type}`),
         filename: `${projectName}/public/js/index${suffix}.js`
       },
       module: {

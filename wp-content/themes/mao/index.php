@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <div id="app">
   <?php bloginfo( 'name' ); ?>
-  <router-view></router-view>
+  <component :is='layout'>
+    <router-view></router-view>
+  </component>
   <ul>
     <li>
       <router-link to='/'>Top</router-link>

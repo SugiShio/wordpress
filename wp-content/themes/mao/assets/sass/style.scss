@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import 'variables';
 @import 'utils';
 @import 'reset';
+@import 'icons';
+
+.m-wrapper {
+  position: fixed;
+  background-image: url('../images/top.jpg');
+  background-size: cover;
+}

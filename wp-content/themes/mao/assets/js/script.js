@@ -6,19 +6,27 @@ import layoutDefault from './layouts/default.vue'
 import layoutTop from './layouts/top.vue'
 
 import index from './pages/index.vue'
-import aboutMao from './pages/aboutMao.vue'
 import works from './pages/works.vue'
 import schedule from './pages/schedule.vue'
 import goodFellows from './pages/goodFellows.vue'
-import contact from './pages/contact.vue'
 
 const routes = [
   { path: '/', component: index },
-  { path: '/about_mao', component: aboutMao },
-  { path: '/works', component: works },
-  { path: '/schedule', component: schedule },
-  { path: '/good_fellows', component: goodFellows },
-  { path: '/contact', component: contact }
+  {
+    path: '/about-mao',
+    meta: { title: 'About Mao', isPage: true }
+  },
+  { path: '/works', component: works, meta: { title: 'Works' } },
+  { path: '/schedule', component: schedule, meta: { title: 'Schedule' } },
+  {
+    path: '/good-fellows',
+    component: goodFellows,
+    meta: { title: 'Good Fellows' }
+  },
+  {
+    path: '/contact',
+    meta: { title: 'Contact', isPage: true }
+  }
 ]
 
 const router = new VueRouter({
@@ -43,6 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
     created() {
       this.setLayout()
     },
+    mounted() {
+      this.setWindowSize()
+      window.addEventListener('resize', () => {
+        clearTimeout()
+        setTimeout(() => {
+          this.setWindowSize()
+        }, 300)
+      })
+    },
     methods: {
       setLayout() {
         switch (this.$route.path) {
@@ -52,6 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
           default:
             this.layout = 'layoutDefault'
         }
+      },
+      setWindowSize() {
+        const width = window.innerWidth
+        const height = window.innerHeight
+        this.$root.$el.style.width = `${width}px`
+        this.$root.$el.style.height = `${height}px`
       }
     }
   }).$mount('#app')

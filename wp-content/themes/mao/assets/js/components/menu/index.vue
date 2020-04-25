@@ -11,10 +11,10 @@ ul.m-menu
 import menuItem from './menuItem.vue'
 const MENU_ITEMS = [
   { label: 'Top', to: '/' },
-  { label: 'About Mao', to: '/about_mao' },
+  { label: 'About Mao', to: '/about-mao' },
   { label: 'Works', to: '/works' },
   { label: 'Schedule', to: '/schedule' },
-  { label: 'Good Fellows', to: '/good_fellows' },
+  { label: 'Good Fellows', to: '/good-fellows' },
   { label: 'Contact', to: '/contact' },
   {
     label: 'Spotify',

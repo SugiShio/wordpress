@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600;1,800&display=swap');
 @import 'variables';
 @import 'utils';
 @import 'reset';
@@ -9,4 +8,32 @@
   position: fixed;
   background-image: url('../images/top.jpg');
   background-size: cover;
+  overflow: scroll;
+}
+
+.m-about {
+  &__image {
+    margin-bottom: 30px;
+    text-align: center;
+
+    img {
+      max-width: 300px;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  &__content {
+    margin-top: 15px;
+    text-align: justify;
+
+    p {
+      margin-top: 10px;
+    }
+  }
 }

@@ -9,7 +9,7 @@ function mao_init() {
   $post_types = [
     ['label'=>'Schedule', 'term'=>'schedule', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-calendar-alt'],
     ['label'=>'Works', 'term'=>'works', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-format-audio'],
-    ['label'=>'Good Fellows', 'term'=>'good_fellows', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
+    ['label'=>'Good Fellows', 'term'=>'good-fellows', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-video-alt3'],
   ];
   foreach($post_types as $post_type) {
     register_post_type($post_type['term'],

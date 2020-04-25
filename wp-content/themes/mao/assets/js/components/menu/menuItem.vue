@@ -45,7 +45,6 @@ export default {
     font-size: 16px;
     font-weight: 600;
     font-style: italic;
-    color: #fff;
 
     &:hover {
       width: auto;

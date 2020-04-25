@@ -59,9 +59,6 @@ export default {
   &__icon {
     font-size: 26px;
     margin-right: 3px;
-    &::before {
-      vertical-align: middle;
-    }
   }
 
   &__remain {

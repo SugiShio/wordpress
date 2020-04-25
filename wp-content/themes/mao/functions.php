@@ -35,6 +35,7 @@ function mao_registar_rest_field() {
     ['post_type'=>'good-fellows', 'field'=>'instagram'],
     ['post_type'=>'good-fellows', 'field'=>'twitter'],
     ['post_type'=>'good-fellows', 'field'=>'facebook'],
+    ['post_type'=>'good-fellows', 'field'=>'youtube'],
     ['post_type'=>'good-fellows', 'field'=>'web']
   ];
   foreach($fields as $field) {

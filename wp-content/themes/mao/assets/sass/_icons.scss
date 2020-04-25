@@ -12,6 +12,7 @@
 
 i[class^='icon-'],
 i[class*=' icon-'] {
+  display: inline-block;
   line-height: 1;
   &::before {
     font-family: icons !important;
@@ -29,9 +30,21 @@ i[class*=' icon-'] {
 .icon-applemusic:before {
   content: '\f101';
 }
-.icon-instagram:before {
+.icon-facebook:before {
   content: '\f102';
 }
-.icon-spotify:before {
+.icon-instagram:before {
   content: '\f103';
+}
+.icon-spotify:before {
+  content: '\f104';
+}
+.icon-twitter:before {
+  content: '\f105';
+}
+.icon-web:before {
+  content: '\f106';
+}
+.icon-youtube:before {
+  content: '\f107';
 }

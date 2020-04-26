@@ -7,7 +7,6 @@ import layoutTop from './layouts/top.vue'
 
 import index from './pages/index.vue'
 import works from './pages/works.vue'
-import goodFellows from './pages/goodFellows.vue'
 
 const routes = [
   { path: '/', component: index },
@@ -22,8 +21,7 @@ const routes = [
   },
   {
     path: '/good-fellows',
-    component: goodFellows,
-    meta: { title: 'Good Fellows' }
+    meta: { title: 'Good Fellows', isPage: true }
   },
   {
     path: '/contact',

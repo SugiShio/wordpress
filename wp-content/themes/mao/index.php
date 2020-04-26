@@ -62,6 +62,47 @@
       ?>
     </template>
 
+    <template #good-fellows>
+      <?php
+        $posts = get_posts(array(
+          'post_type' => 'good-fellows',
+          'meta_key' => 'order',
+          'order' => 'ASC',
+          'orderby' => 'meta_value',
+        ));
+      ?>
+      <ul class="m-goodFellows">
+        <?php
+          foreach($posts as $post) :
+          setup_postdata( $post );
+          $title = get_field('subtitle');
+        ?>
+        <li class="m-goodFellows__item">
+          <div class="m-goodFellows__head">
+            <h3 class="m-goodFellows__name"><?php echo get_the_title(); ?></h3>
+            <?php if($title) : ?>
+            <span class="m-goodFellows__title"><?php echo $title; ?></span>
+            <?php endif; ?>
+          </div>
+          <?php if(get_the_content()) : ?>
+          <div class="m-goodFellows__content"><?php the_content(); ?></div>
+          <?php endif; ?>
+          <ul class="m-goodFellows__sns">
+            <li class="m-goodFellows__snsItem">
+              <a href="" class="m-sns" target='_blank'>
+                <i class="m-sns__icon icon-twitter"></i>
+                <span class="m-sns__label">hoge</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <?php
+          wp_reset_postdata();
+          endforeach;
+        ?>
+      </ul>
+    </template>
+
     <template #contact>
       <?php
         $post = get_page_by_path('contact');

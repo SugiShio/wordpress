@@ -1,0 +1,26 @@
+.m-goodFellows {
+  &__item {
+    margin-bottom: 80px;
+  }
+
+  &__content,
+  &__sns {
+    margin: 15px 0;
+  }
+
+  &__snsItem {
+    margin: 5px 0;
+  }
+
+  &__name {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 800;
+    margin-right: 10px;
+    line-height: 1.4;
+  }
+
+  &__title {
+    font-style: italic;
+  }
+}

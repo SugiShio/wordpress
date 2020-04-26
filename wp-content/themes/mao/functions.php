@@ -27,29 +27,3 @@ function mao_init() {
   };
 }
 add_action('init', 'mao_init');
-
-
-function mao_registar_rest_field() {
-  $fields = [
-    ['post_type'=>'good-fellows', 'field'=>'subtitle'],
-    ['post_type'=>'good-fellows', 'field'=>'instagram'],
-    ['post_type'=>'good-fellows', 'field'=>'twitter'],
-    ['post_type'=>'good-fellows', 'field'=>'facebook'],
-    ['post_type'=>'good-fellows', 'field'=>'youtube'],
-    ['post_type'=>'good-fellows', 'field'=>'web']
-  ];
-  foreach($fields as $field) {
-    register_rest_field( $field['post_type'],
-    $field['field'],
-    array(
-      'get_callback'    => function ( $object, $field_name, $request ) {
-        return get_post_meta( $object[ 'id' ], $field_name, true );
-      },
-      'update_callback' => null,
-      'schema'          => null,
-      )
-    );
-  }
-}
-add_action( 'rest_api_init', 'mao_registar_rest_field' );
-?>

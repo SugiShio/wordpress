@@ -4,66 +4,13 @@
 @import 'reset';
 @import 'icons';
 
+@import 'modules/about';
+@import 'modules/goodFellows';
+@import 'modules/schedule';
+
 .m-wrapper {
   position: fixed;
   background-image: url('../images/top.jpg');
   background-size: cover;
   overflow: scroll;
-}
-
-.m-about {
-  &__image {
-    margin-bottom: 30px;
-    text-align: center;
-
-    img {
-      max-width: 300px;
-    }
-  }
-
-  &__name {
-    display: inline-block;
-    margin-right: 5px;
-    font-size: 24px;
-    font-weight: 800;
-    font-style: italic;
-  }
-
-  &__title {
-    font-style: italic;
-  }
-
-  &__content {
-    margin-top: 15px;
-    text-align: justify;
-
-    p {
-      margin-top: 10px;
-    }
-  }
-}
-
-.m-font-sanserif {
-  font-family: $font-sansserif;
-}
-
-.m-schedule {
-  &__item {
-    margin-bottom: 80px;
-  }
-  &__date {
-    font-style: italic;
-  }
-  &__title {
-    font-size: 24px;
-    font-weight: 600;
-    font-style: italic;
-    line-height: 1.4;
-  }
-  &__place[href] {
-    text-decoration: underline;
-  }
-  &__content {
-    margin: 15px 0;
-  }
 }

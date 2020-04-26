@@ -43,12 +43,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../../sass/variables.scss';
+@import '../../../sass/utils.scss';
 .m-menu {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  @include screen-sm {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    background-color: rgba(#000, 0.8);
+  }
+  @include screen-lg {
+    right: 10px;
+    bottom: 10px;
+    align-items: flex-end;
+  }
 }
 </style>

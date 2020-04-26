@@ -62,6 +62,7 @@ export default {
     font-size: 24px;
     font-weight: 800;
     margin-right: 10px;
+    line-height: 1.4;
   }
 
   &__title {

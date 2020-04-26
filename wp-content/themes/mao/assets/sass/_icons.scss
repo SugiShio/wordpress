@@ -30,21 +30,27 @@ i[class*=' icon-'] {
 .icon-applemusic:before {
   content: '\f101';
 }
-.icon-facebook:before {
+.icon-close:before {
   content: '\f102';
 }
-.icon-instagram:before {
+.icon-facebook:before {
   content: '\f103';
 }
-.icon-spotify:before {
+.icon-instagram:before {
   content: '\f104';
 }
-.icon-twitter:before {
+.icon-menu:before {
   content: '\f105';
 }
-.icon-web:before {
+.icon-spotify:before {
   content: '\f106';
 }
-.icon-youtube:before {
+.icon-twitter:before {
   content: '\f107';
+}
+.icon-web:before {
+  content: '\f108';
+}
+.icon-youtube:before {
+  content: '\f109';
 }

@@ -35,23 +35,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../../sass/variables.scss';
+@import '../../../sass/utils.scss';
 .m-menuItem {
   margin: 5px 10px;
   a {
-    display: inline-block;
-    width: 40px;
+    display: block;
     line-height: 40px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
     font-style: italic;
+    @include screen-lg {
+      display: inline-block;
+      width: 40px;
+    }
 
-    &:hover {
-      width: auto;
-      padding: 0 10px;
+    @include screen-lg {
+      &:hover {
+        width: auto;
+        padding: 0 10px;
 
-      .m-menuItem__remain {
-        display: inline;
+        .m-menuItem__remain {
+          display: inline;
+        }
       }
     }
   }
@@ -62,7 +69,9 @@ export default {
   }
 
   &__remain {
-    display: none;
+    @include screen-lg {
+      display: none;
+    }
   }
 }
 </style>

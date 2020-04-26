@@ -46,3 +46,24 @@
 .m-font-sanserif {
   font-family: $font-sansserif;
 }
+
+.m-schedule {
+  &__item {
+    margin-bottom: 80px;
+  }
+  &__date {
+    font-style: italic;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.4;
+  }
+  &__place[href] {
+    text-decoration: underline;
+  }
+  &__content {
+    margin: 15px 0;
+  }
+}

@@ -7,7 +7,6 @@ import layoutTop from './layouts/top.vue'
 
 import index from './pages/index.vue'
 import works from './pages/works.vue'
-import schedule from './pages/schedule.vue'
 import goodFellows from './pages/goodFellows.vue'
 
 const routes = [
@@ -17,7 +16,10 @@ const routes = [
     meta: { title: 'About Mao', isPage: true }
   },
   { path: '/works', component: works, meta: { title: 'Works' } },
-  { path: '/schedule', component: schedule, meta: { title: 'Schedule' } },
+  {
+    path: '/schedule',
+    meta: { title: 'Schedule', isPage: true }
+  },
   {
     path: '/good-fellows',
     component: goodFellows,

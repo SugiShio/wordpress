@@ -21,4 +21,18 @@
   &__title {
     font-style: italic;
   }
+
+  &__snsLink {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 5px;
+    font-size: 22px;
+  }
+
+  &__label {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
 }

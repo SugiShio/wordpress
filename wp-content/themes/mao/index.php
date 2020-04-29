@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+<?php
+  $MEDIA = ['spotify', 'applemusic'];
+  $SNS = [
+    ['media' => 'instagram', 'url_base' => 'https://www.instagram.com/##ID##' ],
+    ['media' => 'twitter', 'url_base' => 'https://twitter.com/##ID##' ],
+    ['media' => 'facebook', 'url_base' => 'https://www.facebook.com/##ID##' ],
+    ['media' => 'youtube', 'url_base' => 'https://www.youtube.com/user/##ID##' ],
+    ['media' => 'web', 'url_base' => '##ID##' ]
+  ];
+?>
 <div id="app" class="m-wrapper">
   <component :is='layout'>
     <router-view></router-view>
@@ -34,8 +44,7 @@
         <?php
           foreach($posts as $post) :
           setup_postdata( $post );
-          $media = ['spotify', 'applemusic'];
-          foreach($media as $item) {
+          foreach($MEDIA as $item) {
             if(get_field($item)) {
               $media_item[$item] = get_field($item);
             }
@@ -125,6 +134,16 @@
           foreach($posts as $post) :
           setup_postdata( $post );
           $title = get_field('subtitle');
+          foreach($SNS as $item) {
+            $media_name = $item['media'];
+            $account_id = get_field($media_name);
+            if($account_id) {
+              $sns_item[$media_name] = [
+                'account_id' => $account_id,
+                'url' => str_replace('##ID##', $account_id, $item['url_base'])
+              ];
+            }
+          }
         ?>
         <li class="m-goodFellows__item">
           <div class="m-goodFellows__head">
@@ -136,16 +155,23 @@
           <?php if(get_the_content()) : ?>
           <div class="m-goodFellows__content"><?php the_content(); ?></div>
           <?php endif; ?>
+          <?php if($sns_item) : ?>
           <ul class="m-goodFellows__sns">
+            <?php foreach($sns_item as $media_name => $item) : ?>
             <li class="m-goodFellows__snsItem">
-              <a href="" class="m-sns" target='_blank'>
-                <i class="m-sns__icon icon-twitter"></i>
-                <span class="m-sns__label">hoge</span>
+              <a href="<?php echo $item['url']; ?>" class="m-goodFellows__snsLink" target='_blank'>
+                <i class="m-goodFellows__icon icon-<?php echo $media_name; ?>"></i>
+                <span class="m-goodFellows__label">
+                  <?php echo $item['account_id']; ?>
+                </span>
               </a>
             </li>
+            <?php endforeach; ?>
           </ul>
+          <?php endif; ?>
         </li>
         <?php
+          $sns_item = null;
           wp_reset_postdata();
           endforeach;
         ?>

@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 
 import layoutDefault from './layouts/default.vue'
 import layoutTop from './layouts/top.vue'
+import contactForm from './components/contactForm.vue'
 
 import index from './pages/index.vue'
 
@@ -36,7 +37,7 @@ const router = new VueRouter({
 document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     router,
-    components: { layoutDefault, layoutTop },
+    components: { layoutDefault, layoutTop, contactForm },
     data() {
       return {
         layout: 'layoutDefault'

@@ -6,26 +6,25 @@ import layoutDefault from './layouts/default.vue'
 import layoutTop from './layouts/top.vue'
 
 import index from './pages/index.vue'
-import works from './pages/works.vue'
 
 const routes = [
   { path: '/', component: index },
   {
     path: '/about-mao',
-    meta: { title: 'About Mao', isPage: true }
+    meta: { title: 'About Mao' }
   },
-  { path: '/works', component: works, meta: { title: 'Works' } },
+  { path: '/works', meta: { title: 'Works' } },
   {
     path: '/schedule',
-    meta: { title: 'Schedule', isPage: true }
+    meta: { title: 'Schedule' }
   },
   {
     path: '/good-fellows',
-    meta: { title: 'Good Fellows', isPage: true }
+    meta: { title: 'Good Fellows' }
   },
   {
     path: '/contact',
-    meta: { title: 'Contact', isPage: true }
+    meta: { title: 'Contact' }
   }
 ]
 

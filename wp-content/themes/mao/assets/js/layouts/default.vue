@@ -25,9 +25,7 @@ export default {
       return this.$route.meta.title
     },
     slotName() {
-      return this.$route.meta.isPage
-        ? this.title.toLowerCase().replace(' ', '-')
-        : 'default'
+      return this.title.toLowerCase().replace(' ', '-')
     }
   },
   methods: {

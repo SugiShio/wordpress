@@ -4,9 +4,11 @@
 @import 'reset';
 @import 'icons';
 
+@import 'modules/typography';
 @import 'modules/about';
 @import 'modules/goodFellows';
 @import 'modules/schedule';
+@import 'modules/works';
 
 .m-wrapper {
   position: fixed;

@@ -1,11 +1,11 @@
 .m-goodFellows {
   &__item {
-    margin-bottom: 80px;
+    @extend %m-item;
   }
 
   &__content,
   &__sns {
-    margin: 15px 0;
+    @extend %m-content;
   }
 
   &__snsItem {
@@ -13,11 +13,9 @@
   }
 
   &__name {
+    @extend %m-title;
     display: inline-block;
-    font-size: 24px;
-    font-weight: 800;
     margin-right: 10px;
-    line-height: 1.4;
   }
 
   &__title {

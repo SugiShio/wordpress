@@ -9,10 +9,9 @@
   }
 
   &__name {
+    @extend %m-title;
     display: inline-block;
     margin-right: 5px;
-    font-size: 24px;
-    font-weight: 800;
     font-style: italic;
   }
 
@@ -21,11 +20,6 @@
   }
 
   &__content {
-    margin-top: 15px;
-    text-align: justify;
-
-    p {
-      margin-top: 10px;
-    }
+    @extend %m-content;
   }
 }

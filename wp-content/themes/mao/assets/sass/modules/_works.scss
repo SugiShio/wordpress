@@ -1,0 +1,44 @@
+.m-works {
+  &__item {
+    @extend %m-item;
+  }
+
+  &__title {
+    @extend %m-title;
+    display: inline-block;
+    margin-right: 10px;
+    font-style: italic;
+  }
+
+  &__year {
+    font-style: italic;
+  }
+
+  &__image {
+    margin-bottom: 30px;
+    img {
+      max-width: 400px;
+    }
+  }
+
+  &__content {
+    @extend %m-content;
+  }
+
+  &__media {
+    @extend %m-content;
+    display: flex;
+  }
+
+  &__mediaitem {
+    margin-right: 15px;
+
+    a {
+      font-size: 26px;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

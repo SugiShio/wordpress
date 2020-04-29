@@ -1,20 +1,17 @@
 .m-schedule {
   &__item {
-    margin-bottom: 80px;
+    @extend %m-item;
   }
   &__date {
     font-style: italic;
   }
   &__title {
-    font-size: 24px;
-    font-weight: 600;
-    font-style: italic;
-    line-height: 1.4;
+    @extend %m-title;
   }
   &__place[href] {
     text-decoration: underline;
   }
   &__content {
-    margin: 15px 0;
+    @extend %m-content;
   }
 }

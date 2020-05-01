@@ -5,10 +5,8 @@ Vue.use(VueRouter)
 import layoutDefault from './layouts/default.vue'
 import contactForm from './components/contactForm.vue'
 
-import index from './pages/index.vue'
-
 const routes = [
-  { path: '/', component: index },
+  { path: '/' },
   {
     path: '/about-mao',
     meta: { title: 'About Mao' }

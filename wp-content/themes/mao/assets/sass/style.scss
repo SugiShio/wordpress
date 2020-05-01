@@ -5,6 +5,7 @@
 @import 'icons';
 
 @import 'modules/typography';
+@import 'modules/top';
 @import 'modules/about';
 @import 'modules/goodFellows';
 @import 'modules/schedule';
@@ -14,11 +15,11 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('../images/top.jpg');
+  background-image: url('../images/default.jpg');
   background-size: cover;
   overflow: scroll;
 
-  $pages: 'top', 'about-mao', 'works', 'schedule', 'good-fellows', 'contact';
+  $pages: 'about-mao', 'works', 'schedule', 'good-fellows', 'contact';
   @each $page in $pages {
     &.#{$page} {
       background-image: url('../images/#{$page}.jpg');

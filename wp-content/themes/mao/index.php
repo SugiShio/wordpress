@@ -10,9 +10,9 @@
   ];
 ?>
 <div id="app" class="m-wrapper">
-  <template v-if='isTop'>
+  <div class="m-container" v-if='isTop'>
     <?php include('pages/top.php'); ?>
-  </template>
+  </div>
 
   <layout-default v-else>
     <template #about-mao>

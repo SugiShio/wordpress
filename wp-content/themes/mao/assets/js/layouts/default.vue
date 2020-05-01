@@ -2,7 +2,8 @@
 .m-container
   h2.m-title {{ title }}
   .m-container__inner
-    slot(:name='slotName')
+    transition(name='slide' mode='out-in')
+      slot(:name='slotName')
   a.m-menuButton(@click='toggleMenu')
     i(:class='classMenuButton').icon-close
   mao-menu(:class='{ shown: isMenuShown }')
@@ -69,6 +70,20 @@ export default {
     background-color: rgba(#fff, 0.25);
     @include screen-sm {
       padding: 70px;
+    }
+    .slide-enter-active {
+      transition: all 0.4s;
+    }
+    .slide-leave-active {
+      transition: all 0.2s;
+    }
+    .slide-enter {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+    .slide-leave-to {
+      transform: translateY(30%);
+      opacity: 0;
     }
   }
 }

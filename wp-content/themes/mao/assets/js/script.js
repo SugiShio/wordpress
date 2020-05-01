@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import layoutDefault from './layouts/default.vue'
-import layoutTop from './layouts/top.vue'
 import contactForm from './components/contactForm.vue'
 
 import index from './pages/index.vue'
@@ -37,19 +36,11 @@ const router = new VueRouter({
 document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     router,
-    components: { layoutDefault, layoutTop, contactForm },
-    data() {
-      return {
-        layout: 'layoutDefault'
+    components: { layoutDefault, contactForm },
+    computed: {
+      isTop() {
+        return this.$route.path === '/'
       }
-    },
-    watch: {
-      $route() {
-        this.setLayout()
-      }
-    },
-    created() {
-      this.setLayout()
     },
     mounted() {
       this.setWindowSize()
@@ -61,15 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     },
     methods: {
-      setLayout() {
-        switch (this.$route.path) {
-          case '/':
-            this.layout = 'layoutTop'
-            return
-          default:
-            this.layout = 'layoutDefault'
-        }
-      },
       setWindowSize() {
         const width = window.innerWidth
         const height = window.innerHeight

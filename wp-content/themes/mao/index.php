@@ -10,9 +10,21 @@
   ];
 ?>
 <div id="app" class="m-wrapper">
-  <component :is='layout'>
-    <router-view></router-view>
+  <section class="m-top" v-if='isTop'>
+    <?php
+      $post = get_page_by_path('about-mao');
+      setup_postdata( $post );
+      $site_title = post_custom('name');
+      $site_subtitle = post_custom('title');
+    ?>
+    <h1 class="m-top__title">
+      <?php echo $site_title; ?>
+      <span class="m-top__subtitle"><?php echo $site_subtitle; ?></span>
+    </h1>
+    <?php wp_reset_postdata(); ?>
+  </section>
 
+  <layout-default v-else>
     <template #about-mao>
       <?php
         $post = get_page_by_path('about-mao');
@@ -186,6 +198,6 @@
         wp_reset_postdata();
       ?>
     </template>
-  </component>
+  </layout-default>
 </div>
 <?php get_footer(); ?>

@@ -1,9 +1,9 @@
 <template lang="pug">
-.m-container
+.m-container(:class='pageId')
   h2.m-title {{ title }}
   .m-container__inner
     transition(name='slide' mode='out-in')
-      slot(:name='slotName')
+      slot(:name='pageId')
   a.m-menuButton(@click='toggleMenu')
     i(:class='classMenuButton').icon-close
   mao-menu(:class='{ shown: isMenuShown }')
@@ -25,7 +25,7 @@ export default {
     title() {
       return this.$route.meta.title
     },
-    slotName() {
+    pageId() {
       return this.title.toLowerCase().replace(' ', '-')
     }
   },

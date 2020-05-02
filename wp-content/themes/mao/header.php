@@ -7,18 +7,21 @@
   <title><?php bloginfo( 'name' ); ?></title>
   <meta name="description" content="<?php bloginfo( 'description' ); ?>">
   <meta property="og:title" content="<?php bloginfo( 'name' ); ?>" />
-  <?php if(is_home()) : ?>
   <meta property="og:type" content="website" />
-  <?php else : ?>
-  <meta property="og:type" content="article" />
-  <?php endif; ?>
   <meta property="og:url" content="<?php echo home_url(); ?>" />
   <meta property="og:image" content="<?php echo get_template_directory_uri()."/assets/images/ogp.jpg"; ?>">
   <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
   <meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
+
   <!-- twitter -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@<?php echo $GLOBALS['twitter_account']; ?>" />
+  <?php
+    $index = array_search("twitter", array_column($GLOBALS['medias'], 'name'));
+    $twitter = $GLOBALS['medias'][$index];
+    if($twitter) :
+  ?>
+  <meta name="twitter:site" content="@<?php echo $twitter['label']; ?>" />
+  <?php endif; ?>
 
   <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri()."/assets/images/favicon.ico"; ?>">
 

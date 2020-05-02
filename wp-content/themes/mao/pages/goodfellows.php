@@ -10,18 +10,9 @@
   <ul>
     <?php
       foreach($posts as $post) :
+      $medias = set_medias( $post );
       setup_postdata( $post );
       $title = get_field('subtitle');
-      foreach($SNS as $item) {
-        $media_name = $item['media'];
-        $account_id = get_field($media_name);
-        if($account_id) {
-          $sns_item[$media_name] = [
-            'account_id' => $account_id,
-            'url' => str_replace('##ID##', $account_id, $item['url_base'])
-          ];
-        }
-      }
     ?>
     <li class="m-goodFellows__item">
       <div class="m-goodFellows__head">
@@ -33,14 +24,14 @@
       <?php if(get_the_content()) : ?>
       <div class="m-goodFellows__content"><?php the_content(); ?></div>
       <?php endif; ?>
-      <?php if($sns_item) : ?>
+      <?php if($medias) : ?>
       <ul class="m-goodFellows__sns">
-        <?php foreach($sns_item as $media_name => $item) : ?>
+        <?php foreach($medias as $item) : ?>
         <li class="m-goodFellows__snsItem">
           <a href="<?php echo $item['url']; ?>" class="m-goodFellows__snsLink" target='_blank'>
-            <i class="m-goodFellows__icon icon-<?php echo $media_name; ?>"></i>
+            <i class="m-goodFellows__icon icon-<?php echo $item['name']; ?>"></i>
             <span class="m-goodFellows__label">
-              <?php echo $item['account_id']; ?>
+              <?php echo $item['label']; ?>
             </span>
           </a>
         </li>
@@ -49,7 +40,7 @@
       <?php endif; ?>
     </li>
     <?php
-      $sns_item = null;
+      $medias = null;
       wp_reset_postdata();
       endforeach;
     ?>

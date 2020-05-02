@@ -19,7 +19,7 @@
   background-size: cover;
   overflow: scroll;
 
-  $pages: 'about-mao', 'works', 'schedule', 'good-fellows', 'contact';
+  $pages: 'about', 'works', 'schedule', 'goodfellows', 'contact';
   @each $page in $pages {
     &.#{$page} {
       background-image: url('../images/#{$page}.jpg');

@@ -1,7 +1,7 @@
 <section class="m-goodFellows" key="goodFellows">
   <?php
     $posts = get_posts(array(
-      'post_type' => 'good-fellows',
+      'post_type' => 'goodfellows',
       'meta_key' => 'order',
       'order' => 'ASC',
       'orderby' => 'meta_value',

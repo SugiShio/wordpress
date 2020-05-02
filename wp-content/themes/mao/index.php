@@ -15,8 +15,8 @@
   </div>
 
   <layout-default v-else>
-    <template #about-mao>
-      <?php include('pages/about_mao.php'); ?>
+    <template #about>
+      <?php include('pages/about.php'); ?>
     </template>
 
     <template #works>
@@ -27,8 +27,8 @@
       <?php include('pages/schedule.php'); ?>
     </template>
 
-    <template #good-fellows>
-      <?php include('pages/good_fellows.php'); ?>
+    <template #goodfellows>
+      <?php include('pages/goodfellows.php'); ?>
     </template>
 
     <template #contact>

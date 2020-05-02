@@ -26,7 +26,7 @@ export default {
       return this.$route.meta.title
     },
     pageId() {
-      return this.title.toLowerCase().replace(' ', '-')
+      return this.$route.path.replace(/\//g, '')
     }
   },
   methods: {

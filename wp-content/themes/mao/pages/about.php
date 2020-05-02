@@ -1,6 +1,6 @@
 <section class="m-about" key="aboutMao">
   <?php
-    $post = get_page_by_path('about-mao');
+    $post = get_page_by_path('about');
     setup_postdata( $post );
   ?>
   <div class="m-about__image">

@@ -1,6 +1,6 @@
 <section class="m-top">
   <?php
-    $post = get_page_by_path('about-mao');
+    $post = get_page_by_path('about');
     setup_postdata( $post );
     $site_title = post_custom('name');
     $site_subtitle = post_custom('title');
@@ -12,7 +12,7 @@
   <nav class="m-top__menuWrapper">
     <ul class="m-top__menu">
       <li class="m-top__menuItem">
-        <router-link to='/about-mao'>About Mao</router-link>
+        <router-link to='/about'>About Mao</router-link>
       </li>
       <li class="m-top__menuItem">
         <router-link to='/works'>Works</router-link>
@@ -21,7 +21,7 @@
         <router-link to='/schedule'>Schedule</router-link>
       </li>
       <li class="m-top__menuItem">
-        <router-link to='/good-fellows'>Good Fellows</router-link>
+        <router-link to='/goodfellows'>Good Fellows</router-link>
       </li>
       <li class="m-top__menuItem">
         <router-link to='/contact'>Contact</router-link>

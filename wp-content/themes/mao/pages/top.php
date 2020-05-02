@@ -1,13 +1,7 @@
 <section class="m-top">
-  <?php
-    $post = get_page_by_path('about');
-    setup_postdata( $post );
-    $site_title = post_custom('name');
-    $site_subtitle = post_custom('title');
-  ?>
   <h1 class="m-top__title">
-    <span class="m-top__main"><?php echo $site_title; ?></span><br>
-    <span class="m-top__sub"><?php echo $site_subtitle; ?></span>
+    <span class="m-top__main"><?php echo $GLOBALS['site_title'];; ?></span><br>
+    <span class="m-top__sub"><?php echo $GLOBALS['subtitle'];; ?></span>
   </h1>
   <nav class="m-top__menuWrapper">
     <ul class="m-top__menu">
@@ -28,16 +22,11 @@
       </li>
     </ul>
     <ul class="m-top__medias">
+      <?php foreach($GLOBALS['medias'] as $media) : ?>
       <li class="m-top__media">
-        <a href="" target="_blank"><i class="icon-spotify"></i></a>
+        <a href="<?php echo $media['url']; ?>" target="_blank"><i class="icon-<?php echo $media['name']; ?>"></i></a>
       </li>
-      <li class="m-top__media">
-        <a href="" target="_blank"><i class="icon-applemusic"></i></a>
-      </li>
-      <li class="m-top__media">
-        <a href="" target="_blank"><i class="icon-instagram"></i></a>
-      </li>
+      <?php endforeach; ?>
     </ul>
   </nav>
-  <?php wp_reset_postdata(); ?>
 </section>

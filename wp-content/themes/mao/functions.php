@@ -3,11 +3,10 @@ $post = get_page_by_path('profile');
 setup_postdata( $post );
 $site_title = post_custom('name');
 $subtitle = post_custom('title');
-wp_reset_postdata();
 $medias = set_medias( $post );
+wp_reset_postdata();
 
 function set_medias($post) {
-  setup_postdata( $post );
   $MEDIAS = [
     ['name' => 'spotify', 'label' => 'Spotify'],
     ['name' => 'applemusic', 'label' => 'Apple Music'],
@@ -34,7 +33,6 @@ function set_medias($post) {
       ];
     };
   };
-  wp_reset_postdata();
   return $result;
 }
 

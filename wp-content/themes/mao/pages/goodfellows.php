@@ -10,8 +10,8 @@
   <ul>
     <?php
       foreach($posts as $post) :
-      $medias = set_medias( $post );
       setup_postdata( $post );
+      $medias = set_medias( $post );
       $title = get_field('subtitle');
     ?>
     <li class="m-goodFellows__item">

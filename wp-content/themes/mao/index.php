@@ -1,20 +1,27 @@
 <?php get_header(); ?>
 <?php
-  $MEDIA = ['spotify', 'applemusic'];
-  $SNS = [
-    ['media' => 'instagram', 'url_base' => 'https://www.instagram.com/##ID##' ],
-    ['media' => 'twitter', 'url_base' => 'https://twitter.com/##ID##' ],
-    ['media' => 'facebook', 'url_base' => 'https://www.facebook.com/##ID##' ],
-    ['media' => 'youtube', 'url_base' => 'https://www.youtube.com/user/##ID##' ],
-    ['media' => 'web', 'url_base' => '##ID##' ]
+  $menu_items = [
+    ['label' => 'Top', 'to' => '/'],
+    ['label' => 'About Mao', 'to' => '/about/'],
+    ['label' => 'Works', 'to' => '/works/'],
+    ['label' => 'Schedule', 'to' => '/schedule/'],
+    ['label' => 'Good Fellows', 'to' => '/goodfellows/'],
+    ['label' => 'Contact', 'to' => '/contact/'],
   ];
+  foreach($GLOBALS['medias'] as $media) {
+    $menu_items[] = [
+      'label' => $media['label'],
+      'iconName' => $media['name'],
+      'href' => $media['url']
+    ];
+  };
 ?>
+
 <div id="app" class="m-wrapper">
   <div class="m-container" v-if='isTop'>
     <?php include('pages/top.php'); ?>
   </div>
-
-  <layout-default v-else>
+  <layout-default v-else :menu-items='<?php echo json_encode($menu_items); ?>'>
     <template #about>
       <?php include('pages/about.php'); ?>
     </template>

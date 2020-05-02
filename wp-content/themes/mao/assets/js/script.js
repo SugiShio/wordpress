@@ -8,20 +8,20 @@ import contactForm from './components/contactForm.vue'
 const routes = [
   { path: '/' },
   {
-    path: '/about-mao',
+    path: '/about/',
     meta: { title: 'About Mao' }
   },
-  { path: '/works', meta: { title: 'Works' } },
+  { path: '/works/', meta: { title: 'Works' } },
   {
-    path: '/schedule',
+    path: '/schedule/',
     meta: { title: 'Schedule' }
   },
   {
-    path: '/good-fellows',
+    path: '/goodfellows/',
     meta: { title: 'Good Fellows' }
   },
   {
-    path: '/contact',
+    path: '/contact/',
     meta: { title: 'Contact' }
   }
 ]

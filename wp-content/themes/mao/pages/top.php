@@ -6,19 +6,19 @@
   <nav class="m-top__menuWrapper">
     <ul class="m-top__menu">
       <li class="m-top__menuItem">
-        <router-link to='/about'>About Mao</router-link>
+        <router-link to='/about/'>About Mao</router-link>
       </li>
       <li class="m-top__menuItem">
-        <router-link to='/works'>Works</router-link>
+        <router-link to='/works/'>Works</router-link>
       </li>
       <li class="m-top__menuItem">
-        <router-link to='/schedule'>Schedule</router-link>
+        <router-link to='/schedule/'>Schedule</router-link>
       </li>
       <li class="m-top__menuItem">
-        <router-link to='/goodfellows'>Good Fellows</router-link>
+        <router-link to='/goodfellows/'>Good Fellows</router-link>
       </li>
       <li class="m-top__menuItem">
-        <router-link to='/contact'>Contact</router-link>
+        <router-link to='/contact/'>Contact</router-link>
       </li>
     </ul>
     <ul class="m-top__medias">

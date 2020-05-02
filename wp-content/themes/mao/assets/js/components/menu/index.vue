@@ -9,35 +9,10 @@ ul.m-menu
 
 <script>
 import menuItem from './menuItem.vue'
-const MENU_ITEMS = [
-  { label: 'Top', to: '/' },
-  { label: 'About Mao', to: '/about' },
-  { label: 'Works', to: '/works' },
-  { label: 'Schedule', to: '/schedule' },
-  { label: 'Good Fellows', to: '/goodfellows' },
-  { label: 'Contact', to: '/contact' },
-  {
-    label: 'Spotify',
-    href: 'https://www.spotify.com/jp/',
-    iconName: 'spotify'
-  },
-  {
-    label: 'Apple Music',
-    href: 'https://www.apple.com/jp/apple-music/',
-    iconName: 'applemusic'
-  },
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/',
-    iconName: 'instagram'
-  }
-]
 export default {
   components: { menuItem },
-  data() {
-    return {
-      menuItems: MENU_ITEMS
-    }
+  props: {
+    menuItems: { type: Array, required: true }
   }
 }
 </script>

@@ -6,13 +6,19 @@
       slot(:name='pageId')
   a.m-menuButton(@click='toggleMenu')
     i(:class='classMenuButton').icon-close
-  mao-menu(:class='{ shown: isMenuShown }')
+  mao-menu(
+    :class='{ shown: isMenuShown }'
+    :menuItems='menuItems'
+    )
 </template>
 
 <script>
 import maoMenu from '../components/menu/index.vue'
 export default {
   components: { maoMenu },
+  props: {
+    menuItems: { type: Array, default: () => [] }
+  },
   data() {
     return {
       isMenuShown: false

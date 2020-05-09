@@ -5,21 +5,11 @@
   </h1>
   <nav class="m-top__menuWrapper">
     <ul class="m-top__menu">
+    <?php foreach(array_slice($GLOBALS['page_config'], 1) as $page) : ?>
       <li class="m-top__menuItem">
-        <router-link to='/about/'>About Mao</router-link>
+        <router-link to='/<?php echo $page['id']; ?>/'><?php echo $page['label']; ?></router-link>
       </li>
-      <li class="m-top__menuItem">
-        <router-link to='/works/'>Works</router-link>
-      </li>
-      <li class="m-top__menuItem">
-        <router-link to='/schedule/'>Schedule</router-link>
-      </li>
-      <li class="m-top__menuItem">
-        <router-link to='/goodfellows/'>Good Fellows</router-link>
-      </li>
-      <li class="m-top__menuItem">
-        <router-link to='/contact/'>Contact</router-link>
-      </li>
+    <?php endforeach; ?>
     </ul>
     <ul class="m-top__medias">
       <?php foreach($GLOBALS['medias'] as $media) : ?>

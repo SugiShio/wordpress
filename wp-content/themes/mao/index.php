@@ -21,25 +21,11 @@
       <?php include('pages/top.php'); ?>
     </div>
     <layout-default v-else :menu-items='<?php echo json_encode($menu_items); ?>'>
-      <template #about>
-        <?php include('pages/about.php'); ?>
+    <?php foreach(array_slice($GLOBALS['page_config'], 1) as $page) : ?>
+      <template #<?php echo $page['id']; ?>>
+        <?php include('pages/' . $page['id'] . '.php'); ?>
       </template>
-
-      <template #works>
-        <?php include('pages/works.php'); ?>
-      </template>
-
-      <template #schedule>
-        <?php include('pages/schedule.php'); ?>
-      </template>
-
-      <template #goodfellows>
-        <?php include('pages/goodfellows.php'); ?>
-      </template>
-
-      <template #contact>
-        <?php include('pages/contact.php'); ?>
-      </template>
+    <?php endforeach; ?>
     </layout-default>
   </transition>
 </div>

@@ -1,13 +1,11 @@
 <?php get_header(); ?>
 <?php
-  $menu_items = [
-    ['label' => 'Top', 'to' => '/'],
-    ['label' => 'About Mao', 'to' => '/about/'],
-    ['label' => 'Works', 'to' => '/works/'],
-    ['label' => 'Schedule', 'to' => '/schedule/'],
-    ['label' => 'Good Fellows', 'to' => '/goodfellows/'],
-    ['label' => 'Contact', 'to' => '/contact/'],
-  ];
+  foreach($GLOBALS['page_config'] as $page) {
+    $to = $page['id'] == 'top'
+      ? '/'
+      : '/' . $page['id'] . '/';
+    $menu_items[] = ['label' => $page['label'], 'to' => $to];
+  };
   foreach($GLOBALS['medias'] as $media) {
     $menu_items[] = [
       'label' => $media['label'],

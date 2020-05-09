@@ -6,6 +6,15 @@ $subtitle = post_custom('title');
 $medias = set_medias( $post );
 wp_reset_postdata();
 
+$page_config = [
+  ['label' => 'Top', 'id' => 'top'],
+  ['label' => 'About Mao', 'id' => 'about'],
+  ['label' => 'Works', 'id' => 'works'],
+  ['label' => 'Schedule', 'id' => 'schedule'],
+  ['label' => 'Good Fellows', 'id' => 'goodfellows'],
+  ['label' => 'Contact', 'id' => 'contact'],
+];
+
 function set_medias($post) {
   $MEDIAS = [
     ['name' => 'spotify', 'label' => 'Spotify'],

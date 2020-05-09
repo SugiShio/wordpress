@@ -29,6 +29,21 @@
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
   <![endif]-->
   <?php wp_head(); ?>
+  <style>
+    <?php
+    $post=get_page_by_path('background-images');
+    setup_postdata($post);
+    foreach($GLOBALS['page_config'] as $page) :
+      if (get_field($page['id'])) : ?>
+      .m-container.<?php echo $page['id'];?> {
+        background-image: url(<?php echo get_field($page['id']);?>);
+      }
+    <?php
+      endif;
+    endforeach;
+    wp_reset_postdata();
+    ?>
+  </style>
 </head>
 
 <body <?php body_class(); ?>>

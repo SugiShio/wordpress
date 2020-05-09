@@ -14,6 +14,7 @@
 .m-wrapper {
   background-image: url('../images/default.jpg');
   background-size: cover;
+  background-position: center center;
 }
 
 .m-container {
@@ -22,13 +23,6 @@
   height: 100%;
   background-size: cover;
   overflow: scroll;
-
-  $pages: 'about', 'works', 'schedule', 'goodfellows', 'contact';
-  @each $page in $pages {
-    &.#{$page} {
-      background-image: url('../images/#{$page}.jpg');
-    }
-  }
 }
 
 .fade-enter-active {

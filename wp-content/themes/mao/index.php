@@ -17,7 +17,7 @@
 
 <div id="app" class="m-wrapper">
   <transition name='fade'>
-    <div class="m-container" v-if='isTop'>
+    <div class="m-container top" v-if='isTop'>
       <?php include('pages/top.php'); ?>
     </div>
     <layout-default v-else :menu-items='<?php echo json_encode($menu_items); ?>'>

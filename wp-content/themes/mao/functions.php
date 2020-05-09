@@ -23,15 +23,26 @@ function set_medias($post) {
     ['name' => 'twitter', 'label' => 'Twitter', 'url_base' => 'https://twitter.com/##ID##' ],
     ['name' => 'facebook', 'label' => 'Facebook', 'url_base' => 'https://www.facebook.com/##ID##' ],
     ['name' => 'youtube', 'label' => 'Youtube', 'url_base' => 'https://www.youtube.com/user/##ID##' ],
-    ['name' => 'web', 'label' => 'Web']
+    ['name' => 'web']
   ];
   $result = [];
   foreach($MEDIAS as $item) {
     $value = post_custom($item['name']);
     if($value) {
-      $label = $item['url_base']
-        ? $value
-        : $item['label'];
+      if($item['url_base']) {
+        $label = $value;
+      } else if ($item['label']) {
+        $label = $item['label'];
+      } else {
+        $label = preg_replace('/^https?:\/\/(www\.)?/', '', $value);
+        $label = preg_replace('/\/$/', '', $label);
+        if(
+          preg_match('/\/.+$/', $label) &&
+          strlen($label) > 30
+          ) {
+          $label = substr($label, 0, 30) . '...';
+        }
+      }
       $url = $item['url_base']
         ? str_replace('##ID##', $value, $item['url_base'])
         : $value;

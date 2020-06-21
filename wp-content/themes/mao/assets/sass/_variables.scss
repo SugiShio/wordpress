@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+/* colors
+----------------- */
+$color-text: #fff;
+
+/* font families
+----------------- */
+$font-sansserif: 'Source Sans Pro', 'ヒラギノ角ゴ Pro',
+  'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$font-family-default: 'Montserrat', 'ヒラギノ角ゴ Pro',
+  'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+
+/* font sizes
+----------------- */
+$font-sm: 10px;
+$font-md: 14px;
+$font-lg: 18px;
+$font-xlg: 24px;
+
+/* break points
+----------------- */
+$breakpoint-sm: 600px;

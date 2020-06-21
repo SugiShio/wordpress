@@ -1,0 +1,26 @@
+.m-about {
+  &__image {
+    margin-bottom: 30px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  &__name {
+    @extend %m-title;
+    display: inline-block;
+    margin-right: 5px;
+    font-style: italic;
+  }
+
+  &__title {
+    font-style: italic;
+  }
+
+  &__content {
+    @extend %m-content;
+  }
+}

@@ -1,0 +1,38 @@
+.m-goodFellows {
+  &__item {
+    @extend %m-item;
+  }
+
+  &__content,
+  &__sns {
+    @extend %m-content;
+  }
+
+  &__snsItem {
+    margin: 5px 0;
+  }
+
+  &__name {
+    @extend %m-title;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-style: italic;
+  }
+
+  &__snsLink {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 5px;
+    font-size: 22px;
+  }
+
+  &__label {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+}

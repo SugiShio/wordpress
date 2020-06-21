@@ -1,0 +1,17 @@
+.m-schedule {
+  &__item {
+    @extend %m-item;
+  }
+  &__date {
+    font-style: italic;
+  }
+  &__title {
+    @extend %m-title;
+  }
+  &__place[href] {
+    text-decoration: underline;
+  }
+  &__content {
+    @extend %m-content;
+  }
+}

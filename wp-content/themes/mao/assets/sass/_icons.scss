@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot?e4ca3b10e66d3c4c02ed37d6e9b5cf04?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/icons.woff2?e4ca3b10e66d3c4c02ed37d6e9b5cf04') format('woff2'),
+    url('../fonts/icons.woff?e4ca3b10e66d3c4c02ed37d6e9b5cf04') format('woff'),
+    url('../fonts/icons.ttf?e4ca3b10e66d3c4c02ed37d6e9b5cf04')
+      format('truetype'),
+    url('../fonts/icons.svg?e4ca3b10e66d3c4c02ed37d6e9b5cf04#icons')
+      format('svg');
+}
+
+i[class^='icon-'],
+i[class*=' icon-'] {
+  display: inline-block;
+  line-height: 1;
+  &::before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: bottom;
+  }
+}
+
+.icon-applemusic:before {
+  content: '\f101';
+}
+.icon-close:before {
+  content: '\f102';
+}
+.icon-facebook:before {
+  content: '\f103';
+}
+.icon-instagram:before {
+  content: '\f104';
+}
+.icon-menu:before {
+  content: '\f105';
+}
+.icon-spotify:before {
+  content: '\f106';
+}
+.icon-twitter:before {
+  content: '\f107';
+}
+.icon-web:before {
+  content: '\f108';
+}
+.icon-youtube:before {
+  content: '\f109';
+}

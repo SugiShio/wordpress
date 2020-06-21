@@ -2,12 +2,20 @@
 
 /* colors
 ----------------- */
-$color-text: #141415;
+$color-black: #231d1b;
+$color-gray: #ded6d4;
+$color-main: #f2a95b;
+
+$color-text: $color-black;
+$color-background: #fffefa;
+
+/* width
+----------------- */
+$width-header: 1000px;
 
 /* font families
 ----------------- */
-$font-default: 'Source Sans Pro', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro',
-  'メイリオ', 'Meiryo', sans-serif;
+$font-default: 'Noto Serif JP', serif;
 
 /* break points
 ----------------- */

@@ -1,0 +1,26 @@
+.y-classes {
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__head {
+    margin: 20px 0 10px;
+  }
+
+  &__title-1 {
+    @extend .y-title-1;
+    margin: 20px 0;
+  }
+
+  &__title-2 {
+    @extend .y-title-2;
+  }
+
+  &__content {
+    margin: 10px 0;
+
+    p {
+      margin: 15px 0;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.y-access {
+  &__item {
+    margin: 20px 0 50px;
+  }
+
+  &__title {
+    @extend .y-title-2;
+  }
+
+  &__address {
+    margin-top: 10px;
+    font-size: $font-size-sm;
+  }
+
+  &__container {
+    margin: 20px 0;
+    @include screen-lg {
+      display: flex;
+    }
+  }
+
+  &__content {
+    word-break: break-word;
+    > h2 {
+      @extend .y-title-3;
+    }
+
+    > p {
+      margin: 10px 0;
+    }
+  }
+
+  &__map {
+    height: 200px;
+    @include screen-lg {
+      flex-shrink: 0;
+      margin-left: 20px;
+      width: 330px;
+    }
+    > iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

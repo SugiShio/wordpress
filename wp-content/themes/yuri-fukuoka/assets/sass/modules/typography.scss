@@ -1,0 +1,30 @@
+.y-title {
+  text-align: center;
+  margin: 80px 0;
+  padding-bottom: 20px;
+  font-size: $font-size-xxlg;
+  font-weight: bold;
+  background-image: url('../images/line.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.y-title-1 {
+  padding: 5px 10px;
+  background-color: $color-main;
+  color: #fff;
+  font-weight: bold;
+  font-size: $font-size-xlg;
+}
+
+.y-title-2 {
+  border-bottom: 2px solid $color-main;
+  padding: 5px 0;
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
+.y-title-3 {
+  display: inline;
+  font-weight: bold;
+}

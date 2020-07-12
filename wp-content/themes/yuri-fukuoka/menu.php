@@ -14,11 +14,14 @@
           <transition name='fade'>
             <ul class="y-header__accordionMenu" v-show="isOpen">
               <li>
-                <a class="y-header__accordionItem"
-                  href="<?php echo get_post_type_archive_link( 'lesson' ); ?>">Flamenco</a>
+                <a class="y-header__accordionItem" href="<?php echo get_post_type_archive_link( 'flamenco' ); ?>">
+                  Flamenco
+                </a>
               </li>
               <li>
-                <a class="y-header__accordionItem" href="<?php echo get_post_type_archive_link( 'lesson' ); ?>">Yoga</a>
+                <a class="y-header__accordionItem" href="<?php echo get_post_type_archive_link( 'yoga' ); ?>">
+                  Yoga
+                </a>
               </li>
             </ul>
           </transition>

@@ -3,7 +3,11 @@
 @import 'utils';
 @import 'reset';
 
+@import 'modules/access';
+@import 'modules/classes';
 @import 'modules/header';
 @import 'modules/layout';
+@import 'modules/profile';
 @import 'modules/qa';
 @import 'modules/transition';
+@import 'modules/typography';

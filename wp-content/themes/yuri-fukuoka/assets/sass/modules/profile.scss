@@ -1,0 +1,34 @@
+.y-profile {
+  &__image {
+    margin: 50px 0;
+    text-align: center;
+
+    > img {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  &__name {
+    @extend .y-title-2;
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  &__nameEn {
+    font-size: $font-size-md;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+
+  &__content {
+    word-break: break-word;
+    > h2 {
+      @extend .y-title-3;
+    }
+
+    > p {
+      margin: 10px 0;
+    }
+  }
+}

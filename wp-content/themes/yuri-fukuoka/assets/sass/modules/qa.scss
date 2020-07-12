@@ -8,10 +8,7 @@
   }
 
   &__question {
-    border-bottom: 2px solid $color-main;
-    padding: 5px 0;
-    font-size: $font-size-lg;
-    font-weight: bold;
+    @extend .y-title-2;
 
     &::before {
       content: 'Q.';

@@ -1,0 +1,21 @@
+.y-contact {
+  &__content {
+    word-break: break-word;
+    > h2 {
+      @extend .y-title-3;
+    }
+
+    > p {
+      margin: 10px 0;
+    }
+
+    a {
+      color: $color-gray;
+      text-decoration: underline;
+    }
+
+    .mw_wp_form {
+      margin: 50px 0;
+    }
+  }
+}

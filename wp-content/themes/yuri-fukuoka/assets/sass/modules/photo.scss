@@ -1,0 +1,19 @@
+.y-photo {
+  &__date {
+    font-size: $font-size-sm;
+  }
+
+  &__title {
+    @extend .y-title-2;
+  }
+
+  &__content {
+    @extend .y-content;
+
+    .wp-block-gallery .blocks-gallery-item {
+      margin-right: 20px;
+      width: 230px;
+      height: 230px;
+    }
+  }
+}

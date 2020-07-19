@@ -12,12 +12,8 @@
   }
 
   &__content {
+    @extend .y-content;
     margin: 20px 0;
-    word-break: break-word;
-
-    > p {
-      margin: 10px 0;
-    }
   }
 
   &__table {

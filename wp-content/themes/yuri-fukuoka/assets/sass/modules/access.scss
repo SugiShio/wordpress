@@ -20,14 +20,7 @@
   }
 
   &__content {
-    word-break: break-word;
-    > h2 {
-      @extend .y-title-3;
-    }
-
-    > p {
-      margin: 10px 0;
-    }
+    @extend .y-content;
   }
 
   &__map {

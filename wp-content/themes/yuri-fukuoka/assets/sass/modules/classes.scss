@@ -17,10 +17,7 @@
   }
 
   &__content {
+    @extend .y-content;
     margin: 10px 0;
-
-    p {
-      margin: 15px 0;
-    }
   }
 }

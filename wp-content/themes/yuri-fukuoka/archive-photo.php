@@ -32,6 +32,8 @@
         </div>
         <view-window
           v-show='isShow'
+          :is-first='isFirst'
+          :is-last='isLast'
           :src='imageUrl'
           @close-button-clicked='closeViewer'
           @next-button-clicked='showNext'

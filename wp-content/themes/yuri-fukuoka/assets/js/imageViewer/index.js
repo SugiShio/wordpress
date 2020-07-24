@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       computed: {
+        isFirst() {
+          return this.showingIndex === 0
+        },
+        isLast() {
+          return this.showingIndex === this.items.length - 1
+        },
         imageUrl() {
           if (!Number.isInteger(this.showingIndex)) return ''
           return (
@@ -29,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       mounted() {
-        this.items = this.$el.getElementsByTagName('img')
+        this.items = this.$el.querySelectorAll('img[class^="wp-image-"]')
         Array.from(this.items).forEach((item, index) => {
           item.addEventListener('click', () => {
             this.showingIndex = index
@@ -50,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           this.isShow = true
         },
         closeViewer() {
+          this.showingIndex = null
           this.isShow = false
         }
       }

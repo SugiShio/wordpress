@@ -1,11 +1,15 @@
 <template lang="pug">
 .background(@click='emitClose')
-  .arrowButton(@click.stop='emitPrev')
+  .arrowButton(
+    @click.stop='emitPrev'
+    :class='{disable: isFirst}'
+    )
     i.icon.icon-left
   .content
     transition(
       name='fade'
-      mode='out-in')
+      mode='out-in'
+      )
       img.image(
         :key='src'
         :src='src'
@@ -14,7 +18,10 @@
         )
     .title(v-if='title') {{ title }}
     .closeButton(@click='emitClose') close
-  .arrowButton(@click.stop='emitNext')
+  .arrowButton(
+    @click.stop='emitNext'
+    :class='{disable: isLast}'
+    )
     i.icon.icon-right
 </template>
 
@@ -23,6 +30,8 @@ const MAX_IMAGE_RATIO = 0.8
 export default {
   props: {
     src: { type: String, default: '' },
+    isFirst: { type: Boolean, default: false },
+    isLast: { type: Boolean, default: false },
     title: { type: String, default: '' }
   },
   data() {
@@ -127,6 +136,11 @@ export default {
   transition: 0.3s;
   &:hover {
     opacity: 0.6;
+  }
+
+  &.disable {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 </style>

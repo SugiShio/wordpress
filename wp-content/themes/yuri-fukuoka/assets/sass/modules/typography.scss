@@ -35,6 +35,12 @@
     @extend .y-title-3;
   }
 
+  > h3,
+  > h4 {
+    margin: 15px 0;
+    font-weight: bold;
+  }
+
   > p {
     margin: 15px 0;
   }

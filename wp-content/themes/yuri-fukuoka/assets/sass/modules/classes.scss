@@ -80,4 +80,15 @@
     @extend .y-content;
     margin: 10px 0;
   }
+
+  &__bottom {
+    @extend .y-content;
+    margin: 30px 0;
+    padding: 5px 20px;
+    background-color: $color-gray;
+
+    a {
+      color: $color-text;
+    }
+  }
 }

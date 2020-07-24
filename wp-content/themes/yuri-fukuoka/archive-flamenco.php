@@ -58,6 +58,15 @@ $posts = get_posts(array(
     ?>
   </ul>
   <?php endif; ?>
+
+  <div class="y-classes__bottom">
+    <?php
+    $post = get_post(get_page_by_path('flamenco-bottom'));
+    setup_postdata( $post );
+    the_content();
+    wp_reset_postdata();
+    ?>
+  </div>
 </section>
 
 <?php get_footer(); ?>

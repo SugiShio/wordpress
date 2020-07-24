@@ -19,4 +19,15 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <?php include 'menu.php'; ?>
+  <?php if(!is_home()) : ?>
+  <div class="y-header">
+    <div class="y-header__upperInner">
+      <a class="y-header__siteTitle" href="/">
+        <img src="<?php echo get_template_directory_uri()."/assets/images/header.png"; ?>" alt="">
+      </a>
+    </div>
+    <div class="h-header__bottomInner">
+      <?php include 'menu.php'; ?>
+    </div>
+  </div>
+  <?php endif; ?>

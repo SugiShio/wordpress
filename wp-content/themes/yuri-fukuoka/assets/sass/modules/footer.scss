@@ -1,0 +1,57 @@
+.y-footer {
+  background-color: $color-black;
+  padding: 30px 20px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: $width-header;
+    margin: auto;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__item {
+    width: 200px;
+    &--indent {
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+    > a,
+    > span {
+      color: $color-white;
+      line-height: 40px;
+    }
+
+    > a {
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__banners {
+    display: flex;
+
+    > a {
+      display: block;
+      margin-left: 10px;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__copyright {
+    max-width: $width-header;
+    margin: auto;
+    text-align: right;
+    display: block;
+    color: $color-white;
+  }
+}

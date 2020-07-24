@@ -38,6 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       },
       methods: {
+        showNext() {
+          if (!this.isShow || this.items.length - 2 < this.showingIndex) return
+          this.showingIndex++
+        },
+        showPrev() {
+          if (!this.isShow || this.showingIndex < 1) return
+          this.showingIndex--
+        },
         showViewer() {
           this.isShow = true
         },

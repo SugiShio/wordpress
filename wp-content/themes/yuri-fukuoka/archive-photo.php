@@ -30,7 +30,12 @@
         <div class="y-photo__content js-gallery">
           <?php the_content(); ?>
         </div>
-        <view-window v-show='isShow' :src='imageUrl' @close-button-clicked='closeViewer'
+        <view-window
+          v-show='isShow'
+          :src='imageUrl'
+          @close-button-clicked='closeViewer'
+          @next-button-clicked='showNext'
+          @prev-button-clicked='showPrev'
           title='<?php the_date(); ?> <?php the_title(); ?>'></view-window>
       </div>
       <?php endif; ?>

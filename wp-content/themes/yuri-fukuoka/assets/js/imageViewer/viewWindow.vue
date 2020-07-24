@@ -1,13 +1,21 @@
 <template lang="pug">
 .background(@click='emitClose')
+  .arrowButton(@click.stop='emitPrev')
+    i.icon.icon-left
   .content
-    img.image(
-      :src='src'
-      :width='width'
-      :height='height'
-      )
+    transition(
+      name='fade'
+      mode='out-in')
+      img.image(
+        :key='src'
+        :src='src'
+        :width='width'
+        :height='height'
+        )
     .title(v-if='title') {{ title }}
     .closeButton(@click='emitClose') close
+  .arrowButton(@click.stop='emitNext')
+    i.icon.icon-right
 </template>
 
 <script>
@@ -24,13 +32,19 @@ export default {
     }
   },
   created() {
-    this.setWindowSize()
+    this.updateWindowSize()
   },
   methods: {
     emitClose() {
       this.$emit('close-button-clicked')
     },
-    setWindowSize() {
+    emitPrev() {
+      this.$emit('prev-button-clicked')
+    },
+    emitNext() {
+      this.$emit('next-button-clicked')
+    },
+    updateWindowSize() {
       this.windowWidth = window.innerWidth
       this.windowHeight = window.innerHeight
     }
@@ -41,11 +55,12 @@ export default {
       this.height = null
       if (!value) return
 
-      this.$nextTick(() => {
-        this.setWindowSize()
-        const imageElement = this.$el.getElementsByClassName('image')[0]
-        const imageWidth = imageElement.width
-        const imageHeight = imageElement.height
+      const img = new Image()
+      img.src = value
+      img.onload = () => {
+        this.updateWindowSize()
+        const imageWidth = img.naturalWidth
+        const imageHeight = img.naturalHeight
         if (
           this.windowWidth * MAX_IMAGE_RATIO < imageWidth ||
           this.windowHeight * MAX_IMAGE_RATIO < imageHeight
@@ -57,7 +72,7 @@ export default {
           this.width = imageWidth * ratio
           this.height = imageHeight * ratio
         }
-      })
+      }
     }
   }
 }
@@ -100,6 +115,16 @@ export default {
   cursor: pointer;
   transition: opacity 0.3s;
 
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.arrowButton {
+  font-size: 24px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
   &:hover {
     opacity: 0.6;
   }

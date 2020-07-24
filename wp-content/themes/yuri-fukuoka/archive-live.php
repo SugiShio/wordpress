@@ -79,14 +79,7 @@
           <td class="y-live__td"><?php echo get_field('remarks'); ?></td>
         </tr>
         <?php endif; ?>
-
       </table>
-
-
-
-      <div class="y-live__map">
-        <?php echo get_field('html_map'); ?>
-      </div>
     </li>
     <?php
     wp_reset_postdata();

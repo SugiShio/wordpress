@@ -8,6 +8,11 @@
     color: $color-white;
   }
 
+  &--yoga {
+    background-position: right;
+    background-image: url('../images/classes_yoga.png');
+  }
+
   &__inner {
     max-width: $width-header;
     margin: auto;

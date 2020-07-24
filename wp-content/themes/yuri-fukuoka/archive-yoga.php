@@ -1,0 +1,71 @@
+<?php get_header(); ?>
+
+<?php
+$posts = get_posts(array(
+  'post_type' => 'yoga',
+  'meta_key' => 'order',
+  'orderby' => 'meta_value',
+  'order' => 'ASC',
+  'posts_per_page' => 50,
+));
+?>
+
+<section class="y-classmain y-classmain--yoga">
+  <div class="y-classmain__inner">
+    <h3 class="y-classmain__subtitle">港区芝浦の少人数制ヨガサロン</h3>
+    <h2 class="y-classmain__title">yoga salon GRACIAGE</h2>
+
+    <p class="y-classmain__text">
+      当教室は、完全予約制プライベートサロンです。<br>
+      アラインメントをしっかり確認しながら、アジャストも交えてレッスンいたしますので、<br>
+      ご自身の体としっかり向き合いたい方、周りを気にしないでゆっくりとヨガをやりたい方におすすめです。
+    </p>
+
+    <p class="y-classmain__text">
+      随時生徒さん募集しております。<a href="">こちら</a>より気軽にお問い合わせください！
+    </p>
+    <div class="y-classmain__about">
+      <h3 class="y-classmain__abouttitle">ヨガとは</h3>
+      <p class="y-classmain__abouttext">
+        ヨガにはサンスクリット語で『結ぶ・繋ぐ』という意味があり、『心・体・魂』が繋がっている状態のことを表します。『呼吸・姿勢・瞑想』を組み合わせ、『心身の解放』と『心の安定と安らぎ』を得るものです。<br>
+        決して人と比較することはせず『そこに自分が存在することを大切に』そして『自分と向き合う、自分のための時間』を有意義に過ごして​参りましょう！
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="y-container y-classes">
+  <h3 class="y-classes__title-1">レッスン</h3>
+  <?php
+  if($posts) :
+  ?>
+
+  <ul class="y-classes__list">
+    <?php
+    foreach($posts as $post) :
+      setup_postdata( $post );
+      ?>
+    <li class="y-classes__item">
+      <h4 class="y-classes__title-2"><?php the_title(); ?></h4>
+      <div class="y-classes__content">
+        <?php the_content(); ?>
+      </div>
+    </li>
+    <?php
+    wp_reset_postdata();
+    endforeach;
+    ?>
+  </ul>
+  <?php endif; ?>
+
+  <div class="y-classes__bottom">
+    <?php
+    $post = get_post(get_page_by_path('yoga-bottom'));
+    setup_postdata( $post );
+    the_content();
+    wp_reset_postdata();
+    ?>
+  </div>
+</section>
+
+<?php get_footer(); ?>

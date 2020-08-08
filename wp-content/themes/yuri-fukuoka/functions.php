@@ -7,7 +7,7 @@ add_action('wp_enqueue_scripts', 'yf_scripts');
 
 function yf_init() {
   $post_types = [
-    ['label'=>'お知らせ', 'term'=>'announce', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-megaphone'],
+    ['label'=>'お知らせ', 'term'=>'announce', 'menu_position'=>5, 'menu_icon'=>'dashicons-megaphone'],
     ['label'=>'レッスン（フラメンコ）', 'term'=>'flamenco', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-universal-access'],
     ['label'=>'レッスン（ヨガ）', 'term'=>'yoga', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-universal-access'],
     ['label'=>'アクセス', 'term'=>'access', 'has_archive'=>true, 'menu_position'=>5, 'menu_icon'=>'dashicons-location-alt'],

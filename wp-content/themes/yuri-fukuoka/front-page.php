@@ -47,6 +47,26 @@
     </p>
     <img src="<?php echo get_template_directory_uri()."/assets/images/flowers_bottom.png"; ?>" alt="">
   </section>
+
+  <section class="y-topAnnounce">
+    <?php
+    $posts = get_posts(array(
+      'post_type' => 'announce',
+      'posts_per_page' => 1,
+    ));
+    $post = $posts[0];
+    setup_postdata( $post );
+    $date = get_the_date('Y-m-d');
+    ?>
+    <h4 class="y-topAnnounce__title">お知らせ</h4>
+    <div class="y-topAnnounce__description">
+      <time class="y-topAnnounce__date" datetime="<?php echo $date; ?>">
+        <?php echo date('Y.n.j', strtotime($date)); ?>
+      </time>
+      <?php the_title(); ?>
+    </div>
+    <?php wp_reset_postdata(); ?>
+  </section>
 </div>
 
 <?php get_footer(); ?>

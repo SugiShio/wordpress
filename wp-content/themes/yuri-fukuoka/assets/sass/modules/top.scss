@@ -86,3 +86,23 @@
     color: inherit;
   }
 }
+
+.y-topAnnounce {
+  max-width: $width-default;
+  text-align: center;
+  margin: 80px auto;
+  padding-bottom: 50px;
+  background-image: url('../images/line.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  &__date {
+    font-size: $font-size-sm;
+    margin-right: 10px;
+  }
+}

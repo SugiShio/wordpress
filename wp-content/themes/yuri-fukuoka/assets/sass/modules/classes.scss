@@ -4,12 +4,14 @@
   background-position: left;
 
   &--flamenco {
+    background-color: #1c1515;
     background-image: url('../images/classes_flamenco.png');
     color: $color-white;
   }
 
   &--yoga {
     background-position: right;
+    background-color: #c47e3f;
     background-image: url('../images/classes_yoga.png');
   }
 

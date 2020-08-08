@@ -2,7 +2,7 @@
 <div class="y-top">
   <section class='y-mainview'>
     <div class="y-mainview__flamenco">
-      <img src="<?php echo get_template_directory_uri()."/assets/images/main_flamenco.jpg"; ?>" alt="">
+      <img src="<?php echo get_template_directory_uri()."/assets/images/main_flamenco.png"; ?>" alt="">
 
       <div class="y-mainview__text">
         <h3 class="y-mainview__subtext">下北沢のフラメンコ教室</h3>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="y-mainview__yoga">
-      <img src="<?php echo get_template_directory_uri()."/assets/images/main_yoga.jpg"; ?>" alt="">
+      <img src="<?php echo get_template_directory_uri()."/assets/images/main_yoga.png"; ?>" alt="">
       <div class="y-mainview__text">
         <h3 class="y-mainview__subtext">港区芝浦の少人数制ヨガサロン</h3>
         <h2 class="y-mainview__maintext">yoga salon GRACIAGE</h2>

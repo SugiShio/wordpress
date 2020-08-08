@@ -59,11 +59,18 @@
     left: 0;
     top: 100%;
     margin: 0 10px;
+    z-index: $z-index-header;
+    background-color: #fff;
+    box-shadow: 0 3px 3px rgba(#000, 0.1);
   }
 
   &__accordionItem {
-    line-height: 40px;
     padding: 0 10px;
-    background-color: #fff;
+    line-height: 40px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }

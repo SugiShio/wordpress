@@ -16,13 +16,12 @@ $posts = get_posts(array(
     <h2 class="y-classmain__title">yoga salon GRACIAGE</h2>
 
     <p class="y-classmain__text">
-      当教室は、完全予約制プライベートサロンです。<br>
-      アラインメントをしっかり確認しながら、アジャストも交えてレッスンいたしますので、<br>
-      ご自身の体としっかり向き合いたい方、周りを気にしないでゆっくりとヨガをやりたい方におすすめです。
+      芝浦ヨガサロングラシアージュは、完全予約制のプライベートレッスンで、ご自身のペースでワークアウトできる空間です。<br>
+      アライメントをしっかり確認しながら、アジャストも交えてレッスンいたしますので、周りを気にせずゆっくりやりたい方、<br>ご自身の体としっかり向き合いたい方におすすめです。<br>
     </p>
 
     <p class="y-classmain__text">
-      随時生徒さん募集しております。<a href="">こちら</a>より気軽にお問い合わせください！
+      随時生徒さん募集しております。<a href="<?php echo get_permalink(get_page_by_path( 'contact' )); ?>">こちら</a>より気軽にお問い合わせください。
     </p>
     <div class="y-classmain__about">
       <h3 class="y-classmain__abouttitle">ヨガとは</h3>

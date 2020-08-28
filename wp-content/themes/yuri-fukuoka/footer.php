@@ -47,7 +47,7 @@
       </a>
     </div>
   </div>
-  <small class="y-footer__copyright">@2020 福岡由理</small>
+  <small class="y-footer__copyright">©️ 2020 Flamenco studio Las gracias, yoga salon GRACIAGE</small>
 </footer>
 
 <?php wp_footer(); ?>

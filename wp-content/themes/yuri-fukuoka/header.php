@@ -22,7 +22,7 @@
   <?php if(!is_home()) : ?>
   <div class="y-header">
     <div class="y-header__upperInner">
-      <a class="y-header__siteTitle" href="/">
+      <a class="y-header__siteTitle" href="<?php echo home_url(); ?>">
         <img src="<?php echo get_template_directory_uri()."/assets/images/header.png"; ?>" alt="">
       </a>
     </div>

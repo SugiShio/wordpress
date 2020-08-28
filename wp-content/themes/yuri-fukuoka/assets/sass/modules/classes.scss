@@ -1,18 +1,23 @@
 .y-classmain {
-  height: 540px;
   background-repeat: no-repeat;
   background-position: left;
-
+  @include screen-lg {
+    height: 540px;
+  }
   &--flamenco {
     background-color: #1c1515;
-    background-image: url('../images/classes_flamenco.png');
     color: $color-white;
+    @include screen-lg {
+      background-image: url('../images/classes_flamenco.png');
+    }
   }
 
   &--yoga {
     background-position: center;
     background-color: #e9dede;
-    background-image: url('../images/classes_yoga.png');
+    @include screen-lg {
+      background-image: url('../images/classes_yoga.png');
+    }
   }
 
   &__inner {

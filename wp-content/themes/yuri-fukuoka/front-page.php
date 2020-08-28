@@ -2,15 +2,12 @@
 <div class="y-top">
   <section class='y-mainview'>
     <div class="y-mainview__flamenco">
-      <img src="<?php echo get_template_directory_uri()."/assets/images/main_flamenco.png"; ?>" alt="">
-
       <div class="y-mainview__text">
         <h3 class="y-mainview__subtext">下北沢のフラメンコ教室</h3>
         <h2 class="y-mainview__maintext">Flamenco studio Las gracias</h2>
       </div>
     </div>
     <div class="y-mainview__yoga">
-      <img src="<?php echo get_template_directory_uri()."/assets/images/main_yoga.jpg"; ?>" alt="">
       <div class="y-mainview__text">
         <h3 class="y-mainview__subtext">港区芝浦の少人数制ヨガサロン</h3>
         <h2 class="y-mainview__maintext">yoga salon GRACIAGE</h2>
@@ -24,7 +21,7 @@
 
   <section class="y-top__copy">
     <img src="<?php echo get_template_directory_uri()."/assets/images/flowers_upper.png"; ?>" alt="">
-    <p>
+    <p class="y-top__copytext">
       当教室はフラメンコ・ヨガ・ピラティスのクラスを設けております。<br>
       まずは体を動かして日々のストレスを発散し、<br>
       体と心のスペースを取り戻し、<br>
@@ -37,7 +34,7 @@
       </span>
       <span><strong>ココロ</strong>が動けば、<strong>カラダ</strong>も動く</span>
     </p>
-    <p>
+    <p class="y-top__copytext">
       日常の生活を変えたくても誰も変えてくれません。<br>
       変えられるのはアナタです。<br>
       まずは行動してみてください。<br>

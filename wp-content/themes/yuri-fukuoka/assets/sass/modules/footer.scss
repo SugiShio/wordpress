@@ -4,18 +4,28 @@
   padding: 30px 20px;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
     max-width: $width-header;
     margin: auto;
+    flex-wrap: wrap;
+    @include screen-lg {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__menu {
     display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    flex-grow: 1;
   }
 
   &__item {
-    width: 200px;
+    @include screen-lg {
+      width: 200px;
+    }
     &--indent {
       margin-bottom: 20px;
       padding-left: 10px;
@@ -36,6 +46,9 @@
 
   &__banners {
     display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-bottom: 20px;
 
     > a {
       display: block;

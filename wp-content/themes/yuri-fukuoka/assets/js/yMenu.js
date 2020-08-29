@@ -1,5 +1,5 @@
 const MOUNT_POINT = 'js-menu'
-import Vue from 'vue'
+const BREAK_POINT = 600
 
 document.addEventListener('DOMContentLoaded', () => {
   const element = document.getElementById(MOUNT_POINT)
@@ -14,21 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  const accordionItems = element.getElementsByClassName(
-    `${MOUNT_POINT}_accordion`
-  )
-  ;[].slice.call(accordionItems).forEach(item => {
-    new Vue({
-      name: 'accordion',
-      el: item,
-      data: {
-        isOpen: false
-      },
-      methods: {
-        toggleIsOpen() {
-          this.isOpen = !this.isOpen
-        }
-      }
+  const menuBody = document.getElementsByClassName(`${MOUNT_POINT}_body`)
+  const setMenuShow = () => {
+    const isWindowWide = BREAK_POINT < window.innerWidth
+    ;[].slice.call(menuBody).forEach(item => {
+      item.style.display = isWindowWide ? '' : 'none'
     })
+  }
+  setMenuShow()
+
+  let timeoutId = null
+  window.addEventListener('resize', () => {
+    if (timeoutId) return
+    timeoutId = setTimeout(() => {
+      timeoutId = null
+      setMenuShow()
+    }, 500)
   })
 })

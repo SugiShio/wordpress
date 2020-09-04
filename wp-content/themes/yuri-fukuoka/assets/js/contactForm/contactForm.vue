@@ -30,6 +30,7 @@ div
 
 <script>
 import inputItem from './inputItem.vue'
+import Validate from './validate'
 
 export default {
   props: {
@@ -53,6 +54,16 @@ export default {
   methods: {
     goToConfirm() {
       this.isConfirm = true
+      return
+      this.errorMessages = []
+      const errors = Validate.validate(this.values, this.contactConfig)
+      if (errors.length) {
+        this.errorMessages = errors.map(error => {
+          return Validate.getErrorMessage(error.type)
+        })
+      } else {
+        this.isConfirm = true
+      }
     },
     backToInput() {
       this.isConfirm = false

@@ -50,5 +50,5 @@ npm run watch -- --env.theme=[theme]
 
 |      | バージョン |
 | :--- | :--------- |
-| node | v10.15.1   |
-| npm  | 6.4.1      |
+| node | v12.11.1   |
+| npm  | 6.14.8     |

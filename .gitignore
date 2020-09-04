@@ -43,4 +43,3 @@ xmlrpc.php
 /sitemap.xml.gz
 
 node_modules/
-package-lock.json

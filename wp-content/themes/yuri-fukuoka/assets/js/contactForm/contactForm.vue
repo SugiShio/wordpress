@@ -116,6 +116,7 @@ export default {
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
+  appearance: none;
 
   &:hover {
     opacity: 0.6;

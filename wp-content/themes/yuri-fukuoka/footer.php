@@ -39,9 +39,11 @@
     </nav>
 
     <div class="y-footer__banners">
+      <?php /*
       <a href="https://www.yogaroom.jp/" target="_blank">
         <img src="<?php echo get_template_directory_uri()."/assets/images/banner_yogaroom.gif"; ?>" alt="">
       </a>
+      */?>
       <a href="http://www.jmya.jp/" target="_blank">
         <img src="<?php echo get_template_directory_uri()."/assets/images/banner_jmya.png"; ?>" alt="">
       </a>

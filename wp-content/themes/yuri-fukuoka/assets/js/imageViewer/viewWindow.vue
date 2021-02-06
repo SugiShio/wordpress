@@ -88,6 +88,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../sass/_variables.scss';
 .background {
   position: fixed;
   top: 0;
@@ -98,6 +99,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: rgba(#fff, 0.9);
+  z-index: $z-index-image-viewer;
 }
 
 .content {

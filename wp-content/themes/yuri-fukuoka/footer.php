@@ -43,10 +43,10 @@
       <a href="https://www.yogaroom.jp/" target="_blank">
         <img src="<?php echo get_template_directory_uri()."/assets/images/banner_yogaroom.gif"; ?>" alt="">
       </a>
-      */?>
       <a href="http://www.jmya.jp/" target="_blank">
         <img src="<?php echo get_template_directory_uri()."/assets/images/banner_jmya.png"; ?>" alt="">
       </a>
+      */?>
     </div>
   </div>
   <small class="y-footer__copyright">©️ 2020 Flamenco studio Las gracias, yoga salon GRACIAGE</small>

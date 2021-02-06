@@ -9,7 +9,9 @@
 ?>
 <section class="y-container y-photo">
   <h2 class="y-title">Photo</h2>
-
+  <p class="y-photo__topDescription">
+    クリックすると画像が拡大されます。
+  </p>
   <ul class="y-photo__list">
     <?php
     foreach($posts as $post) :

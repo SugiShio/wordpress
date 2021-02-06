@@ -9,6 +9,7 @@ $color-darkgray: #908e8b;
 $color-main: #f2a95b;
 
 $color-text: $color-black;
+$color-text-weak: lighten($color-black, 30%);
 $color-background: $color-white;
 
 /* width

@@ -14,17 +14,17 @@ div
       |{{ message }}
 
   .bottons(v-show='!isConfirm')
-    .button(
+    .y-button.button(
       @click='goToConfirm'
     ) 入力内容の確認
 
   .buttons(v-show='isConfirm')
-    input.button(
+    input.y-button.button(
       type='submit'
       name='submit'
       value='送信'
     )
-    .button(@click='backToInput') 修正する
+    .y-button.button(@click='backToInput') 修正する
 
 </template>
 
@@ -117,21 +117,8 @@ export default {
 
 .button {
   display: block;
-  width: 100%;
   max-width: 200px;
   margin: 10px auto;
-  padding: 8px 10px;
-  border: 1px solid;
-  background-color: $color-main;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
-  appearance: none;
-
-  &:hover {
-    opacity: 0.6;
-  }
 }
 
 .error {

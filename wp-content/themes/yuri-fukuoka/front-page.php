@@ -3,8 +3,8 @@
   <section class='y-mainview'>
     <div class="y-mainview__flamenco">
       <div class="y-mainview__text">
-        <h3 class="y-mainview__subtext">下北沢のフラメンコ教室</h3>
-        <h2 class="y-mainview__maintext">Flamenco studio Las gracias</h2>
+        <h3 class="y-mainview__subtext">福岡由理フラメンコ教室</h3>
+        <h2 class="y-mainview__maintext">lasgracias</h2>
       </div>
     </div>
     <div class="y-mainview__yoga">

@@ -12,8 +12,8 @@ $posts = get_posts(array(
 
 <section class="y-classmain y-classmain--flamenco">
   <div class="y-classmain__inner">
-    <h3 class="y-classmain__subtitle">下北沢のフラメンコ教室</h3>
-    <h2 class="y-classmain__title">Flamenco studio Las gracias</h2>
+    <h3 class="y-classmain__subtitle">福岡由理フラメンコ教室</h3>
+    <h2 class="y-classmain__title">lasgracias</h2>
 
     <p class="y-classmain__text">
       当教室は、ヨガ・ピラティスで解剖学（体の筋肉や骨格の仕組み）を学んだ講師が、<br>

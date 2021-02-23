@@ -59,7 +59,8 @@ export default {
 .label {
   display: block;
   padding: 0 5px;
-  @media screen and (min-width: 400px) {
+  letter-spacing: 0;
+  @media screen and (min-width: 420px) {
     width: 120px;
     flex-shrink: 0;
     margin-right: 20px;
@@ -72,7 +73,7 @@ export default {
   > div {
     width: 100%;
   }
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 420px) {
     display: flex;
   }
 }
@@ -91,7 +92,7 @@ export default {
   padding: 0 5px;
   word-break: break-word;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 420px) {
     padding: 10px 5px;
   }
 }

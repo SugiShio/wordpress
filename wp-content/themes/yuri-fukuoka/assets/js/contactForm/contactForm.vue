@@ -73,48 +73,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../sass/_variables.scss';
-
-.item {
-  margin: 20px 0;
-}
-
-.label {
-  display: block;
-  padding: 0 5px;
-  @media screen and (min-width: 400px) {
-    width: 120px;
-    flex-shrink: 0;
-    margin-right: 20px;
-    padding: 10px 5px;
-    text-align: right;
-  }
-}
-
-.input-wrapper {
-  @media screen and (min-width: 400px) {
-    display: flex;
-  }
-}
-
-.input {
-  width: 100%;
-  padding: 10px 5px;
-  border: 1px solid;
-  background-color: #fff;
-  outline: none;
-  appearance: none;
-}
-
-.confirmItem {
-  padding: 0 5px;
-  word-break: break-word;
-
-  @media screen and (min-width: 400px) {
-    padding: 10px 5px;
-  }
-}
-
 .button {
   display: block;
   max-width: 200px;

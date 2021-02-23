@@ -12,7 +12,7 @@ $posts = get_posts(array(
 
 <section class="y-classmain y-classmain--yoga">
   <div class="y-classmain__inner">
-    <h3 class="y-classmain__subtitle">港区芝浦の少人数制ヨガサロン</h3>
+    <h3 class="y-classmain__subtitle">港区芝浦の完全予約制女性専用ヨガサロン</h3>
     <h2 class="y-classmain__title">yoga salon GRACIAGE</h2>
 
     <p class="y-classmain__text">

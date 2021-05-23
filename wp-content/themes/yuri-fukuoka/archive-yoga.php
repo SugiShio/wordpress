@@ -35,7 +35,6 @@ $posts = get_posts(array(
 
 <section class="y-container y-classes">
   <div class="y-classes__buttonArea">
-    <p>体験レッスン受付中！初回レッスン￥1000</p>
     <div class="y-classes__button">
       <a href="https://coubic.com/yogasalongraciage" class='y-button' target="_blank">オンライン予約</a>
     </div>

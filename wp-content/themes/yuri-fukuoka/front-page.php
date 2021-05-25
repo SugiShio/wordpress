@@ -9,7 +9,7 @@
     </div>
     <div class="y-mainview__yoga">
       <div class="y-mainview__text">
-        <h3 class="y-mainview__subtext">港区芝浦の少人数制ヨガサロン</h3>
+        <h3 class="y-mainview__subtext">港区芝浦の完全予約制女性専用ヨガサロン</h3>
         <h2 class="y-mainview__maintext">yoga salon GRACIAGE</h2>
       </div>
     </div>

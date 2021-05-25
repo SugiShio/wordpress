@@ -21,7 +21,7 @@ const CONTACT_CONFIG = [
     placeholder: '例）08012345678',
     rules: { format: 'phone' }
   },
-  { label: '件名', name: 'subject', placeholder: '例）体験レッスン希望' },
+  { label: '件名', name: 'subject', placeholder: '' },
   {
     label: '本文',
     name: 'body',

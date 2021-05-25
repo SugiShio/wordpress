@@ -38,7 +38,13 @@
       </div>
     </nav>
 
-    <div class="y-footer__banners">
+    <div class="y-footer__sns">
+      <a href="https://ja-jp.facebook.com/yuri.fukuoka.3" class='y-footer__snslink' target="_blank">
+        Facebook&nbsp;<i class="icon icon-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/lasgracias2008/?hl=ja" class='y-footer__snslink' target="_blank">
+        instagram&nbsp;<i class="icon icon-instagram"></i>
+      </a>
       <?php /*
       <a href="https://www.yogaroom.jp/" target="_blank">
         <img src="<?php echo get_template_directory_uri()."/assets/images/banner_yogaroom.gif"; ?>" alt="">

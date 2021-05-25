@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?fbb7d3f4d5aaa7684406c08befe8e1f3?#iefix')
+  src: url('../fonts/icons.eot?bee67ff4ee20a0b1daf8874137b8762e?#iefix')
       format('embedded-opentype'),
-    url('../fonts/icons.woff2?fbb7d3f4d5aaa7684406c08befe8e1f3') format('woff2'),
-    url('../fonts/icons.woff?fbb7d3f4d5aaa7684406c08befe8e1f3') format('woff'),
-    url('../fonts/icons.ttf?fbb7d3f4d5aaa7684406c08befe8e1f3')
+    url('../fonts/icons.woff2?bee67ff4ee20a0b1daf8874137b8762e') format('woff2'),
+    url('../fonts/icons.woff?bee67ff4ee20a0b1daf8874137b8762e') format('woff'),
+    url('../fonts/icons.ttf?bee67ff4ee20a0b1daf8874137b8762e')
       format('truetype'),
-    url('../fonts/icons.svg?fbb7d3f4d5aaa7684406c08befe8e1f3#icons')
+    url('../fonts/icons.svg?bee67ff4ee20a0b1daf8874137b8762e#icons')
       format('svg');
 }
 
@@ -22,9 +22,15 @@ i[class*=' icon-']:before {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-left:before {
+.icon-facebook:before {
   content: '\f101';
 }
-.icon-right:before {
+.icon-instagram:before {
   content: '\f102';
+}
+.icon-left:before {
+  content: '\f103';
+}
+.icon-right:before {
+  content: '\f104';
 }

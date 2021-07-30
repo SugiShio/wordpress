@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+/* colors
+----------------- */
+$color-black: #141415;
+$color-text: #141415;
+$color-text-weak: #93989e;
+$color-text-link: #2f6ab2;
+$color-background: #f7f8fa;
+$color-accent: #c91138;
+$color-theme: #2f6ab2;
+$color-technic: #2f6ab2;
+$color-performance: #98c746;
+$color-cm: #f4bf20;
+$color-photo: #cf5e9e;
+
+$color-input-border: #93989e;
+
+/* font families
+----------------- */
+$font-sansserif: 'Source Sans Pro', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+
+/* font sizes
+----------------- */
+$font-sm: 10px;
+$font-md: 14px;
+$font-lg: 18px;
+$font-xlg: 24px;
+
+/* break points
+----------------- */
+$width-sidebar: 220px;
+
+/* break points
+----------------- */
+$breakpoint-sm: 640px;
+$breakpoint-lg: 1000px;

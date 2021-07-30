@@ -1,0 +1,40 @@
+.y-qa {
+  &__list {
+    margin: 40px 0;
+  }
+
+  &__item {
+    margin: 40px 0;
+  }
+
+  &__question {
+    @extend .y-title-2;
+
+    &::before {
+      content: 'Q.';
+    }
+  }
+
+  &__answer {
+    margin: 10px 0;
+    padding: 5px;
+    &::before {
+      content: 'A.';
+    }
+  }
+
+  &__question,
+  &__answer {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $color-main;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}

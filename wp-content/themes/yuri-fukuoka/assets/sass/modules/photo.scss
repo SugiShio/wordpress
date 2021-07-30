@@ -1,0 +1,29 @@
+.y-photo {
+  &__topDescription {
+    margin: 30px 0;
+    text-align: center;
+    color: $color-darkgray;
+  }
+
+  &__date {
+    font-size: $font-size-sm;
+  }
+
+  &__title {
+    @extend .y-title-2;
+  }
+
+  &__content {
+    @extend .y-content;
+    margin: 20px 0;
+
+    .wp-block-gallery .blocks-gallery-item {
+      height: 230px;
+      cursor: pointer;
+
+      .blocks-gallery-item__caption {
+        display: none;
+      }
+    }
+  }
+}

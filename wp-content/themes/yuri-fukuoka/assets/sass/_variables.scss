@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+/* colors
+----------------- */
+$color-black: #231d1b;
+$color-white: #fffefa;
+$color-gray: #ded6d4;
+$color-darkgray: #908e8b;
+$color-main: #f2a95b;
+
+$color-text: $color-black;
+$color-text-weak: lighten($color-black, 30%);
+$color-background: $color-white;
+
+/* width
+----------------- */
+$width-default: 750px;
+$width-header: 1000px;
+
+/* font families
+----------------- */
+$font-default: 'Noto Serif JP', serif;
+
+/* font size
+----------------- */
+$font-size-sm: 11px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-size-xlg: 20px;
+$font-size-xxlg: 24px;
+
+/* break points
+----------------- */
+$breakpoint: 600px;
+
+/* z-index
+----------------- */
+$z-index-header: 100;
+$z-index-image-viewer: 200;

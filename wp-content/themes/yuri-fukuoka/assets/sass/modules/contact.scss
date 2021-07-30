@@ -1,0 +1,9 @@
+.y-contact {
+  &__content {
+    @extend .y-content;
+
+    .mw_wp_form {
+      margin: 50px 0;
+    }
+  }
+}

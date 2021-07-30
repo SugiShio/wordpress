@@ -1,0 +1,116 @@
+.y-classmain {
+  background-repeat: no-repeat;
+  background-position: left;
+  @include screen-lg {
+    height: 540px;
+  }
+  &--flamenco {
+    background-color: #1c1515;
+    color: $color-white;
+    @include screen-lg {
+      background-image: url('../images/classes_flamenco.png');
+    }
+  }
+
+  &--yoga {
+    background-position: center;
+    background-color: #e9dede;
+    @include screen-lg {
+      background-image: url('../images/classes_yoga.png');
+    }
+  }
+
+  &__inner {
+    max-width: $width-header;
+    margin: auto;
+    padding: 10px;
+  }
+
+  &__subtitle,
+  &__title,
+  &__text,
+  &__about,
+  &__abouttitle,
+  &__abouttext {
+    color: inherit;
+  }
+
+  &__subtitle {
+    margin-top: 50px;
+    font-size: $font-size-lg;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    margin: 10px 0;
+
+    > a {
+      text-decoration: underline;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__about {
+    background-color: rgba($color-white, 0.4);
+    margin: 30px 0;
+    padding: 15px 20px;
+  }
+
+  &__abouttitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.y-classes {
+  &__buttonArea {
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  &__button {
+    margin: 10px auto;
+    width: 200px;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__head {
+    margin: 20px 0 10px;
+  }
+
+  &__title-1 {
+    @extend .y-title-1;
+    margin: 20px 0;
+  }
+
+  &__title-2 {
+    @extend .y-title-2;
+  }
+
+  &__content {
+    @extend .y-content;
+    margin: 10px 0;
+  }
+
+  &__bottom {
+    @extend .y-content;
+    margin: 30px 0;
+    padding: 5px 20px;
+    background-color: $color-gray;
+
+    a {
+      color: $color-text;
+    }
+  }
+}

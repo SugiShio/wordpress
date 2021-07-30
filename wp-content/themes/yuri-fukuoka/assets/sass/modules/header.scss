@@ -1,0 +1,110 @@
+.y-header {
+  &__upperInner {
+    background-color: $color-gray;
+    text-align: center;
+  }
+
+  &__siteTitle {
+    display: inline-block;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__bottomInner {
+    background-color: $color-background;
+  }
+
+  &__menu {
+    @include screen-lg {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__menuTrigger {
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    @include screen-lg {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    > img {
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  &__item,
+  &__link {
+    position: relative;
+    display: block;
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 50px;
+    text-align: center;
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &.is-current::before {
+      content: '~';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      line-height: 20px;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+    }
+
+    @include screen-lg {
+      display: inline-block;
+    }
+  }
+
+  &__accordion {
+    position: relative;
+  }
+
+  &__accordionMenu {
+    text-align: center;
+    padding: 0 20px;
+
+    @include screen-lg {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      z-index: $z-index-header;
+      background-color: rgba($color-white, 0.7);
+      text-align: left;
+    }
+  }
+
+  &__accordionItem {
+    padding: 0 10px;
+    line-height: 40px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

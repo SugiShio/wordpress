@@ -1,0 +1,146 @@
+$breakpoint-mainview: 900px;
+
+.y-top {
+  &__menu {
+    margin: 50px 0;
+  }
+  &__copy {
+    text-align: center;
+    position: relative;
+    max-width: $width-default;
+    margin: 50px 10px;
+    border: 3px solid $color-black;
+    background-color: #fff;
+
+    @include screen-lg {
+      margin: 50px auto;
+    }
+
+    &::before {
+      content: '';
+      border: 2px solid $color-black;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+    }
+  }
+  &__copytext {
+    padding: 0 20px;
+    line-height: 3;
+
+    @include screen-sm {
+      line-height: 2;
+      > br {
+        display: none;
+      }
+    }
+  }
+
+  &__maincopy {
+    margin: 50px 0;
+    span {
+      display: block;
+      line-height: 2;
+      font-size: $font-size-xlg;
+      font-weight: bold;
+      > strong {
+        font-size: 1.2em;
+      }
+      @include screen-lg {
+        &:first-child {
+          padding-right: 80px;
+        }
+        &:nth-child(2) {
+          padding-left: 80px;
+        }
+      }
+    }
+  }
+}
+
+.y-mainview {
+  @media screen and (min-width: $breakpoint-mainview) {
+    display: flex;
+  }
+  &__flamenco,
+  &__yoga {
+    width: 100%;
+    background-repeat: no-repeat;
+    @media screen and (min-width: $breakpoint-mainview) {
+      width: 50%;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    height: 50vh;
+    @media screen and (min-width: $breakpoint-mainview) {
+      height: 800px;
+    }
+  }
+
+  &__flamenco {
+    text-align: right;
+    background-color: #020202;
+    background-image: url('../images/main_flamenco-sp.jpg');
+
+    @media screen and (min-width: $breakpoint-mainview) {
+      background-position: right;
+      background-image: url('../images/main_flamenco.jpg');
+    }
+    .y-mainview__text {
+      align-items: flex-end;
+      color: $color-background;
+    }
+  }
+  &__yoga {
+    background-position: right;
+    background-color: #f1e1e1;
+    background-image: url('../images/main_yoga-sp.jpg');
+
+    @media screen and (min-width: $breakpoint-mainview) {
+      background-position: left;
+      background-image: url('../images/main_yoga.jpg');
+    }
+  }
+  &__subtext {
+    font-size: $font-size-md;
+    color: inherit;
+    @include screen-lg {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__maintext {
+    font-size: 20px;
+    @include screen-lg {
+      font-size: 26px;
+    }
+    color: inherit;
+  }
+}
+
+.y-topAnnounce {
+  max-width: $width-default;
+  text-align: center;
+  margin: 80px auto;
+  padding-bottom: 50px;
+  background-image: url('../images/line.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  &__date {
+    font-size: $font-size-sm;
+    margin-right: 10px;
+  }
+}

@@ -26,6 +26,13 @@ services:
     volumes:
       - db-data:/var/lib/mysql
 
+  node:
+    build: .
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+
 # database用にストレージの永続化設定
 volumes:
   db-data:

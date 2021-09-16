@@ -30,3 +30,4 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <?php if (!is_home()) include 'menu.php'; ?>

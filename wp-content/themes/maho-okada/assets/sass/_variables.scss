@@ -2,34 +2,23 @@
 
 /* colors
 ----------------- */
-$color-black: #141415;
-$color-text: #141415;
-$color-text-weak: #93989e;
-$color-text-link: #2f6ab2;
-$color-background: #f7f8fa;
-$color-accent: #c91138;
-$color-theme: #2f6ab2;
-$color-technic: #2f6ab2;
-$color-performance: #98c746;
-$color-cm: #f4bf20;
-$color-photo: #cf5e9e;
-
-$color-input-border: #93989e;
+$color-text: #5e5c58;
+$color-text-weak: #b1aba3;
+$color-accent: #e83724;
+$color-accent-weak: #f4aea9;
 
 /* font families
 ----------------- */
-$font-sansserif: 'Source Sans Pro', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$font-default: 'Crimson Text', 'Noto Serif JP', 'ヒラギノ明朝 ProN W3',
+  'HiraMinProN-W3', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
 
-/* font sizes
+/* font size
 ----------------- */
-$font-sm: 10px;
-$font-md: 14px;
-$font-lg: 18px;
-$font-xlg: 24px;
+$font-size-md: 16px;
 
-/* break points
+/* width
 ----------------- */
-$width-sidebar: 220px;
+$width-default: 600px;
 
 /* break points
 ----------------- */

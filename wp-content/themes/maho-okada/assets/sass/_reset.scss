@@ -1,23 +1,23 @@
 @charset 'utf-8';
 
 html {
-  font-family: $font-sansserif;
+  font-family: $font-default;
   font-size: 62.5%;
   font-weight: normal;
-  font-style:normal;
-  line-height: 1.6;
+  font-style: normal;
+  line-height: 1.8;
   overflow-y: scroll;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
   text-decoration: none;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   color: $color-text;
   border: 0;
   outline: none;
 
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
@@ -27,35 +27,60 @@ body {
   overflow: hidden;
 }
 
-body, div,
-h1, h2, h3, h4, h5, h6, p,
-a, span, time, mark,
-dl, dt, dd, ol, ul, li,
-form, label, legend,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+time,
+mark,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+legend,
 article,
-footer, header, main,
-menu, nav, section, summary,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary,
 blockquote {
-  font-family: $font-sansserif;
-  font-size: 1.4rem;
+  font-family: $font-default;
+  font-size: $font-size-md;
   font-weight: normal;
-  font-style:normal;
-  line-height: 1.6;
+  font-style: normal;
+  line-height: 1.8;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
   text-decoration: none;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   color: inherit;
   border: 0;
   outline: none;
 
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
   -webkit-tap-highlight-color: transparent;
 }
 
-a, span, em, time {
+a,
+span,
+em,
+time {
   font-size: inherit;
   font-weight: inherit;
   font-style: inherit;
@@ -72,7 +97,10 @@ img {
   vertical-align: bottom;
 }
 
-input, textarea, fieldset, select {
+input,
+textarea,
+fieldset,
+select {
   font-size: inherit;
   font-weight: inherit;
   font-style: inherit;
@@ -81,12 +109,13 @@ input, textarea, fieldset, select {
   padding: 0;
 }
 
-ol, ul {
-  list-style:none;
+ol,
+ul {
+  list-style: none;
 }
 
 table {
-  border-spacing:0;
+  border-spacing: 0;
   border-collapse: collapse;
 }
 

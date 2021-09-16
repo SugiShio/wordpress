@@ -1,0 +1,27 @@
+.mo-biography {
+  &__name {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__name-en {
+    color: $color-text-weak;
+    font-size: 10px;
+  }
+
+  &__content {
+    p {
+      margin: 20px 0;
+    }
+
+    .wp-block-image {
+      margin: 50px;
+    }
+  }
+}

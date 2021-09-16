@@ -15,3 +15,11 @@
     @content;
   }
 }
+
+%hover-style {
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

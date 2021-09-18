@@ -1,4 +1,4 @@
-<header>
+<maho-header>
   <nav class="mo-menu">
     <ul class="mo-menu__list">
       <li>
@@ -22,4 +22,4 @@
       </li>
     </ul>
   </nav>
-</header>
+</maho-header>

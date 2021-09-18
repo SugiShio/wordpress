@@ -30,4 +30,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <?php if (!is_home()) include 'menu.php'; ?>
+  <div id="js-maho">
+    <?php if (!is_home()) include 'maho-header.php'; ?>

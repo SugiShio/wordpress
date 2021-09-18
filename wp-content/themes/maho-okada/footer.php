@@ -1,3 +1,4 @@
+</div>
 <?php
 $sns = array('youtube', 'twitter', 'instagram', 'facebook');
 $url_base = array(

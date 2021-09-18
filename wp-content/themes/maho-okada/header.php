@@ -30,5 +30,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <div id="js-maho">
+  <div id="js-maho" :class='["mo-wrapper", { isHeaderFixed }]'>
     <?php if (!is_home()) include 'maho-header.php'; ?>

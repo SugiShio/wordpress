@@ -1,6 +1,7 @@
 import Vue from 'vue'
-const MOUNT_POINT = 'js-maho'
+import MahoHamburgerTrigger from './hamburgerTrigger/index.vue'
 import MahoHeader from './header/index.vue'
+const MOUNT_POINT = 'js-maho'
 
 document.addEventListener('DOMContentLoaded', () => {
   const el = document.getElementById(MOUNT_POINT)
@@ -8,6 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   new Vue({
     el,
-    components: { MahoHeader }
+    components: { MahoHamburgerTrigger, MahoHeader },
+    data() {
+      return {
+        isHeaderFixed: false,
+        isMenuOpen: false
+      }
+    },
+    created() {
+      window.addEventListener('scroll', () => {
+        this.isHeaderFixed = 300 < window.scrollY
+      })
+    },
+    methods: {
+      toggleIsMenuOpen() {
+        this.isMenuOpen = !this.isMenuOpen
+      }
+    }
   })
 })

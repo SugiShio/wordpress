@@ -30,4 +30,27 @@
     text-align: center;
     color: $color-accent;
   }
+
+  &__dateTitle {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 50px;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  &__monthSelector {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__selectorButton {
+    @extend %hover-style;
+    width: 30px;
+    text-align: center;
+  }
 }

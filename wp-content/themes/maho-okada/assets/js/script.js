@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import MahoContactForm from './contactForm/index.vue'
 import MahoHamburgerTrigger from './hamburgerTrigger/index.vue'
 import MahoHeader from './header/index.vue'
 import MahoWorksLoader from './worksLoader/index.vue'
@@ -10,7 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   new Vue({
     el,
-    components: { MahoHamburgerTrigger, MahoHeader, MahoWorksLoader },
+    components: {
+      MahoContactForm,
+      MahoHamburgerTrigger,
+      MahoHeader,
+      MahoWorksLoader
+    },
     data() {
       return {
         isHeaderFixed: false,

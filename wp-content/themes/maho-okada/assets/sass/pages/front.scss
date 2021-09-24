@@ -24,6 +24,58 @@
   }
 }
 
+.mo-front-parallax {
+  position: relative;
+
+  &--1 {
+    height: 50vh;
+  }
+
+  &--2 {
+    height: 40vh;
+  }
+
+  &__item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &.isShow {
+      opacity: 1;
+    }
+
+    &--1 {
+      top: 10vh;
+      left: 60%;
+    }
+
+    &--2 {
+      top: 15vh;
+      left: 35%;
+      width: 100px;
+      height: 70px;
+      background-color: rgba($color-text, 0.2);
+    }
+
+    &--3 {
+      top: 30vh;
+      left: 23%;
+    }
+
+    &--4 {
+      top: 10vh;
+      left: 26%;
+    }
+
+    &--5 {
+      top: 22vh;
+      left: 58%;
+      width: 70px;
+      height: 100px;
+      background-color: rgba($color-accent, 0.2);
+    }
+  }
+}
 .mo-front-show {
   margin: 50px 0;
 

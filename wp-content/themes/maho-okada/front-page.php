@@ -10,6 +10,18 @@
     <span class="mo-front__title-sub">Official Website</span>
   </h1>
 
+  <section class="mo-front-parallax mo-front-parallax--1">
+    <maho-parallax-item class="mo-front-parallax__item mo-front-parallax__item--1">
+      <img src="<?php echo get_template_directory_uri() . "/assets/images/front/image_1.png"; ?>" alt="">
+    </maho-parallax-item>
+
+    <maho-parallax-item :parallax-rate='0.1' class="mo-front-parallax__item mo-front-parallax__item--2">
+    </maho-parallax-item>
+    <maho-parallax-item :parallax-rate='0.09' class="mo-front-parallax__item mo-front-parallax__item--3">
+      <img src="<?php echo get_template_directory_uri() . "/assets/images/front/image_2.png"; ?>" alt="">
+    </maho-parallax-item>
+  </section>
+
   <?php /* Upcoming show */ ?>
 
   <section class="mo-front-show">
@@ -57,6 +69,14 @@
     <?php endif; ?>
   </section>
 
+  <section class="mo-front-parallax mo-front-parallax--2">
+    <maho-parallax-item :parallax-rate='0.08' class="mo-front-parallax__item mo-front-parallax__item--4">
+      <img src="<?php echo get_template_directory_uri() . "/assets/images/front/image_3.png"; ?>" alt="">
+    </maho-parallax-item>
+
+    <maho-parallax-item :parallax-rate='0.02' class="mo-front-parallax__item mo-front-parallax__item--5">
+    </maho-parallax-item>
+  </section>
 
   <nav class="mo-front-menu">
     <ul class="mo-front-menu__list">

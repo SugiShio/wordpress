@@ -2,6 +2,7 @@ import Vue from 'vue'
 import MahoContactForm from './contactForm/index.vue'
 import MahoHamburgerTrigger from './hamburgerTrigger/index.vue'
 import MahoHeader from './header/index.vue'
+import MahoParallaxItem from './parallaxItem/index.vue'
 import MahoWorksLoader from './worksLoader/index.vue'
 const MOUNT_POINT = 'js-maho'
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       MahoContactForm,
       MahoHamburgerTrigger,
       MahoHeader,
+      MahoParallaxItem,
       MahoWorksLoader
     },
     data() {

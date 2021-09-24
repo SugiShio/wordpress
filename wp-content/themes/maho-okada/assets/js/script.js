@@ -23,12 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         isMenuOpen: false
       }
     },
-    created() {
-      window.addEventListener('scroll', () => {
-        this.isHeaderFixed = 300 < window.scrollY
-      })
-    },
     methods: {
+      setIsHeaderFixed({ isHeaderFixed }) {
+        this.isHeaderFixed = isHeaderFixed
+      },
       toggleIsMenuOpen() {
         this.isMenuOpen = !this.isMenuOpen
       }

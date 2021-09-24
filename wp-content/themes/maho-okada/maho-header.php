@@ -1,5 +1,5 @@
 <maho-hamburger-trigger :is-menu-open='isMenuOpen' @menu-trigger-clicked='toggleIsMenuOpen'></maho-hamburger-trigger>
-<maho-header :is-menu-open='isMenuOpen' :is-header-fixed='isHeaderFixed'>
+<maho-header :is-menu-open='isMenuOpen' :is-header-fixed='isHeaderFixed' @header-fixed-changed='setIsHeaderFixed'>
   <nav class="mo-menu">
     <ul class="mo-menu__list">
       <li>

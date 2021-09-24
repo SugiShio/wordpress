@@ -7,8 +7,22 @@
 export default {
   name: 'MahoHeader',
   props: {
-    isHeaderFixed: { type: Boolean, required: true },
     isMenuOpen: { type: Boolean, required: true }
+  },
+  data() {
+    return {
+      isHeaderFixed: 300 < window.scrollY
+    }
+  },
+  created() {
+    window.addEventListener('scroll', () => {
+      this.isHeaderFixed = 300 < window.scrollY
+    })
+  },
+  watch: {
+    isHeaderFixed(isHeaderFixed) {
+      this.$emit('header-fixed-changed', { isHeaderFixed })
+    }
   }
 }
 </script>

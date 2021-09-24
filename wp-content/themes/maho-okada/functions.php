@@ -29,3 +29,32 @@ function mo_init()
   };
 }
 add_action('init', 'mo_init');
+
+function mo_registar_rest_field()
+{
+  register_rest_field(
+    'works',
+    'image',
+    array(
+      'get_callback'    => function ($object, $field_name, $request) {
+        $image_id = get_post_meta($object['id'], $field_name, true);
+        return wp_get_attachment_url($image_id);
+      },
+      'update_callback' => null,
+      'schema'          => null,
+    )
+  );
+
+  register_rest_field(
+    'works',
+    'year',
+    array(
+      'get_callback'    => function ($object, $field_name, $request) {
+        return get_post_meta($object['id'], $field_name, true);
+      },
+      'update_callback' => null,
+      'schema'          => null,
+    )
+  );
+}
+add_action('rest_api_init', 'mo_registar_rest_field');

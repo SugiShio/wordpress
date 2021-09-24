@@ -1,10 +1,7 @@
 <?php get_header(); ?>
-<main id="app" class="o-main">
-  <?php
-  $term = 'works';
-  include 'title.php';
-  ?>
-  <works-loader base-url="<?php echo get_site_url() ?>" post-type='works'>"></works-loader>
-</main>
+<section class="mo-container mo-schedule">
+  <h2 class="mo-container__title">Works</h2>
+  <maho-works-loader base-url="<?php echo get_site_url(); ?>" post-type='works'>"></maho-works-loader>
+</section>
 
 <?php get_footer(); ?>

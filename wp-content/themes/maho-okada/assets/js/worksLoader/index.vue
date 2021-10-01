@@ -4,11 +4,11 @@
     li.mo-worksLoader__item(
       v-for='item in items'
       @click='setModalItem(item)'
-      :class='{ "v-loading": !item.title }')
-      template(v-if='item.imageSrc')
-        .mo-worksLoader__title
-          span {{ item.title }}
-        img(:src='item.imageSrc')
+      :class='{ "v-loading": !item.title }'
+      :style='{ backgroundImage: `url(${item.imageSrc})` }'
+      )
+      .mo-worksLoader__title(v-if='item.imageSrc')
+        span {{ item.title }}
       template(v-else)
         span {{ item.title }}
   fetch-component(
@@ -98,6 +98,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba($color-accent, 0.04);
+    background-position: center center;
+    background-size: cover;
     transition: 0.3s;
     cursor: pointer;
 
@@ -109,7 +112,7 @@ export default {
 
     span {
       display: block;
-      padding: 5px;
+      padding: 10px;
       text-align: center;
     }
   }

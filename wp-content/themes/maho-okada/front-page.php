@@ -2,8 +2,6 @@
 <div class="mo-front">
   <div class="mo-front__mainview">
     <img src="<?php echo get_template_directory_uri() . "/assets/images/front/mainview.jpg"; ?>" alt="">
-
-    <img src="" alt="">
   </div>
   <h1 class="mo-front__title">
     <span class="mo-front__title-main">Maho Okada</span>

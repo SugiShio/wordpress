@@ -9,18 +9,32 @@
     margin: auto;
     width: 100%;
     max-width: 540px;
+
+    @include screen-sm {
+      height: 100vw;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__title-main {
     display: block;
-    font-size: 80px;
     color: $color-accent;
+    font-size: 50px;
+
+    @include screen-lg {
+      font-size: 80px;
+    }
   }
 
   &__title-sub {
     display: block;
-    font-size: 32px;
+    font-size: 24px;
     color: $color-accent-weak;
+
+    @include screen-lg {
+      font-size: 32px;
+    }
   }
 }
 
@@ -28,11 +42,19 @@
   position: relative;
 
   &--1 {
-    height: 50vh;
+    height: 162vw;
+
+    @include screen-md {
+      height: 50vh;
+    }
   }
 
   &--2 {
-    height: 40vh;
+    height: 100vw;
+
+    @include screen-md {
+      height: 40vh;
+    }
   }
 
   &__item {
@@ -45,34 +67,56 @@
     }
 
     &--1 {
-      top: 10vh;
-      left: 60%;
+      top: 30%;
+      right: 7%;
+
+      @include screen-md {
+        top: 10vh;
+        left: 60%;
+      }
     }
 
     &--2 {
       top: 15vh;
-      left: 35%;
+      left: 15%;
       width: 100px;
       height: 70px;
       background-color: rgba($color-text, 0.2);
+
+      @include screen-md {
+        left: 35%;
+      }
     }
 
     &--3 {
-      top: 30vh;
-      left: 23%;
+      top: 67%;
+      left: 9%;
+
+      @include screen-md {
+        top: 30vh;
+        left: 23%;
+      }
     }
 
     &--4 {
       top: 10vh;
-      left: 26%;
+      left: 10%;
+
+      @include screen-md {
+        left: 26%;
+      }
     }
 
     &--5 {
-      top: 22vh;
+      top: 64%;
       left: 58%;
       width: 70px;
       height: 100px;
       background-color: rgba($color-accent, 0.2);
+
+      @include screen-md {
+        top: 22vh;
+      }
     }
   }
 }

@@ -1,0 +1,18 @@
+.mo-menu {
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    @include screen-sm {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    @extend %hover-style;
+    display: block;
+    line-height: $height-header;
+    margin: 0 5px;
+    padding: 0 15px;
+  }
+}

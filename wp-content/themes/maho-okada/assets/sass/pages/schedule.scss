@@ -1,0 +1,56 @@
+.mo-schedule {
+  &__item {
+    text-align: center;
+    margin: 80px 0;
+  }
+
+  &__date {
+    display: block;
+    margin: 10px 0;
+    color: $color-text-weak;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__place {
+    @extend %hover-style;
+    color: $color-accent;
+  }
+
+  &__content {
+    @extend %mo-markdown;
+    margin: 30px 0;
+    text-align: left;
+  }
+
+  &__link {
+    @extend %hover-style;
+    text-align: center;
+    color: $color-accent;
+  }
+
+  &__dateTitle {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 50px;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  &__monthSelector {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__selectorButton {
+    @extend %hover-style;
+    width: 30px;
+    text-align: center;
+  }
+}

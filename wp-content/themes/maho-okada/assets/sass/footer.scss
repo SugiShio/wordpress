@@ -1,0 +1,28 @@
+.mo-footer {
+  margin-top: 50px;
+
+  &__copyright {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    font-size: $font-size-sm;
+    color: $color-accent;
+  }
+}
+
+.mo-footer-sns {
+  margin: 50px 0;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin: 0 5px;
+    font-size: 30px;
+  }
+
+  &__link {
+    @extend %hover-style;
+  }
+}

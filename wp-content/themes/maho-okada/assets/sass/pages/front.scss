@@ -1,0 +1,171 @@
+.mo-front {
+  margin: auto;
+  padding: 50px 15px 50px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+
+  &__mainview {
+    margin: auto;
+    width: 100%;
+    max-width: 540px;
+
+    @include screen-sm {
+      height: 100vw;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title-main {
+    display: block;
+    color: $color-accent;
+    font-size: 50px;
+
+    @include screen-lg {
+      font-size: 80px;
+    }
+  }
+
+  &__title-sub {
+    display: block;
+    font-size: 24px;
+    color: $color-accent-weak;
+
+    @include screen-lg {
+      font-size: 32px;
+    }
+  }
+}
+
+.mo-front-parallax {
+  position: relative;
+
+  &--1 {
+    height: 162vw;
+
+    @include screen-md {
+      height: 50vh;
+    }
+  }
+
+  &--2 {
+    height: 100vw;
+
+    @include screen-md {
+      height: 40vh;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &.isShow {
+      opacity: 1;
+    }
+
+    &--1 {
+      top: 30%;
+      right: 7%;
+
+      @include screen-md {
+        top: 10vh;
+        left: 60%;
+      }
+    }
+
+    &--2 {
+      top: 15vh;
+      left: 15%;
+      width: 100px;
+      height: 70px;
+      background-color: rgba($color-text, 0.2);
+
+      @include screen-md {
+        left: 35%;
+      }
+    }
+
+    &--3 {
+      top: 67%;
+      left: 9%;
+
+      @include screen-md {
+        top: 30vh;
+        left: 23%;
+      }
+    }
+
+    &--4 {
+      top: 10vh;
+      left: 10%;
+
+      @include screen-md {
+        left: 26%;
+      }
+    }
+
+    &--5 {
+      top: 64%;
+      left: 58%;
+      width: 70px;
+      height: 100px;
+      background-color: rgba($color-accent, 0.2);
+
+      @include screen-md {
+        top: 22vh;
+      }
+    }
+  }
+}
+.mo-front-show {
+  margin: 50px 0;
+
+  &__title {
+    margin: 30px 0;
+    font-size: 30px;
+    color: $color-accent-weak;
+  }
+
+  &__item {
+    margin: 50px 0;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 15px;
+    color: $color-text-weak;
+  }
+
+  &__morelink {
+    @extend %hover-style;
+    position: relative;
+    margin: 30px 0;
+    padding-right: 25px;
+    color: $color-accent;
+
+    &::before {
+      content: '▲';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      color: $color-accent-weak;
+      transform: rotate(90deg) scale(0.5);
+    }
+  }
+}
+
+.mo-front-menu {
+  margin: 50px 0;
+
+  &__item {
+    margin: 30px 0;
+  }
+
+  &__link {
+    @extend %hover-style;
+  }
+}

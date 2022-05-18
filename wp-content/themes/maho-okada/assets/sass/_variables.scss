@@ -1,0 +1,36 @@
+@charset 'utf-8';
+
+/* colors
+----------------- */
+$color-text: #5e5c58;
+$color-text-weak: #b1aba3;
+$color-accent: #e83724;
+$color-accent-weak: #f4aea9;
+
+/* font families
+----------------- */
+$font-default: 'Crimson Text', 'Noto Serif JP', 'ヒラギノ明朝 ProN W3',
+  'HiraMinProN-W3', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+
+/* font size
+----------------- */
+$font-size-sm: 12px;
+$font-size-md: 16px;
+
+/* width
+----------------- */
+$width-default: 600px;
+
+/* width
+----------------- */
+$height-header: 60px;
+
+/* break points
+----------------- */
+$breakpoint-sm: 640px;
+$breakpoint-lg: 1000px;
+
+/* z-index
+----------------- */
+$z-index-header: 100;
+$z-index-hamburger-trigger: 110;

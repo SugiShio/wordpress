@@ -9,7 +9,7 @@
     'meta_key' => 'date',
     'offset' => $posts_per_page * ($page - 1),
     'orderby' => 'meta_value',
-    'order' => 'ASC',
+    'order' => 'DESC',
     'posts_per_page' => $posts_per_page
   ));
 ?>

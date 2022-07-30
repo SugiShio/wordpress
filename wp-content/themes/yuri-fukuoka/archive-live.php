@@ -1,13 +1,16 @@
 <?php get_header(); ?>
 
 <?php
-  // memo ページネーション未実装
+  $query_paged = get_query_var('paged');
+  $page = $query_paged ? intval(get_query_var('paged')) : 1;
+  $posts_per_page = 10;
   $posts = get_posts(array(
     'post_type' => 'live',
     'meta_key' => 'date',
+    'offset' => $posts_per_page * ($page - 1),
     'orderby' => 'meta_value',
-    'order' => 'ASC',
-    'posts_per_page' => 30
+    'order' => 'DESC',
+    'posts_per_page' => $posts_per_page
   ));
 ?>
 <section class="y-container y-live">
@@ -86,6 +89,8 @@
     endforeach;
     ?>
   </ul>
+
+  <?php the_posts_pagination(); ?>
 </section>
 
 <?php get_footer(); ?>

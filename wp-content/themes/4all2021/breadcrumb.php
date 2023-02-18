@@ -47,7 +47,7 @@
     }
   }
 ?>
-<div class="u-header">
+<div class="u-header<?php if (post_custom('no_nav')) echo " is-single"; ?>">
   <ul class="u-header__breadcrumb">
     <?php foreach ($breadcrumb as $key => $value) : ?>
     <li class="u-header__breadcrumb-item"><a href="<?php echo $value; ?>"><?php echo $key; ?></a></li>

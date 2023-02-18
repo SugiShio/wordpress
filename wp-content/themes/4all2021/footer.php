@@ -1,5 +1,6 @@
   </div>
-  <footer class="u-footer">
+  <?php if (!post_custom('no_footer')) : ?>
+  <footer class="u-footer<?php if (post_custom('no_nav')) echo " is-single"; ?>">
     <div class="u-footer__inner">
       <div class="u-footer__banner">
         <a href="https://www.kiwayasbest.com/" target="_blank">
@@ -64,6 +65,8 @@
       <small class="u-footer__copyright">©︎ 2018 - 2021 The Ukulele Contest 4 All</small>
     </div>
   </footer>
+  <?php endif; ?>
+
   <?php wp_footer(); ?>
 </body>
 </html>

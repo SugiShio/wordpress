@@ -19,6 +19,8 @@
 @mixin container($v: 30px, $h: 15px) {
   padding: $v $h;
   @include screen-lg {
-    padding-left: $h + 15px + $width-sidebar;
+    &:not(.is-single) {
+      padding-left: $h + 15px + $width-sidebar;
+    }
   }
 }

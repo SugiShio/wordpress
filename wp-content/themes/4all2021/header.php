@@ -32,8 +32,12 @@
 <body <?php body_class(); ?>>
   <?php
   get_template_part('loading');
-  get_template_part('navigation');
-  if (!is_home() && !is_404()) {
+  if (!post_custom('no_nav')) {
+    get_template_part('navigation');
+  } else {
+    wp_reset_postdata();
+  }
+  if (!is_home() && !is_404() && !post_custom('no_header')) {
     get_template_part('breadcrumb');
   }
   ?>

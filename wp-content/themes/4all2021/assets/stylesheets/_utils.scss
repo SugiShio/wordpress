@@ -1,0 +1,24 @@
+@mixin screen-sm() {
+  @media screen and (max-width: $breakpoint-sm - 1) {
+    @content;
+  }
+}
+
+@mixin screen-md() {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin screen-lg() {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin container($v: 30px, $h: 15px) {
+  padding: $v $h;
+  @include screen-lg {
+    padding-left: $h + 15px + $width-sidebar;
+  }
+}

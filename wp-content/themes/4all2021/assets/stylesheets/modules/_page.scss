@@ -1,0 +1,7 @@
+.u-page {
+  &__container {
+    @extend .markdown;
+    max-width: $width-contents;
+    margin: auto;
+  }
+}

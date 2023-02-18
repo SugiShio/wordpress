@@ -1,0 +1,132 @@
+.u-winners {
+  &__container {
+    max-width: $width-contents;
+    margin: auto;
+  }
+
+  &__coming-soon {
+    text-align: center;
+    font-size: $font-lg;
+    margin: 30px;
+  }
+
+  &__movie {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: calc(56.25vw - 33.75px);
+    max-height: 270px;
+    margin: 10px auto;
+  }
+
+  &__head {
+    margin: auto;
+    padding-top: 100px;
+    background-image: url('../images/winners/award-title.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 480px;
+    .en & {
+      background-image: url('../images/winners/award-title-en.jpg');
+    }
+
+    &--2020 {
+      // background-image: url('../images/winners/award-title-2020.jpg');
+    }
+
+    @include screen-lg {
+      max-width: 600px;
+      min-height: 332px;
+      padding-top: 140px;
+      background-size: contain;
+    }
+  }
+
+  &__text {
+    @extend .markdown;
+  }
+
+  &__list {
+    margin: 20px 0;
+    @include screen-lg {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__listitem {
+    min-height: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    background-image: url('../images/winners/winner-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 200px;
+    @include screen-lg {
+      width: 32%;
+      margin: 0;
+    }
+  }
+
+  &__award-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 63px;
+    color: $color-gold;
+    font-size: $font-lg;
+
+    span {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 22px;
+        height: 63px;
+        margin: auto;
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 22px 63px;
+      }
+
+      &::before {
+        right: 100%;
+        margin-right: 5px;
+        background-image: url('../images/winners/award-title-left.svg');
+      }
+
+      &::after {
+        left: 100%;
+        margin-left: 5px;
+        background-image: url('../images/winners/award-title-right.svg');
+      }
+    }
+  }
+
+  &__winner-name {
+    margin: 10px 0 5px;
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+
+  &__san {
+    font-size: $font-md;
+  }
+
+  &__work-title-label {
+    color: $color-text-weak;
+    font-size: $font-sm;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: underline;
+    color: $color-gold;
+  }
+}

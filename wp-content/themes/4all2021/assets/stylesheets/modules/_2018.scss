@@ -1,0 +1,94 @@
+.u-2018 {
+  &__container {
+    max-width: $width-contents;
+    margin: auto;
+  }
+
+  &__list {
+    margin: 20px 0;
+
+    @include screen-lg {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: $width-contents;
+      margin: auto;
+    }
+  }
+
+  &__listitem {
+    min-height: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    background-image: url('../images/2018/winner-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 200px;
+
+    @include screen-lg {
+      width: 32%;
+      margin: 0;
+    }
+  }
+
+  &__award-title {
+    font-size: $font-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 63px;
+    color: $color-gold;
+
+    span {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 22px;
+        height: 63px;
+        margin: auto;
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 22px 63px;
+      }
+
+      &::before {
+        right: 100%;
+        margin-right: 5px;
+        background-image: url('../images/2018/award-title-left.svg');
+      }
+
+      &::after {
+        left: 100%;
+        margin-left: 5px;
+        background-image: url('../images/2018/award-title-right.svg');
+      }
+    }
+  }
+
+  &__winner-name {
+    font-size: $font-lg;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+
+  &__san {
+    font-size: $font-md;
+  }
+
+  &__work-title-label {
+    font-size: $font-sm;
+    color: $color-text-weak;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: underline;
+    color: $color-gold;
+  }
+}

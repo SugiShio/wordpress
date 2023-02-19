@@ -1,0 +1,55 @@
+.u-trigger-button {
+  position: fixed;
+  z-index: $z-index-navigation + 1;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(#fff, 0.9);
+
+  > span {
+    display: block;
+    width: 25px;
+    height: 1px;
+    margin-top: 7px;
+    content: '';
+    transition: 0.3s;
+    background-color: $color-text;
+
+    &:first-child {
+      margin-top: 2px;
+    }
+  }
+
+  &__text {
+    margin-top: 4px;
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  &.is-open {
+    > span {
+      &:nth-child(1) {
+        margin-top: 13px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        margin-top: -1px;
+        transform: rotate(135deg);
+      }
+    }
+
+    .u-trigger-button__text {
+      margin-top: 13px;
+    }
+  }
+}

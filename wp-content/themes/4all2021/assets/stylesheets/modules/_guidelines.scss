@@ -1,0 +1,227 @@
+.u-guidelines {
+  &__container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  &__link-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 40px auto 0;
+  }
+
+  &__link-item {
+    position: relative;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba($color-black, 0.2);
+
+    @include screen-md {
+      width: calc(25% - 15px);
+    }
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(2) {
+      @include screen-md {
+        margin-right: 20px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      margin: auto;
+      content: '';
+      transform: rotate(45deg);
+      border-right: 2px solid $color-text-weak;
+      border-bottom: 2px solid $color-text-weak;
+    }
+
+    &--w50 {
+      width: calc(50% - 10px);
+    }
+  }
+
+  &__link-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0 25px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $color-background;
+    }
+  }
+
+  &__link-icon {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  &__link-text {
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+
+    > br {
+      @include screen-sm {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  &__item {
+    padding: 40px 0;
+  }
+
+  &__icon {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+
+    em {
+      font-size: $font-lg;
+      line-height: 1.3;
+    }
+  }
+
+  &__table {
+    margin: 30px 0;
+  }
+
+  &__row {
+    @include screen-lg {
+      display: flex;
+    }
+    & + & {
+      margin-top: 15px;
+    }
+  }
+
+  &__th {
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid transparent;
+
+    @include screen-lg {
+      width: 100px;
+      border-right-width: 2px;
+      border-right-style: solid;
+      border-bottom: none;
+    }
+
+    &--instrument {
+      border-color: $color-blue;
+    }
+
+    &--4all {
+      border-color: $color-green;
+    }
+
+    &--song {
+      border-color: $color-yellow;
+    }
+
+    &--photo {
+      border-color: $color-pink;
+    }
+  }
+
+  &__td {
+    @extend .markdown;
+    margin-top: 10px;
+
+    @include screen-lg {
+      flex: 1;
+      margin-top: 0;
+      padding: 10px 20px;
+    }
+  }
+
+  &__text {
+    padding: 30px 0;
+    text-align: center;
+    color: $color-text-weak;
+  }
+
+  &__note {
+    font-size: $font-sm;
+    max-width: 600px;
+    margin: auto;
+    color: $color-text-weak;
+  }
+
+  &__judge-list {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  &__judge-item {
+    margin-bottom: 40px;
+
+    @include screen-md {
+      display: flex;
+    }
+  }
+
+  &__judge-image {
+    width: 180px;
+    margin: 0 auto;
+
+    @include screen-md {
+      margin-right: 30px;
+    }
+  }
+
+  &__judge-body {
+    flex: 1;
+
+    @include screen-sm {
+      max-width: 400px;
+      margin: 10px auto 0;
+    }
+  }
+
+  &__judge-name {
+    font-size: 18px;
+
+    @include screen-sm {
+      text-align: center;
+    }
+  }
+
+  &__judge-sub {
+    color: $color-text-weak;
+
+    @include screen-sm {
+      text-align: center;
+    }
+  }
+
+  &__judge-text {
+    margin-top: 10px;
+    text-align: justify;
+  }
+}

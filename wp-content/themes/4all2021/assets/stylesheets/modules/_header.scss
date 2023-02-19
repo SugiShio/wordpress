@@ -1,0 +1,61 @@
+.u-header {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 41.4vw;
+  color: #fff;
+  background-color: #3e0000;
+  background-image: url('../images/curtain.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+
+  @include container(15px);
+  @include screen-lg {
+    height: 30.3vw;
+    max-height: 30.3vh;
+  }
+
+  &__breadcrumb {
+    width: 100%;
+    max-width: $width-contents;
+    margin: 0 auto;
+  }
+
+  &__breadcrumb-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(100% + 15px);
+      margin: auto;
+      content: '>';
+      transform: translateX(-50%);
+      letter-spacing: 0;
+    }
+
+    > a {
+      font-size: $font-sm;
+      text-decoration: underline;
+
+      @include screen-lg {
+        font-size: $font-md;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    width: 100%;
+    max-width: $width-contents;
+    margin: 0 auto;
+
+    @include screen-lg {
+      font-size: 36px;
+    }
+  }
+}

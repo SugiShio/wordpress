@@ -1,0 +1,43 @@
+.u-pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0 50px;
+
+  &__numbers {
+    font-size: $font-lg;
+    line-height: 40px;
+    display: block;
+    min-width: 40px;
+    margin: 10px;
+    transition: 0.3s;
+    text-align: center;
+    letter-spacing: 0;
+    border-radius: 20px;
+
+    &[href] {
+      &:hover {
+        background-color: $color-background;
+        box-shadow: 0 1px 4px rgba(darken(#000, 30%), 0.4);
+      }
+    }
+
+    &:not([href]) {
+      background-color: $color-background;
+    }
+
+    &.prev,
+    &.next {
+      font-size: $font-md;
+      padding: 0 10px;
+    }
+
+    &.prev {
+      margin-right: 20px;
+    }
+
+    &.next {
+      margin-left: 20px;
+    }
+  }
+}

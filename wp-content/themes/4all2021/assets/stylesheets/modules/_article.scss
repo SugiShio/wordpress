@@ -1,0 +1,78 @@
+.u-article {
+  &__container {
+    max-width: $width-contents;
+    margin: auto;
+  }
+}
+.u-articlelist {
+  margin: -10px;
+  @include screen-lg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.u-articleitem {
+  padding: 10px;
+  @include screen-lg {
+    width: 50%;
+  }
+
+  &__link {
+    display: flex;
+    transition: 0.3s;
+
+    &[href]:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__image {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 20px;
+    width: 120px;
+  }
+
+  &__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 1px 5px 0;
+    font-size: $font-sm;
+    color: #fff;
+    background-color: $color-text-weak;
+
+    &--tieup {
+      background-color: $color-blue;
+    }
+
+    &--event {
+      background-color: $color-pink;
+    }
+
+    &--judge {
+      background-color: $color-green;
+    }
+
+    &--prize {
+      background-color: $color-yellow;
+    }
+  }
+
+  &__title {
+    font-size: $font-lg;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  &__content {
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+
+  &__date {
+    display: block;
+    color: $color-text-weak;
+  }
+}

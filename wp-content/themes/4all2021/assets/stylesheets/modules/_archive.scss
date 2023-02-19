@@ -1,0 +1,31 @@
+.u-archive {
+  &__container {
+    max-width: $width-contents;
+    margin: auto;
+  }
+
+  &__list {
+    @include screen-lg {
+      max-width: 600px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    padding: 10px 5px;
+    transition: 0.3s;
+
+    &[href]:hover {
+      color: $color-text-weak;
+    }
+  }
+
+  &__date {
+    color: $color-text-weak;
+    width: 120px;
+  }
+
+  &__title {
+    flex: 1;
+  }
+}

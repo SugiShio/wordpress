@@ -1,0 +1,107 @@
+.section {
+  @include container;
+  background-position: center center;
+  background-size: cover;
+
+  &__head {
+    margin: 20px 0;
+  }
+
+  &__head-main {
+    overflow: hidden;
+    text-align: center;
+    font-size: $font-xlg;
+
+    span {
+      position: relative;
+      display: inline-block;
+      letter-spacing: 0.2em;
+
+      br {
+        @include screen-md {
+          display: none;
+        }
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 19px;
+        margin: auto 15px;
+        content: '';
+        background-image: url('../images/line.svg');
+        @include screen-md {
+          margin: auto 25px;
+        }
+      }
+
+      &::before {
+        right: 100%;
+      }
+
+      &::after {
+        left: 100%;
+      }
+    }
+
+    &--white {
+      span {
+        color: #fff;
+
+        &::before,
+        &::after {
+          background-image: url('../images/line-white.svg');
+        }
+      }
+    }
+
+    &--winners {
+      color: $color-gold;
+    }
+  }
+
+  &__head-sub {
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #56595d;
+    font-size: $font-sm;
+
+    &--white {
+      color: #fff;
+    }
+  }
+
+  &__gallery-note {
+    text-align: center;
+    li {
+      color: $color-accent;
+      font-size: $font-sm;
+    }
+  }
+
+  &__note {
+    display: block;
+    text-align: center;
+    line-height: 1.4;
+
+    &--red {
+      color: $color-accent;
+    }
+
+    &--white {
+      color: #fff;
+      text-shadow: 0 0 3px #000;
+    }
+
+    &::before {
+      content: '※ ';
+    }
+  }
+
+  &__markdown {
+    @extend .markdown;
+  }
+}

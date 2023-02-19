@@ -1,0 +1,44 @@
+.u-entry {
+  &__container {
+    max-width: $width-contents;
+    margin: auto;
+  }
+
+  &__title {
+    @extend .markdown__h1;
+    padding-top: 40px;
+  }
+
+  &__description,
+  &__description-comp {
+    @extend .markdown;
+    margin-bottom: 10px;
+    white-space: pre-line;
+  }
+
+  &__description {
+    padding: 10px 20px;
+    background-color: $color-background;
+  }
+
+  &__sns-buttons {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  &__sns-button {
+    display: inline-block;
+
+    & + & {
+      margin-left: 10px;
+    }
+  }
+
+  &__button {
+    @extend %button;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto;
+  }
+}

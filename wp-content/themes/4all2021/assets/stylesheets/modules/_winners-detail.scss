@@ -1,0 +1,170 @@
+.u-winners-detail {
+  &__coming-soon {
+    margin: 30px;
+    text-align: center;
+    font-size: $font-lg;
+  }
+
+  &__head {
+    @extend .section__head;
+  }
+
+  &__head-main {
+    @extend .section__head-main;
+    color: $color-gold;
+    font-size: 30px;
+    @include screen-lg {
+      font-size: 40px;
+    }
+  }
+
+  &__head-sub {
+    @extend .section__head-sub;
+    text-transform: uppercase;
+    color: $color-gold;
+  }
+}
+
+.u-winner {
+  max-width: 600px;
+  margin: 30px auto;
+  background-image: url('../images/winners/winner-bg.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  & + & {
+    margin-top: 100px;
+  }
+
+  &__head {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    margin: 10px 0 20px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 35px;
+      height: 100px;
+      margin: auto;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    &::before {
+      left: 0;
+      margin-right: 5px;
+      background-image: url('../images/winners/award-title-left.svg');
+      @include screen-lg {
+        left: 20px;
+      }
+    }
+
+    &::after {
+      right: 0;
+      margin-left: 5px;
+      background-image: url('../images/winners/award-title-right.svg');
+      @include screen-lg {
+        right: 20px;
+      }
+    }
+  }
+
+  &__award-title {
+    letter-spacing: 0.1em;
+    color: $color-gold;
+    font-size: $font-lg;
+    font-weight: bold;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      margin: 0 10px;
+      content: '-';
+    }
+  }
+
+  &__winner-name {
+    margin: 10px 0;
+    padding: 0 20px;
+    text-align: center;
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+
+  &__winner-san {
+    font-size: $font-md;
+  }
+
+  &__work-title-label {
+    text-align: center;
+    color: $color-text-weak;
+    font-size: $font-sm;
+  }
+
+  &__work-title {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  &__movie {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: calc(56.25vw - 33.75px);
+    max-height: 270px;
+    margin: auto;
+  }
+
+  &__comment {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid $color-gold;
+  }
+
+  &__comment-label {
+    margin-bottom: 10px;
+    color: $color-gold;
+    font-weight: bold;
+  }
+}
+
+.comment {
+  padding: 20px 0;
+  @include screen-lg {
+    display: flex;
+  }
+
+  & + & {
+    border-top: 1px solid $color-text-weak;
+  }
+
+  &__sub {
+    @include screen-lg {
+      flex-shrink: 0;
+      width: 100px;
+      margin-right: 20px;
+    }
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+
+  &__name {
+    margin: 5px 0 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+}

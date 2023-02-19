@@ -1,0 +1,59 @@
+.u-info {
+  &__concept,
+  &__schedule,
+  &__past-result {
+    max-width: 600px;
+    @extend .markdown;
+  }
+
+  &__concept {
+    margin: auto;
+    > h2 {
+      font-size: $font-lg;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 1.6;
+      margin-top: 40px;
+
+      > em {
+        border-bottom: 2px dotted $color-theme;
+      }
+    }
+
+    > p {
+      margin-top: 20px;
+      text-align: justify;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 40px auto 20px;
+  }
+
+  &__logo {
+    font-size: 60px;
+    margin: 0 10px;
+  }
+
+  &__schedule {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    td:first-child {
+      width: 100px;
+    }
+
+    table {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__past-result {
+    margin: auto;
+    text-align: center;
+  }
+}

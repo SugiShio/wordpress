@@ -1,0 +1,56 @@
+%button {
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: $color-text;
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(#000, 0.4);
+}
+
+.u-button {
+  a {
+    @extend %button;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 1px 4px rgba(#000, 0.4);
+
+    &:hover {
+      background-color: darken(#fff, 5%);
+    }
+  }
+
+  &--entry a {
+    color: #fff;
+    background-color: $color-accent;
+    box-shadow: 0 1px 4px rgba(darken($color-accent, 30%), 0.4);
+
+    &:hover {
+      background-color: darken($color-accent, 5%);
+    }
+  }
+
+  &--winners a {
+    max-width: 380px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    background-color: $color-gold;
+
+    &:hover {
+      background-color: darken($color-gold, 10%);
+    }
+  }
+
+  span {
+    @extend %button;
+    color: #fff;
+    background-color: $color-text-weak;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,58 @@
+.u-single {
+  &__container {
+    max-width: $width-contents;
+    margin: auto;
+  }
+
+  &__title {
+    border-left: 10px solid $color-theme;
+    line-height: 1.4;
+    padding-left: 10px;
+    font-size: $font-xlg;
+    margin: 20px 0;
+  }
+
+  &__title2 {
+    border-left: 7px solid $color-theme;
+    line-height: 1.4;
+    padding-left: 10px;
+    font-size: $font-lg;
+    margin: 20px 0;
+  }
+
+  &__taglist {
+    display: flex;
+  }
+
+  &__date {
+    margin: 20px 0;
+    color: $color-text-weak;
+  }
+
+  &__thumbnail {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  &__content {
+    margin: 50px 0;
+    @extend .markdown;
+
+    > h2 {
+      background-color: $color-theme;
+      color: #fff;
+      padding: 5px 10px;
+    }
+
+    > h3 {
+      border-left: 5px solid $color-theme;
+      line-height: 1.4;
+      padding-left: 10px;
+      font-size: 16px;
+    }
+
+    > h4 {
+      color: $color-theme;
+    }
+  }
+}

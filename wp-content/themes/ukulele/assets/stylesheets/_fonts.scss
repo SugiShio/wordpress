@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "icons";
+    src: url("../../public/fonts/icons.eot?2485e4feea939aa98a0c93ba89127a2f?#iefix") format("embedded-opentype"),
+url("../../public/fonts/icons.woff2?2485e4feea939aa98a0c93ba89127a2f") format("woff2"),
+url("../../public/fonts/icons.woff?2485e4feea939aa98a0c93ba89127a2f") format("woff"),
+url("../../public/fonts/icons.ttf?2485e4feea939aa98a0c93ba89127a2f") format("truetype"),
+url("../../public/fonts/icons.svg?2485e4feea939aa98a0c93ba89127a2f#icons") format("svg");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-4all:before {
+    content: "\f101";
+}
+.icon-close:before {
+    content: "\f102";
+}
+.icon-down:before {
+    content: "\f103";
+}
+.icon-heart-fill:before {
+    content: "\f104";
+}
+.icon-heart:before {
+    content: "\f105";
+}
+.icon-instrument:before {
+    content: "\f106";
+}
+.icon-left:before {
+    content: "\f107";
+}
+.icon-photo:before {
+    content: "\f108";
+}
+.icon-play:before {
+    content: "\f109";
+}
+.icon-right:before {
+    content: "\f10a";
+}
+.icon-song:before {
+    content: "\f10b";
+}
+.icon-up:before {
+    content: "\f10c";
+}

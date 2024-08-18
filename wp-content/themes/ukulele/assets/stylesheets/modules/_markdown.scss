@@ -1,0 +1,121 @@
+.markdown {
+  &__h1,
+  > h1 {
+    font-size: $font-xlg;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $color-theme;
+  }
+
+  > h2 {
+    font-size: $font-lg;
+    font-weight: bold;
+    margin: 20px 0 10px;
+  }
+
+  > h3 {
+    margin: 20px 0 10px;
+    font-weight: bold;
+  }
+
+  > h4 {
+    margin: 10px 0;
+  }
+
+  > p {
+    margin: 10px 0;
+    text-align: justify;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color-text-link;
+  }
+
+  ul,
+  ol {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  li {
+    margin: 3px 0;
+    padding-left: 20px;
+  }
+
+  ul {
+    > li {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 11px;
+        left: 6px;
+        width: 4px;
+        height: 4px;
+        content: '';
+        transform: translateY(-50%);
+        border-radius: 2px;
+        background-color: $color-theme;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: cnt;
+
+    > li {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        counter-increment: cnt;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  > ol > li {
+    &::before {
+      content: '(' counter(cnt) ')';
+    }
+  }
+  ul,
+  ol {
+    li > ol > li {
+      &::before {
+        content: counter(cnt) '. ';
+      }
+    }
+  }
+
+  code {
+    padding: 1px 5px;
+    border-radius: 2px;
+    background-color: lighten($color-theme, 50%);
+    color: $color-theme;
+  }
+}
+
+em {
+  font-weight: bold;
+}
+
+hr {
+  margin: 30px 0 50px;
+  border: none;
+  border-bottom: 1px solid $color-text-weak;
+}
+
+table {
+  tr {
+    border: 1px solid $color-text-weak;
+  }
+}
+
+figcaption {
+  text-align: center;
+  color: $color-text-weak;
+}

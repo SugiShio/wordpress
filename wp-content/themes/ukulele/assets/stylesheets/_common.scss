@@ -1,0 +1,21 @@
+.color {
+  &-instrument {
+    color: $color-blue;
+  }
+
+  &-song {
+    color: $color-yellow;
+  }
+
+  &-4all {
+    color: $color-green;
+  }
+
+  &-photo {
+    color: $color-pink;
+  }
+}
+
+.u-wrapper {
+  position: relative;
+}

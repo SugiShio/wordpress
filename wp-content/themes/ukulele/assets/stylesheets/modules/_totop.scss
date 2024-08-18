@@ -1,0 +1,51 @@
+.u-totop {
+  font-size: 10px;
+  position: fixed;
+  z-index: $z-index-totop;
+  right: 20px;
+  bottom: 20px;
+  visibility: hidden;
+  height: 40px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background-color, opacity 0.3s;
+  opacity: 0;
+  border-radius: 20px;
+  background-color: $color-background;
+  box-shadow: 0 2px 4px rgba(#000, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include screen-sm {
+    width: 40px;
+  }
+  @include screen-lg {
+    &:hover {
+      background-color: darken($color-background, 5%);
+    }
+  }
+
+  &.is-show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.is-fixed {
+    position: absolute;
+  }
+
+  &__text {
+    font-size: $font-sm;
+    line-height: 1;
+
+    @include screen-sm {
+      display: none;
+    }
+  }
+
+  &__icon {
+    line-height: 1;
+  }
+}

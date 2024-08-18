@@ -8,7 +8,7 @@ export default {
   // departments
   instrument: 'インスト',
   song: 'ソング',
-  '4all': '4ALL',
+  '4all': 'グループ',
   photo: 'フォト',
 
   // SONG_TYPES

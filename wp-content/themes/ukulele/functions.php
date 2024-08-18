@@ -62,7 +62,7 @@ function ukulele_stripe($entry_fee)
     }
 }
 
-function forall2021_setup()
+function ukulele_setup()
 {
     // <title>の挿入
     add_theme_support('title-tag');
@@ -70,19 +70,19 @@ function forall2021_setup()
     // アイキャッチ画像有効化
     add_theme_support('post-thumbnails');
 }
-add_action('after_setup_theme', 'forall2021_setup');
+add_action('after_setup_theme', 'ukulele_setup');
 
-function forall2021_scripts()
+function ukulele_scripts()
 {
-    wp_enqueue_style('forall2021-style', get_template_directory_uri() . '/public/css/style.css');
+    wp_enqueue_style('ukulele-style', get_template_directory_uri() . '/public/css/style.css');
     wp_enqueue_script('twitter-publish', 'https://platform.twitter.com/widgets.js');
-    wp_enqueue_script('forall2021-scripts', get_template_directory_uri() . '/public/js/index.js');
-    wp_enqueue_script('forall2021-stripe', 'https://js.stripe.com/v3/');
-    wp_enqueue_script('forall2021-zipcode', 'https://postcode-jp.com/js/postcodejp.js');
+    wp_enqueue_script('ukulele-scripts', get_template_directory_uri() . '/public/js/index.js');
+    wp_enqueue_script('ukulele-stripe', 'https://js.stripe.com/v3/');
+    wp_enqueue_script('ukulele-zipcode', 'https://postcode-jp.com/js/postcodejp.js');
 }
-add_action('wp_enqueue_scripts', 'forall2021_scripts');
+add_action('wp_enqueue_scripts', 'ukulele_scripts');
 
-function forall2021_init()
+function ukulele_init()
 {
     $post_types = [
         ['label' => '更新情報', 'term' => 'news', 'has_archive' => true, 'menu_position' => 5, 'menu_icon' => 'dashicons-megaphone'],
@@ -136,4 +136,4 @@ function forall2021_init()
         );
     };
 }
-add_action('init', 'forall2021_init');
+add_action('init', 'ukulele_init');

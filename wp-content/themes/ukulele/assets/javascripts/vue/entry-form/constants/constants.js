@@ -7,8 +7,7 @@ export const STRIPE_STYLE = {
     color: '#000'
   }
 }
-// export const DEPARTMENTS = ['instrument', 'song', '4all', 'photo']
-export const DEPARTMENTS = ['instrument', 'song']
+export const DEPARTMENTS = ['instrument', 'song', '4all', 'photo']
 
 const formItems = {
   entryName: {
@@ -202,7 +201,8 @@ export const FORM_CONFIG = {
       formItems.members_8,
       formItems.image,
       formItems.youtubeUrl
-    ]
+    ],
+    fee: true
   },
   photo: {
     items: [

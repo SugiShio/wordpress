@@ -36,7 +36,7 @@ $posts = get_posts(array(
 <section class="y-container y-classes">
   <div class="y-classes__buttonArea">
     <div class="y-classes__button">
-      <a href="https://coubic.com/yogasalongraciage" class='y-button' target="_blank">オンライン予約</a>
+      <a href="https://beauty.hotpepper.jp/kr/slnH000707826/" class='y-button' target="_blank">オンライン予約</a>
     </div>
   </div>
   <h3 class="y-classes__title-1">レッスン</h3>

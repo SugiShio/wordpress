@@ -1,0 +1,16 @@
+.nav-links {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+a.page-numbers {
+  margin: 0 10px;
+  color: $color-darkgray;
+  text-decoration: underline;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

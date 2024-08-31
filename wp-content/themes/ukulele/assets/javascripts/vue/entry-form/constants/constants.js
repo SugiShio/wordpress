@@ -172,7 +172,7 @@ export const FORM_CONFIG = {
       formItems.image,
       formItems.youtubeUrl
     ],
-    fee: true
+    fee: 2000
   },
   song: {
     items: [
@@ -187,7 +187,7 @@ export const FORM_CONFIG = {
       formItems.image,
       formItems.youtubeUrl
     ],
-    fee: true
+    fee: 2000
   },
   '4all': {
     items: [
@@ -202,7 +202,7 @@ export const FORM_CONFIG = {
       formItems.image,
       formItems.youtubeUrl
     ],
-    fee: true
+    fee: 3000
   },
   photo: {
     items: [
@@ -216,7 +216,8 @@ export const FORM_CONFIG = {
       formItems.members_8,
       formItems.image,
       formItems.photoUrl
-    ]
+    ],
+    fee: 0
   }
 }
 

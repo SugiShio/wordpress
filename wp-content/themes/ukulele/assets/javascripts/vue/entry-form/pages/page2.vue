@@ -20,7 +20,7 @@ div
         ukulele-input(
         :item='item'
         )
-  template(v-if='fee')
+  template(v-if='fee > 0')
     h2.u-entry__title {{ paymentTitle }}
     ul.u-form-table
       li.u-form-table__row
@@ -28,6 +28,7 @@ div
         .u-form-table__input
           payment-form(
           :get-stripe-token='getStripeToken'
+          :fee='fee'
           @got-token-succeeded='goNext'
           @got-token-failed='getStripeToken=false'
           )

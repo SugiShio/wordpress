@@ -21,6 +21,7 @@
 
   &__content {
     @extend .y-content;
+    flex-grow: 1;
   }
 
   &__map {

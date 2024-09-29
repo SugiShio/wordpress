@@ -19,6 +19,16 @@
     <?php include 'menu.php'; ?>
   </section>
 
+  <section class="y-top__head">
+    <div class="y-top__head-button">
+      <a href="https://beauty.hotpepper.jp/kr/slnH000707826/" class='y-button'
+        target="_blank">ヨガ・整体・ヘッドマッサージのご予約はこちら</a>
+    </div>
+    <p class="y-top__head-text">
+      フラメンコの体験レッスンは <a href="<?php echo get_permalink(get_page_by_path( 'contact' )); ?>">Contactページ</a>よりお願いします。
+    </p>
+  </section>
+
   <section class="y-top__copy">
     <img src="<?php echo get_template_directory_uri()."/assets/images/flowers_upper.png"; ?>" alt="">
     <p class="y-top__copytext">

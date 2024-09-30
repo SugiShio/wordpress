@@ -24,6 +24,10 @@ div
     h2.u-entry__title {{ paymentTitle }}
     ul.u-form-table
       li.u-form-table__row
+        .u-form-table__head お支払い金額
+        .u-form-table__input
+          | {{ fee.toLocaleString() }}円
+      li.u-form-table__row
         .u-form-table__head {{ i18n.cardNumber }}
         .u-form-table__input
           payment-form(

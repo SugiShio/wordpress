@@ -1,0 +1,39 @@
+.w-main {
+  padding: 70px 20px;
+}
+
+.w-columnswrapper {
+  @include screen-lg {
+    display: flex;
+    margin: auto;
+    width: $width-default;
+    justify-content: space-between;
+  }
+}
+
+.w-singlecolumn {
+  @include screen-lg {
+    width: $width-default;
+    margin: auto;
+  }
+}
+
+.w-maincolumn {
+  @include screen-lg {
+    width: $width-maincolumn;
+  }
+}
+
+.w-sidecolumn {
+  @include screen-lg {
+    width: $width-sidecolumn;
+  }
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-size: 1.3em;
+  &::before {
+    vertical-align: middle;
+  }
+}

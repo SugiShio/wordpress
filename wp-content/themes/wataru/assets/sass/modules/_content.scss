@@ -1,0 +1,21 @@
+.w-content {
+  &--profile {
+    padding: 0 20px 20px;
+    background-color: $color-back;
+    box-shadow: 0 2px 8px rgba(#000, .1);
+  }
+
+  &__title {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding-right: 80px;
+    border-bottom: 3px solid $color-main;
+    color: $color-main;
+    font-family: $fontfamily-alegreya;
+    font-size: 46px;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: .05em;
+  }
+}

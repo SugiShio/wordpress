@@ -1,0 +1,16 @@
+.w-button {
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: $color-gray;
+  color: $color-white;
+  font-family: $fontfamily-alegreya;
+  text-align: center;
+  letter-spacing: .1em;
+  transition: .3s;
+  &:hover {
+    background-color: lighten($color-gray, 10%);
+  }
+}

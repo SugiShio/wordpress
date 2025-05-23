@@ -16,9 +16,10 @@ services:
       - .:/var/www/html
 
   db:
-    platform: linux/x86_64
-    image: mysql:5.7
-    # env_file: .env
+    image: mysql:8.0
+    platform: linux/arm64  # Apple M1/M2チップの場合はarm64を指定
+    container_name: mysql8
+    restart: always
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
       MYSQL_DATABASE: 'wordpress'

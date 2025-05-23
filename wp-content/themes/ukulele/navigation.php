@@ -72,9 +72,11 @@
     :items="<?php echo $menu_items ?>"
     ></ukulele-menu>
 
+    <?php /*
     <language-selector
     :languages='<?php echo htmlspecialchars(json_encode($GLOBALS['langs'])); ?>'
     current-language='<?php echo $GLOBALS['lang']['value']; ?>'
     ></language-selector>
+    */ ?>
   </navigation>
 </div>

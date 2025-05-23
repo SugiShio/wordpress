@@ -16,7 +16,10 @@ import { STRIPE_STYLE } from '../constants/constants.js'
 let stripe, elements, card
 
 export default {
-  props: ['getStripeToken'],
+  props: {
+    getStripeToken: { type: Boolean, default: false },
+    fee: { type: Number, default: 0, required: true }
+  },
   data() {
     return {
       tokenId: '',
@@ -65,7 +68,7 @@ export default {
           this.$store.commit('setData', {
             n: 1,
             name: 'amount',
-            value: '2,000円'
+            value: `${this.fee.toLocaleString()}円`
           })
           this.$emit('got-token-succeeded')
         }

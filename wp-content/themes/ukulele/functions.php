@@ -40,7 +40,6 @@ require_once(dirname(__FILE__) . '/lib/stripe/init.php');
 $post = get_page_by_path('entry');
 setup_postdata($post);
 $secret_key = post_custom('secret_key');
-$entry_fee = post_custom('entry_fee');
 wp_reset_postdata();
 \Stripe\Stripe::setApiKey($secret_key);
 
@@ -48,10 +47,11 @@ add_action('template_redirect', 'ukulele_stripe', 100);
 function ukulele_stripe($entry_fee)
 {
     $token = $_POST['stripeToken'];
+    $fee = $_POST['fee'];
     if ($token) {
         try {
             $charge = \Stripe\Charge::create(array(
-                "amount" => $GLOBALS["entry_fee"],
+                "amount" => $fee,
                 "currency" => "jpy",
                 "source" => $token,
                 "description" => "エントリーフィー",

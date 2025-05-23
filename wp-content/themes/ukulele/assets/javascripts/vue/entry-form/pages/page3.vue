@@ -17,13 +17,18 @@ div
       .u-form-table__head {{ i18n[item.key] }}
       .u-form-table__input
         confirm(:item='item')
-  template(v-if='fee')
+  template(v-if='fee > 0')
     h2.u-entry__title {{ paymentTitle }}
     ul.u-form-tablecardFormItems
       li.u-form-table__row(v-for='item in cardFormItems')
         .u-form-table__head {{ item.label }}
         .u-form-table__input
           confirm(:item='item')
+          input(
+            name='fee'
+            :value='fee'
+            type='hidden'
+            )
   ul.u-form-buttons
     li.u-form-buttons__item(@click='goBack')
       a {{ i18n.backToInput }}

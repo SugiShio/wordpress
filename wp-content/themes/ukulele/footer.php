@@ -61,12 +61,14 @@
           <a href="<?php echo get_permalink($sctl->ID); ?>"><?php echo $sctl->post_title ?></a>
         </li>
       </ul>
-      <div class="u-footer__contact">Contact: <a href="mailto:info@ukulelecontest4all.com">info@ukulelecontest4all.com</a></div>
-      <small class="u-footer__copyright">©︎ 2018 - 2021 The Ukulele Contest 4 All</small>
+      <div class="u-footer__contact">Contact: <a
+          href="mailto:ukulelecontest4all@gmail.com">ukulelecontest4all@gmail.com</a></div>
+      <small class="u-footer__copyright">©︎ 2018 - 2025 The Ukulele Contest 4 All</small>
     </div>
   </footer>
   <?php endif; ?>
 
   <?php wp_footer(); ?>
-</body>
-</html>
+  </body>
+
+  </html>

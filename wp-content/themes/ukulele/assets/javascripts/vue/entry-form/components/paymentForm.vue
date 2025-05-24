@@ -40,6 +40,12 @@ export default {
       this.storeValidationResult(event.error ? event.error.message : false)
     })
   },
+  beforeDestroy() {
+    this.$store.commit('setValidationResult', {
+      key: 'payment-form',
+      value: [false]
+    })
+  },
   watch: {
     getStripeToken(value) {
       if (!value) return

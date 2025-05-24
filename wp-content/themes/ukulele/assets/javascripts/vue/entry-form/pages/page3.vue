@@ -20,15 +20,26 @@ div
   template(v-if='fee > 0')
     h2.u-entry__title {{ paymentTitle }}
     ul.u-form-tablecardFormItems
-      li.u-form-table__row(v-for='item in cardFormItems')
-        .u-form-table__head {{ item.label }}
-        .u-form-table__input
-          confirm(:item='item')
-          input(
-            name='fee'
-            :value='fee'
-            type='hidden'
-            )
+      li.u-form-table__row
+        .u-form-table__head {{ i18n.paymentMethod }}
+        .u-form-table__input {{ paymentMethodSlected }}
+
+      template(v-if='isPaymentMethodBankTransfer')
+        li.u-form-table__row
+          .u-form-table__head {{ i18n.paymentAmount }}
+          .u-form-table__input
+            | {{ fee.toLocaleString() }}円
+
+      template(v-else)
+        li.u-form-table__row(v-for='item in cardFormItems')
+          .u-form-table__head {{ item.label }}
+          .u-form-table__input
+            confirm(:item='item')
+            input(
+              name='fee'
+              :value='fee'
+              type='hidden'
+              )
   ul.u-form-buttons
     li.u-form-buttons__item(@click='goBack')
       a {{ i18n.backToInput }}
@@ -81,7 +92,16 @@ export default {
       this.items.forEach(item => {
         result[item.key] = ukuleleI18n(item.key || item.name, this.lang)
       })
-      const keys = ['backToInput', 'department', 'posting', 'submitEntry']
+      const keys = [
+        'backToInput',
+        'department',
+        'posting',
+        'submitEntry',
+        'paymentAmount',
+        'paymentMethod',
+        'bankTransfer',
+        'creditCard'
+      ]
       keys.forEach(key => {
         result[key] = ukuleleI18n(key, this.lang)
       })
@@ -91,6 +111,9 @@ export default {
     items() {
       return this.formConfig.items || []
     },
+    isPaymentMethodBankTransfer() {
+      return this.$store.getters.isPaymentMethodBankTransfer
+    },
     lang() {
       return this.$store.state.lang
     },
@@ -99,11 +122,19 @@ export default {
     },
     paymentTitle() {
       return ukuleleI18n('paymentInfo', this.lang)
+    },
+    paymentMethodSlected() {
+      return this.isPaymentMethodBankTransfer
+        ? this.i18n.bankTransfer
+        : this.i18n.creditCard
     }
   },
   methods: {
     goBack() {
       this.$store.dispatch('goBack')
+      this.$nextTick(() => {
+        this.$store.dispatch('scroll')
+      })
       window.history.go(-1)
     },
     onSubmit() {

@@ -2,6 +2,8 @@ const Vue = require('vue')
 import Vuex from 'vuex'
 Vue.use(Vuex)
 
+import { PAYMENT_METHODS } from './constants/constants'
+
 const store = new Vuex.Store({
   state: {
     page: 1,
@@ -10,7 +12,8 @@ const store = new Vuex.Store({
     department: {},
     doValidate: false,
     validationResult: {},
-    lang: 'ja'
+    lang: 'ja',
+    paymentMethod: PAYMENT_METHODS[0]
   },
   mutations: {
     deleteValidationResult(state, payload) {
@@ -55,11 +58,13 @@ const store = new Vuex.Store({
       } else {
         Vue.set(state.validationResult, payload.key, payload.value)
       }
+    },
+    setPaymentMethod(state, { paymentMethod }) {
+      state.paymentMethod = paymentMethod
     }
   },
   actions: {
     goNext({ commit, state }) {
-      $('#formTop')[0].scrollIntoView({ behavior: 'smooth' })
       commit('setPage', { page: ++state.page })
     },
     goBack({ commit, state }) {
@@ -69,6 +74,9 @@ const store = new Vuex.Store({
     },
     submitData({ commit, state }) {
       document.ukuleleform.submit()
+    },
+    scroll() {
+      $('#formTop')[0].scrollIntoView({ behavior: 'smooth' })
     },
     validate({ commit }) {
       commit('setDoValidate', true)
@@ -102,6 +110,9 @@ const store = new Vuex.Store({
         values = [...values, ...state.validationResult[key]]
       })
       return !values.reduce((a, b) => a || b)
+    },
+    isPaymentMethodBankTransfer: state => {
+      return state.paymentMethod === PAYMENT_METHODS[0]
     }
   }
 })
@@ -112,6 +123,8 @@ export const setEntryForm = el => {
   if (!form) return
   form.setAttribute('name', 'ukuleleform')
   const lang = document.getElementById('lang').dataset.lang || 'ja'
+  const elementEntryForm = document.createElement('entry-form')
+  form.appendChild(elementEntryForm)
 
   new Vue({
     el: el,

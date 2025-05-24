@@ -2,7 +2,7 @@ export default {
   // page titles
   selectDepartment: '部門選択',
   entryInfo: 'エントリー情報',
-  paymentInfo: 'お支払い情報',
+  paymentInfo: 'お支払い',
   confirm: '入力内容確認',
 
   // departments
@@ -10,16 +10,23 @@ export default {
   song: 'ソング',
   '4all': 'グループ',
   photo: 'フォト',
+  kids: 'キッズ',
 
   // SONG_TYPES
   original: 'オリジナル',
   existing: '既成曲カバー・アレンジ',
 
   // CARD_FORM_ITEMS
+  paymentMethod: 'お支払い方法',
+  paymentAmount: 'お支払い金額',
+  bankTransfer: '銀行振込',
+  creditCard: 'クレジットカード決済',
   cardNumber: 'カード番号',
   cardExp: 'カード有効期限',
   cvc: 'セキュリティーコード',
   amount: 'お支払い額',
+  bankTransferAnnouncement:
+    '銀行振込の場合は、エントリー後にメールでご案内します。',
 
   // entry form
   entryName: 'エントリーネーム',

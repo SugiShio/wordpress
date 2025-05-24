@@ -8,18 +8,25 @@ export default {
   // departments
   instrument: 'Instrument',
   song: 'Song',
-  '4all': '4all',
+  '4all': 'Group',
   photo: 'Photo',
+  kids: 'Kids',
 
   // SONG_TYPES
   original: 'Original',
   existing: 'Existing song cover/arrange',
 
   // CARD_FORM_ITEMS
+  paymentMethod: 'Payment method',
+  paymentAmount: 'Payment amount',
+  bankTransfer: 'Bank transfer',
+  creditCard: 'Credit card',
   cardNumber: 'Card Number',
   cardExp: 'Expiration Date',
   cvc: 'CVC',
   amount: 'Amount',
+  bankTransferAnnouncement:
+    'If you choose bank transfer, instructions will be sent by email after entry.',
 
   // entry form
   entryName: 'Entry Name',

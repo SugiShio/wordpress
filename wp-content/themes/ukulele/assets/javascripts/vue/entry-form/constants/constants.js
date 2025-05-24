@@ -7,7 +7,7 @@ export const STRIPE_STYLE = {
     color: '#000'
   }
 }
-export const DEPARTMENTS = ['instrument', 'song', '4all', 'photo']
+export const DEPARTMENTS = ['instrument', 'song', '4all', 'kids']
 
 const formItems = {
   entryName: {
@@ -172,7 +172,7 @@ export const FORM_CONFIG = {
       formItems.image,
       formItems.youtubeUrl
     ],
-    fee: 2000
+    fee: 3000
   },
   song: {
     items: [
@@ -187,7 +187,7 @@ export const FORM_CONFIG = {
       formItems.image,
       formItems.youtubeUrl
     ],
-    fee: 2000
+    fee: 3000
   },
   '4all': {
     items: [
@@ -199,6 +199,21 @@ export const FORM_CONFIG = {
       formItems.workTitle,
       formItems.profile,
       formItems.members_8,
+      formItems.image,
+      formItems.youtubeUrl
+    ],
+    fee: 5000
+  },
+  kids: {
+    items: [
+      formItems.entryName,
+      formItems.fullName,
+      formItems.email,
+      formItems.phone,
+      formItems.address,
+      formItems.song,
+      formItems.profile,
+      // formItems.members_2,
       formItems.image,
       formItems.youtubeUrl
     ],
@@ -242,4 +257,5 @@ export const COMPONENTS = {
 
 export const SONG_TYPES = ['original', 'existing']
 
-export const CARD_FORM_ITEMS = ['cardNumber', 'cardExp', 'cvc', 'amount']
+export const CARD_FORM_ITEMS = ['cardNumber', 'cardExp', 'cvc']
+export const PAYMENT_METHODS = ['bankTransfer', 'creditCard']

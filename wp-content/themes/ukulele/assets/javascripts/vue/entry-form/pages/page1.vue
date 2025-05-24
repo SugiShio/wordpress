@@ -38,6 +38,10 @@ export default {
     goNext(department) {
       this.$store.commit('setDepartment', { department })
       this.$store.dispatch('goNext')
+      this.$nextTick(() => {
+        this.$store.dispatch('scroll')
+      })
+
       window.history.pushState(null, null, '../entry-input')
     },
     classes(department) {
